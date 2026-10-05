@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+.gencheck/
+*.local
+.env*.local
+*.tsbuildinfo
+.dev/
+.tanstack/

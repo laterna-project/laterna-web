@@ -1,0 +1,5 @@
+allowBuilds:
+  '@bufbuild/buf': true
+  esbuild: true
+  # Downloads a font list at install time, which the player (JASSUB) does not need.
+  lfa-ponyfill: false

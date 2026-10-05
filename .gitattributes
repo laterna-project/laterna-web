@@ -1,0 +1,10 @@
+# LF line endings everywhere: the generated code (src/gen) is compared byte for byte with the
+# contract.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.woff2 binary
+# Generated code (buf, TanStack Router): collapsed in reviews
+src/gen/** linguist-generated=true
+src/routeTree.gen.ts linguist-generated=true
