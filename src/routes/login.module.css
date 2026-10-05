@@ -1,0 +1,237 @@
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 520px;
+  gap: var(--space-5);
+  min-height: 100vh;
+  padding: var(--space-5);
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.backdrop {
+  border-radius: var(--radius-2xl);
+  background-color: var(--color-surface-sunken);
+  background-position: center;
+  background-size: cover;
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 26px;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  width: 96px;
+  height: 96px;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  opacity: 0.35;
+}
+
+.tile:nth-child(3n + 1) .shape {
+  border-radius: var(--radius-pill);
+}
+
+.tile:nth-child(3n + 2) .shape {
+  border-radius: var(--radius-pill) var(--radius-pill) var(--radius-pill) var(--radius-xs);
+}
+
+.tileLabel {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-heavy);
+  letter-spacing: -0.03em;
+}
+
+.tileText {
+  font-size: var(--text-md);
+  font-weight: var(--weight-strong);
+  opacity: 0.85;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-10) 44px;
+  border-radius: var(--radius-2xl);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.title {
+  margin-top: 36px;
+  font-size: 40px;
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-display);
+}
+
+.server {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--color-ink-muted);
+}
+
+.online {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-success);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.form button[type="submit"] {
+  margin-top: var(--space-2);
+}
+
+.note {
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  text-align: center;
+}
+
+/* Passkey and provider, before the password. */
+.methods {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: 28px;
+}
+
+.primary,
+.secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  height: 60px;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
+  font-weight: var(--weight-heavy);
+}
+
+.primary {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+.secondary {
+  height: 56px;
+  background: var(--color-surface-sunken);
+  color: var(--color-ink);
+}
+
+.secondary:hover:not(:disabled) {
+  background: var(--color-line);
+}
+
+.providerMark {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-sm);
+  background: var(--color-series);
+  color: var(--color-series-ink);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-heavy);
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-5) 0 0;
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+}
+
+.or::before,
+.or::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background: var(--color-line);
+}
+
+.textButton {
+  min-height: var(--control-md);
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-ink);
+  font-size: var(--text-md);
+  font-weight: var(--weight-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tv {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: 28px;
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--color-party-soft);
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+}
+
+.tv svg {
+  flex: none;
+}
+
+.tvLink {
+  font-weight: var(--weight-heavy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 1023px) {
+  .page {
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--page-gutter);
+  }
+
+  .tiles,
+  .backdrop {
+    display: none;
+  }
+
+  .panel {
+    padding: var(--space-8) var(--space-6);
+  }
+}

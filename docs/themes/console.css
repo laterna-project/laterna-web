@@ -1,0 +1,244 @@
+/* @laterna-theme
+name: Console
+author: Laterna (example)
+version: 1.0
+description: Terminal screen: phosphor green, monospaced and square everywhere, sidebar menu.
+base: universe
+*/
+
+/*
+ * Example theme (docs/themes.md): it changes the tokens, then restyles the interface through the
+ * data-ui hooks. Import it in "My account", "Style of this device".
+ */
+
+/* --- Tokens ------------------------------------------------------------------------------------ */
+
+:root {
+  --color-canvas: #050806;
+  --color-surface: #0a110c;
+  --color-surface-sunken: #0f1a12;
+  --color-surface-muted: #08100a;
+  --color-track: #16301d;
+  --color-line: #1d3a25;
+  --color-line-strong: #2f5f3c;
+  --color-ink: #b8f5c8;
+  --color-ink-muted: #7cc993;
+  --color-ink-inverse: #050806;
+  --color-scrim: rgba(0, 0, 0, 0.75);
+  --color-accent: #39ff88;
+  --color-accent-ink: #03170a;
+  --color-scheme: dark;
+  --universe-fill: 0%;
+
+  --color-stage: #000000;
+  --color-stage-raised: #0f1a12;
+  --color-stage-ink: #b8f5c8;
+  --color-stage-ink-muted: #7cc993;
+
+  --color-paper: #050806;
+  --color-paper-ink: #b8f5c8;
+  --color-paper-muted: #7cc993;
+  --color-paper-chip: #16301d;
+
+  /* A single green for every universe, like a monochrome screen. */
+  --color-movies: #39ff88;
+  --color-movies-ink: #03170a;
+  --color-movies-soft: #0f2416;
+  --color-movies-text: #39ff88;
+  --color-series: #39ff88;
+  --color-series-ink: #03170a;
+  --color-series-soft: #0f2416;
+  --color-series-text: #39ff88;
+  --color-music: #39ff88;
+  --color-music-ink: #03170a;
+  --color-music-soft: #0f2416;
+  --color-music-text: #39ff88;
+  --color-books: #39ff88;
+  --color-books-ink: #03170a;
+  --color-books-soft: #0f2416;
+  --color-books-text: #39ff88;
+  --color-photos: #39ff88;
+  --color-photos-ink: #03170a;
+  --color-photos-soft: #0f2416;
+  --color-photos-text: #39ff88;
+  --color-collections: #39ff88;
+  --color-collections-ink: #03170a;
+  --color-collections-soft: #0f2416;
+  --color-collections-text: #39ff88;
+  --color-playlists: #39ff88;
+  --color-playlists-ink: #03170a;
+  --color-playlists-soft: #0f2416;
+  --color-playlists-text: #39ff88;
+  --color-party: #39ff88;
+  --color-party-ink: #03170a;
+  --color-party-soft: #0f2416;
+  --color-party-text: #39ff88;
+
+  --color-danger: #ff5c5c;
+  --color-danger-ink: #1a0303;
+  --color-danger-soft: #2a0d0d;
+  --color-danger-text: #ff9a9a;
+  --color-success: #39ff88;
+  --color-success-soft: #0f2416;
+  --color-success-text: #39ff88;
+  --color-warning-soft: #2a240b;
+  --color-warning-text: #ffe066;
+
+  --font-sans: ui-monospace, "Cascadia Mono", Consolas, "Courier New", monospace;
+  --font-display: var(--font-sans);
+  --weight-regular: 400;
+  --weight-strong: 600;
+  --weight-heavy: 700;
+  --weight-display: 700;
+  --tracking-tight: 0;
+  --tracking-display: 0;
+  --text-3xl: 34px;
+  --text-4xl: 44px;
+
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-pill: 0;
+  --radius-poster: 0;
+  --radius-cover: 0;
+  --radius-photo: 0;
+  --radius-disc: 0;
+
+  --shadow-card: 0 0 0 1px #1d3a25;
+  --shadow-overlay: 0 0 0 1px #2f5f3c;
+  --shadow-floating: 0 0 0 1px #39ff88;
+  --focus-ring: 0 0 0 2px var(--color-canvas), 0 0 0 4px var(--color-accent);
+}
+
+/* --- Screen: scan lines over everything --------------------------------------------------------- */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0 2px, rgba(0, 0, 0, 0.18) 2px 3px);
+  pointer-events: none;
+}
+
+/* --- Sidebar menu (large screens) ---------------------------------------------------------------- */
+
+@media (min-width: 900px) {
+  [data-ui="header"] {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 28px;
+    width: 230px;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    padding: 28px 16px;
+    border-right: 1px solid var(--color-line);
+    background: var(--color-surface);
+  }
+
+  [data-ui="nav"] {
+    flex-direction: column;
+    flex-grow: 0;
+    gap: 2px;
+  }
+
+  [data-ui="nav-link"],
+  [data-ui="nav-more"] {
+    justify-content: flex-start;
+    height: 36px;
+  }
+
+  [data-ui="header-tools"] {
+    order: -1;
+    justify-content: space-between;
+  }
+
+  [data-ui="main"] {
+    max-width: none;
+    margin-left: 230px;
+  }
+
+  [data-ui="mini-player"] {
+    left: calc(50% + 115px);
+  }
+}
+
+/* --- Dressing ----------------------------------------------------------------------------------- */
+
+[data-ui="logo"] > :first-child {
+  display: none;
+}
+
+[data-ui="logo"]::before {
+  content: "▮";
+  color: var(--color-accent);
+  animation: console-cursor 1s steps(1) infinite;
+}
+
+@keyframes console-cursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+[data-ui="nav-link"][aria-current="page"]::before {
+  content: "> ";
+}
+
+[data-ui="main"] h1::before,
+[data-ui="block-title"]::before {
+  content: "$ ";
+  color: var(--color-accent);
+}
+
+/* The app sets the universe colors of a page header inline: only !important covers them. */
+[data-ui="page-header"] {
+  border: 1px solid var(--color-line);
+  /* biome-ignore lint/complexity/noImportantStyles: covers a style set inline by the app. */
+  background: var(--color-surface) !important;
+  /* biome-ignore lint/complexity/noImportantStyles: same as above. */
+  color: var(--color-ink) !important;
+}
+
+[data-ui="button"],
+[data-ui="tab"],
+[data-ui="chip"] {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+[data-ui="card"] [data-ui="artwork"] {
+  outline: 1px solid var(--color-line);
+  filter: grayscale(0.6) contrast(1.1);
+  transition: filter var(--duration-normal) var(--ease-standard);
+}
+
+[data-ui="card"]:hover [data-ui="artwork"] {
+  outline-color: var(--color-accent);
+  filter: none;
+}
+
+[data-ui="card-title"]::before {
+  content: "> ";
+  color: var(--color-accent);
+}
+
+[data-ui="mini-player"],
+[data-ui="queue"] {
+  border: 1px solid var(--color-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-ui="logo"]::before {
+    animation: none;
+  }
+}

@@ -1,0 +1,8 @@
+# TypeScript client generated from the server's API contract. The input (the server repository at
+# the version pinned in package.json) is passed by scripts/gen.mjs.
+version: v2
+clean: true
+plugins:
+  - local: protoc-gen-es
+    out: src/gen
+    opt: target=ts

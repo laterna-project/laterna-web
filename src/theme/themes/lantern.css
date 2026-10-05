@@ -1,0 +1,182 @@
+/* @laterna-theme
+id: lantern
+name: Magic lantern
+author: Laterna
+version: 1.0
+description: Dark and warm, a single amber accent, serif headings.
+*/
+
+/*
+ * "Magic lantern" theme: dark and warm, a single amber accent for every universe, Instrument Serif
+ * for headings and Instrument Sans for the rest, arched posters, round records, bordered plates.
+ * Built-in theme: it defines every token of the contract (src/theme/contract.ts), and nothing else.
+ */
+:root {
+  /* Surfaces and inks */
+  --color-canvas: #14100c;
+  --color-surface: #1c1611;
+  --color-surface-sunken: #241c15;
+  --color-surface-muted: #19140f;
+  --color-track: #2e251c;
+  --color-line: #2e251c;
+  --color-line-strong: #4a3b2c;
+  --color-ink: #f3e9d8;
+  --color-ink-muted: #b9a78e;
+  --color-ink-inverse: #14100c;
+  --color-scrim: rgba(11, 9, 7, 0.72);
+  --color-accent: #f0a63a;
+  --color-accent-ink: #14100c;
+  --color-scheme: dark;
+  --universe-fill: 12%;
+
+  /* Stage: video player, page reader, photo viewer */
+  --color-stage: #0b0907;
+  --color-stage-raised: #1c1611;
+  --color-stage-ink: #f3e9d8;
+  --color-stage-ink-muted: #b9a78e;
+
+  /* Reader paper: the lantern (dark) by default, paper and sepia below */
+  --color-paper: #14100c;
+  --color-paper-ink: #ede3d2;
+  --color-paper-muted: #b9a78e;
+  --color-paper-chip: #3a2e22;
+
+  /* Universes: a single amber accent */
+  --color-movies: #f0a63a;
+  --color-movies-ink: #14100c;
+  --color-movies-soft: #2a2014;
+  --color-movies-text: #f0a63a;
+  --color-series: #f0a63a;
+  --color-series-ink: #14100c;
+  --color-series-soft: #2a2014;
+  --color-series-text: #f0a63a;
+  --color-music: #f0a63a;
+  --color-music-ink: #14100c;
+  --color-music-soft: #2a2014;
+  --color-music-text: #f0a63a;
+  --color-books: #f0a63a;
+  --color-books-ink: #14100c;
+  --color-books-soft: #2a2014;
+  --color-books-text: #f0a63a;
+  --color-photos: #f0a63a;
+  --color-photos-ink: #14100c;
+  --color-photos-soft: #2a2014;
+  --color-photos-text: #f0a63a;
+  --color-collections: #f0a63a;
+  --color-collections-ink: #14100c;
+  --color-collections-soft: #2a2014;
+  --color-collections-text: #f0a63a;
+  --color-playlists: #f0a63a;
+  --color-playlists-ink: #14100c;
+  --color-playlists-soft: #2a2014;
+  --color-playlists-text: #f0a63a;
+  --color-party: #f0a63a;
+  --color-party-ink: #14100c;
+  --color-party-soft: #2a2014;
+  --color-party-text: #f0a63a;
+
+  /* States */
+  --color-danger: #e5604a;
+  --color-danger-ink: #14100c;
+  --color-danger-soft: #3a1c14;
+  --color-danger-text: #f0a38e;
+  --color-success: #9cc5a1;
+  --color-success-soft: #1e2a1f;
+  --color-success-text: #9cc5a1;
+  --color-warning-soft: #33270f;
+  --color-warning-text: #e8c872;
+
+  /* Typography */
+  --font-sans: "Instrument Sans Variable", "Instrument Sans", system-ui, sans-serif;
+  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-reading: "Literata Variable", Georgia, "Times New Roman", serif;
+  --font-legible: "Atkinson Hyperlegible Next Variable", system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-md: 15px;
+  --text-lg: 18px;
+  --text-xl: 24px;
+  --text-2xl: 34px;
+  --text-3xl: 52px;
+  --text-4xl: 84px;
+  --weight-regular: 400;
+  --weight-strong: 500;
+  --weight-heavy: 600;
+  --weight-display: 400;
+  --tracking-tight: -0.01em;
+  --tracking-display: -0.01em;
+  --leading-tight: 1.05;
+  --leading-normal: 1.55;
+
+  /* Shapes: arched posters (a half circle above a 2:3), book covers, records */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-2xl: 24px;
+  --radius-pill: 999px;
+  --radius-poster: 50% 50% 10px 10px / 33% 33% 10px 10px;
+  --radius-cover: 3px 10px 10px 3px;
+  --radius-photo: 6px;
+  --radius-disc: 50%;
+
+  /* Elevation: bordered plates rather than shadows */
+  --shadow-card: 0 0 0 1px #3a2e22;
+  --shadow-overlay: 0 0 0 1px #3a2e22, 0 18px 50px rgba(0, 0, 0, 0.5);
+  --shadow-floating: 0 0 0 1px #4a3b2c, 0 12px 32px rgba(0, 0, 0, 0.55);
+  --focus-ring: 0 0 0 3px var(--color-canvas), 0 0 0 6px var(--color-accent);
+
+  /* Spacing and layout */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --page-gutter: 48px;
+  --page-max: 1600px;
+  --header-height: 88px;
+  --control-sm: 36px;
+  --control-md: 44px;
+  --control-lg: 52px;
+
+  /* Motion */
+  --duration-fast: 120ms;
+  --duration-normal: 220ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --page-gutter: 16px;
+    --header-height: 64px;
+    --text-3xl: 38px;
+    --text-4xl: 56px;
+  }
+}
+
+/* Reader backgrounds chosen by the reader. */
+[data-paper="sepia"] {
+  --color-paper: #f2e6d0;
+  --color-paper-ink: #3b2f22;
+  --color-paper-muted: #6e5c45;
+  --color-paper-chip: #d8c8a8;
+}
+
+[data-paper="night"] {
+  --color-paper: #14100c;
+  --color-paper-ink: #ede3d2;
+  --color-paper-muted: #b9a78e;
+  --color-paper-chip: #3a2e22;
+}
+
+[data-paper="paper"] {
+  --color-paper: #faf8f3;
+  --color-paper-ink: #1e1f24;
+  --color-paper-muted: #5e6270;
+  --color-paper-chip: #e2ded4;
+}

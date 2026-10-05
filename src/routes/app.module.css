@@ -1,0 +1,252 @@
+.shell {
+  min-height: 100vh;
+}
+
+/* Header: logo, sections, search and profile; on wide screens, the sections in the middle and
+   everything within the page width. */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  max-width: calc(var(--page-max) + 2 * var(--page-gutter));
+  height: var(--header-height);
+  margin-inline: auto;
+  padding: 0 var(--page-gutter);
+}
+
+.nav {
+  display: flex;
+  flex-grow: 1;
+  gap: var(--space-1);
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+.home {
+  justify-self: start;
+}
+
+.tools {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+@media (min-width: 1280px) {
+  .header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  }
+
+  .nav {
+    gap: var(--space-2);
+  }
+
+  .tools {
+    justify-self: end;
+  }
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 40px;
+  padding: 0 14px;
+  border-radius: var(--radius-pill);
+}
+
+.navLink:hover {
+  background: var(--color-surface-sunken);
+}
+
+.navLink[aria-current="page"] {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+.navDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+}
+
+.navLink[aria-current="page"] .navDot {
+  display: none;
+}
+
+.search {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--control-md);
+  padding: 0 10px 0 var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  box-shadow: inset 0 0 0 1px var(--color-line);
+  color: var(--color-ink-muted);
+  font-size: var(--text-md);
+}
+
+.searchText {
+  min-width: 120px;
+}
+
+.kbd {
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+  background: var(--color-surface-sunken);
+  font-family: inherit;
+  font-size: var(--text-xs);
+}
+
+@media (max-width: 1023px) {
+  .searchText,
+  .kbd {
+    display: none;
+  }
+
+  .search {
+    justify-content: center;
+    width: var(--control-md);
+    padding: 0;
+  }
+}
+
+/* Medium screens: the sections move to their own line, and wrap if they overflow (no scrolling,
+   which would cut the "More" menu). */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    padding-top: var(--space-3);
+    padding-bottom: var(--space-3);
+  }
+
+  .nav {
+    order: 3;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    padding-top: var(--space-3);
+    padding-bottom: var(--space-3);
+  }
+
+  .nav {
+    order: 3;
+    flex-basis: 100%;
+    overflow-x: auto;
+  }
+}
+
+.main {
+  max-width: calc(var(--page-max) + 2 * var(--page-gutter));
+  margin-inline: auto;
+  padding: var(--space-3) var(--page-gutter) var(--space-10);
+}
+
+/* Room under the page for the floating music player. */
+.main[data-music="true"] {
+  padding-bottom: 120px;
+}
+
+.menu {
+  position: relative;
+}
+
+.menuButton {
+  display: flex;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: transparent;
+}
+
+.menuPanel {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  padding: var(--space-2);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-overlay);
+}
+
+.menuWho {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-2) var(--space-3) var(--space-3);
+  border-bottom: 1px solid var(--color-line);
+  margin-bottom: var(--space-1);
+}
+
+.menuName {
+  font-weight: var(--weight-heavy);
+}
+
+.menuAccount {
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--control-md);
+  padding: 0 var(--space-3);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  font-size: var(--text-md);
+  font-weight: var(--weight-strong);
+  text-align: left;
+}
+
+.menuItem:hover {
+  background: var(--color-surface-sunken);
+}
+
+/* "More" menu of the navigation. */
+.morePanel {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  padding: var(--space-2);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-overlay);
+}
+
+.chevron {
+  display: inline-flex;
+  transform: rotate(90deg);
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.chevron[data-open="true"] {
+  transform: rotate(-90deg);
+}
+
+button.navLink {
+  border: none;
+  background: transparent;
+  font: inherit;
+}

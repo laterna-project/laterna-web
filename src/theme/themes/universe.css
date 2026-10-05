@@ -1,0 +1,183 @@
+/* @laterna-theme
+id: universe
+name: Universe
+author: Laterna
+version: 1.0
+description: Light, a bold color per section, pale tints on large surfaces.
+*/
+
+/*
+ * "Universe" theme (the default): light background, one bold color per universe (movies, series,
+ * music, books, photos...) on small elements and a pale tint on large surfaces, rounded shapes,
+ * Plus Jakarta Sans.
+ * Built-in theme: it defines every token of the contract (src/theme/contract.ts), and nothing else.
+ */
+:root {
+  /* Surfaces and inks */
+  --color-canvas: #f5f6f8;
+  --color-surface: #ffffff;
+  --color-surface-sunken: #f0f1f4;
+  --color-surface-muted: #f7f8fa;
+  --color-track: #eef0f3;
+  --color-line: #e4e6eb;
+  --color-line-strong: #c9ccd4;
+  --color-ink: #14151a;
+  --color-ink-muted: #5e6270;
+  --color-ink-inverse: #ffffff;
+  --color-scrim: rgba(20, 21, 26, 0.55);
+  --color-accent: #14151a;
+  --color-accent-ink: #ffffff;
+  --color-scheme: light;
+  --universe-fill: 14%;
+
+  /* Stage: video player, page reader, photo viewer */
+  --color-stage: #0e0f13;
+  --color-stage-raised: #23252d;
+  --color-stage-ink: #ffffff;
+  --color-stage-ink-muted: #a9adb8;
+
+  /* Reader paper (sepia and night below) */
+  --color-paper: #fbfaf7;
+  --color-paper-ink: #1e1f24;
+  --color-paper-muted: #5e6270;
+  --color-paper-chip: #eeede8;
+
+  /* Universes: color, ink placed on it, soft tint, text on the soft tint */
+  --color-movies: #ff7a45;
+  --color-movies-ink: #14151a;
+  --color-movies-soft: #fff0ea;
+  --color-movies-text: #b8461c;
+  --color-series: #5b4bdb;
+  --color-series-ink: #ffffff;
+  --color-series-soft: #eeebff;
+  --color-series-text: #4b3cc9;
+  --color-music: #1fb57a;
+  --color-music-ink: #14151a;
+  --color-music-soft: #e6f7ef;
+  --color-music-text: #127a51;
+  --color-books: #12b5b0;
+  --color-books-ink: #14151a;
+  --color-books-soft: #e6f8f7;
+  --color-books-text: #0b7672;
+  --color-photos: #a8d83c;
+  --color-photos-ink: #14151a;
+  --color-photos-soft: #f0f9e0;
+  --color-photos-text: #4f6e12;
+  --color-collections: #ffc83d;
+  --color-collections-ink: #14151a;
+  --color-collections-soft: #fff6db;
+  --color-collections-text: #8a6100;
+  --color-playlists: #ff6fa5;
+  --color-playlists-ink: #14151a;
+  --color-playlists-soft: #ffe6f0;
+  --color-playlists-text: #b5245c;
+  --color-party: #3aa6ff;
+  --color-party-ink: #14151a;
+  --color-party-soft: #e5f3ff;
+  --color-party-text: #0b67b5;
+
+  /* States */
+  --color-danger: #e5484d;
+  --color-danger-ink: #ffffff;
+  --color-danger-soft: #ffe4e1;
+  --color-danger-text: #b42318;
+  --color-success: #1fb57a;
+  --color-success-soft: #e6f7ef;
+  --color-success-text: #127a51;
+  --color-warning-soft: #fff6db;
+  --color-warning-text: #8a6100;
+
+  /* Typography */
+  --font-sans: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: var(--font-sans);
+  --font-reading: "Literata Variable", Georgia, "Times New Roman", serif;
+  --font-legible: "Atkinson Hyperlegible Next Variable", system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-md: 15px;
+  --text-lg: 17px;
+  --text-xl: 22px;
+  --text-2xl: 30px;
+  --text-3xl: 44px;
+  --text-4xl: 60px;
+  --weight-regular: 500;
+  --weight-strong: 700;
+  --weight-heavy: 800;
+  --weight-display: 800;
+  --tracking-tight: -0.02em;
+  --tracking-display: -0.04em;
+  --leading-tight: 1.1;
+  --leading-normal: 1.5;
+
+  /* Shapes */
+  --radius-xs: 6px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-2xl: 32px;
+  --radius-pill: 999px;
+  --radius-poster: 16px;
+  --radius-cover: 8px 16px 16px 8px;
+  --radius-photo: 14px;
+  --radius-disc: 14px;
+
+  /* Elevation */
+  --shadow-card: 0 1px 2px rgba(20, 21, 26, 0.04), 0 10px 30px rgba(20, 21, 26, 0.06);
+  --shadow-overlay: 0 14px 40px rgba(20, 21, 26, 0.14);
+  --shadow-floating: 0 12px 32px rgba(20, 21, 26, 0.25);
+  --focus-ring: 0 0 0 3px var(--color-canvas), 0 0 0 6px var(--color-ink);
+
+  /* Spacing and layout */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --page-gutter: 40px;
+  --page-max: 1600px;
+  --header-height: 84px;
+  --control-sm: 34px;
+  --control-md: 44px;
+  --control-lg: 50px;
+
+  /* Motion */
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --page-gutter: 16px;
+    --header-height: 64px;
+    --text-3xl: 34px;
+    --text-4xl: 44px;
+  }
+}
+
+/* Reader backgrounds chosen by the reader. */
+[data-paper="sepia"] {
+  --color-paper: #f4ead8;
+  --color-paper-ink: #3b2f22;
+  --color-paper-muted: #6e5c45;
+  --color-paper-chip: #e8dcc5;
+}
+
+[data-paper="night"] {
+  --color-paper: #15161b;
+  --color-paper-ink: #d9dce3;
+  --color-paper-muted: #9aa0ae;
+  --color-paper-chip: #262831;
+}
+
+[data-paper="paper"] {
+  --color-paper: #fbfaf7;
+  --color-paper-ink: #1e1f24;
+  --color-paper-muted: #5e6270;
+  --color-paper-chip: #eeede8;
+}

@@ -1,0 +1,553 @@
+/* --- Cards -------------------------------------------------------------------------------------- */
+
+.card,
+.artistCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.cardArt {
+  position: relative;
+  display: block;
+  transition: transform var(--duration-normal) var(--ease-standard);
+}
+
+.artistCard > :first-child {
+  transition: transform var(--duration-normal) var(--ease-standard);
+}
+
+.card:hover .cardArt,
+.artistCard:hover > :first-child {
+  transform: translateY(-3px);
+}
+
+.cardPlay {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: grid;
+  place-items: center;
+  width: var(--control-md);
+  height: var(--control-md);
+  padding-left: 3px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-music);
+  color: var(--color-music-ink);
+  box-shadow: var(--shadow-card);
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.card:hover .cardPlay,
+.cardPlay:focus-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.cardFavorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-pill);
+  background: var(--color-playlists);
+  color: var(--color-playlists-ink);
+}
+
+.cardTitle {
+  display: block;
+  margin-top: var(--space-2);
+  overflow: hidden;
+  font-size: var(--text-md);
+  font-weight: var(--weight-heavy);
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.artistCard .cardTitle {
+  text-align: center;
+}
+
+.cardMeta {
+  display: block;
+  overflow: hidden;
+  font-size: var(--text-sm);
+  /* 0.85 at least: 4.5:1 on the color of each universe (series included). */
+  opacity: 0.85;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.artistCard .cardMeta {
+  text-align: center;
+}
+
+/* --- Tracks ------------------------------------------------------------------------------------- */
+
+.tracks {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.disc {
+  padding: var(--space-4) var(--space-4) var(--space-2);
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-heavy);
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 54px;
+  padding-right: var(--space-3);
+  border-radius: var(--radius-lg);
+}
+
+.track:hover {
+  background: var(--color-surface-muted);
+}
+
+.track[aria-current="true"] {
+  background: var(--color-music-soft);
+}
+
+.trackMain {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  min-height: 54px;
+  padding: var(--space-1) var(--space-3);
+  border: none;
+  border-radius: var(--radius-lg);
+  background: transparent;
+  text-align: left;
+}
+
+.trackNumber {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 32px;
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-strong);
+  font-variant-numeric: tabular-nums;
+}
+
+.trackArt {
+  flex: none;
+  width: 40px;
+}
+
+.trackText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.trackTitle,
+.trackSub {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trackTitle {
+  font-weight: var(--weight-strong);
+}
+
+.track[aria-current="true"] .trackTitle {
+  color: var(--color-music-text);
+}
+
+.trackSub {
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+}
+
+.trackTime {
+  flex: none;
+  width: 48px;
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.trackFavorite,
+.trackAction {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-ink-muted);
+}
+
+.trackActions {
+  display: flex;
+}
+
+.trackFavorite[aria-pressed="false"],
+.trackActions {
+  opacity: 0;
+}
+
+.track:hover .trackFavorite,
+.track:hover .trackActions,
+.track:focus-within .trackFavorite,
+.track:focus-within .trackActions {
+  opacity: 1;
+}
+
+.trackFavorite[aria-pressed="true"] {
+  color: var(--color-playlists);
+}
+
+.trackFavorite:hover,
+.trackAction:hover {
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+/* --- Header of an album or an artist ------------------------------------------------------------ */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+  gap: var(--space-10);
+  align-items: end;
+  padding: var(--space-8);
+  border-radius: var(--radius-2xl);
+  background: color-mix(in srgb, var(--color-music) var(--universe-fill), var(--color-surface));
+  color: color-mix(in srgb, var(--color-music-ink) var(--universe-fill), var(--color-ink));
+}
+
+.hero[data-artist="true"] {
+  grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+}
+
+.heroArt {
+  box-shadow: var(--shadow-overlay);
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.chip {
+  align-self: flex-start;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-heavy);
+}
+
+.heroTitle {
+  font-size: clamp(var(--text-3xl), 6vw, 88px);
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  line-height: 0.95;
+  letter-spacing: var(--tracking-display);
+  overflow-wrap: anywhere;
+}
+
+.artistLink {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-heavy);
+}
+
+.artistLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.artistInitial {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  background: var(--color-ink);
+  color: var(--color-ink-inverse);
+  font-size: var(--text-xs);
+}
+
+.heroLine {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-strong);
+}
+
+.overview {
+  max-width: 64ch;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.listen,
+.secondary,
+.roundAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: 54px;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
+  font-weight: var(--weight-heavy);
+}
+
+.listen {
+  padding: 0 var(--space-6);
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+.secondary {
+  padding: 0 var(--space-5);
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+.roundAction {
+  width: 54px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+.roundAction[aria-pressed="true"] {
+  color: var(--color-playlists);
+}
+
+.gainChip {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-surface) 60%, transparent);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-strong);
+}
+
+/* --- Page body ---------------------------------------------------------------------------------- */
+
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.panel {
+  padding: var(--space-3);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.asideCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.asideCard[data-accent="true"] {
+  background: color-mix(in srgb, var(--color-music) var(--universe-fill), var(--color-surface));
+  color: color-mix(in srgb, var(--color-music-ink) var(--universe-fill), var(--color-ink));
+  box-shadow: none;
+}
+
+.asideTitle {
+  font-size: var(--text-lg);
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-tight);
+}
+
+.asideText {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-strong);
+}
+
+.small {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.small .listen,
+.small .secondary {
+  height: var(--control-md);
+  padding: 0 var(--space-5);
+  font-size: var(--text-sm);
+}
+
+.small .secondary {
+  background: var(--color-surface);
+}
+
+.more {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.moreItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-1) 0;
+}
+
+.moreArt {
+  flex: none;
+  width: 64px;
+}
+
+.moreText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.moreTitle {
+  overflow: hidden;
+  font-weight: var(--weight-heavy);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.moreItem:hover .moreTitle {
+  text-decoration: underline;
+}
+
+.moreMeta {
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+}
+
+.sectionTitle {
+  font-size: var(--text-xl);
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-tight);
+}
+
+@media (max-width: 960px) {
+  .hero,
+  .hero[data-artist="true"] {
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--space-5);
+  }
+
+  .heroArt {
+    width: min(260px, 70%);
+  }
+
+  .body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* --- Track information (GetTrack) ----------------------------------------------------------------- */
+
+.infoContext {
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+}
+
+.infoFile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.infoVersion {
+  font-size: var(--text-md);
+  font-weight: var(--weight-heavy);
+}
+
+.infoMissing {
+  color: var(--color-danger-text);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-strong);
+}
+
+.infoList {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+}
+
+.infoList > div {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.infoList dt {
+  color: var(--color-ink-muted);
+  font-weight: var(--weight-strong);
+}
+
+.infoList dd {
+  margin: 0;
+  font-weight: var(--weight-strong);
+}

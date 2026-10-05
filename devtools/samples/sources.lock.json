@@ -1,0 +1,1051 @@
+{
+  "sources": {
+    "01_llama_drama_1080p.mp4": {
+      "url": "https://archive.org/download/Caminandes1LlamaDrama/01_llama_drama_1080p.mp4",
+      "size": 35103580,
+      "sha256": "90cbebdd3ce684a7f8716d45dee1f52d2b1608fd22966637b4d26af1a6db0ebf"
+    },
+    "02_gran_dillama_1080p.mp4": {
+      "url": "https://archive.org/download/Caminandes2GranDillama/02_gran_dillama_1080p.mp4",
+      "size": 125974946,
+      "sha256": "468e6743c674689a728726bbe4bb4b2a65bd8702a89f021af26a8bb4d450eebd"
+    },
+    "Arrival_of_a_Train_at_La_Ciotat_(The_Lumière_Brothers,_1895).webm": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Arrival_of_a_Train_at_La_Ciotat_%28The_Lumi%C3%A8re_Brothers%2C_1895%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 4756758,
+      "sha256": "f11f2407c878d488c0475a01530098b66fa9cc7f6a7f51cc15edd948d854a2d6"
+    },
+    "bbb_sunflower_1080p_30fps_normal.mp4.zip": {
+      "url": "https://download.blender.org/demo/movies/BBB/bbb_sunflower_1080p_30fps_normal.mp4.zip",
+      "size": 275524128,
+      "sha256": "e320fef389ec749117d0c1583945039266a40f25483881c2ff0d33207e62b362"
+    },
+    "Caminandes__Llamigos-1080p.mp4": {
+      "url": "https://archive.org/download/CaminandesLlamigos/Caminandes_%20Llamigos-1080p.mp4",
+      "size": 138945811,
+      "sha256": "826513349ecf02d83b22f414514704e3bba10ff28fb45408a6cdf6cc57bacc06"
+    },
+    "Chopin_–_Prelude_Op._28_No._4_(First_German_Edition).png": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Chopin_%E2%80%93_Prelude_Op._28_No._4_%28First_German_Edition%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 89442,
+      "sha256": "d8b6294898b2a30bb0094a4c12a482a3554a097abaee2711a49cd39b6fee4f77"
+    },
+    "Cosmos Laundromat - First Cycle (1080p).mp4": {
+      "url": "https://archive.org/download/CosmosLaundromatFirstCycle/Cosmos%20Laundromat%20-%20First%20Cycle%20(1080p).mp4",
+      "size": 220087570,
+      "sha256": "ed4f43b895920072f8e995520d85f8470708a2909258ab5b6d102e7a3f5fca0f"
+    },
+    "Cosmos Laundromat (2015).en.srt": {
+      "url": "https://archive.org/download/CosmosLaundromatFirstCycle/CosmosLaundromat-FirstCycle1080p.en.srt",
+      "size": 3949,
+      "sha256": "a0e809f66916085d066636d53dbbd89ebcdedb08bbedbb22c070bfea30278aa9"
+    },
+    "Cosmos Laundromat (2015).es.srt": {
+      "url": "https://archive.org/download/CosmosLaundromatFirstCycle/CosmosLaundromat-FirstCycle1080p.es.srt",
+      "size": 3907,
+      "sha256": "7a6589e8b01444efc72940c551f2975e1da488e918321340cca008e819437d29"
+    },
+    "Cosmos Laundromat (2015).fr.srt": {
+      "url": "https://archive.org/download/CosmosLaundromatFirstCycle/CosmosLaundromat-FirstCycle1080p.fr.srt",
+      "size": 4119,
+      "sha256": "3dac8d90f19c603a96c3e49701bbaed5775de25bcae930218c9e46148e8caa04"
+    },
+    "Cosmos Laundromat (2015).it.srt": {
+      "url": "https://archive.org/download/CosmosLaundromatFirstCycle/CosmosLaundromat-FirstCycle1080p.it.srt",
+      "size": 3941,
+      "sha256": "116e51783f4330d53b87056d1a4fc0dbbcbeb6806a3310fcbab5fb5450e2b0f5"
+    },
+    "CosmosLaundromat-FirstCycle1080p.fr.srt": {
+      "url": "https://archive.org/download/CosmosLaundromatFirstCycle/CosmosLaundromat-FirstCycle1080p.fr.srt",
+      "size": 4119,
+      "sha256": "3dac8d90f19c603a96c3e49701bbaed5775de25bcae930218c9e46148e8caa04"
+    },
+    "ED-1-TheWires.mp3": {
+      "url": "https://download.blender.org/ED/1-TheWires.mp3",
+      "size": 1810560,
+      "sha256": "0d3005b8bab3b187f1aed3104948957f27dcd5b953131f1025cc00c8c7bc97a2"
+    },
+    "ED-2-TypewriterDance.mp3": {
+      "url": "https://download.blender.org/ED/2-TypewriterDance.mp3",
+      "size": 1695872,
+      "sha256": "a30a695df7b6bf758be71268d734778318f11756386a15a6bb414356ed7cedf7"
+    },
+    "ED-3-TheSafestPlace.mp3": {
+      "url": "https://download.blender.org/ED/3-TheSafestPlace.mp3",
+      "size": 1085568,
+      "sha256": "89b1c12b5acb2092b485775bdcb514a32b8e136bc8b7cc6784404255f1c5b0ad"
+    },
+    "ED-4-EmoCreates.mp3": {
+      "url": "https://download.blender.org/ED/4-EmoCreates.mp3",
+      "size": 1450112,
+      "sha256": "bde3822adf9acbdfeb83a83dad06d579e381aad16c78134d8ce752f524b2fb9a"
+    },
+    "ED-5-EndTitle.mp3": {
+      "url": "https://download.blender.org/ED/5-EndTitle.mp3",
+      "size": 2193536,
+      "sha256": "1b2bab76f405b30d1f00d845987496f808c538860af3f30322f5417a9a8c3a74"
+    },
+    "ED-6-TeaserMusic.mp3": {
+      "url": "https://download.blender.org/ED/6-TeaserMusic.mp3",
+      "size": 1798272,
+      "sha256": "73c5a47b2ec1c622fab7b61ad3add48b5091dbce9ec52672315cd30b48028402"
+    },
+    "ED-7-Ambience.mp3": {
+      "url": "https://download.blender.org/ED/7-Ambience.mp3",
+      "size": 2633856,
+      "sha256": "24f222732204e571e88924cf0a395bfa4c3d0e690225ef0bd48fd257876860f7"
+    },
+    "ED-cover.jpg": {
+      "url": "https://download.blender.org/ED/cover.jpg",
+      "size": 204925,
+      "sha256": "a18be30822fea5413833871fc859c407e63a6096fcecbab8ee3173f90c20d5df"
+    },
+    "elephantsdream-720-h264-st-aac.mov": {
+      "url": "https://download.blender.org/ED/elephantsdream-720-h264-st-aac.mov",
+      "size": 152496338,
+      "sha256": "6fc295e0e92835316ec95929ccfc664b05ed2434f673e6f5e684f98f7558a547"
+    },
+    "Eugène_Delacroix_-_Frédéric_Chopin_-_WGA06194.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Eug%C3%A8ne_Delacroix_-_Fr%C3%A9d%C3%A9ric_Chopin_-_WGA06194.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 123618,
+      "sha256": "5a648ff8116280f5cd8539554fbff38caf43e8a11c872f57709a3b271cc28d7b"
+    },
+    "Frederic_Chopin_photo.jpeg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Frederic_Chopin_photo.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 1453748,
+      "sha256": "83082dcb9dcc4c5e69ba056a97f7822960d023314b8ab74a9abda0df2bbcf47c"
+    },
+    "Fredoka-OFL.txt": {
+      "url": "https://github.com/google/fonts/raw/main/ofl/fredoka/OFL.txt",
+      "size": 4388,
+      "sha256": "5c9e7eee5c6b25f4b05b8d53b2e470ea4962f9ced742d044a98f7d95d1375bab"
+    },
+    "Fredoka[wdth,wght].ttf": {
+      "url": "https://github.com/google/fonts/raw/main/ofl/fredoka/Fredoka%5Bwdth,wght%5D.ttf",
+      "size": 159184,
+      "sha256": "2ba02e68b152868aef9ba28e24b3648c7d457fe6f25c761f2c2c53fb61a73fc8"
+    },
+    "Funk_Sampler-9613.jpg": {
+      "url": "https://archive.org/download/Funk_Sampler-9613/Funk_Sampler-9613.jpg",
+      "size": 43088,
+      "sha256": "8fdec55d3a460b1fda98f625ec9d6a12c2de18eaa4be22b1e12f43afff53d9c2"
+    },
+    "hokusaimanga05kats_orig_jp2.tar": {
+      "url": "https://archive.org/download/hokusaimanga05kats/hokusaimanga05kats_orig_jp2.tar",
+      "size": 70287360,
+      "sha256": "4fae5098c251cf9c97aeb0e85bfeab049f94717cff186851d3f94f728929844b"
+    },
+    "hokusaimanga14kats.pdf": {
+      "url": "https://archive.org/download/hokusaimanga14kats/hokusaimanga14kats.pdf",
+      "size": 10703229,
+      "sha256": "d54ebc606e771f0a75d5c40c915ad38812105cd9c03d60b5cec4a8e7cab357af"
+    },
+    "jules-verne_around-the-world-in-eighty-days_george-makepeace-towle.epub": {
+      "url": "https://standardebooks.org/ebooks/jules-verne/around-the-world-in-eighty-days/george-makepeace-towle/downloads/jules-verne_around-the-world-in-eighty-days_george-makepeace-towle.epub?source=download",
+      "size": 667271,
+      "sha256": "115e6bd0317d98f86fe3f74571beeadbbb345ee7b04bccbf139db858610cc7bf"
+    },
+    "Kevin_MacLeod_-_01_-_Aces_High.mp3": {
+      "url": "https://archive.org/download/Funk_Sampler-9613/Kevin_MacLeod_-_01_-_Aces_High.mp3",
+      "size": 7724847,
+      "sha256": "64948c990f3b0a09d6011dcc2b585d8b7eb6a2c67a0002fa5d01d17b688dd610"
+    },
+    "Kevin_MacLeod_-_02_-_Private_Eye.mp3": {
+      "url": "https://archive.org/download/Funk_Sampler-9613/Kevin_MacLeod_-_02_-_Private_Eye.mp3",
+      "size": 3038595,
+      "sha256": "22e9033ba8d0f3ae6b92c5517296c3c58cff72d5350f65e9de6a62b2c38ce320"
+    },
+    "Kevin_MacLeod_-_03_-_There_It_Is.mp3": {
+      "url": "https://archive.org/download/Funk_Sampler-9613/Kevin_MacLeod_-_03_-_There_It_Is.mp3",
+      "size": 1506892,
+      "sha256": "aa196a319c7ca05c1b86f32585260c2731c23f6e9cfe72aa0d703e2eeb9b18ab"
+    },
+    "Kevin_MacLeod_-_04_-_Presenterator.mp3": {
+      "url": "https://archive.org/download/Funk_Sampler-9613/Kevin_MacLeod_-_04_-_Presenterator.mp3",
+      "size": 10228616,
+      "sha256": "ffc7df37d7ec7817442eef28a38e29cbc0e0fdc1f59fda53611e0ad08ab73b14"
+    },
+    "La_Sortie_de_l'Usine_Lumière_à_Lyon_I_1895.webm": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/La_Sortie_de_l%27Usine_Lumi%C3%A8re_%C3%A0_Lyon_I_1895.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 43936500,
+      "sha256": "f16b67f78d7e69bd15aa8511264572c711acf5c0c10361d5d632e6038f6fdd23"
+    },
+    "Le_Voyage_dans_la_Lune_(1902).webm.480p.vp9.webm": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6d/Le_Voyage_dans_la_Lune_%281902%29.webm/Le_Voyage_dans_la_Lune_%281902%29.webm.480p.vp9.webm",
+      "size": 76751098,
+      "sha256": "991a4cc1e126dad41ff828ce561dc02b36030d51dfc38ea6f28fd0ad965a1e94"
+    },
+    "Les_Vampires_-_La_tête_coupée_(1915).webm": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Les_Vampires_-_La_t%C3%AAte_coup%C3%A9e_%281915%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 107971508,
+      "sha256": "c770594ea0b9f26d8fd802cd01e6789e15302e6153df775929c01d441b0b3397"
+    },
+    "Les_Vampires_-_Le_Cryptogramme_rouge_(1915).webm": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Les_Vampires_-_Le_Cryptogramme_rouge_%281915%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 141789572,
+      "sha256": "d5f7342fd3c52b8b7067b263721eae049693e7dc099b3e0cc65d0368a4f0c190"
+    },
+    "Les_Vampires_-_Le_Spectre_(1916).webm": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Les_Vampires_-_Le_Spectre_%281916%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 87058382,
+      "sha256": "d2a098af3e10571c5ecf7a9d271f685f9de2de0cc479d1fdaf6db44b49deadda"
+    },
+    "Les_Vampires_-_Satanas(1916).webm": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Les_Vampires_-_Satanas%281916%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 144701152,
+      "sha256": "f9b15fa1acd4d088cb7b2ba3eecd033260fe4e485329f8c8f026e775012f470d"
+    },
+    "Marya Morevna - Episode 301.de.srt": {
+      "url": "https://archive.org/download/morevna-episode-3.0.1/subtitles/Marya%20Morevna%20-%20Episode%20301.de.srt",
+      "size": 4597,
+      "sha256": "4ee9a5816fbf34d6c3b48455ad06d4ddacd14230f0aa89ad88abc9f2893a21c7"
+    },
+    "Marya Morevna - Episode 301.en.srt": {
+      "url": "https://archive.org/download/morevna-episode-3.0.1/subtitles/Marya%20Morevna%20-%20Episode%20301.en.srt",
+      "size": 4332,
+      "sha256": "b639ce0550f47a59547173d6aac5e69ecb4dd1e2fbb9463252b5503c15993703"
+    },
+    "Marya Morevna - Episode 301.es.srt": {
+      "url": "https://archive.org/download/morevna-episode-3.0.1/subtitles/Marya%20Morevna%20-%20Episode%20301.es.srt",
+      "size": 4365,
+      "sha256": "26124fdaebf0e21766bdc2a35adfb9256ade62fa51676bcf6819804a2dbb87d3"
+    },
+    "Marya Morevna - Episode 301.fr.srt": {
+      "url": "https://archive.org/download/morevna-episode-3.0.1/subtitles/Marya%20Morevna%20-%20Episode%20301.fr.srt",
+      "size": 4401,
+      "sha256": "805bd487db74e1506da73dde8031b9eb62861569860666c0695270091db67b2c"
+    },
+    "Marya Morevna - Episode 301.ko.srt": {
+      "url": "https://archive.org/download/morevna-episode-3.0.1/subtitles/Marya%20Morevna%20-%20Episode%20301.ko.srt",
+      "size": 4685,
+      "sha256": "5921d7898d2c42e54684388007c1e0204ed5d69db08a9c91a23738307daad292"
+    },
+    "Marya Morevna - Episode 301.pl.srt": {
+      "url": "https://archive.org/download/morevna-episode-3.0.1/subtitles/Marya%20Morevna%20-%20Episode%20301.pl.srt",
+      "size": 4378,
+      "sha256": "fa624e95f42a2c68ad880f5bcdcadf984a4190ecea20f38f8e76b3f48bb560e5"
+    },
+    "Marya Morevna - Episode 301.pt-br.srt": {
+      "url": "https://archive.org/download/morevna-episode-3.0.1/subtitles/Marya%20Morevna%20-%20Episode%20301.pt-br.srt",
+      "size": 4581,
+      "sha256": "a69ecb7fa5c19d5d894e27623af7efbf59f78dbb1166e0d5ac9fa0037c79baa7"
+    },
+    "Marya Morevna - Episode 301.ru.srt": {
+      "url": "https://archive.org/download/morevna-episode-3.0.1/subtitles/Marya%20Morevna%20-%20Episode%20301.ru.srt",
+      "size": 5598,
+      "sha256": "24f2026052d46aad1cb5d0b40dfb0a399d7a977bdde16f6961724cce7f620ec5"
+    },
+    "morevna-4.0.1.mp4": {
+      "url": "https://archive.org/download/morevna-4.0.1/morevna-4.0.1.mp4",
+      "size": 140435547,
+      "sha256": "373d7f1d8be1dfd4f76a98675e2aad154f8bcb762117faf2271e53e1dfc0e0bb"
+    },
+    "morevna-episode-3.0.1.mp4": {
+      "url": "https://archive.org/download/morevna-episode-3.0.1/morevna-episode-3.0.1.mp4",
+      "size": 271747926,
+      "sha256": "3dbd87b2c1950fab9a3943641ab0b0a6031708df2379345137e3d012edc14d71"
+    },
+    "nemo/Little Nemo 1905-10-15.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Little_Nemo_1905-10-15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 625429,
+      "sha256": "339d7b1228ca24bbffa55afe46efb4203db484afb6875eaa5888684694fce9d6"
+    },
+    "nemo/Little Nemo 1905-10-29.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Little_Nemo_1905-10-29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 756406,
+      "sha256": "858c2158e678dceb4ab25feea7a9e67973c85bd13b6102fd0d5bd1d43679c7ab"
+    },
+    "nemo/Little Nemo 1905-11-05.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Little_Nemo_1905-11-05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 823497,
+      "sha256": "16586b20d7940cee3123f2dcb81b1efa10edcf4bbbbf5352e492fff157d56a2d"
+    },
+    "nemo/Little Nemo 1905-11-12.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Little_Nemo_1905-11-12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 701961,
+      "sha256": "8eae9b9e60c695ce5da0bd136231b6a9e9a8abe52dd82d7e6bee379cfe37d20a"
+    },
+    "nemo/Little Nemo 1905-11-19.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Little_Nemo_1905-11-19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 761068,
+      "sha256": "7de67d3a65bcc70c1f557c3ddaafd5527d6f4790d4ae95baf626154047a636d0"
+    },
+    "nemo/Little Nemo 1905-11-26.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Little_Nemo_1905-11-26.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 658307,
+      "sha256": "601aa0447ec59794a5441b4cb40d28285b4889de2141ffdeb0ddb58d1acbd0d2"
+    },
+    "nemo/Little Nemo 1905-12-03.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Little_Nemo_1905-12-03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 708807,
+      "sha256": "9250c59c9ef613585317877d33d89e6e3a0bfafbb2cfa92fe2cbaccab96bc9bb"
+    },
+    "nemo/Little Nemo 1905-12-10.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Little_Nemo_1905-12-10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 801100,
+      "sha256": "a7bcdb160c5730c766c7ffab577dd994453b42fbc90b0e714a30b90a00aa7c6b"
+    },
+    "nemo/Little Nemo 1905-12-17.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Little_Nemo_1905-12-17.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 668255,
+      "sha256": "d79c92ac7b5f1eb81f511f31ba3e5a99f7f9a43146b294288492ebbcccad663a"
+    },
+    "nemo/Little Nemo 1905-12-24.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Little_Nemo_1905-12-24.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 718745,
+      "sha256": "fbdcc2a3e142c232f765f585ee9e42b3e61dbdf05758d47ea8f32576f9c813de"
+    },
+    "nemo/Little Nemo 1905-12-31.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Little_Nemo_1905-12-31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 768521,
+      "sha256": "955af02d6a00245a1dd4e4685b81bac82d750da3fa406e8b79d00e9f2e489cc9"
+    },
+    "nemo/Little Nemo 1906-01-07.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Little_Nemo_1906-01-07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 730872,
+      "sha256": "cfc5538c278ad5380b25e10307955b0e55a47636f790a095a36446732180d55a"
+    },
+    "nemo/Little Nemo 1906-01-14.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Little_Nemo_1906-01-14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 793491,
+      "sha256": "783dde2826f92f7f3dbb3740065ac75fdbb96ca1f52b97e43c98c313b13488cb"
+    },
+    "nemo/Little Nemo 1906-01-21.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Little_Nemo_1906-01-21.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 661035,
+      "sha256": "b5caa508b725776fb2ab875fa2694dafb89403d4c25fa374919cfa45209da3d4"
+    },
+    "nemo/Little Nemo 1906-02-04.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Little_Nemo_1906-02-04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 1014400,
+      "sha256": "c18f3439d11ab4df516c4c644c837f531c1d43085da16592d2afd61d40566605"
+    },
+    "nemo/Little Nemo 1906-02-11.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Little_Nemo_1906-02-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 824140,
+      "sha256": "b9115b9143cf1cb428cf535da69d741a6e07b73b5f27752fbe03829758494b95"
+    },
+    "nemo/Little Nemo 1906-02-25.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Little_Nemo_1906-02-25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 821840,
+      "sha256": "9748332f7dc5bb00282846545fef87ca53e8112775236fadfc991c08bc18e4b6"
+    },
+    "nemo/Little Nemo 1906-03-04.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Little_Nemo_1906-03-04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 705236,
+      "sha256": "bb556211ace5b9625f64b8c6ea5f412bb2200ae3d713dea0c003b2ecd9226c5c"
+    },
+    "nemo/Little Nemo 1906-03-18.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Little_Nemo_1906-03-18.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 764028,
+      "sha256": "12517f95aad7c75cb1c9d64d8be9458a35269e0b52c3ab4af600083feffcf893"
+    },
+    "nemo/Little Nemo 1906-03-25.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Little_Nemo_1906-03-25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 797627,
+      "sha256": "bd94fefeaacb1548495935f9d8cda9f5c1b08e29941ea8eccb36d1b0c9d5f83c"
+    },
+    "nemo/Little Nemo 1906-04-01.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Little_Nemo_1906-04-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 754069,
+      "sha256": "f0f7fcf969136d1b7765472e7c8bdafc27f76b63bab280668548fa9b811c3326"
+    },
+    "nemo/Little Nemo 1906-04-08.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Little_Nemo_1906-04-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 829560,
+      "sha256": "cddcd0d4086deff4806483842e515c14d1dc189dc65d82b425ee3bc44763d6ab"
+    },
+    "nemo/Little Nemo 1906-04-15.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Little_Nemo_1906-04-15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 779183,
+      "sha256": "3efcc9ec7146b6dcfe01637daf2ae8ff61a456412a4b1c1e2cc53ba055ee4c08"
+    },
+    "nemo/Little Nemo in Slumberland (1905-10-22).jpeg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Little_Nemo_in_Slumberland_%281905-10-22%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 719878,
+      "sha256": "fc4e5a8fbcfbcc287e8bc5415d2ae1f1c52e3fa490fc39a853499f8b3c2ce165"
+    },
+    "Nocturne in B flat minor, Op. 9 no. 1.flac": {
+      "url": "https://archive.org/download/musopen-chopin-complete-works-flac/Nocturne%20in%20B%20flat%20minor%2C%20Op.%209%20no.%201.flac",
+      "size": 40480541,
+      "sha256": "c8b11bbf16f6e2e1abe18b893c10959bfa2a694bd3f3008d369877aaa3868f89"
+    },
+    "Nocturne in B major, Op. 9 no. 3.flac": {
+      "url": "https://archive.org/download/musopen-chopin-complete-works-flac/Nocturne%20in%20B%20major%2C%20Op.%209%20no.%203.flac",
+      "size": 20690340,
+      "sha256": "6c8b84bb6a91be27798486320a9c857ba68d494070ec9691030f20924a84fd54"
+    },
+    "Nocturne in E flat major, Op. 9 no. 2.flac": {
+      "url": "https://archive.org/download/musopen-chopin-complete-works-flac/Nocturne%20in%20E%20flat%20major%2C%20Op.%209%20no.%202.flac",
+      "size": 62681284,
+      "sha256": "964158421c39e9cdc618e0c5b1a2da1acbc589ea156ee2e22fb4949ba9098a90"
+    },
+    "Nosferatu_le_vampire-Film_Murnau_1922.webm": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Nosferatu_le_vampire-Film_Murnau_1922.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 338255467,
+      "sha256": "d3080b2cb69d63a73cb64e539152fc1c6bb1d5d440efb7cb39177d21cb346836"
+    },
+    "pepper-and-carrot-ep6-en-v1.mp4": {
+      "url": "https://archive.org/download/pepper-and-carrot-ep6-v1/pepper-and-carrot-ep6-en-v1.mp4",
+      "size": 239749688,
+      "sha256": "f3d32cb5f6b477de60331d61a863898e23909bf2b4efd2a766ae7ef00af08f16"
+    },
+    "pepper-and-carrot-ep6-ru-v1.mp4": {
+      "url": "https://archive.org/download/pepper-and-carrot-ep6-v1/pepper-and-carrot-ep6-ru-v1.mp4",
+      "size": 241626395,
+      "sha256": "13a8152d60b42b6b4190bfab1facbe39aacb344457f09919aa200f4aa8154153"
+    },
+    "pepper-carrot-ep3-1080.mp4": {
+      "url": "https://archive.org/download/pepper-carrot-episode-3-the-secret-ingredients-english/79780d2c-419b-42a3-adb5-85ae2aea4d1e-1080.mp4",
+      "size": 47681875,
+      "sha256": "2f66d2112b678aad728bcf2f69d03c60103f2d807af1ee2b57b0af44d46d391a"
+    },
+    "pepper-carrot-ep4-1080.mp4": {
+      "url": "https://archive.org/download/pepper-carrot-episode-4-stroke-of-genius-1080p/Pepper%20%26%20Carrot%20Episode%204%3A%20Stroke%20of%20Genius%201080p.mp4",
+      "size": 167243999,
+      "sha256": "1e3987c652412613bc61bd036981441d4177600e459b868ea9d4c65db4b18f6f"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E01P00.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep01_Potion-of-Flight/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E01P00.jpg",
+      "size": 41197,
+      "sha256": "c0d89739677ea6a3d3dd257938aaff6b21ae8e1efc260d722112427e2f2d93a9"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E01P01.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep01_Potion-of-Flight/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E01P01.jpg",
+      "size": 443210,
+      "sha256": "800bda942e1c000cb6e3ea355b9c13432062d59f86ab97d92a53018acabd8c06"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E01P02.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep01_Potion-of-Flight/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E01P02.jpg",
+      "size": 447979,
+      "sha256": "db618ff1ee3b040bb0f1f0807aefe14661374b63df42317163e639704dd75f89"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E01P03.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep01_Potion-of-Flight/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E01P03.jpg",
+      "size": 301876,
+      "sha256": "1acd1dc082f1d7bd02277e8334235d5c41efa0c5e411cf693590a545d02e4e17"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E01P04.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep01_Potion-of-Flight/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E01P04.jpg",
+      "size": 1258,
+      "sha256": "d58f4d23964283a2a47cd463dd577a8b191c2cd48e4ad8e93f9806bb7f60c441"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E02P00.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep02_Rainbow-potions/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E02P00.jpg",
+      "size": 45443,
+      "sha256": "7a8ae57c707d988f0c6ce3ae4a701b28c3b4855b970f8c1604f7e9f6b70e75d3"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E02P01.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep02_Rainbow-potions/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E02P01.jpg",
+      "size": 659990,
+      "sha256": "978b1d152c97bd89730491632a9b2714387096720264f2b9c7b9f7f90ea5f11c"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E02P02.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep02_Rainbow-potions/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E02P02.jpg",
+      "size": 538617,
+      "sha256": "859398609154cc48276fdc6ea1bf39e65f91982320311463e72c451a9c71cbf2"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E02P03.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep02_Rainbow-potions/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E02P03.jpg",
+      "size": 519420,
+      "sha256": "8069b79a9891a02d50f713161156b0d6826b46ed553547afaadbf7c83a6e8084"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E02P04.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep02_Rainbow-potions/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E02P04.jpg",
+      "size": 511871,
+      "sha256": "3433ec65659508aea3aa3893af6020fdf620203d2a2f53ccab195082d8e33e72"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E02P05.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep02_Rainbow-potions/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E02P05.jpg",
+      "size": 439206,
+      "sha256": "c6b28ea1f34855ed8498aa2201702a4962c4b5f8a272db7be0072655bb546a8e"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E02P06.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep02_Rainbow-potions/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E02P06.jpg",
+      "size": 157685,
+      "sha256": "1a269aa6e1544aaeac94086951c7ca0bfc2a57e4b6ed78e7ea1689957efaf4b5"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E03P00.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep03_The-secret-ingredients/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E03P00.jpg",
+      "size": 43673,
+      "sha256": "aab0383eeeed8867898cc5c62c1dcab892adcf997488f48e9bfd2765aabd7646"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E03P01.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep03_The-secret-ingredients/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E03P01.jpg",
+      "size": 796648,
+      "sha256": "2d9dcc79969986dc39bcc3f2507895e53121d947b6c1469265894e20a62642ca"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E03P02.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep03_The-secret-ingredients/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E03P02.jpg",
+      "size": 728519,
+      "sha256": "b2247715e1c426780cb5ae9acc4e22ade37573484ef8f813f0d091b837db7854"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E03P03.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep03_The-secret-ingredients/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E03P03.jpg",
+      "size": 460222,
+      "sha256": "8c3de845b9dd7c4cf3d81145221d47401854dad79fdfbb98fa0a5183bf06f016"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E03P04.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep03_The-secret-ingredients/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E03P04.jpg",
+      "size": 573240,
+      "sha256": "974014a2c9ea3546541e19d27934cebccc684c255ac06d409036d54cc5d39ae8"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E03P05.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep03_The-secret-ingredients/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E03P05.jpg",
+      "size": 777314,
+      "sha256": "0ce494d2ae88d11cac74d8479ba8e7cb86dda4c3998393aaf23b89262b74d2af"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E03P06.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep03_The-secret-ingredients/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E03P06.jpg",
+      "size": 735418,
+      "sha256": "5d14b2aa0307646416799fcbd1a48fd989f8469075d1eef40074068e1d3db502"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E03P07.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep03_The-secret-ingredients/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E03P07.jpg",
+      "size": 585338,
+      "sha256": "23fffb8e9ae5d6dc8f63dd9419b323e8f232b915c5effb9f8ae2804cc6bbbffc"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E03P08.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep03_The-secret-ingredients/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E03P08.jpg",
+      "size": 433182,
+      "sha256": "14a9a2e2a2926e4ac40f516334e8713b8a001f56c2ca0e2926244a16d388af66"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E04P00.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep04_Stroke-of-genius/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E04P00.jpg",
+      "size": 51970,
+      "sha256": "b65c7feb45833eb01267456792da3fbf5ab64c311b3c151b1238f18ec964ead9"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E04P01.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep04_Stroke-of-genius/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E04P01.jpg",
+      "size": 577889,
+      "sha256": "085b2db6826271beea9203d6c555ca41f804801b12aace81580f4077560c631d"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E04P02.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep04_Stroke-of-genius/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E04P02.jpg",
+      "size": 660282,
+      "sha256": "75395f39777585199467d15dc28fa79b21069d94bddd0e162fae95d99abfd2f5"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E04P03.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep04_Stroke-of-genius/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E04P03.jpg",
+      "size": 606784,
+      "sha256": "6334cd2aadaf6e683446224730222ce5bb5c7d07b976a2eaed473ab62073353d"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E04P04.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep04_Stroke-of-genius/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E04P04.jpg",
+      "size": 66535,
+      "sha256": "f517dc7bdd71e02a1953ff2cb9cee8f6e1297a8898216830617e5921a48261dc"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E04P06.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep04_Stroke-of-genius/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E04P06.jpg",
+      "size": 248967,
+      "sha256": "cc9679c55d0030a7c0a8d46a50c2cd86bf085e6beb242293e217439bf24de911"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E04P07.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep04_Stroke-of-genius/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E04P07.jpg",
+      "size": 604286,
+      "sha256": "af19dade2f3d0a5a7b0dfd639aa6b27e4d7e6d3a51edb7497197b1d9bc7e3750"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E04P08.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep04_Stroke-of-genius/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E04P08.jpg",
+      "size": 520462,
+      "sha256": "3ea7d6de6a66547810b24fbec4e2dd96380c9a130a831778aa73fd0640b09b46"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E05P00.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep05_Special-holiday-episode/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E05P00.jpg",
+      "size": 36576,
+      "sha256": "9657a29ad2cf59eb36129ec2cf13450d346d986e681a7e509c1de49bce927d3a"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E05P01.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep05_Special-holiday-episode/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E05P01.jpg",
+      "size": 412756,
+      "sha256": "24689c89fe16afeea807bef09ed5247518bfd579e064b8b08faace56435fb9b6"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E05P02.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep05_Special-holiday-episode/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E05P02.jpg",
+      "size": 344217,
+      "sha256": "8b0f5e2654f1aeeb5d6dbb740937926b441e9ea6e8e5f5f14fc76507d6e1e25e"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E05P03.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep05_Special-holiday-episode/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E05P03.jpg",
+      "size": 449093,
+      "sha256": "8e0ac628a28b0df6bb6ca427e1bfbf19d4dbfb612c037f39aa7cc2ae9d549dd9"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E05P04.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep05_Special-holiday-episode/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E05P04.jpg",
+      "size": 209036,
+      "sha256": "0ea85c43bd9b9c92d09fbbeb40090265cbed1bce098fd73f250cf04c048e362b"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E05P05.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep05_Special-holiday-episode/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E05P05.jpg",
+      "size": 443996,
+      "sha256": "e913c78ad2dd8512d7540dd98fa25912c3d564d6f90132eae3ebd520ba69816a"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E06P00.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep06_The-Potion-Contest/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E06P00.jpg",
+      "size": 43332,
+      "sha256": "dd030ff85fa11b454577ef152e4364f949b52dd7b65fb8bd5bc3f2f613022312"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E06P01.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep06_The-Potion-Contest/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E06P01.jpg",
+      "size": 507498,
+      "sha256": "91d12dbe4aabdf91e02b9fbea5a50ea8f9d041ee06a2fe492f4c2413452497c1"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E06P02.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep06_The-Potion-Contest/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E06P02.jpg",
+      "size": 477772,
+      "sha256": "a0b8c94bb44e20697f9ffa294580d61ab6976f8e6675228669d4043cf00a04ad"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E06P03.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep06_The-Potion-Contest/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E06P03.jpg",
+      "size": 529386,
+      "sha256": "26464b4a6f6ad3f5b47a7741c6268e86309ebae10e1e5d5d09ef2a5928a3ba5f"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E06P04.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep06_The-Potion-Contest/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E06P04.jpg",
+      "size": 701346,
+      "sha256": "3c0bcba973f95a0cf45ccf4e27234141a753df09c750df26cc0735cb6b3032d2"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E06P05.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep06_The-Potion-Contest/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E06P05.jpg",
+      "size": 709709,
+      "sha256": "c18fb6e8beaec12af78ecf218668e2d70cf8a85c1a92608f701b34743e7184fc"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E06P06.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep06_The-Potion-Contest/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E06P06.jpg",
+      "size": 690123,
+      "sha256": "8e6bb77014fc97f6980042065b991cb62c10cb701a0a5dbbbfe20d7b719a2a37"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E06P07.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep06_The-Potion-Contest/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E06P07.jpg",
+      "size": 775756,
+      "sha256": "9a36f3cfa0060d4183a6c3e30388d6b3bb8b0280df4eeeb54f7a1d5eb1b7acbb"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E06P08.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep06_The-Potion-Contest/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E06P08.jpg",
+      "size": 605762,
+      "sha256": "35029853ce10b7f8a665d6003050c341831cdf0b74d3c181c3f67087e456f908"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E06P09.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep06_The-Potion-Contest/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E06P09.jpg",
+      "size": 612165,
+      "sha256": "d5d21346fb7066399ce177a95350b58ec2f93e8fc4833f1ce14cb0fe2e58ef12"
+    },
+    "peppercarrot/fr_Pepper-and-Carrot_by-David-Revoy_E06P10.jpg": {
+      "url": "https://www.peppercarrot.com/0_sources/ep06_The-Potion-Contest/low-res/fr_Pepper-and-Carrot_by-David-Revoy_E06P10.jpg",
+      "size": 540868,
+      "sha256": "8f98ad1e7f5ec60942a5d4b071fdcd0a90e30e082fbc36b5d9ab0dc925ac347b"
+    },
+    "pg17489-images-3.epub": {
+      "url": "https://www.gutenberg.org/cache/epub/17489/pg17489-images-3.epub",
+      "size": 349831,
+      "sha256": "07316c83c56abcdb74657d10e31f5bca574df25e49e82ebfe26ad2a5f328abb0"
+    },
+    "pg17493-images-3.epub": {
+      "url": "https://www.gutenberg.org/cache/epub/17493/pg17493-images-3.epub",
+      "size": 320161,
+      "sha256": "a23707ac103b147c3ed4a03ce936459ada9318c738582dba0c790ff97678288a"
+    },
+    "pg17494-images-3.epub": {
+      "url": "https://www.gutenberg.org/cache/epub/17494/pg17494-images-3.epub",
+      "size": 298888,
+      "sha256": "beb12a111c72b5db9cdad300ed58c95a214a4303ad7ce3aeae603be8d4db9b79"
+    },
+    "pg17518-images-3.epub": {
+      "url": "https://www.gutenberg.org/cache/epub/17518/pg17518-images-3.epub",
+      "size": 402179,
+      "sha256": "b7c07eefbaeb8c8eb6a2369fe67e2685c2579fd8afbc0f082a7b9fd0b8c646e0"
+    },
+    "pg17519-images-3.epub": {
+      "url": "https://www.gutenberg.org/cache/epub/17519/pg17519-images-3.epub",
+      "size": 351402,
+      "sha256": "0d1af53a4667725de3228e63b3b400f1f8533315c1bf177dc0938b226ee6010a"
+    },
+    "pg54873-images-3.epub": {
+      "url": "https://www.gutenberg.org/cache/epub/54873/pg54873-images-3.epub",
+      "size": 29877734,
+      "sha256": "c83b25ca602521537969612944695dcd4f88918a8308aabbe9cfcd4b289ae331"
+    },
+    "photos/2 Place de l'Opéra, Paris, West view 20220409.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/2_Place_de_l%27Op%C3%A9ra%2C_Paris%2C_West_view_20220409.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 8333135,
+      "sha256": "01480a9eb5029af0588cec7a84149c9a78b60d48a4450fe89777690df9a8f23e"
+    },
+    "photos/2012-09-23 Kerascoêt village (7).jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/2012-09-23_Kerasco%C3%AAt_village_%287%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 10445585,
+      "sha256": "99f894d361b4eba2e81d4af84b654f2e86c2736b8494220630bc8faaebd21b55"
+    },
+    "photos/2017-07-31 France, Paris DSC 3052 DxO.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/2017-07-31_France%2C_Paris_DSC_3052_DxO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 8301598,
+      "sha256": "ada75d204c6784b3464aed3a3fbafdbfcc8016bd5ae6c621b48b092b88196e11"
+    },
+    "photos/38 rue Barbet-de-Jouy Paris.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/38_rue_Barbet-de-Jouy_Paris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 5697603,
+      "sha256": "47b47652d54ae6d3d05cac282fd549253b6fd1552474a12d8c3c43451bbd167a"
+    },
+    "photos/4 rue Fabert Paris.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/4_rue_Fabert_Paris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 7809503,
+      "sha256": "2414be572843a3757f5f7b9fe0cdd4c478d486d82746f175f639a4f5cb9b27df"
+    },
+    "photos/Abbaye Saint-Ouen de Rouen as seen from Gros Horloge 140215 3.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Abbaye_Saint-Ouen_de_Rouen_as_seen_from_Gros_Horloge_140215_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 10164022,
+      "sha256": "e99ac0adebd93dcd79ccd0b7827de5a499d0850f33715289b1e386222ff254cc"
+    },
+    "photos/Abbaye Saint-Ouen de Rouen, South-West View from Mont Gargan 140215 3.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Abbaye_Saint-Ouen_de_Rouen%2C_South-West_View_from_Mont_Gargan_140215_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 9954555,
+      "sha256": "34a059426453320bcc4648faeca9cf15da4b35a3b9b71b6f0251b07519c5036d"
+    },
+    "photos/Abbaye Saint-Ouen de Rouen, West View 140215 2.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Abbaye_Saint-Ouen_de_Rouen%2C_West_View_140215_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 7857757,
+      "sha256": "0f06b2333af8a830103120824379661935d8ece684063f0fe36806745372071d"
+    },
+    "photos/Anctoville-sur-Boscq – Église Saint-Martin – Baie 1 – Ordination de saint Martin 2025 08 19.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Anctoville-sur-Boscq_%E2%80%93_%C3%89glise_Saint-Martin_%E2%80%93_Baie_1_%E2%80%93_Ordination_de_saint_Martin_2025_08_19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 10000100,
+      "sha256": "8c0511d6efe6a3ecf34a4bced676283a6857405277e607c91420cfb437b2b23a"
+    },
+    "photos/Anctoville-sur-Boscq – Église Saint-Martin – Baie 2 – Charité de Saint Martin 2025 08 19.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Anctoville-sur-Boscq_%E2%80%93_%C3%89glise_Saint-Martin_%E2%80%93_Baie_2_%E2%80%93_Charit%C3%A9_de_Saint_Martin_2025_08_19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 9823774,
+      "sha256": "1c05c472c7e6be78e2dbfae9a7b7fde880b0c268044f266f0c3a7aed44ad6e5e"
+    },
+    "photos/Anctoville-sur-Boscq – Église Saint-Martin – Intérieur 2025 08 19.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Anctoville-sur-Boscq_%E2%80%93_%C3%89glise_Saint-Martin_%E2%80%93_Int%C3%A9rieur_2025_08_19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 9928071,
+      "sha256": "ed37e2aceab13b9bfe0d2951395e991929e28ad3efa2fb4498034c831b205731"
+    },
+    "photos/Anctoville-sur-Boscq – Église Saint-Martin – Nef 2025 08 19.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Anctoville-sur-Boscq_%E2%80%93_%C3%89glise_Saint-Martin_%E2%80%93_Nef_2025_08_19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 10631955,
+      "sha256": "5b5f7b2e3b5bc9520484b903006cea2a0c2bcdfda710d314d445a5774d369ec5"
+    },
+    "photos/Anctoville-sur-Boscq – Église Saint-Martin – Nef II 2025 08 19.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Anctoville-sur-Boscq_%E2%80%93_%C3%89glise_Saint-Martin_%E2%80%93_Nef_II_2025_08_19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 11026248,
+      "sha256": "94c9bc5d82d5aac91a90bc090943cc1f720b77fc4d72b11fa12732ad7a18f963"
+    },
+    "photos/Chamonix - Lac Blanc 4.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Chamonix_-_Lac_Blanc_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 6819155,
+      "sha256": "820ecbe4a34c0598fd380fc1c3a06306ca94fcacfe500c79340bb1be425326e7"
+    },
+    "photos/Chamonix - Lac Blanc 6.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Chamonix_-_Lac_Blanc_6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 3607578,
+      "sha256": "2e8eb9307736d3a12d328f105567a928d221f1b7a1091c109dd52ac9cbde3ad0"
+    },
+    "photos/Chamonix - trail 7.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Chamonix_-_trail_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 6923308,
+      "sha256": "03e910e878c16580551249631eca4f8cee15abfa82569f26aa21f7ee386dc9bb"
+    },
+    "photos/Champ-de-Mars - 20150801 15h29 (10620).jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Champ-de-Mars_-_20150801_15h29_%2810620%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 9249944,
+      "sha256": "f396487aaa1be4ef2708d583389aaca70d0cd1afecf85aac3d72cd3068a96e3d"
+    },
+    "photos/Clocktower of Abbaye Saint-Ouen, South-East View 20140215 1.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Clocktower_of_Abbaye_Saint-Ouen%2C_South-East_View_20140215_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 4747670,
+      "sha256": "5be23e045aaffead608b0d7359ad776b25b3d5b77b4b5fd6b53ed1cca7996cc6"
+    },
+    "photos/Commode (Paris, 1775) - Musée des arts décoratifs (Paris) 20210629 152946.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Commode_%28Paris%2C_1775%29_-_Mus%C3%A9e_des_arts_d%C3%A9coratifs_%28Paris%29_20210629_152946.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 4622285,
+      "sha256": "23301dfa5784f12a28cd98757efba859d9446cf5d77fe967ec4ea1bbd0e533af"
+    },
+    "photos/Gare de Paris-Saint-Lazare, West View, Paris 8e 20140223.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Gare_de_Paris-Saint-Lazare%2C_West_View%2C_Paris_8e_20140223.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 7468311,
+      "sha256": "adee679238f99bf566cf82bf88540183ff9a15c2647a3718785056fd9c59195d"
+    },
+    "photos/Gare de Rouen Rive-Droite, South View 140215 1.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Gare_de_Rouen_Rive-Droite%2C_South_View_140215_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 4509105,
+      "sha256": "f0bd3341718c76dc56c6848c306ee7c8dd02823950090996353b465310853ff0"
+    },
+    "photos/Hôtel de Ville de Rouen, West View 140215 5.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/H%C3%B4tel_de_Ville_de_Rouen%2C_West_View_140215_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 6800385,
+      "sha256": "e74f7a1ab8cb9a4b82783a051b5fcba55b27dea49c4a60100378e5d298d2e135"
+    },
+    "photos/Hotel Edouard 7 - Paris - Opéra.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Hotel_Edouard_7_-_Paris_-_Op%C3%A9ra.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 3132473,
+      "sha256": "8def8aa7f03c0e7978824a93fff89570526925f83b069b754a76fe2a55dd3e5f"
+    },
+    "photos/Knutt (juvenil) 07.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Knutt_%28juvenil%29_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 5727647,
+      "sha256": "c1bb6f5177e23399f6398f4fcc489b5c323c1bfc255348ceeea677896f99aaf4"
+    },
+    "photos/Lac Blanc in Chamonix.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Lac_Blanc_in_Chamonix.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 5940832,
+      "sha256": "1b55f8d690618797a552aebeba6aa32d36106341528e62395a389c7a73f3b661"
+    },
+    "photos/Lacs des Chéserys 3.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Lacs_des_Ch%C3%A9serys_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 2303835,
+      "sha256": "c30725dfc29869c1fc0bc95aef79906e9e14219d27526944e012a469abc809a4"
+    },
+    "photos/Mountain hillside, Chamonix.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Mountain_hillside%2C_Chamonix.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 4997204,
+      "sha256": "b30d1f18550b6e54bc242b2cb56112204d4f5fee02ad5f94ea0d413e79634bc0"
+    },
+    "photos/Saint-Pol-de-Léon - Place de l'Été 1944 - Monument aux déportés et fusillés de Saint-Pol-de-Léon.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Saint-Pol-de-L%C3%A9on_-_Place_de_l%27%C3%89t%C3%A9_1944_-_Monument_aux_d%C3%A9port%C3%A9s_et_fusill%C3%A9s_de_Saint-Pol-de-L%C3%A9on.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 3915559,
+      "sha256": "8bb77432d79f47fc9986aaa80c3c39759421ac6b04f7b1864c11868b87ca51be"
+    },
+    "photos/Sizun - Croix de Kerféos 01.jpg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Sizun_-_Croix_de_Kerf%C3%A9os_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "size": 4565489,
+      "sha256": "491f6b11d6b1873f1baba123bdeb2935a41106fb8eb52e96af00a41d56285aaa"
+    },
+    "Prelude Op. 28 no. 1.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%201.mp3",
+      "size": 800976,
+      "sha256": "a22469156f43f84b0220d2fba39c8f720c6ff7e76e774c3eccc58189792f4524"
+    },
+    "Prelude Op. 28 no. 10.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2010.mp3",
+      "size": 645144,
+      "sha256": "1d82e8eb57ca2fb3a7bde459db5ffca2ae11fce7ce95670725561e55eecc7cdc"
+    },
+    "Prelude Op. 28 no. 11.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2011.mp3",
+      "size": 901464,
+      "sha256": "59e63cbefb0fca7bb28f19ab423c721c04156c6c252bc4e2d671ae5467fa43cd"
+    },
+    "Prelude Op. 28 no. 12.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2012.mp3",
+      "size": 1704264,
+      "sha256": "b553a40733b5ad49fd28e80a3b4ff33a8fd97a2decc9c3af0176a5ab1c2ee8c6"
+    },
+    "Prelude Op. 28 no. 13.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2013.mp3",
+      "size": 3191640,
+      "sha256": "87bff25cd09155960075b44579dc9e7ce04284240733ce87944c0a90b0c27ff1"
+    },
+    "Prelude Op. 28 no. 14.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2014.mp3",
+      "size": 730560,
+      "sha256": "7cb586a5b13bb7e57f2e816e848a78edac551fef5bfa2da8163935253f50c6e0"
+    },
+    "Prelude Op. 28 no. 15.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2015.mp3",
+      "size": 5668200,
+      "sha256": "25500f881fd4c9e1de5bd82f1c79a9e8b7b8f8ae574296db2c407ba706b0731e"
+    },
+    "Prelude Op. 28 no. 16.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2016.mp3",
+      "size": 1745832,
+      "sha256": "6bc752bff166a4ac5512ce9b3a76bcf2e6511e4b3adb361ebf94e4087cc82b31"
+    },
+    "Prelude Op. 28 no. 17.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2017.mp3",
+      "size": 3657168,
+      "sha256": "53553198bc73040cd59428ec9d6026807c85dbdedcec7c410794605c32ed24ba"
+    },
+    "Prelude Op. 28 no. 18.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2018.mp3",
+      "size": 1764048,
+      "sha256": "9386efeaf5db80f60a17136bb5062183d171d74fef4abf5192a052b5ee31fa51"
+    },
+    "Prelude Op. 28 no. 19.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2019.mp3",
+      "size": 5472720,
+      "sha256": "d2e7d1d38d334cea648d25c3e1a129f39cf423380206fb7c2729bfda3e99d675"
+    },
+    "Prelude Op. 28 no. 21.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2021.mp3",
+      "size": 2311008,
+      "sha256": "f071c64b30b061f3bf59536839b91fb65bcb708f935a5b9a9198637a39997d7c"
+    },
+    "Prelude Op. 28 no. 22.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2022.mp3",
+      "size": 1383720,
+      "sha256": "7337acc8d7a85476aa6bc21bd71c8986d62ac6bb058bbb26c379cf5b0784931f"
+    },
+    "Prelude Op. 28 no. 23.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2023.mp3",
+      "size": 1214616,
+      "sha256": "cf280c80155ef3a2b311a49ee039775aaa55e78785170e70d8cbfe0d18d9f3df"
+    },
+    "Prelude Op. 28 no. 24.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%2024.mp3",
+      "size": 3560880,
+      "sha256": "7deea3f73dbc5865c352c9277f3c6c38805bfb377cc7b9aa76b0c538daac64d3"
+    },
+    "Prelude Op. 28 no. 5.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%205.mp3",
+      "size": 816456,
+      "sha256": "f51b3916ca6e9e48026e53fdbac6d93311fa1ecff6b168aa1dcac0358cb250dd"
+    },
+    "Prelude Op. 28 no. 6.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%206.mp3",
+      "size": 2053944,
+      "sha256": "c44a90af86bd522d24da342eada8c59288543d67321606ffc41a325c5d666838"
+    },
+    "Prelude Op. 28 no. 7.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%207.mp3",
+      "size": 3254544,
+      "sha256": "c40fcc49cc4ca91719e1c7178522a36b64837cf02d34806a0e62eac86073bea2"
+    },
+    "Prelude Op. 28 no. 9.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.%209.mp3",
+      "size": 1599336,
+      "sha256": "81fc9314a160335c29fc321ab3426aa3b6ecaa6b25b90b8eec63f51cda27c1c4"
+    },
+    "Prelude Op. 28 no.3.mp3": {
+      "url": "https://archive.org/download/musopen-chopin/Prelude%20Op.%2028%20no.3.mp3",
+      "size": 1161720,
+      "sha256": "6d915ff4d9ed33b37f3a58fe3f4fb98933d128e8162beef4afd69e6d9dc63934"
+    },
+    "Sintel (2010).fr.srt": {
+      "url": "https://download.blender.org/durian/subs/sintel_fr.srt",
+      "size": 1728,
+      "sha256": "9a15ca906821342af2b34aa324130272aec911733bd0465c619b95474753062a"
+    },
+    "Sintel (2010).ja.srt": {
+      "url": "https://download.blender.org/durian/subs/sintel_jp.srt",
+      "size": 1750,
+      "sha256": "865182d78d9d5df40192df19a1d0d91addcab91567bce08f7736bd9cd4086f0a"
+    },
+    "Sintel (2010).nl.srt": {
+      "url": "https://download.blender.org/durian/subs/sintel_nl.srt",
+      "size": 1531,
+      "sha256": "af6991a33a1721e91eff07310437722f4db4cb9bcc705090c7615f02b6329d24"
+    },
+    "Sintel (2010).pl.srt": {
+      "url": "https://download.blender.org/durian/subs/sintel_pl.srt",
+      "size": 1606,
+      "sha256": "6ae63dc9638ecd4e416d7ce130b57ffef58818078ff5749d0e1b2ffb6996ba19"
+    },
+    "Sintel (2010).ru.srt": {
+      "url": "https://download.blender.org/durian/subs/sintel_ru.srt",
+      "size": 2016,
+      "sha256": "8e6f8d3416971add6698cc1c3938504752e0f812711f1ac366e4a2ab3b305ba4"
+    },
+    "Sintel.2010.720p.mkv.zip": {
+      "url": "https://download.blender.org/durian/movies/Sintel.2010.720p.mkv.zip",
+      "size": 681285470,
+      "sha256": "d252f898641b20f51c64206f31063e659c28b152a9d988936736d1b56e6e4db3"
+    },
+    "springopenmovie.mp4": {
+      "url": "https://archive.org/download/springopenmovie/springopenmovie.mp4",
+      "size": 90190341,
+      "sha256": "c4965c017428ce5ac5c0d51e52692505842f4cb3c0b582c8bbb7cc4e056a5931"
+    },
+    "tears_of_steel_1080p.webm.zip": {
+      "url": "https://download.blender.org/demo/movies/ToS/tears_of_steel_1080p.webm.zip",
+      "size": 571346776,
+      "sha256": "992ce5ea61b17f0e1b1c0ad8912bc6dd351a6ee7cf4c1612916e6f1a2442619a"
+    },
+    "TOS-de.srt": {
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-de.srt",
+      "size": 4851,
+      "sha256": "666685daa9064a5a59144e47bddd2d570bbdda199df6e4e39f3273e479ab1f4b"
+    },
+    "TOS-en.srt": {
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-en.srt",
+      "size": 4764,
+      "sha256": "ce9578f6fe098a5821045a38884b229160f9e7ba27890448a92f5be330c6e6fe"
+    },
+    "TOS-es.srt": {
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-es.srt",
+      "size": 4948,
+      "sha256": "b1936989cf42eda28988ec9120a80b7303562ea6429e49441160ba688da39a5c"
+    },
+    "TOS-fr-orig.srt": {
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-fr-orig.srt",
+      "size": 4908,
+      "sha256": "94cc887d34c83ee909dfe141edaccc2afc1ae8c23c7929b60e2f73905968c708"
+    },
+    "TOS-it.srt": {
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-it.srt",
+      "size": 4744,
+      "sha256": "6b8f6023b88b16acadea52d1664aa92ef132d7481e3e1957f1f334260477c870"
+    },
+    "TOS-JP.srt": {
+      "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-JP.srt",
+      "size": 4965,
+      "sha256": "dae49f0d9231c93a3ca02f02ab08023a4e5379aa8dfa9e22f78bc40d8754ad74"
+    }
+  },
+  "selections": {
+    "books/little-nemo": [
+      "File:Little Nemo 1905-10-15.jpg",
+      "File:Little Nemo in Slumberland (1905-10-22).jpeg",
+      "File:Little Nemo 1905-10-29.jpg",
+      "File:Little Nemo 1905-11-05.jpg",
+      "File:Little Nemo 1905-11-12.jpg",
+      "File:Little Nemo 1905-11-19.jpg",
+      "File:Little Nemo 1905-11-26.jpg",
+      "File:Little Nemo 1905-12-03.jpg",
+      "File:Little Nemo 1905-12-10.jpg",
+      "File:Little Nemo 1905-12-17.jpg",
+      "File:Little Nemo 1905-12-24.jpg",
+      "File:Little Nemo 1905-12-31.jpg",
+      "File:Little Nemo 1906-01-07.jpg",
+      "File:Little Nemo 1906-01-14.jpg",
+      "File:Little Nemo 1906-01-21.jpg",
+      "File:Little Nemo 1906-02-04.jpg",
+      "File:Little Nemo 1906-02-11.jpg",
+      "File:Little Nemo 1906-02-25.jpg",
+      "File:Little Nemo 1906-03-04.jpg",
+      "File:Little Nemo 1906-03-18.jpg",
+      "File:Little Nemo 1906-03-25.jpg",
+      "File:Little Nemo 1906-04-01.jpg",
+      "File:Little Nemo 1906-04-08.jpg",
+      "File:Little Nemo 1906-04-15.jpg"
+    ],
+    "photos/Alps/Chamonix": [
+      "File:Chamonix - Lac Blanc 4.jpg",
+      "File:Chamonix - Lac Blanc 6.jpg",
+      "File:Chamonix - trail 7.jpg",
+      "File:Lac Blanc in Chamonix.jpg",
+      "File:Lacs des Chéserys 3.jpg",
+      "File:Mountain hillside, Chamonix.jpg"
+    ],
+    "photos/Brittany/Finistère": [
+      "File:2012-09-23 Kerascoêt village (7).jpg",
+      "File:Knutt (juvenil) 07.jpg",
+      "File:Saint-Pol-de-Léon - Place de l'Été 1944 - Monument aux déportés et fusillés de Saint-Pol-de-Léon.jpg",
+      "File:Sizun - Croix de Kerféos 01.jpg"
+    ],
+    "photos/Normandy/Manche": [
+      "File:Anctoville-sur-Boscq – Église Saint-Martin – Baie 1 – Ordination de saint Martin 2025 08 19.jpg",
+      "File:Anctoville-sur-Boscq – Église Saint-Martin – Baie 2 – Charité de Saint Martin 2025 08 19.jpg",
+      "File:Anctoville-sur-Boscq – Église Saint-Martin – Intérieur 2025 08 19.jpg",
+      "File:Anctoville-sur-Boscq – Église Saint-Martin – Nef 2025 08 19.jpg",
+      "File:Anctoville-sur-Boscq – Église Saint-Martin – Nef II 2025 08 19.jpg"
+    ],
+    "photos/Normandy/Rouen": [
+      "File:Abbaye Saint-Ouen de Rouen as seen from Gros Horloge 140215 3.jpg",
+      "File:Abbaye Saint-Ouen de Rouen, South-West View from Mont Gargan 140215 3.jpg",
+      "File:Abbaye Saint-Ouen de Rouen, West View 140215 2.jpg",
+      "File:Clocktower of Abbaye Saint-Ouen, South-East View 20140215 1.jpg",
+      "File:Gare de Rouen Rive-Droite, South View 140215 1.jpg",
+      "File:Hôtel de Ville de Rouen, West View 140215 5.jpg"
+    ],
+    "photos/Paris": [
+      "File:2 Place de l'Opéra, Paris, West view 20220409.jpg",
+      "File:2017-07-31 France, Paris DSC 3052 DxO.jpg",
+      "File:38 rue Barbet-de-Jouy Paris.jpg",
+      "File:4 rue Fabert Paris.jpg",
+      "File:Champ-de-Mars - 20150801 15h29 (10620).jpg",
+      "File:Commode (Paris, 1775) - Musée des arts décoratifs (Paris) 20210629 152946.jpg",
+      "File:Gare de Paris-Saint-Lazare, West View, Paris 8e 20140223.jpg",
+      "File:Hotel Edouard 7 - Paris - Opéra.jpg"
+    ]
+  }
+}
