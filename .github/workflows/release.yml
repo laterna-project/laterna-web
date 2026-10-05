@@ -1,0 +1,98 @@
+name: Release
+
+# A version tag builds the static client, checks the archive, then publishes the release. Run by
+# hand, it builds the same archives as a workflow artifact and publishes nothing.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Archives
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: A release is tagged on main, with the version of package.json
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if [ "v$version" != "${GITHUB_REF_NAME%%-*}" ]; then
+            echo "::error::$GITHUB_REF_NAME does not match package.json ($version)"
+            exit 1
+          fi
+          # Pre-releases (v1.2.0-rc.1) are tagged on their release branch.
+          case "$GITHUB_REF_NAME" in *-*) exit 0 ;; esac
+          git fetch origin main
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" origin/main; then
+            echo "::error::$GITHUB_REF_NAME does not point at a commit of main"
+            exit 1
+          fi
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - name: Archives
+        run: |
+          if [ "$GITHUB_REF_TYPE" = tag ]; then version=${GITHUB_REF_NAME#v}; else version="$(node -p "require('./package.json').version")-snapshot"; fi
+          name="laterna-web-$version"
+          mkdir -p "release/$name"
+          cp -r dist/. "release/$name/"
+          cp LICENSE README.md "release/$name/"
+          node scripts/licenses.mjs "release/$name/THIRD_PARTY_LICENSES.md"
+          (cd release && tar -czf "$name.tar.gz" "$name" && zip -qr "$name.zip" "$name")
+          (cd release && sha256sum "$name.tar.gz" "$name.zip" > checksums.txt)
+          echo "NAME=$name" >> "$GITHUB_ENV"
+      - name: Try the archive
+        run: |
+          mkdir -p "$RUNNER_TEMP/try"
+          tar -xzf "release/$NAME.tar.gz" -C "$RUNNER_TEMP/try"
+          node scripts/smoke-test.mjs "$RUNNER_TEMP/try/$NAME"
+          (cd release && sha256sum -c checksums.txt)
+      - name: Snapshot
+        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: ${{ env.NAME }}
+          path: |
+            release/*.tar.gz
+            release/*.zip
+            release/checksums.txt
+      - name: Upload to a draft release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          prerelease=""
+          case "$GITHUB_REF_NAME" in *-*) prerelease="--prerelease" ;; esac
+          gh release create "$GITHUB_REF_NAME" --draft --verify-tag --generate-notes $prerelease \
+            --title "$GITHUB_REF_NAME" \
+            "release/$NAME.tar.gz" "release/$NAME.zip" release/checksums.txt
+      - name: Provenance
+        # Artifact attestations need a public repository.
+        if: ${{ startsWith(github.ref, 'refs/tags/') && !github.event.repository.private }}
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-checksums: release/checksums.txt
+      - name: Publish the release
+        if: startsWith(github.ref, 'refs/tags/')
+        run: gh release edit "$GITHUB_REF_NAME" --draft=false
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
