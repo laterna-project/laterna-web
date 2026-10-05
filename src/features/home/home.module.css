@@ -1,0 +1,360 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Background of the server theme: the image, veiled with the app's background so the text stays readable. */
+.banner {
+  position: relative;
+  isolation: isolate;
+  padding: var(--space-10) var(--space-8);
+  overflow: hidden;
+  border-radius: var(--radius-2xl);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    var(--color-canvas) 30%,
+    color-mix(in srgb, var(--color-canvas) 55%, transparent)
+  );
+}
+
+.title {
+  font-size: var(--text-3xl);
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
+}
+
+.lead {
+  font-size: var(--text-lg);
+  color: var(--color-ink-muted);
+}
+
+.empty {
+  max-width: 640px;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  color: var(--color-ink-muted);
+}
+
+/* Blocks one under the other, with no colored block: only the resume card stands out. */
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-5);
+  min-height: var(--control-sm);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-xl);
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
+}
+
+.dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-pill);
+}
+
+/* Tabs of recently added: like the header's sections. */
+.tabs {
+  display: flex;
+  gap: var(--space-1);
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tab {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--control-sm);
+  padding: 0 14px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-ink);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-heavy);
+  cursor: pointer;
+}
+
+.tab:hover {
+  background: var(--color-surface-sunken);
+}
+
+.tab[aria-selected="true"] {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+.tab .dot {
+  width: 8px;
+  height: 8px;
+}
+
+.tab[aria-selected="true"] .dot {
+  display: none;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: var(--space-2);
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-heavy);
+}
+
+.more:hover {
+  color: var(--color-ink);
+}
+
+.scroll {
+  display: grid;
+  place-items: center;
+  width: var(--control-sm);
+  height: var(--control-sm);
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.scroll:hover:not(:disabled) {
+  background: var(--color-surface-sunken);
+}
+
+.scroll:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.scrollBack svg {
+  transform: scaleX(-1);
+}
+
+/* Scrolling strip on one line; the margin shows the cards' elevation and outline. */
+.strip {
+  display: flex;
+  gap: var(--space-5);
+  margin: calc(-1 * var(--space-2));
+  padding: var(--space-2) var(--space-2) var(--space-3);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--space-2);
+  list-style: none;
+  scrollbar-width: none;
+}
+
+.strip > li {
+  flex: none;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.posters > li,
+.albums > li {
+  width: 180px;
+}
+
+.episodes > li {
+  width: 280px;
+}
+
+.books > li {
+  width: 150px;
+}
+
+.photos {
+  gap: var(--space-2);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  color: var(--color-ink);
+}
+
+.art {
+  position: relative;
+  display: block;
+  transition: transform var(--duration-normal) var(--ease-standard);
+}
+
+.card:hover .art {
+  transform: translateY(-3px);
+}
+
+.cardTitle {
+  display: block;
+  margin-top: 6px;
+  overflow: hidden;
+  font-size: var(--text-md);
+  font-weight: var(--weight-heavy);
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.muted {
+  display: block;
+  overflow: hidden;
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chip {
+  position: absolute;
+  bottom: var(--space-2);
+  left: var(--space-2);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--color-series-soft);
+  color: var(--color-series-text);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-heavy);
+}
+
+/* Progress over the image of a started playback, and a button to resume it. */
+.bar {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  height: 5px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+}
+
+.bar > span {
+  display: block;
+  height: 100%;
+}
+
+.cardPlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: var(--control-md);
+  height: var(--control-md);
+  padding-left: 3px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-card);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition:
+    opacity var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.card:hover .cardPlay,
+.cardPlay:focus-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+@media (hover: none) {
+  .cardPlay {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Loading */
+.skeleton {
+  min-height: 260px;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-sunken);
+}
+
+.skeletonTitle {
+  width: 360px;
+  max-width: 100%;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-sunken);
+}
+
+@media (max-width: 767px) {
+  .posters > li,
+  .albums > li {
+    width: 140px;
+  }
+
+  .episodes > li {
+    width: 240px;
+  }
+
+  .books > li {
+    width: 120px;
+  }
+}
