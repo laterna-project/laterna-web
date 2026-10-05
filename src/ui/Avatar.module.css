@@ -1,0 +1,35 @@
+.avatar {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  font-weight: var(--weight-heavy);
+  line-height: 1;
+}
+
+.sm {
+  width: var(--control-md);
+  height: var(--control-md);
+  font-size: 18px;
+}
+
+.md {
+  width: 72px;
+  height: 72px;
+  font-size: 30px;
+}
+
+.xl {
+  width: 160px;
+  height: 160px;
+  font-size: 64px;
+}
+
+@media (max-width: 767px) {
+  .xl {
+    width: 112px;
+    height: 112px;
+    font-size: 44px;
+  }
+}

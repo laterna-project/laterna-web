@@ -1,0 +1,128 @@
+.page {
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 var(--page-gutter);
+}
+
+.server {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: 14px;
+  color: var(--color-ink-muted);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-10) var(--page-gutter);
+  text-align: center;
+}
+
+.title {
+  font-size: var(--text-4xl);
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
+}
+
+.lead {
+  margin-top: calc(var(--space-4) * -1);
+  font-size: var(--text-lg);
+  color: var(--color-ink-muted);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-8);
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  border: none;
+  border-radius: var(--radius-xl);
+  background: transparent;
+}
+
+.profile > span:first-child {
+  transition:
+    transform var(--duration-normal) var(--ease-standard),
+    box-shadow var(--duration-normal) var(--ease-standard);
+}
+
+.profile:hover > span:first-child {
+  transform: translateY(-4px);
+}
+
+.profile[aria-pressed="true"] > span:first-child {
+  box-shadow:
+    0 0 0 5px var(--color-canvas),
+    0 0 0 9px var(--color-ink);
+}
+
+.name {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-heavy);
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+  min-height: 22px;
+}
+
+.badge {
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-sunken);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-strong);
+}
+
+.pin {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.pinLabel {
+  font-weight: var(--weight-heavy);
+}
+
+.pinInput {
+  width: 220px;
+  height: 56px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-sunken);
+  font-size: 28px;
+  letter-spacing: 0.4em;
+  text-align: center;
+}
+
+.pinHint {
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}

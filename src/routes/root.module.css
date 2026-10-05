@@ -1,0 +1,27 @@
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  max-width: 560px;
+  margin: 0 auto;
+  padding: var(--space-10) var(--page-gutter);
+}
+
+.title {
+  margin-top: var(--space-6);
+  font-size: var(--text-3xl);
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
+}
+
+.text {
+  color: var(--color-ink-muted);
+}
+
+.link {
+  font-weight: var(--weight-strong);
+  text-decoration: underline;
+}
