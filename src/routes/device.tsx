@@ -118,6 +118,7 @@ function PairDevice() {
               <input
                 id="device-code"
                 className={styles.code}
+                data-large
                 autoComplete="one-time-code"
                 autoCapitalize="characters"
                 spellCheck={false}

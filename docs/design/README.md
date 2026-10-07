@@ -15,4 +15,5 @@ refers to them as "server: docs/design/...".
 | [Internationalization](i18n.md) | Interface languages, catalogs, texts and errors composed by the server |
 | [Accessibility](accessibility.md) | WCAG 2.2 AA, the audit, focus, titles, panels, contrast |
 | [Readers](readers.md) | foliate-js for EPUB, pdf.js for PDF, the page reader |
+| [Devices and the installed app](devices.md) | Phones, tablets and computers, installing the app, the service worker, iPhone specifics |
 | [Sample media](sample-media.md) | The free sample libraries and the seed scripts used in development |

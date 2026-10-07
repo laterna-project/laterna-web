@@ -226,6 +226,52 @@ const paths = {
       <path d="M12 7.6v.1" />
     </>
   ),
+  // Sections, in the tab bar of phones.
+  home: <path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z" />,
+  discover: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M15.5 8.5 13.6 13.6 8.5 15.5l1.9-5.1z" />
+    </>
+  ),
+  film: (
+    <>
+      <rect x="3.5" y="4" width="17" height="16" rx="2.5" />
+      <path d="M7.5 4v16" />
+      <path d="M16.5 4v16" />
+      <path d="M3.5 12h4" />
+      <path d="M16.5 12h4" />
+    </>
+  ),
+  music: (
+    <>
+      <circle cx="7" cy="17.5" r="2.5" />
+      <circle cx="17.5" cy="15.5" r="2.5" />
+      <path d="M9.5 17.5V6.5l10.5-2.5v11.5" />
+    </>
+  ),
+  book: (
+    <>
+      <path d="M12 6.5C10 5 7.5 4.5 4 5v13.5c3.5-.5 6 0 8 1.5 2-1.5 4.5-2 8-1.5V5c-3.5-.5-6 0-8 1.5z" />
+      <path d="M12 6.5V20" />
+    </>
+  ),
+  photo: (
+    <>
+      <rect x="3.5" y="4.5" width="17" height="15" rx="2.5" />
+      <circle cx="9" cy="10" r="1.8" />
+      <path d="M20.5 15.5 16 11l-8.5 8.5" />
+    </>
+  ),
+  // The logo's four dots.
+  more: (
+    <>
+      <circle cx="7.5" cy="7.5" r="2.5" />
+      <circle cx="16.5" cy="7.5" r="2.5" />
+      <circle cx="7.5" cy="16.5" r="2.5" />
+      <circle cx="16.5" cy="16.5" r="2.5" />
+    </>
+  ),
 } as const;
 
 export type IconName = keyof typeof paths;

@@ -133,18 +133,12 @@
   }
 }
 
-@media (max-width: 767px) {
-  .header {
-    flex-wrap: wrap;
-    height: auto;
-    padding-top: var(--space-3);
-    padding-bottom: var(--space-3);
-  }
-
+/* Phones, and tablets held upright: the sections go to the tab bar, at the bottom of the screen.
+   The same query in src/theme/global.css, src/music/music.module.css and
+   src/features/photos/photos.module.css. */
+@media (max-width: 767px), (max-width: 1023px) and (pointer: coarse) {
   .nav {
-    order: 3;
-    flex-basis: 100%;
-    overflow-x: auto;
+    display: none;
   }
 }
 
@@ -157,6 +151,148 @@
 /* Room under the page for the floating music player. */
 .main[data-music="true"] {
   padding-bottom: 120px;
+}
+
+/* --- Tab bar (phones, tablets held upright) --------------------------------------------------- */
+
+.tabBar {
+  display: none;
+}
+
+@media (max-width: 767px), (max-width: 1023px) and (pointer: coarse) {
+  .tabBar {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    padding: var(--space-1) max(var(--space-2), env(safe-area-inset-right))
+      calc(var(--space-1) + env(safe-area-inset-bottom)) max(var(--space-2), env(safe-area-inset-left));
+    background: var(--color-surface);
+    box-shadow: 0 -1px 0 var(--color-line);
+  }
+
+  /* Room under the page for the bar, and for the music player above it. */
+  .main {
+    padding-bottom: calc(var(--space-10) + 64px + env(safe-area-inset-bottom));
+  }
+
+  .main[data-music="true"] {
+    padding-bottom: calc(var(--space-10) + 144px + env(safe-area-inset-bottom));
+  }
+}
+
+.tab {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
+  min-height: 56px;
+  padding: var(--space-1) 0;
+  border: none;
+  background: transparent;
+  color: var(--color-ink-muted);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-strong);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tabMenu {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.tabIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 30px;
+  border-radius: var(--radius-pill);
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.tabLabel {
+  max-width: 100%;
+  padding-inline: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tab[aria-current="page"] {
+  color: var(--color-ink);
+}
+
+.tab[aria-current="page"] .tabIcon {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+/* The section shown takes its universe's color. */
+.tab[aria-current="page"][data-universe="movies"] .tabIcon {
+  background: var(--color-movies);
+  color: var(--color-movies-ink);
+}
+
+.tab[aria-current="page"][data-universe="series"] .tabIcon {
+  background: var(--color-series);
+  color: var(--color-series-ink);
+}
+
+.tab[aria-current="page"][data-universe="music"] .tabIcon {
+  background: var(--color-music);
+  color: var(--color-music-ink);
+}
+
+.tab[aria-current="page"][data-universe="books"] .tabIcon {
+  background: var(--color-books);
+  color: var(--color-books-ink);
+}
+
+.tab[aria-current="page"][data-universe="photos"] .tabIcon {
+  background: var(--color-photos);
+  color: var(--color-photos-ink);
+}
+
+/* Phones: four sections, the others under "More", which then stands for them. */
+@media (max-width: 599px) {
+  .tab[data-extra] {
+    display: none;
+  }
+
+  .tab[data-holds-extra] {
+    color: var(--color-ink);
+  }
+
+  .tab[data-holds-extra] .tabIcon {
+    background: var(--color-accent);
+    color: var(--color-accent-ink);
+  }
+}
+
+@media (min-width: 600px) {
+  .menuItem[data-extra] {
+    display: none;
+  }
+}
+
+/* "More": the other sections, above the bar. */
+.tabPanel {
+  position: absolute;
+  right: max(var(--space-2), env(safe-area-inset-right));
+  bottom: calc(100% + var(--space-2));
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  padding: var(--space-2);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-overlay);
 }
 
 .menu {

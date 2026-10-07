@@ -64,6 +64,19 @@ for (const asset of assets) {
   }
 }
 
+// The installed app: the icons of its manifest, and the service worker with the files it keeps.
+async function file(path) {
+  const res = await get(path);
+  if (res.headers.get("content-type") === "text/html") problems.push(`${path}: missing from the archive`);
+  return res;
+}
+const manifest = await (await file("/manifest.json")).json();
+for (const icon of manifest.icons ?? []) await file(icon.src);
+const worker = await (await file("/sw.js")).text();
+const build = worker.match(/^const build = (.*);$/m)?.[1];
+if (build === undefined) problems.push("/sw.js: no description of the build");
+else for (const path of JSON.parse(build).shell) if (path !== "/") await file(path);
+
 server.close();
 if (problems.length > 0) {
   console.error(`Smoke test failed:\n  ${problems.join("\n  ")}`);

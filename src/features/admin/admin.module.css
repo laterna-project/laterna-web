@@ -81,6 +81,31 @@
   background: var(--color-ink-inverse);
 }
 
+/* Narrow screens only (below). */
+.menuButton {
+  display: none;
+  align-items: center;
+  gap: var(--space-3);
+  height: 44px;
+  padding: 0 var(--space-3);
+  border: none;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-sunken);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-heavy);
+  text-align: left;
+}
+
+.chevron {
+  display: inline-flex;
+  transform: rotate(90deg);
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.chevron[data-open="true"] {
+  transform: rotate(-90deg);
+}
+
 .menuBadge {
   padding: 1px 8px;
   border-radius: var(--radius-pill);
@@ -1118,8 +1143,13 @@
     padding: var(--space-3);
   }
 
+  /* The menu folds under a button that names the section shown. */
   .side {
     position: static;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--space-3);
     min-height: 0;
     padding: var(--space-3);
   }
@@ -1128,17 +1158,32 @@
     min-height: 0;
   }
 
-  .menu {
-    flex-direction: row;
-    overflow-x: auto;
+  .side > .spacer {
+    display: none;
   }
 
-  .menuLink {
-    flex: none;
+  .brand {
+    padding: 0 var(--space-2);
   }
 
   .back {
-    margin-top: var(--space-2);
+    grid-row: 1;
+    grid-column: 2;
+    margin-top: 0;
+    padding: 0 var(--space-4);
+  }
+
+  .menuButton,
+  .menu {
+    grid-column: 1 / -1;
+  }
+
+  .menuButton {
+    display: flex;
+  }
+
+  .menu[data-open="false"] {
+    display: none;
   }
 
   .main {

@@ -1,5 +1,6 @@
 import { useQuery } from "@connectrpc/connect-query";
-import { createFileRoute, Link, Outlet, redirect } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, redirect, useLocation } from "@tanstack/react-router";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SkipLink } from "../../app/PageFocus";
 import { restricted } from "../../features/account/parental";
@@ -9,6 +10,7 @@ import { ActivityService } from "../../gen/laterna/v1/activity_pb";
 import { LibraryService } from "../../gen/laterna/v1/library_pb";
 import { SystemService } from "../../gen/laterna/v1/system_pb";
 import { useMusic } from "../../music/MusicProvider";
+import { Icon } from "../../ui/Icon";
 import { Logo } from "../../ui/Logo";
 
 // Server administration: for administrators only (the server checks too).
@@ -43,6 +45,11 @@ function AdminLayout() {
   const music = useMusic();
   const allowed = !restricted(profile);
   const enabled = { enabled: allowed };
+  // Narrow screens: the menu folds under a button that names the section shown.
+  const [open, setOpen] = useState(false);
+  const current = useLocation({
+    select: (l) => menu.find((m) => (m.to === "/admin" ? l.pathname === m.to : l.pathname.startsWith(m.to))),
+  });
   const badges: Partial<Record<(typeof menu)[number]["to"], number>> = {
     "/admin/libraries": useQuery(LibraryService.method.listLibraries, {}, enabled).data?.libraries.length,
     "/admin/accounts": useQuery(AccountService.method.listAccounts, {}, enabled).data?.accounts.length,
@@ -58,8 +65,32 @@ function AdminLayout() {
           <Logo />
           <span className={styles.brandSub}>{t("adminNav.subtitle")}</span>
         </Link>
+        {allowed && current && (
+          <button
+            type="button"
+            className={styles.menuButton}
+            data-ui="admin-menu-button"
+            aria-expanded={open}
+            aria-controls="admin-menu"
+            aria-label={t("adminNav.menu", { section: t(current.label) })}
+            onClick={() => setOpen((o) => !o)}
+          >
+            <span className={styles.menuDot} style={{ background: current.dot }} />
+            {t(current.label)}
+            <span className={styles.spacer} />
+            <span className={styles.chevron} data-open={open}>
+              <Icon name="chevron" size={14} />
+            </span>
+          </button>
+        )}
         {allowed && (
-          <nav aria-label={t("adminNav.label")} className={styles.menu} data-ui="nav">
+          <nav
+            id="admin-menu"
+            aria-label={t("adminNav.label")}
+            className={styles.menu}
+            data-open={open}
+            data-ui="nav"
+          >
             {menu.map((m) => (
               <Link
                 key={m.to}
@@ -68,6 +99,7 @@ function AdminLayout() {
                 data-ui="nav-link"
                 activeProps={{ "aria-current": "page" }}
                 activeOptions={{ exact: m.to === "/admin" }}
+                onClick={() => setOpen(false)}
               >
                 {({ isActive }) => (
                   <>

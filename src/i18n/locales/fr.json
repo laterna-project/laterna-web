@@ -96,6 +96,7 @@
     "label": "Administration",
     "brand": "Administration, vue d'ensemble",
     "subtitle": "administration",
+    "menu": "Menu de l'administration : {{section}}",
     "overview": "Vue d'ensemble",
     "libraries": "Bibliothèques",
     "accounts": "Comptes",

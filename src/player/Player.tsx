@@ -22,11 +22,13 @@ import {
 import i18n from "../i18n";
 import { StartParty } from "../party/StartParty";
 import type { Universe } from "../theme/contract";
+import { barColor } from "../theme/theme";
 import { Artwork } from "../ui/Artwork";
 import { Icon } from "../ui/Icon";
 import { Status } from "../ui/Status";
 import { usePanelFocus } from "../ui/usePanelFocus";
 import { canSwitchAudioTracks, detectDeviceProfile, withoutDirectVideo } from "./deviceProfile";
+import { canFullscreen, enterFullscreen, exitFullscreen } from "./fullscreen";
 import {
   autoSkippable,
   chapterAt,
@@ -334,6 +336,8 @@ export function Player(p: PlayerProps) {
     document.addEventListener("fullscreenchange", onChange);
     return () => document.removeEventListener("fullscreenchange", onChange);
   }, []);
+  // The bars of the browser and of the installed app around the dark stage.
+  useEffect(() => barColor("--color-stage"), []);
 
   // WebVTT subtitles moved up above the controls while they are shown.
   // biome-ignore lint/correctness/useExhaustiveDependencies: <track> changes with the chosen subtitle.
@@ -416,8 +420,8 @@ export function Player(p: PlayerProps) {
     [total],
   );
   const toggleFullscreen = useCallback(() => {
-    if (document.fullscreenElement) void document.exitFullscreen();
-    else void stage.current?.requestFullscreen();
+    if (document.fullscreenElement) exitFullscreen();
+    else if (stage.current && video.current) enterFullscreen(stage.current, video.current);
   }, []);
 
   const rememberAutoSkip = (on: boolean) => {
@@ -962,14 +966,16 @@ export function Player(p: PlayerProps) {
               {t("player.episodes")}
             </button>
           )}
-          <button
-            type="button"
-            className={styles.round}
-            onClick={toggleFullscreen}
-            aria-label={fullscreen ? t("player.exitFullscreen") : t("player.fullscreen")}
-          >
-            <Icon name={fullscreen ? "shrink" : "expand"} size={20} />
-          </button>
+          {canFullscreen() && (
+            <button
+              type="button"
+              className={styles.round}
+              onClick={toggleFullscreen}
+              aria-label={fullscreen ? t("player.exitFullscreen") : t("player.fullscreen")}
+            >
+              <Icon name={fullscreen ? "shrink" : "expand"} size={20} />
+            </button>
+          )}
         </div>
       </div>
     </main>

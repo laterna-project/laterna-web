@@ -113,6 +113,9 @@ contract. They come with:
 | `menu` | Drop-down menu ("More", profile). |
 | `menu-item` | Item of a drop-down menu. |
 | `header-tools` | Search and profile group, on the right of the header. |
+| `tab-bar` | Phones: bar of the sections at the bottom of the screen, instead of the header's. |
+| `tab-bar-link` | A section of the bar (aria-current="page" when shown; data-universe). |
+| `tab-bar-more` | "More" button of the bar: the other sections (aria-expanded). |
 | `search-button` | Search button of the header. |
 | `profile-button` | Profile badge that opens its menu. |
 | `main` | Page content (data-page: home, movies, series, music, bookshelf, photos, admin...). |
@@ -185,6 +188,7 @@ contract. They come with:
 | `theme-picker` | Theme choice in "My account". |
 | `admin` | Administration: sidebar and content. |
 | `admin-side` | Administration sidebar. |
+| `admin-menu-button` | Narrow screens: button that opens the administration menu (aria-expanded). |
 
 ## Before sharing a theme
 

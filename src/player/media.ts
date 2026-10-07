@@ -9,11 +9,13 @@ import {
   type SubtitleTrack,
 } from "../gen/laterna/v1/playback_pb";
 import i18n from "../i18n";
+import { nativeHls } from "./deviceProfile";
 import { subtitleMode } from "./logic";
 
 /**
- * Plays a stream in a media element: directly (whole file, Range requests), or as HLS with hls.js.
- * onLoaded: the start position is in place. Returns the function that detaches it.
+ * Plays a stream in a media element: directly (whole file, Range requests), or as HLS with hls.js,
+ * or by the browser itself where it has no Media Source Extensions (iPhone). onLoaded: the start
+ * position is in place. Returns the function that detaches it.
  */
 export function attachStream(
   media: HTMLMediaElement,
@@ -21,7 +23,7 @@ export function attachStream(
   o: { start: number; autoplay: boolean; onLoaded?: () => void; onFatal: (message: string) => void },
 ): () => void {
   const url = mediaUrl(s.url);
-  if (s.method === PlaybackMethod.DIRECT || s.method === PlaybackMethod.CONVERTED) {
+  if (s.method === PlaybackMethod.DIRECT || s.method === PlaybackMethod.CONVERTED || nativeHls()) {
     media.src = url;
     media.addEventListener(
       "loadedmetadata",

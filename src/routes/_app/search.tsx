@@ -88,6 +88,7 @@ function SearchPage() {
           <input
             id="search"
             className={styles.input}
+            data-large
             type="search"
             // biome-ignore lint/a11y/noAutofocus: people come here to type a search
             autoFocus

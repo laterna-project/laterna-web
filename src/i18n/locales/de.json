@@ -93,6 +93,7 @@
     "label": "Verwaltung",
     "brand": "Verwaltung, Übersicht",
     "subtitle": "Verwaltung",
+    "menu": "Menü der Verwaltung: {{section}}",
     "overview": "Übersicht",
     "libraries": "Mediatheken",
     "accounts": "Konten",
