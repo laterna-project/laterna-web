@@ -121,7 +121,7 @@ lints; `pnpm fmt` fixes what it can.
 | `src/ui` | Base components, without business logic. |
 | `public` | Files served as they are: the manifest of the installed app, its icons, the favicons. |
 | `devtools` | The sample libraries and seed scripts, and the Vite plugins of the build (the service worker among them). |
-| `scripts` | Code generation, the icons, the release checks. |
+| `scripts` | Code generation, the icons, the release checks and notes. |
 
 ## Branches
 

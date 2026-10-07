@@ -177,7 +177,9 @@ export function Player(p: PlayerProps) {
   );
 
   const open = useCallback(
-    async (next: Choice, start: number | undefined) => {
+    // first: the opening of the playback, which takes the subtitle the profile prefers (server:
+    // docs/design/subtitles.md); the viewer's later choices are kept as they are.
+    async (next: Choice, start: number | undefined, first = false) => {
       const v = video.current;
       if (!v) return;
       const gen = ++generation.current;
@@ -202,6 +204,7 @@ export function Player(p: PlayerProps) {
           fileId: next.fileId ?? "",
           audioStreamIndex: next.audio,
           subtitleIndex: burn ? (next.subtitle ?? undefined) : undefined,
+          profileSubtitle: first,
           device: otherAudio && !switchAudio ? withoutDirectVideo(profile) : profile,
         });
         if (gen !== generation.current) {
@@ -211,7 +214,9 @@ export function Player(p: PlayerProps) {
         current.current = s;
         setSession(s);
         setAudioViaHls(otherAudio && !switchAudio && s.method !== PlaybackMethod.DIRECT);
-        setChoice({ ...next, fileId: s.fileId, audio: s.audioStreamIndex });
+        const shown = first ? (s.subtitleIndex ?? null) : next.subtitle;
+        const burned = shown !== null && s.burnedSubtitleIndex === shown;
+        setChoice({ ...next, subtitle: shown, fileId: s.fileId, audio: s.audioStreamIndex });
         const from = start ?? seconds(s.resumePosition);
         detach.current = attachStream(v, s, {
           start: from,
@@ -222,10 +227,10 @@ export function Player(p: PlayerProps) {
           onFatal: setError,
         });
         // Subtitle shown by the browser: put it back; burned in: nothing to do.
-        if (!burn)
+        if (!burned)
           void showSubtitle(
             s,
-            s.subtitles.find((t) => t.index === next.subtitle),
+            s.subtitles.find((t) => t.index === shown),
           );
         // File just added: the list of subtitles arrives when extraction ends.
         if (!s.subtitlesReady) {
@@ -239,6 +244,12 @@ export function Player(p: PlayerProps) {
             };
             current.current = ready;
             setSession(ready);
+            // A subtitle picked before extraction ended: its files are there now.
+            if (shown !== null && !burned)
+              void showSubtitle(
+                ready,
+                ready.subtitles.find((t) => t.index === shown),
+              );
           }
         }
       } catch (err) {
@@ -251,7 +262,7 @@ export function Player(p: PlayerProps) {
   // First opening (once per item), closing when leaving.
   // biome-ignore lint/correctness/useExhaustiveDependencies: a single opening per item played.
   useEffect(() => {
-    void open({ subtitle: null }, p.start);
+    void open({ subtitle: null }, p.start, true);
     const onUnload = () => {
       const s = current.current;
       if (s) stopOnUnload(s.sessionId, position.current);

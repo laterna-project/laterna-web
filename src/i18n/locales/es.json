@@ -114,6 +114,17 @@
     "restrictedText": "El servidor no abre la administración desde un perfil infantil o con control parental, ni siquiera en la cuenta de un administrador.",
     "backups": "Copias de seguridad"
   },
+  "subtitlePrefs": {
+    "title": "Subtítulos",
+    "when": "Mostrar subtítulos",
+    "auto": "Automáticamente",
+    "always": "Siempre",
+    "forced": "Solo los subtítulos forzados",
+    "off": "Nunca",
+    "hint": "Automáticamente: cuando el audio está en otro idioma; si no, solo los subtítulos forzados, para carteles y frases en otro idioma. En todos los dispositivos de este perfil.",
+    "language": "Idioma de los subtítulos",
+    "languageDefault": "El idioma del perfil ({{language}})"
+  },
   "language": {
     "label": "Idioma (language)",
     "title": "Idioma",

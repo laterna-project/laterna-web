@@ -114,6 +114,17 @@
     "restrictedText": "Le serveur n'ouvre pas l'administration depuis un profil enfant ou sous contrôle parental, même sur le compte d'un administrateur.",
     "backups": "Sauvegardes"
   },
+  "subtitlePrefs": {
+    "title": "Sous-titres",
+    "when": "Afficher les sous-titres",
+    "auto": "Automatiquement",
+    "always": "Toujours",
+    "forced": "Seulement les sous-titres forcés",
+    "off": "Jamais",
+    "hint": "Automatiquement : quand l'audio est dans une autre langue ; sinon seulement les sous-titres forcés, pour les panneaux et les répliques en langue étrangère. Sur tous les appareils de ce profil.",
+    "language": "Langue des sous-titres",
+    "languageDefault": "La langue du profil ({{language}})"
+  },
   "language": {
     "label": "Langue (language)",
     "title": "Langue",
