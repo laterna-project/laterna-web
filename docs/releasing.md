@@ -79,12 +79,20 @@ Pushing the tag starts the [release workflow](../.github/workflows/release.yml),
    `.zip`, with their SHA-256 in `checksums.txt`;
 4. unpacks the archive, serves it as the README describes and checks that the page, a route and
    every file it references load (`scripts/smoke-test.mjs`);
-5. uploads everything to a **draft** release with generated notes;
+5. uploads everything to a **draft** release, with notes built by `scripts/release-notes.ts`:
+   the commit subjects since the previous release grouped by gitmoji (features, fixes, security,
+   performance, other changes; CI, tests, tools and release commits left out), then how to
+   install, as on the server;
 6. attests the provenance of the archives;
 7. publishes the release.
 
 If a step fails, the draft stays unpublished: fix the problem, delete the draft and the tag, and
 tag again.
+
+Then describe the release by hand, as the server's are (`gh release edit vX.Y.Z --notes-file`):
+a sentence on what the version brings at the top, each feature in a sentence or two instead of its
+commit subject, and an "Upgrading from X.Y" section on what changes for the people who serve the
+client (server versions, files of the archive, proxy, themes).
 
 To see what a release would contain without publishing anything, run the workflow by hand
 (`gh workflow run release.yml`): it builds a snapshot archive, runs the same checks and keeps the
