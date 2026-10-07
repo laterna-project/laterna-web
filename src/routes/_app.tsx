@@ -42,20 +42,23 @@ export const Route = createFileRoute("/_app")({
 
 /** Sections of the main navigation; each shows only if the profile has a library of that kind. */
 const sections = [
-  { to: "/", label: "nav.home", kinds: [], universe: undefined },
+  { to: "/", label: "nav.home", kinds: [], universe: undefined, icon: "home" },
   // Recommendations: movies and series only (server: docs/design/home.md).
   {
     to: "/discover",
     label: "nav.discover",
     kinds: [LibraryKind.MOVIES, LibraryKind.SHOWS],
     universe: undefined,
+    icon: "discover",
   },
-  { to: "/movies", label: "nav.movies", kinds: [LibraryKind.MOVIES], universe: "movies" },
-  { to: "/series", label: "nav.series", kinds: [LibraryKind.SHOWS], universe: "series" },
-  { to: "/music", label: "nav.music", kinds: [LibraryKind.MUSIC], universe: "music" },
-  { to: "/bookshelf", label: "nav.books", kinds: [LibraryKind.BOOKS], universe: "books" },
-  { to: "/photos", label: "nav.photos", kinds: [LibraryKind.PHOTOS], universe: "photos" },
+  { to: "/movies", label: "nav.movies", kinds: [LibraryKind.MOVIES], universe: "movies", icon: "film" },
+  { to: "/series", label: "nav.series", kinds: [LibraryKind.SHOWS], universe: "series", icon: "tv" },
+  { to: "/music", label: "nav.music", kinds: [LibraryKind.MUSIC], universe: "music", icon: "music" },
+  { to: "/bookshelf", label: "nav.books", kinds: [LibraryKind.BOOKS], universe: "books", icon: "book" },
+  { to: "/photos", label: "nav.photos", kinds: [LibraryKind.PHOTOS], universe: "photos", icon: "photo" },
 ] as const;
+
+type Section = (typeof sections)[number];
 
 function AppShell() {
   const { profile } = Route.useRouteContext();
@@ -86,6 +89,7 @@ function Shell() {
   const kinds = new Set(
     (useQuery(CatalogService.method.listCatalogLibraries, {}).data?.libraries ?? []).map((l) => l.kind),
   );
+  const shown = sections.filter((s) => s.kinds.length === 0 || s.kinds.some((k) => kinds.has(k)));
 
   // "/" opens the search, except while typing.
   useEffect(() => {
@@ -116,24 +120,22 @@ function Shell() {
           <Logo />
         </Link>
         <nav aria-label={t("nav.main")} className={styles.nav} data-ui="nav">
-          {sections
-            .filter((s) => s.kinds.length === 0 || s.kinds.some((k) => kinds.has(k)))
-            .map((s) => (
-              <Link
-                key={s.to}
-                to={s.to}
-                className={styles.navLink}
-                data-ui="nav-link"
-                data-universe={s.universe}
-                activeProps={{ "aria-current": "page" }}
-                activeOptions={{ exact: s.to === "/" }}
-              >
-                {s.universe && (
-                  <span className={styles.navDot} style={{ background: `var(--color-${s.universe})` }} />
-                )}
-                {t(s.label)}
-              </Link>
-            ))}
+          {shown.map((s) => (
+            <Link
+              key={s.to}
+              to={s.to}
+              className={styles.navLink}
+              data-ui="nav-link"
+              data-universe={s.universe}
+              activeProps={{ "aria-current": "page" }}
+              activeOptions={{ exact: s.to === "/" }}
+            >
+              {s.universe && (
+                <span className={styles.navDot} style={{ background: `var(--color-${s.universe})` }} />
+              )}
+              {t(s.label)}
+            </Link>
+          ))}
           <MoreMenu />
         </nav>
         <div className={styles.tools} data-ui="header-tools">
@@ -165,6 +167,7 @@ function Shell() {
       >
         <Outlet />
       </main>
+      <TabBar sections={shown} />
       <MiniPlayer />
     </div>
   );
@@ -246,6 +249,79 @@ function MoreMenu() {
         </div>
       )}
     </div>
+  );
+}
+
+/**
+ * Phones and tablets held upright: the sections in a bar at the bottom of the screen, within reach
+ * of the thumb, instead of the header's. Tablets show them all; phones only the first four, the
+ * others (data-extra) moving under "More", with collections, playlists and watch parties.
+ */
+function TabBar({ sections }: { sections: readonly Section[] }) {
+  const { t } = useTranslation();
+  const { open, setOpen, ref, button } = useDisclosure();
+  const extra = sections.slice(4);
+  const inMore = useLocation({ select: (l) => more.some((m) => l.pathname.startsWith(m.to)) });
+  const inExtra = useLocation({ select: (l) => extra.some((m) => l.pathname.startsWith(m.to)) });
+  return (
+    <nav aria-label={t("nav.main")} className={styles.tabBar} data-ui="tab-bar">
+      {sections.map((s, i) => (
+        <Link
+          key={s.to}
+          to={s.to}
+          className={styles.tab}
+          data-ui="tab-bar-link"
+          data-universe={s.universe}
+          data-extra={i >= 4 || undefined}
+          activeProps={{ "aria-current": "page" }}
+          activeOptions={{ exact: s.to === "/" }}
+        >
+          <span className={styles.tabIcon}>
+            <Icon name={s.icon} size={22} />
+          </span>
+          <span className={styles.tabLabel}>{t(s.label)}</span>
+        </Link>
+      ))}
+      <div className={styles.tabMenu} ref={ref}>
+        <button
+          ref={button}
+          type="button"
+          className={styles.tab}
+          data-ui="tab-bar-more"
+          aria-expanded={open}
+          aria-controls="menu-tabs"
+          aria-current={inMore ? "page" : undefined}
+          data-holds-extra={inExtra || undefined}
+          onClick={() => setOpen((o) => !o)}
+        >
+          <span className={styles.tabIcon}>
+            <Icon name="more" size={22} />
+          </span>
+          <span className={styles.tabLabel}>{t("nav.more")}</span>
+        </button>
+        {open && (
+          <div id="menu-tabs" className={styles.tabPanel} data-ui="menu">
+            {[...extra, ...more].map((m, i) => (
+              <Link
+                key={m.to}
+                to={m.to}
+                className={styles.menuItem}
+                data-ui="menu-item"
+                data-universe={m.universe}
+                data-extra={i < extra.length || undefined}
+                activeProps={{ "aria-current": "page" }}
+                onClick={() => setOpen(false)}
+              >
+                {m.universe && (
+                  <span className={styles.navDot} style={{ background: `var(--color-${m.universe})` }} />
+                )}
+                {t(m.label)}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    </nav>
   );
 }
 

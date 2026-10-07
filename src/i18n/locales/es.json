@@ -96,6 +96,7 @@
     "label": "Administración",
     "brand": "Administración, resumen",
     "subtitle": "administración",
+    "menu": "Menú de administración: {{section}}",
     "overview": "Resumen",
     "libraries": "Bibliotecas",
     "accounts": "Cuentas",

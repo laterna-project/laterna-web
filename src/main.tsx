@@ -25,6 +25,27 @@ watchTheme();
 // Accessibility audit in the console, in development only.
 if (import.meta.env.DEV) void import("./app/audit").then((m) => m.installAudit());
 
+// Installed app (docs/design/devices.md): the service worker exists in the build only, and browsers
+// only offer it over HTTPS (or on this computer).
+if (import.meta.env.PROD && "serviceWorker" in navigator) {
+  void navigator.serviceWorker.register("/sw.js").catch(() => {});
+}
+
+// Once the server is updated, the files of the previous version are gone: a page still open
+// reloads into the new version when it misses one, at most once a minute so that a file that is
+// really missing does not reload forever.
+window.addEventListener("vite:preloadError", (e) => {
+  const key = "laterna.reloadedAt";
+  try {
+    if (Date.now() - Number(sessionStorage.getItem(key) ?? 0) < 60_000) return;
+    sessionStorage.setItem(key, String(Date.now()));
+  } catch {
+    return;
+  }
+  e.preventDefault();
+  window.location.reload();
+});
+
 const root = document.getElementById("app");
 if (root === null) throw new Error("element #app not found");
 

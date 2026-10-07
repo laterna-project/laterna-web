@@ -14,6 +14,8 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  /* Phones held sideways: the page stays clear of the notch (index.html: viewport-fit=cover). */
+  padding-inline: env(safe-area-inset-left) env(safe-area-inset-right);
   background: var(--color-canvas);
   color: var(--color-ink);
   font-family: var(--font-sans);
@@ -62,9 +64,32 @@ main[tabindex="-1"]:focus {
   box-shadow: none;
 }
 
-/* The floating music pill must not hide the focused element. */
+/* The floating music pill must not hide the focused element, nor the tab bar of phones. */
 html:has([data-music="true"]) {
   scroll-padding-bottom: 140px;
+}
+
+@media (max-width: 767px), (max-width: 1023px) and (pointer: coarse) {
+  html:has([data-ui="tab-bar"]) {
+    scroll-padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+
+  html:has([data-ui="tab-bar"]):has([data-music="true"]) {
+    scroll-padding-bottom: calc(160px + env(safe-area-inset-bottom));
+  }
+}
+
+/* Touch screens: Safari zooms into the page when a field written under 16 px gets focus. Fields
+   written bigger keep their size (data-large). */
+@media (pointer: coarse) {
+  :root
+    :is(
+      input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"], [type="color"]),
+      select,
+      textarea
+    ):not([data-large]) {
+    font-size: 16px;
+  }
 }
 
 img {

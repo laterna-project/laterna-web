@@ -54,8 +54,9 @@ carry. `saveFile` streams them to a file the user picks where the browser allows
 
 The build is a set of static files. It expects the API on the same origin, which keeps cookies,
 CORS and passkey origins out of the picture: in development Vite proxies the server's routes, in
-production a reverse proxy does (see the README). `VITE_LATERNA_URL` builds a client for a server
-on another origin.
+production the server serves the files itself, or a reverse proxy does (see the README).
+`VITE_LATERNA_URL` builds a client for a server on another origin. The build installs as an app on
+phones, tablets and computers ([devices.md](devices.md)).
 
 Large libraries load on demand: hls.js with the player, JASSUB with a styled subtitle, foliate-js
 with an EPUB, pdf.js with a PDF, each interface language with its catalog.

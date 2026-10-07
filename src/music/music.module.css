@@ -352,11 +352,22 @@
 
 @media (max-width: 640px) {
   .mini {
-    bottom: var(--space-3);
+    bottom: calc(var(--space-3) + env(safe-area-inset-bottom));
   }
 
   .panel {
     right: var(--page-gutter);
-    bottom: 84px;
+    bottom: calc(84px + env(safe-area-inset-bottom));
+  }
+}
+
+/* Phones: above the tab bar of the sections (src/routes/app.module.css). */
+@media (max-width: 767px), (max-width: 1023px) and (pointer: coarse) {
+  html:has([data-ui="tab-bar"]) .mini {
+    bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+
+  html:has([data-ui="tab-bar"]) .panel {
+    bottom: calc(148px + env(safe-area-inset-bottom));
   }
 }
