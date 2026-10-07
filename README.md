@@ -14,6 +14,7 @@ the web app does what the server does, no more.
 
 | Laterna Web | Laterna server |
 |---|---|
+| 0.3.x | 0.5.x; 0.1.x to 0.4.x without the subtitle setting |
 | 0.2.x | 0.1.x to 0.4.x |
 | 0.1.x | 0.1.x to 0.4.x |
 
