@@ -1,7 +1,7 @@
 name: Weekly
 
-# Checks that do not belong on every push: new advisories against unchanged dependencies, and
-# whether the pinned server version still generates the same client.
+# Checks that do not belong on every push: new advisories against unchanged dependencies, the
+# whole check on the pinned server version, and whether a newer server release changes the client.
 on:
   schedule:
     - cron: "41 4 * * 1"
@@ -39,6 +39,12 @@ jobs:
         run: |
           pinned=$(node -p "require('./package.json').laternaServer")
           latest=$(gh release view --repo laterna-project/laterna --json tagName --jq .tagName)
-          if [ "$latest" != "$pinned" ]; then
-            echo "::notice::The server released $latest; the client is generated from $pinned."
+          if [ "$latest" = "$pinned" ]; then exit 0; fi
+          # Does the new release change what the client is generated from (contract, texts)?
+          git -c advice.detachedHead=false clone --quiet --depth 1 --branch "$latest" \
+            https://github.com/laterna-project/laterna.git "$RUNNER_TEMP/server"
+          if LATERNA_SOURCE="$RUNNER_TEMP/server" pnpm gen:check > /dev/null; then
+            echo "::notice::The server released $latest, with the same contract and texts as $pinned: move the pin (laternaServer) and the README's table of server versions."
+          else
+            echo "::warning::The server released $latest, whose contract or texts differ from $pinned: generate the client from it and adapt (docs/releasing.md, Following the server)."
           fi
