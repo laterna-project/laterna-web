@@ -111,6 +111,17 @@
     "restrictedText": "The server doesn't open administration from a kid profile or a profile under parental control, even on an administrator's account.",
     "backups": "Backups"
   },
+  "subtitlePrefs": {
+    "title": "Subtitles",
+    "when": "Show subtitles",
+    "auto": "Automatically",
+    "always": "Always",
+    "forced": "Forced subtitles only",
+    "off": "Never",
+    "hint": "Automatically: when the audio is in another language; otherwise only forced subtitles, for signs and lines in a foreign language. On every device of this profile.",
+    "language": "Subtitle language",
+    "languageDefault": "The profile's language ({{language}})"
+  },
   "language": {
     "label": "Language",
     "title": "Language",
