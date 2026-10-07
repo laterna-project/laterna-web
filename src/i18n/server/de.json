@@ -246,6 +246,7 @@
   "error.profile.invalid_language": "Ungültige Sprache „{language}“: Eine Kennung wie „de“ oder „pt-BR“ wird erwartet",
   "error.profile.invalid_max_age": "Das Höchstalter muss zwischen 0 und {max} liegen",
   "error.profile.invalid_pin": "Die PIN muss aus 4 bis 8 Ziffern bestehen",
+  "error.profile.invalid_subtitle_mode": "Unbekannter Untertitelmodus „{mode}“",
   "error.profile.last_unrestricted": "Das Konto muss mindestens ein uneingeschränktes Profil behalten",
   "error.profile.name_invalid": "Der Profilname enthält ungültige Zeichen",
   "error.profile.name_required": "Ein Profilname ist erforderlich",

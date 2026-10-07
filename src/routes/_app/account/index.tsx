@@ -6,6 +6,7 @@ import { Devices } from "../../../features/account/Devices";
 import { LanguagePicker } from "../../../features/account/LanguagePicker";
 import { ProfileEditor } from "../../../features/account/ProfileEditor";
 import { ProfileTheme } from "../../../features/account/ProfileTheme";
+import { SubtitlePicker } from "../../../features/account/SubtitlePicker";
 import { ThemePicker } from "../../../features/account/ThemePicker";
 import { ProfileService } from "../../../gen/laterna/v1/profile_pb";
 
@@ -51,6 +52,12 @@ function Account() {
               {t("language.title")}
             </h2>
             <LanguagePicker hint profile />
+          </section>
+          <section className={styles.card} aria-labelledby="subtitles">
+            <h2 id="subtitles" className={styles.cardTitle}>
+              {t("subtitlePrefs.title")}
+            </h2>
+            <SubtitlePicker />
           </section>
           <ThemePicker />
           {!profile.kid && <Devices />}

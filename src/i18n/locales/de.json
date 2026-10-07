@@ -111,6 +111,17 @@
     "restrictedText": "Der Server öffnet die Verwaltung nicht aus einem Kinderprofil oder einem Profil mit Jugendschutz, selbst im Konto eines Administrators.",
     "backups": "Sicherungen"
   },
+  "subtitlePrefs": {
+    "title": "Untertitel",
+    "when": "Untertitel anzeigen",
+    "auto": "Automatisch",
+    "always": "Immer",
+    "forced": "Nur erzwungene Untertitel",
+    "off": "Nie",
+    "hint": "Automatisch: wenn der Ton in einer anderen Sprache ist; sonst nur erzwungene Untertitel, für Schilder und fremdsprachige Stellen. Auf allen Geräten dieses Profils.",
+    "language": "Sprache der Untertitel",
+    "languageDefault": "Die Sprache des Profils ({{language}})"
+  },
   "language": {
     "label": "Sprache (language)",
     "title": "Sprache",

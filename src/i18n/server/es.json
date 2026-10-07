@@ -246,6 +246,7 @@
   "error.profile.invalid_language": "Idioma no válido «{language}»: se espera una etiqueta como «es» o «pt-BR»",
   "error.profile.invalid_max_age": "La edad máxima debe estar entre 0 y {max}",
   "error.profile.invalid_pin": "El PIN debe tener de 4 a 8 cifras",
+  "error.profile.invalid_subtitle_mode": "Modo de subtítulos «{mode}» desconocido",
   "error.profile.last_unrestricted": "La cuenta debe conservar al menos un perfil sin restricciones",
   "error.profile.name_invalid": "El nombre del perfil contiene caracteres no válidos",
   "error.profile.name_required": "Se necesita un nombre de perfil",
