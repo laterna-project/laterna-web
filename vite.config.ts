@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vitest/config";
 import { cssLayer } from "./devtools/vite/layer.ts";
 import { pdfjsAssets } from "./devtools/vite/pdfjs-assets.ts";
+import { serviceWorker } from "./devtools/vite/service-worker.ts";
 
 // Laterna server used in development ("task dev" in a checkout of the server).
 const server = process.env.LATERNA_URL ?? "http://localhost:8096";
@@ -33,6 +34,7 @@ export default defineConfig({
     pdfjsAssets(),
     // The app's styles go in the "app" layer: the chosen theme goes on top.
     cssLayer("app"),
+    serviceWorker(),
   ],
   build: {
     // The player bundles hls.js (about 400 kB); it only loads when a playback opens.

@@ -14,7 +14,8 @@ the web app does what the server does, no more.
 
 | Laterna Web | Laterna server |
 |---|---|
-| 0.1.x | 0.1.x |
+| 0.2.x | 0.1.x, 0.2.x |
+| 0.1.x | 0.1.x, 0.2.x |
 
 The contract and the server's text catalogs are taken from the server version pinned in
 [`package.json`](package.json) (`laternaServer`).
@@ -51,12 +52,22 @@ The contract and the server's text catalogs are taken from the server version pi
 - **Languages**: English, French, German and Spanish, chosen per device or per profile.
 - **Accessibility**: WCAG 2.2 AA is the target; every screen works with the keyboard and a screen
   reader.
+- **Every screen size**: phones, tablets and computers, in a browser tab or
+  [installed as an app](#installing-the-app-on-a-device).
 
 ## Installing
 
-Each release comes with an archive of static files (`laterna-web-<version>.tar.gz` or `.zip`).
-Serve them **on the same origin as the server**, behind a reverse proxy that sends the server's
-routes to Laterna and everything else to the client:
+**With the server's Docker image**, version 0.2.0 or later, there is nothing to install: the image
+includes the client. Open the server's address (http://localhost:8096 on the server itself).
+
+**On other installations of the server**, download the archive of a release
+(`laterna-web-<version>.tar.gz` or `.zip`), unpack it, and point the server at the folder with
+`paths.web` in its configuration or `LATERNA_WEB_DIR`. The server's
+[installation guide](https://github.com/laterna-project/laterna/blob/main/docs/install.md#the-web-client)
+explains it.
+
+**Behind your own reverse proxy**, serve the client's files **on the same origin as the server**,
+and send the server's routes to Laterna:
 
 | Paths | Go to |
 |---|---|
@@ -82,6 +93,9 @@ media.example.com {
 }
 ```
 
+When the server serves the client itself, the same proxy is simpler: everything goes to the
+server (`reverse_proxy localhost:8096`, with `flush_interval -1`).
+
 Then, in the server's settings (Administration › Authentication), set the public address to that
 origin (`https://media.example.com`): passkeys, OpenID Connect and the device login page use it.
 Declare the proxy in the server's `trusted_proxies` and keep its streams unbuffered, as the
@@ -92,6 +106,27 @@ explains.
 To serve the client from another origin instead, build it yourself with the server's address in
 `VITE_LATERNA_URL` (`VITE_LATERNA_URL=https://media.example.com pnpm build`) and allow that origin
 in the server's `cors_origins`.
+
+## Installing the app on a device
+
+The client installs as an app on phones, tablets and computers: its own icon and window, without
+the browser's bars, and a "Server unreachable" page of its own when the server cannot be reached.
+It updates with the server.
+
+| Devices | Browsers | How |
+|---|---|---|
+| Android phones and tablets | Chrome, Edge, Samsung Internet, Firefox | Menu › Install app (or Add to home screen) |
+| iPhone and iPad, iOS and iPadOS 16.4 or later | Safari; from 16.4, also Chrome, Edge and Firefox | Share › Add to Home Screen |
+| Windows 10 and 11, Linux, ChromeOS | Chrome, Edge and other Chromium browsers | The install button of the address bar, or Menu › Install |
+| macOS 14 or later | Safari 17 or later; Chrome, Edge | File › Add to Dock in Safari |
+
+Browsers only install apps served over **HTTPS**: a server reached at `http://192.168.x.y:8096`
+works in a browser tab but cannot be installed. A reverse proxy with a certificate, such as Caddy
+above, fixes that. Firefox on a computer may not offer to install it; the client works there in a
+tab. TVs are not covered: they need apps of their own.
+
+[docs/design/devices.md](docs/design/devices.md) explains the layouts, the service worker and what
+differs on iPhone.
 
 ## Development
 

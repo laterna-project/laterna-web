@@ -93,6 +93,7 @@
     "label": "Administration",
     "brand": "Administration, overview",
     "subtitle": "administration",
+    "menu": "Administration menu: {{section}}",
     "overview": "Overview",
     "libraries": "Libraries",
     "accounts": "Accounts",

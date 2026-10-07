@@ -37,6 +37,7 @@ address to http://localhost:5173 (Administration › Authentication).
 | `pnpm check` | Everything that must pass before a change is done; CI runs the same. |
 | `pnpm gen` | Regenerate the API client (`src/gen`) and copy the server's English and French text catalogs (`src/i18n/server`), from the server version pinned in `package.json`. |
 | `pnpm gen:check` | Fail if `src/gen` or those catalogs differ from that version. |
+| `pnpm icons` | Draw the favicons and the icons of the installed app again (`public/`), after a change to their shapes or colors in `scripts/icons.mjs`. |
 | `pnpm test`, `pnpm lint`, `pnpm fmt`, `pnpm typecheck`, `pnpm build` | The usual. |
 | `pnpm samples [movies\|shows\|anime\|music\|books\|photos]` | Build the free sample libraries in `~/laterna-samples` (`LATERNA_SAMPLES` for another folder). About 5 GB; needs FFmpeg and, outside Windows, `bsdtar` (`libarchive-tools` on Debian and Ubuntu). |
 | `pnpm seed` | Set up a new server through the API: administrator, a test account, a kid profile, the sample libraries, a scan. Credentials go to `.dev/seed.json` (not committed). |
@@ -118,8 +119,9 @@ lints; `pnpm fmt` fixes what it can.
 | `src/theme` | The token contract, the built-in styles, server themes, imported themes, `data-ui` hooks. |
 | `src/i18n` | Languages, the interface catalogs and the server's text catalogs. |
 | `src/ui` | Base components, without business logic. |
-| `devtools` | The sample libraries and seed scripts, and the Vite plugins of the build. |
-| `scripts` | Code generation. |
+| `public` | Files served as they are: the manifest of the installed app, its icons, the favicons. |
+| `devtools` | The sample libraries and seed scripts, and the Vite plugins of the build (the service worker among them). |
+| `scripts` | Code generation, the icons, the release checks. |
 
 ## Branches
 
@@ -138,7 +140,7 @@ handle `release/*` and `hotfix/*`; the whole model, versions and the release ste
 2. Branch from `develop`, keep the change focused, and update the design note it contradicts or
    extends.
 3. Run `pnpm check`, and check the screens you touched in the browser, with the keyboard and
-   `laternaAudit()`.
+   `laternaAudit()`, at the size of a phone, a tablet and a computer.
 4. Open a pull request against `develop`. It is squashed when merged, and its title becomes the
    commit subject: write it in English, in the imperative, with a
    [gitmoji](https://gitmoji.dev/) in front (`✨ Add ...`, `🐛 Fix ...`, `♻️ Refactor ...`).

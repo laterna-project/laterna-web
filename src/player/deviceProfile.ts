@@ -6,11 +6,16 @@ const videoTypes: Record<string, string> = { mp4: "video/mp4", webm: "video/webm
 const videoContainers = Object.keys(videoTypes);
 
 /**
- * What THIS browser can play, tested codec by codec (MediaSource.isTypeSupported). From it the
- * server decides, for each playback: direct play, HLS without transcoding, or transcoding.
+ * What THIS browser can play, tested codec by codec (MediaSource.isTypeSupported; without Media
+ * Source, on iPhone, the video element answers). From it the server decides, for each playback:
+ * direct play, HLS without transcoding, or transcoding.
  */
 export function detectDeviceProfile(): DeviceProfile {
-  const ms = (type: string) => typeof MediaSource !== "undefined" && MediaSource.isTypeSupported(type);
+  const probe = typeof document !== "undefined" ? document.createElement("video") : undefined;
+  const ms = (type: string) =>
+    typeof MediaSource !== "undefined"
+      ? MediaSource.isTypeSupported(type)
+      : probe?.canPlayType(type) === "probably";
   const hdr = typeof matchMedia !== "undefined" && matchMedia("(dynamic-range: high)").matches;
   const codecs: Record<string, [string, string?]> = {
     h264: ["avc1.640028"],
@@ -43,7 +48,6 @@ export function detectDeviceProfile(): DeviceProfile {
     .map(([name]) => name);
   if (ms('audio/webm; codecs="vorbis"')) audioCodecs.push("vorbis");
 
-  const probe = typeof document !== "undefined" ? document.createElement("video") : undefined;
   const containers = Object.entries(videoTypes)
     .filter(([, type]) => video.length > 0 && probe?.canPlayType(type))
     .map(([c]) => c);
@@ -61,7 +65,7 @@ export function detectDeviceProfile(): DeviceProfile {
     containers,
     video,
     audioCodecs,
-    hls: hlsSupported(),
+    hls: hlsSupported() || nativeHls(),
     // WebVTT by the browser, ASS by JASSUB; image subtitles (PGS) are burned in.
     subtitleFormats: ["vtt", "ass"],
   });
@@ -85,7 +89,19 @@ export function withoutDirectVideo(profile: DeviceProfile): DeviceProfile {
 }
 
 /**
- * Can the player read an HLS stream (with hls.js, so with Media Source Extensions)? Same test as
+ * Does the browser play HLS streams itself, without Media Source Extensions (iPhone)? The players
+ * then give it the stream as is (src/player/media.ts).
+ */
+export function nativeHls(): boolean {
+  return (
+    typeof MediaSource === "undefined" &&
+    typeof document !== "undefined" &&
+    document.createElement("video").canPlayType("application/vnd.apple.mpegurl") !== ""
+  );
+}
+
+/**
+ * Can the player read an HLS stream with hls.js, so with Media Source Extensions? Same test as
  * Hls.isSupported(), without loading hls.js: the music player, present on every page, also
  * describes the device.
  */

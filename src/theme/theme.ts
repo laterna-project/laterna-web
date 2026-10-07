@@ -4,6 +4,7 @@
 // win over the components'. The server theme (docs/design/themes.md) goes on top: a last style
 // sheet with its colors, radius, density and font.
 import i18n, { list } from "../i18n";
+import type { Token } from "./contract";
 import { parseManifest, remoteUrls, type ThemeManifest, themeProblems } from "./format";
 import { serverThemeCss } from "./server";
 import { activeLayer, subscribeServerTheme } from "./serverLayer";
@@ -122,6 +123,7 @@ function refreshServerSheet(style: Theme | undefined): void {
   else if (!active) css = read(serverKey);
   if (css === null) {
     document.adoptedStyleSheets = document.adoptedStyleSheets.filter((s) => s !== serverSheet);
+    paintBars();
     return;
   }
   serverSheet ??= new CSSStyleSheet();
@@ -130,6 +132,7 @@ function refreshServerSheet(style: Theme | undefined): void {
     ...document.adoptedStyleSheets.filter((s) => s !== serverSheet),
     serverSheet,
   ];
+  paintBars();
   if (active)
     try {
       localStorage.setItem(serverKey, css);
@@ -138,13 +141,47 @@ function refreshServerSheet(style: Theme | undefined): void {
     }
 }
 
+// --- System bars ---------------------------------------------------------------------------------
+
+// Colors asked by the screens shown, the last one wins.
+const barTokens: Token[] = [];
+
+/**
+ * Colors the bars around the app (theme-color: the browser's toolbar, the status bar of the
+ * installed app) like the screen: the theme's canvas, or what a screen asks for.
+ */
+function paintBars(): void {
+  const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+  const color = getComputedStyle(document.documentElement)
+    .getPropertyValue(barTokens.at(-1) ?? "--color-canvas")
+    .trim();
+  if (meta && color) meta.content = color;
+}
+
+/** While a screen is shown, the bars take the color of a token (the dark stage of the players). */
+export function barColor(token: Token): () => void {
+  barTokens.push(token);
+  paintBars();
+  return () => {
+    const at = barTokens.lastIndexOf(token);
+    if (at >= 0) barTokens.splice(at, 1);
+    paintBars();
+  };
+}
+
 /** Follows changes made in another tab (theme chosen, imported or removed). */
 export function watchTheme(): () => void {
   const onStorage = (e: StorageEvent) => {
     if (e.key === activeKey || e.key === importedKey) applyTheme(savedTheme());
   };
   window.addEventListener("storage", onStorage);
-  return () => window.removeEventListener("storage", onStorage);
+  // A server theme has light and dark colors, chosen by the system.
+  const dark = window.matchMedia("(prefers-color-scheme: dark)");
+  dark.addEventListener("change", paintBars);
+  return () => {
+    window.removeEventListener("storage", onStorage);
+    dark.removeEventListener("change", paintBars);
+  };
 }
 
 /**

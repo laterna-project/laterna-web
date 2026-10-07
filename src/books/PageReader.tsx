@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { imageWidthFor, mediaUrl } from "../api/media";
 import type { ReadingProgress } from "../gen/laterna/v1/catalog_pb";
 import i18n from "../i18n";
+import { barColor } from "../theme/theme";
 import { Icon } from "../ui/Icon";
 import { type PageMode, type PageSize, pageProgression, percent, spreadOf, spreads } from "./logic";
 import type { PdfBook } from "./pdf";
@@ -55,6 +56,9 @@ export function PageReader(p: PageReaderProps) {
   const saved = useRef(p.progress?.page ?? -1);
   // Scrolling: the most visible page.
   const [scrolled, setScrolled] = useState(p.progress?.page ?? 0);
+
+  // The bars of the browser and of the installed app around the dark stage.
+  useEffect(() => barColor("--color-stage"), []);
 
   // PDF: opened by pdf.js.
   const pdfUrl = p.source.kind === "pdf" ? p.source.fileUrl : null;

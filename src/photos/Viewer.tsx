@@ -14,6 +14,7 @@ import { ImageKind, imageSrcSet, imageUrl, imageWidthFor, pickImage } from "../a
 import { useRefreshCatalog } from "../features/catalog/actions";
 import { CatalogService, type PhotoSummary } from "../gen/laterna/v1/catalog_pb";
 import { PhotoService } from "../gen/laterna/v1/photo_pb";
+import { barColor } from "../theme/theme";
 import { Icon } from "../ui/Icon";
 import { usePanelFocus } from "../ui/usePanelFocus";
 import { listInput, loadSelection, type ViewerSearch } from "./context";
@@ -49,6 +50,8 @@ export function PhotoViewer({ id, search }: { id: string; search: ViewerSearch }
     ? chosen.flatMap((q) => (q.data?.photo?.summary ? [q.data.photo.summary] : []))
     : (list.data?.pages.flatMap((p) => p.photos) ?? []);
   const index = sequence.findIndex((p) => p.id === id);
+  // The bars of the browser and of the installed app around the dark stage.
+  useEffect(() => barColor("--color-stage"), []);
 
   // Photo further in the timeline than the loaded pages: load more.
   useEffect(() => {

@@ -2,9 +2,18 @@
 <html lang="en" data-theme="universe">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- viewport-fit=cover: the app draws under the notch and the home bar, and keeps its controls
+         out of them (env(safe-area-inset-*)). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light" />
+    <!-- Color of the system bars: the theme's canvas, updated by src/theme/theme.ts. -->
+    <meta name="theme-color" content="#f5f6f8" />
     <title>Laterna</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Laterna" />
   </head>
   <body>
     <div id="app"></div>

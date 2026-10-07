@@ -3,6 +3,9 @@
   position: fixed;
   inset: 0;
   z-index: 10;
+  /* Clear of the notch and the home bar of phones (index.html: viewport-fit=cover). */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
   display: grid;
   grid-template-columns: minmax(0, 1fr) 400px;
   background: var(--color-canvas);

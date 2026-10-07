@@ -123,6 +123,7 @@ function Profiles() {
             <input
               id="pin"
               className={styles.pinInput}
+              data-large
               type="password"
               inputMode="numeric"
               pattern="[0-9]{4,8}"

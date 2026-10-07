@@ -367,3 +367,15 @@
     overflow-x: auto;
   }
 }
+
+/* Phones: above the tab bar of the sections (src/routes/app.module.css), and above the music
+   player when it plays. */
+@media (max-width: 767px), (max-width: 1023px) and (pointer: coarse) {
+  html:has([data-ui="tab-bar"]) .selectionBar {
+    bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+
+  html:has([data-ui="tab-bar"]) [data-music="true"] .selectionBar {
+    bottom: calc(148px + env(safe-area-inset-bottom));
+  }
+}
