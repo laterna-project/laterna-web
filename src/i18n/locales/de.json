@@ -411,6 +411,7 @@
   "playbackMethod": {
     "transcoded": "transkodiert",
     "gpu": "GPU",
+    "decoder": "{{decoder}}-Dekodierung",
     "audio": "Audio",
     "remux": "ohne Transkodierung",
     "direct": "Direktwiedergabe"
@@ -502,9 +503,10 @@
     "encoders": "Encoder",
     "toneMapping": "HDR → SDR",
     "noToneMapping": "keine Umwandlung möglich",
-    "gpu": "Grafikkarte",
-    "gpuOn": "vollständige Pipeline verfügbar",
-    "gpuOff": "nicht verwendet",
+    "decoding": "Videodekodierung",
+    "decodingGpu": "auf der Grafikkarte: Dekodierung, Skalierung und HDR",
+    "decodingHardware": "auf der Grafikkarte ({{decoder}})",
+    "decodingCpu": "durch den Prozessor",
     "system": "System",
     "librariesTitle": "Mediatheken",
     "manage": "Verwalten",
@@ -1158,6 +1160,7 @@
       "video": "Bild neu kodiert",
       "videoWith": "Bild neu kodiert ({{encoder}})",
       "videoGpu": "Bild neu kodiert ({{encoder}}, auf der Grafikkarte)",
+      "videoDecoder": "Bild neu kodiert ({{encoder}}, von der Grafikkarte dekodiert)",
       "toneMapping": "HDR in SDR umgewandelt ({{method}})",
       "audio": "Ton in AAC neu kodiert",
       "audioViaHls": "Dieser Browser spielt nur die Standard-Tonspur einer Datei: Der Server legt die gewählte in einen HLS-Stream."
