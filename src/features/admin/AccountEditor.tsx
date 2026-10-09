@@ -57,6 +57,10 @@ export function AccountEditor({
   const [isAdmin, setIsAdmin] = useState(a?.isAdmin ?? false);
   const [disabled, setDisabled] = useState(a?.disabled ?? false);
   const [denyDownloads, setDenyDownloads] = useState(a?.denyDownloads ?? false);
+  const [denyRequests, setDenyRequests] = useState(a?.denyRequests ?? false);
+  const [autoApprove, setAutoApprove] = useState(a?.autoApproveRequests ?? false);
+  // Requests over seven days, 0 for no limit (server default: 10).
+  const [quota, setQuota] = useState(a?.requestQuota ?? 10);
   const [all, setAll] = useState(!a?.libraries || a.libraries.all);
   const [libraryIds, setLibraryIds] = useState<string[]>(a?.libraries?.libraryIds ?? []);
   const [maxAge, setMaxAge] = useState<number | null>(a?.parental?.maxAge ?? null);
@@ -97,10 +101,18 @@ export function AccountEditor({
   const submit = (e: FormEvent) => {
     e.preventDefault();
     setSaved(false);
-    // An administrator sees everything, without parental controls, and can always download.
-    const limits = isAdmin ? {} : { libraries: access, parental, denyDownloads };
+    // An administrator sees everything, without parental controls, can always download and request.
+    const limits = isAdmin
+      ? {}
+      : { libraries: access, parental, denyDownloads, denyRequests, autoApproveRequests: autoApprove };
     if (!a) {
-      createAccount.mutate({ username: username.trim(), password, isAdmin, ...limits });
+      createAccount.mutate({
+        username: username.trim(),
+        password,
+        isAdmin,
+        ...limits,
+        requestQuota: isAdmin ? undefined : quota,
+      });
       return;
     }
     updateAccount.mutate({
@@ -115,6 +127,9 @@ export function AccountEditor({
             libraries: access,
             parental,
             denyDownloads: denyDownloads !== a.denyDownloads ? denyDownloads : undefined,
+            denyRequests: denyRequests !== a.denyRequests ? denyRequests : undefined,
+            autoApproveRequests: autoApprove !== a.autoApproveRequests ? autoApprove : undefined,
+            requestQuota: quota !== a.requestQuota ? quota : undefined,
           }),
     });
   };
@@ -265,6 +280,43 @@ export function AccountEditor({
             setDenyDownloads(on);
           }}
         />
+        <fieldset className={styles.fieldset} disabled={isAdmin}>
+          <legend className={styles.label}>{t("accountEditor.requests")}</legend>
+          <Switch
+            label={t("accountEditor.noRequests")}
+            hint={t("accountEditor.noRequestsHint")}
+            tone="danger"
+            on={!isAdmin && denyRequests}
+            disabled={isAdmin}
+            onChange={(on) => {
+              setSaved(false);
+              setDenyRequests(on);
+            }}
+          />
+          <Switch
+            label={t("accountEditor.autoApprove")}
+            hint={t("accountEditor.autoApproveHint")}
+            on={isAdmin || autoApprove}
+            disabled={isAdmin || denyRequests}
+            onChange={(on) => {
+              setSaved(false);
+              setAutoApprove(on);
+            }}
+          />
+          <Field
+            label={t("accountEditor.quota")}
+            hint={t("accountEditor.quotaHint")}
+            type="number"
+            min={0}
+            max={1000}
+            disabled={isAdmin || denyRequests}
+            value={isAdmin ? "" : quota}
+            onChange={(e) => {
+              setSaved(false);
+              setQuota(Math.max(0, Math.min(1000, Math.round(Number(e.target.value) || 0))));
+            }}
+          />
+        </fieldset>
         {!self && (
           <Switch
             label={t("accountEditor.admin")}

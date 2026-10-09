@@ -14,6 +14,7 @@ import { AuthService } from "../gen/laterna/v1/auth_pb";
 import { CatalogService } from "../gen/laterna/v1/catalog_pb";
 import { LibraryKind } from "../gen/laterna/v1/library_pb";
 import { ProfileService } from "../gen/laterna/v1/profile_pb";
+import { RequestService } from "../gen/laterna/v1/request_pb";
 import { adoptLanguage } from "../i18n";
 import { MiniPlayer } from "../music/MiniPlayer";
 import { MusicProvider, useMusic } from "../music/MusicProvider";
@@ -90,6 +91,13 @@ function Shell() {
     (useQuery(CatalogService.method.listCatalogLibraries, {}).data?.libraries ?? []).map((l) => l.kind),
   );
   const shown = sections.filter((s) => s.kinds.length === 0 || s.kinds.some((k) => kinds.has(k)));
+  // Requests show once an administrator has set where they land, unless the account may not make any.
+  const account = session.account;
+  const mayRequest = !account?.denyRequests || Boolean(account.isAdmin);
+  const destinations = useQuery(RequestService.method.listRequestDestinations, {}, { enabled: mayRequest });
+  const moreShown = more.filter(
+    (m) => m.to !== "/requests" || (mayRequest && (destinations.data?.destinations.length ?? 0) > 0),
+  );
 
   // "/" opens the search, except while typing.
   useEffect(() => {
@@ -136,7 +144,7 @@ function Shell() {
               {t(s.label)}
             </Link>
           ))}
-          <MoreMenu />
+          <MoreMenu items={moreShown} />
         </nav>
         <div className={styles.tools} data-ui="header-tools">
           <Link
@@ -167,18 +175,21 @@ function Shell() {
       >
         <Outlet />
       </main>
-      <TabBar sections={shown} />
+      <TabBar sections={shown} more={moreShown} />
       <MiniPlayer />
     </div>
   );
 }
 
-/** More sections: collections, playlists, watch parties ("More" in the navigation). */
+/** More sections: collections, playlists, watch parties, requests ("More" in the navigation). */
 const more = [
   { to: "/collections", label: "nav.collections", universe: "collections" },
   { to: "/playlists", label: "nav.lists", universe: "playlists" },
   { to: "/party", label: "nav.party", universe: "party" },
+  { to: "/requests", label: "nav.requests", universe: "movies" },
 ] as const;
+
+type More = (typeof more)[number];
 
 /**
  * Panel that opens under a button (disclosure pattern): it closes on an outside click, when focus
@@ -210,10 +221,10 @@ function useDisclosure() {
   return { open, setOpen, ref, button };
 }
 
-function MoreMenu() {
+function MoreMenu({ items }: { items: readonly More[] }) {
   const { t } = useTranslation();
   const { open, setOpen, ref, button } = useDisclosure();
-  const here = useLocation({ select: (l) => more.some((m) => l.pathname.startsWith(m.to)) });
+  const here = useLocation({ select: (l) => items.some((m) => l.pathname.startsWith(m.to)) });
   return (
     <div className={styles.menu} ref={ref}>
       <button
@@ -233,7 +244,7 @@ function MoreMenu() {
       </button>
       {open && (
         <div id="menu-more" className={styles.morePanel} data-ui="menu">
-          {more.map((m) => (
+          {items.map((m) => (
             <Link
               key={m.to}
               to={m.to}
@@ -257,7 +268,7 @@ function MoreMenu() {
  * of the thumb, instead of the header's. Tablets show them all; phones only the first four, the
  * others (data-extra) moving under "More", with collections, playlists and watch parties.
  */
-function TabBar({ sections }: { sections: readonly Section[] }) {
+function TabBar({ sections, more }: { sections: readonly Section[]; more: readonly More[] }) {
   const { t } = useTranslation();
   const { open, setOpen, ref, button } = useDisclosure();
   const extra = sections.slice(4);

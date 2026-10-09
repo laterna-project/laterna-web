@@ -13,6 +13,7 @@ import { LibraryService } from "../gen/laterna/v1/library_pb";
 import { MusicService } from "../gen/laterna/v1/music_pb";
 import { PhotoService } from "../gen/laterna/v1/photo_pb";
 import { PlaylistService } from "../gen/laterna/v1/playlist_pb";
+import { RequestService } from "../gen/laterna/v1/request_pb";
 import { ThemeService } from "../gen/laterna/v1/theme_pb";
 
 /** Services whose responses depend on the catalog and on watch data. */
@@ -112,6 +113,9 @@ export function useServerEvents(profileId: string): void {
                 break;
               case "themesChanged":
                 invalidator.mark(ThemeService);
+                break;
+              case "requestsChanged":
+                invalidator.mark(RequestService);
                 break;
               default:
                 break;

@@ -8,6 +8,7 @@ import styles from "../../features/admin/admin.module.css";
 import { AccountService } from "../../gen/laterna/v1/account_pb";
 import { ActivityService } from "../../gen/laterna/v1/activity_pb";
 import { LibraryService } from "../../gen/laterna/v1/library_pb";
+import { RequestService, RequestStatus } from "../../gen/laterna/v1/request_pb";
 import { SystemService } from "../../gen/laterna/v1/system_pb";
 import { useMusic } from "../../music/MusicProvider";
 import { Icon } from "../../ui/Icon";
@@ -26,6 +27,7 @@ const menu = [
   { to: "/admin", label: "adminNav.overview", dot: "var(--color-ink)" },
   { to: "/admin/libraries", label: "adminNav.libraries", dot: "var(--color-collections)" },
   { to: "/admin/accounts", label: "adminNav.accounts", dot: "var(--color-playlists)" },
+  { to: "/admin/requests", label: "adminNav.requests", dot: "var(--color-movies)" },
   { to: "/admin/authentication", label: "adminNav.authentication", dot: "var(--color-series)" },
   { to: "/admin/themes", label: "adminNav.themes", dot: "var(--color-accent)" },
   { to: "/admin/devices", label: "adminNav.devices", dot: "var(--color-party)" },
@@ -53,6 +55,11 @@ function AdminLayout() {
   const badges: Partial<Record<(typeof menu)[number]["to"], number>> = {
     "/admin/libraries": useQuery(LibraryService.method.listLibraries, {}, enabled).data?.libraries.length,
     "/admin/accounts": useQuery(AccountService.method.listAccounts, {}, enabled).data?.accounts.length,
+    "/admin/requests": useQuery(
+      RequestService.method.listRequests,
+      { statuses: [RequestStatus.PENDING], pageSize: 1 },
+      enabled,
+    ).data?.pendingCount,
     "/admin/devices": useQuery(ActivityService.method.listDevices, {}, enabled).data?.devices.length,
     "/admin/tasks": useQuery(SystemService.method.getSystemStatus, {}, enabled).data?.status?.jobsFailed,
   };
