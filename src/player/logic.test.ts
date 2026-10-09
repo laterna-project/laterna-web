@@ -169,6 +169,22 @@ describe("playback method", () => {
     });
   });
 
+  it("says where the picture was decoded", () => {
+    const s = (fields: object) =>
+      create(StartPlaybackResponseSchema, {
+        method: PlaybackMethod.HLS_TRANSCODE,
+        videoTranscoded: true,
+        videoEncoder: "h264_nvenc",
+        ...fields,
+      });
+    expect(methodSummary(s({ decoder: "cuda" })).detail).toBe(
+      "Picture re-encoded (h264_nvenc, decoded by the graphics card).",
+    );
+    expect(methodSummary(s({ gpu: true })).detail).toBe(
+      "Picture re-encoded (h264_nvenc, on the graphics card).",
+    );
+  });
+
   it("direct play", () => {
     expect(methodSummary(create(StartPlaybackResponseSchema, { method: PlaybackMethod.DIRECT })).title).toBe(
       "Direct play",

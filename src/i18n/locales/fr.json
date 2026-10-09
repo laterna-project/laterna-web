@@ -430,6 +430,7 @@
   "playbackMethod": {
     "transcoded": "réencodée",
     "gpu": "carte graphique",
+    "decoder": "décodage {{decoder}}",
     "audio": "son",
     "remux": "sans réencodage",
     "direct": "lecture directe"
@@ -522,9 +523,10 @@
     "encoders": "Encodeurs",
     "toneMapping": "HDR → SDR",
     "noToneMapping": "aucune conversion possible",
-    "gpu": "Carte graphique",
-    "gpuOn": "chaîne complète disponible",
-    "gpuOff": "non utilisée",
+    "decoding": "Décodage vidéo",
+    "decodingGpu": "sur la carte : décodage, mise à l'échelle et HDR",
+    "decodingHardware": "sur la carte ({{decoder}})",
+    "decodingCpu": "par le processeur",
     "system": "Système",
     "librariesTitle": "Bibliothèques",
     "manage": "Gérer",
@@ -1217,6 +1219,7 @@
       "video": "image réencodée",
       "videoWith": "image réencodée ({{encoder}})",
       "videoGpu": "image réencodée ({{encoder}}, sur la carte graphique)",
+      "videoDecoder": "image réencodée ({{encoder}}, décodée par la carte graphique)",
       "toneMapping": "HDR converti en SDR ({{method}})",
       "audio": "son réencodé en AAC",
       "audioViaHls": "Ce navigateur ne lit que la piste audio par défaut d'un fichier : le serveur met celle choisie dans un flux HLS."

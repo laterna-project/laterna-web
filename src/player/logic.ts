@@ -180,7 +180,14 @@ export function methodSummary(s: StartPlaybackResponse): { title: string; detail
     case PlaybackMethod.HLS_TRANSCODE: {
       const video = !s.videoEncoder
         ? i18n.t("player.method.video")
-        : i18n.t(s.gpu ? "player.method.videoGpu" : "player.method.videoWith", { encoder: s.videoEncoder });
+        : i18n.t(
+            s.gpu
+              ? "player.method.videoGpu"
+              : s.decoder
+                ? "player.method.videoDecoder"
+                : "player.method.videoWith",
+            { encoder: s.videoEncoder },
+          );
       const what = [
         s.videoTranscoded && video,
         s.toneMapping && i18n.t("player.method.toneMapping", { method: s.toneMapping }),

@@ -197,8 +197,14 @@ function Overview() {
                 </dd>
                 <dt>{t("adminOverview.toneMapping")}</dt>
                 <dd>{status.toneMappers.join(", ") || t("adminOverview.noToneMapping")}</dd>
-                <dt>{t("adminOverview.gpu")}</dt>
-                <dd>{status.gpu ? t("adminOverview.gpuOn") : t("adminOverview.gpuOff")}</dd>
+                <dt>{t("adminOverview.decoding")}</dt>
+                <dd>
+                  {status.gpu
+                    ? t("adminOverview.decodingGpu")
+                    : status.decoder
+                      ? t("adminOverview.decodingHardware", { decoder: status.decoder })
+                      : t("adminOverview.decodingCpu")}
+                </dd>
                 <dt>{t("adminOverview.system")}</dt>
                 <dd>
                   {status.os} / {status.arch} · {status.goVersion.replace(/^go/, "Go ")}
