@@ -9,12 +9,15 @@ import { serviceWorker } from "./devtools/vite/service-worker.ts";
 const server = process.env.LATERNA_URL ?? "http://localhost:8096";
 
 // Server routes proxied by Vite, so the app and the API share the same origin in development:
-// Connect services (/laterna.v1.<Service>/<Method>) and byte routes (images, streams, fonts,
-// scrubbing thumbnails, books, downloads, logs, backups), the OpenID Connect callback and metrics.
+// Connect services (/laterna.v1.<Service>/<Method>) and byte routes (images, request posters,
+// streams, fonts, scrubbing thumbnails, books, downloads, logs, backups), the OpenID Connect
+// callback and metrics.
 // Production needs the same routes on the same origin (README).
 // Prefixes end with a slash where the app has a route starting with the same letters (/bookshelf).
 const proxied = [
   "/images/",
+  // Not "/requests": the app has that page.
+  "/requests/posters/",
   "/playback/",
   "/fonts/",
   "/trickplay/",

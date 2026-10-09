@@ -88,7 +88,13 @@
   font-weight: var(--weight-strong);
 }
 
-.choice[aria-pressed="true"] {
+/* In a dialog, on the surface: a recessed chip. */
+.form .choice {
+  background: var(--color-surface-sunken);
+}
+
+.choice[aria-pressed="true"],
+.form .choice[aria-pressed="true"] {
   background: var(--color-accent);
   color: var(--color-accent-ink);
 }
@@ -104,6 +110,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
   gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .result {
@@ -198,6 +207,9 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .row {
@@ -237,6 +249,7 @@
 }
 
 .progress {
+  display: block;
   width: min(100%, 280px);
   height: 6px;
   overflow: hidden;
@@ -245,6 +258,7 @@
 }
 
 .progressFill {
+  display: block;
   height: 100%;
   border-radius: var(--radius-pill);
   background: var(--color-accent);
@@ -276,6 +290,18 @@
 .label {
   font-size: var(--text-sm);
   font-weight: var(--weight-heavy);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 96px;
+  padding: var(--space-3) var(--space-4);
+  border: none;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-sunken);
+  color: var(--color-ink);
+  font: inherit;
+  resize: vertical;
 }
 
 .select {

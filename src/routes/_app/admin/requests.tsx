@@ -8,6 +8,7 @@ import styles from "../../../features/admin/admin.module.css";
 import { RequestDestinations } from "../../../features/admin/RequestDestinations";
 import { AdminHead } from "../../../features/admin/ui";
 import { decidable, seasonsLabel } from "../../../features/requests/requests";
+import requestStyles from "../../../features/requests/requests.module.css";
 import { DestinationPicker, RequestRow } from "../../../features/requests/ui";
 import { ActivityService } from "../../../gen/laterna/v1/activity_pb";
 import {
@@ -88,13 +89,13 @@ function AdminRequests() {
           </button>
         ))}
       </fieldset>
-      <section className={styles.card} aria-label={t(filter.label)}>
+      <section className={requestStyles.section} aria-label={t(filter.label)}>
         {list.isError && <Alert>{errorMessage(list.error)}</Alert>}
         {remove.isError && <Alert>{errorMessage(remove.error)}</Alert>}
         {list.isSuccess && requests.length === 0 && (
           <p className={styles.muted}>{t("common.nothingToShow")}</p>
         )}
-        <ul className={styles.rows}>
+        <ul className={requestStyles.rows}>
           {requests.map((r) => (
             <RequestRow key={r.id} request={r} who>
               {decidable(r.status) && (
@@ -268,7 +269,7 @@ function DeclineDialog({
         <label className={styles.selectField}>
           <span className={styles.label}>{t("adminRequests.reason")}</span>
           <textarea
-            className={styles.textarea}
+            className={requestStyles.textarea}
             maxLength={500}
             value={reason}
             onChange={(e) => setReason(e.target.value)}

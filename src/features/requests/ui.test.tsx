@@ -135,7 +135,7 @@ describe("request row", () => {
               seasons: RequestSeasons.LATEST,
               declineReason: "Already on Blu-ray",
               profileName: "Léa",
-              username: "Léa",
+              username: "Martin family",
             })}
             who
           />
@@ -152,7 +152,7 @@ describe("request row", () => {
     );
     expect(screen.getByText("Declined")).toBeTruthy();
     expect(screen.getByText("Reason: Already on Blu-ray")).toBeTruthy();
-    expect(screen.getByText(/Latest season · Léa \(Léa\)/)).toBeTruthy();
+    expect(screen.getByText(/Latest season · Léa \(Martin family\)/)).toBeTruthy();
     expect(
       screen.getByRole("progressbar", { name: "Download of Perfect Blue" }).getAttribute("aria-valuenow"),
     ).toBe("25");

@@ -73,7 +73,12 @@ export function RequestRow({
   const meta = [
     kind.label,
     seasonsLabel(r),
-    who ? t("requests.by", { profile: r.profileName, account: r.username }) : "",
+    // The account's name only when the profile has another one.
+    who
+      ? r.profileName === r.username
+        ? r.profileName
+        : t("requests.by", { profile: r.profileName, account: r.username })
+      : "",
     who && r.destination ? r.destination.name : "",
     created ? relativeTime(created) : "",
   ].filter(Boolean);

@@ -76,7 +76,7 @@ and send the server's routes to Laterna:
 
 | Paths | Go to |
 |---|---|
-| `/laterna.v1.*` (the API), `/images/`, `/playback/`, `/fonts/`, `/trickplay/`, `/books/`, `/downloads/`, `/logs/`, `/backups/`, `/hooks/`, `/auth/oidc/`, `/health`, `/metrics` | the server |
+| `/laterna.v1.*` (the API), `/images/`, `/requests/posters/`, `/playback/`, `/fonts/`, `/trickplay/`, `/books/`, `/downloads/`, `/logs/`, `/backups/`, `/hooks/`, `/auth/oidc/`, `/health`, `/metrics` | the server |
 | everything else | the client's files, with `index.html` for any path that is not a file |
 
 With [Caddy](https://caddyserver.com/), the client unpacked in `/srv/laterna-web` and the server
@@ -84,7 +84,7 @@ on port 8096:
 
 ```caddyfile
 media.example.com {
-	@server path /laterna.v1.* /images/* /playback/* /fonts/* /trickplay/* /books/* /downloads/* /logs/* /backups/* /hooks/* /auth/oidc/* /health /metrics
+	@server path /laterna.v1.* /images/* /requests/posters/* /playback/* /fonts/* /trickplay/* /books/* /downloads/* /logs/* /backups/* /hooks/* /auth/oidc/* /health /metrics
 	handle @server {
 		reverse_proxy localhost:8096 {
 			flush_interval -1
