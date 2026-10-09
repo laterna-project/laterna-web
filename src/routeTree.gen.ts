@@ -22,6 +22,7 @@ import { Route as AppDiscoverRouteImport } from './routes/_app/discover'
 import { Route as AppOfflineRouteImport } from './routes/_app/offline'
 import { Route as AppPartyRouteImport } from './routes/_app/party'
 import { Route as AppPlaylistsRouteImport } from './routes/_app/playlists'
+import { Route as AppRequestsRouteImport } from './routes/_app/requests'
 import { Route as AppSearchRouteImport } from './routes/_app/search'
 import { Route as AppAccountIndexRouteImport } from './routes/_app/account/index'
 import { Route as AppAccountHistoryRouteImport } from './routes/_app/account/history'
@@ -38,6 +39,7 @@ import { Route as AppAdminJellyfinImportRouteImport } from './routes/_app/admin/
 import { Route as AppAdminLibrariesRouteImport } from './routes/_app/admin/libraries'
 import { Route as AppAdminLogsRouteImport } from './routes/_app/admin/logs'
 import { Route as AppAdminObservabilityRouteImport } from './routes/_app/admin/observability'
+import { Route as AppAdminRequestsRouteImport } from './routes/_app/admin/requests'
 import { Route as AppAdminSettingsRouteImport } from './routes/_app/admin/settings'
 import { Route as AppAdminSonarrRadarrRouteImport } from './routes/_app/admin/sonarr-radarr'
 import { Route as AppAdminTasksRouteImport } from './routes/_app/admin/tasks'
@@ -124,6 +126,11 @@ const AppPlaylistsRoute = AppPlaylistsRouteImport.update({
   path: '/playlists',
   getParentRoute: () => AppRoute,
 } as any)
+const AppRequestsRoute = AppRequestsRouteImport.update({
+  id: '/requests',
+  path: '/requests',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppSearchRoute = AppSearchRouteImport.update({
   id: '/search',
   path: '/search',
@@ -202,6 +209,11 @@ const AppAdminLogsRoute = AppAdminLogsRouteImport.update({
 const AppAdminObservabilityRoute = AppAdminObservabilityRouteImport.update({
   id: '/observability',
   path: '/observability',
+  getParentRoute: () => AppAdminRoute,
+} as any)
+const AppAdminRequestsRoute = AppAdminRequestsRouteImport.update({
+  id: '/requests',
+  path: '/requests',
   getParentRoute: () => AppAdminRoute,
 } as any)
 const AppAdminSettingsRoute = AppAdminSettingsRouteImport.update({
@@ -323,6 +335,7 @@ export interface FileRoutesByFullPath {
   '/offline': typeof AppOfflineRoute
   '/party': typeof AppPartyRoute
   '/playlists': typeof AppPlaylistsRoute
+  '/requests': typeof AppRequestsRoute
   '/search': typeof AppSearchRoute
   '/account/history': typeof AppAccountHistoryRoute
   '/account/security': typeof AppAccountSecurityRoute
@@ -337,6 +350,7 @@ export interface FileRoutesByFullPath {
   '/admin/libraries': typeof AppAdminLibrariesRoute
   '/admin/logs': typeof AppAdminLogsRoute
   '/admin/observability': typeof AppAdminObservabilityRoute
+  '/admin/requests': typeof AppAdminRequestsRoute
   '/admin/settings': typeof AppAdminSettingsRoute
   '/admin/sonarr-radarr': typeof AppAdminSonarrRadarrRoute
   '/admin/tasks': typeof AppAdminTasksRoute
@@ -371,6 +385,7 @@ export interface FileRoutesByTo {
   '/offline': typeof AppOfflineRoute
   '/party': typeof AppPartyRoute
   '/playlists': typeof AppPlaylistsRoute
+  '/requests': typeof AppRequestsRoute
   '/search': typeof AppSearchRoute
   '/': typeof AppIndexRoute
   '/account/history': typeof AppAccountHistoryRoute
@@ -386,6 +401,7 @@ export interface FileRoutesByTo {
   '/admin/libraries': typeof AppAdminLibrariesRoute
   '/admin/logs': typeof AppAdminLogsRoute
   '/admin/observability': typeof AppAdminObservabilityRoute
+  '/admin/requests': typeof AppAdminRequestsRoute
   '/admin/settings': typeof AppAdminSettingsRoute
   '/admin/sonarr-radarr': typeof AppAdminSonarrRadarrRoute
   '/admin/tasks': typeof AppAdminTasksRoute
@@ -424,6 +440,7 @@ export interface FileRoutesById {
   '/_app/offline': typeof AppOfflineRoute
   '/_app/party': typeof AppPartyRoute
   '/_app/playlists': typeof AppPlaylistsRoute
+  '/_app/requests': typeof AppRequestsRoute
   '/_app/search': typeof AppSearchRoute
   '/_app/': typeof AppIndexRoute
   '/_app/account/history': typeof AppAccountHistoryRoute
@@ -439,6 +456,7 @@ export interface FileRoutesById {
   '/_app/admin/libraries': typeof AppAdminLibrariesRoute
   '/_app/admin/logs': typeof AppAdminLogsRoute
   '/_app/admin/observability': typeof AppAdminObservabilityRoute
+  '/_app/admin/requests': typeof AppAdminRequestsRoute
   '/_app/admin/settings': typeof AppAdminSettingsRoute
   '/_app/admin/sonarr-radarr': typeof AppAdminSonarrRadarrRoute
   '/_app/admin/tasks': typeof AppAdminTasksRoute
@@ -478,6 +496,7 @@ export interface FileRouteTypes {
     | '/offline'
     | '/party'
     | '/playlists'
+    | '/requests'
     | '/search'
     | '/account/history'
     | '/account/security'
@@ -492,6 +511,7 @@ export interface FileRouteTypes {
     | '/admin/libraries'
     | '/admin/logs'
     | '/admin/observability'
+    | '/admin/requests'
     | '/admin/settings'
     | '/admin/sonarr-radarr'
     | '/admin/tasks'
@@ -526,6 +546,7 @@ export interface FileRouteTypes {
     | '/offline'
     | '/party'
     | '/playlists'
+    | '/requests'
     | '/search'
     | '/'
     | '/account/history'
@@ -541,6 +562,7 @@ export interface FileRouteTypes {
     | '/admin/libraries'
     | '/admin/logs'
     | '/admin/observability'
+    | '/admin/requests'
     | '/admin/settings'
     | '/admin/sonarr-radarr'
     | '/admin/tasks'
@@ -578,6 +600,7 @@ export interface FileRouteTypes {
     | '/_app/offline'
     | '/_app/party'
     | '/_app/playlists'
+    | '/_app/requests'
     | '/_app/search'
     | '/_app/'
     | '/_app/account/history'
@@ -593,6 +616,7 @@ export interface FileRouteTypes {
     | '/_app/admin/libraries'
     | '/_app/admin/logs'
     | '/_app/admin/observability'
+    | '/_app/admin/requests'
     | '/_app/admin/settings'
     | '/_app/admin/sonarr-radarr'
     | '/_app/admin/tasks'
@@ -719,6 +743,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppPlaylistsRouteImport
       parentRoute: typeof AppRoute
     }
+    '/_app/requests': {
+      id: '/_app/requests'
+      path: '/requests'
+      fullPath: '/requests'
+      preLoaderRoute: typeof AppRequestsRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/_app/search': {
       id: '/_app/search'
       path: '/search'
@@ -829,6 +860,13 @@ declare module '@tanstack/react-router' {
       path: '/observability'
       fullPath: '/admin/observability'
       preLoaderRoute: typeof AppAdminObservabilityRouteImport
+      parentRoute: typeof AppAdminRoute
+    }
+    '/_app/admin/requests': {
+      id: '/_app/admin/requests'
+      path: '/requests'
+      fullPath: '/admin/requests'
+      preLoaderRoute: typeof AppAdminRequestsRouteImport
       parentRoute: typeof AppAdminRoute
     }
     '/_app/admin/settings': {
@@ -1011,6 +1049,7 @@ interface AppAdminRouteChildren {
   AppAdminLibrariesRoute: typeof AppAdminLibrariesRoute
   AppAdminLogsRoute: typeof AppAdminLogsRoute
   AppAdminObservabilityRoute: typeof AppAdminObservabilityRoute
+  AppAdminRequestsRoute: typeof AppAdminRequestsRoute
   AppAdminSettingsRoute: typeof AppAdminSettingsRoute
   AppAdminSonarrRadarrRoute: typeof AppAdminSonarrRadarrRoute
   AppAdminTasksRoute: typeof AppAdminTasksRoute
@@ -1028,6 +1067,7 @@ const AppAdminRouteChildren: AppAdminRouteChildren = {
   AppAdminLibrariesRoute: AppAdminLibrariesRoute,
   AppAdminLogsRoute: AppAdminLogsRoute,
   AppAdminObservabilityRoute: AppAdminObservabilityRoute,
+  AppAdminRequestsRoute: AppAdminRequestsRoute,
   AppAdminSettingsRoute: AppAdminSettingsRoute,
   AppAdminSonarrRadarrRoute: AppAdminSonarrRadarrRoute,
   AppAdminTasksRoute: AppAdminTasksRoute,
@@ -1047,6 +1087,7 @@ interface AppRouteChildren {
   AppOfflineRoute: typeof AppOfflineRoute
   AppPartyRoute: typeof AppPartyRoute
   AppPlaylistsRoute: typeof AppPlaylistsRoute
+  AppRequestsRoute: typeof AppRequestsRoute
   AppSearchRoute: typeof AppSearchRoute
   AppIndexRoute: typeof AppIndexRoute
   AppEpisodesIdRoute: typeof AppEpisodesIdRoute
@@ -1076,6 +1117,7 @@ const AppRouteChildren: AppRouteChildren = {
   AppOfflineRoute: AppOfflineRoute,
   AppPartyRoute: AppPartyRoute,
   AppPlaylistsRoute: AppPlaylistsRoute,
+  AppRequestsRoute: AppRequestsRoute,
   AppSearchRoute: AppSearchRoute,
   AppIndexRoute: AppIndexRoute,
   AppEpisodesIdRoute: AppEpisodesIdRoute,

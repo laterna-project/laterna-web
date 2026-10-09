@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/events.proto.
  */
 export const file_laterna_v1_events: GenFile = /*@__PURE__*/
-  fileDesc("ChdsYXRlcm5hL3YxL2V2ZW50cy5wcm90bxIKbGF0ZXJuYS52MSISChBTdWJzY3JpYmVSZXF1ZXN0IjUKEVN1YnNjcmliZVJlc3BvbnNlEiAKBWV2ZW50GAEgASgLMhEubGF0ZXJuYS52MS5FdmVudCLaAwoFRXZlbnQSKAoEdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKgoJaGVhcnRiZWF0GAIgASgLMhUubGF0ZXJuYS52MS5IZWFydGJlYXRIABIkCgZyZXN5bmMYAyABKAsyEi5sYXRlcm5hLnYxLlJlc3luY0gAEjkKEWxpYnJhcmllc19jaGFuZ2VkGAQgASgLMhwubGF0ZXJuYS52MS5MaWJyYXJpZXNDaGFuZ2VkSAASNQoPbGlicmFyeV9zY2FubmVkGAUgASgLMhoubGF0ZXJuYS52MS5MaWJyYXJ5U2Nhbm5lZEgAEjEKDWl0ZW1zX2NoYW5nZWQYBiABKAsyGC5sYXRlcm5hLnYxLkl0ZW1zQ2hhbmdlZEgAEjgKEXVzZXJfZGF0YV9jaGFuZ2VkGAcgASgLMhsubGF0ZXJuYS52MS5Vc2VyRGF0YUNoYW5nZWRIABI5ChFkb3dubG9hZHNfY2hhbmdlZBgIIAEoCzIcLmxhdGVybmEudjEuRG93bmxvYWRzQ2hhbmdlZEgAEjMKDnRoZW1lc19jaGFuZ2VkGAkgASgLMhkubGF0ZXJuYS52MS5UaGVtZXNDaGFuZ2VkSABCBgoEa2luZCILCglIZWFydGJlYXQiCAoGUmVzeW5jIhIKEExpYnJhcmllc0NoYW5nZWQimAEKDkxpYnJhcnlTY2FubmVkEhIKCmxpYnJhcnlfaWQYASABKAkSDQoFZmlsZXMYAiABKAUSDQoFYWRkZWQYAyABKAUSDwoHY2hhbmdlZBgEIAEoBRINCgVtb3ZlZBgFIAEoBRIPCgdtaXNzaW5nGAYgASgFEhAKCHJldHVybmVkGAcgASgFEhEKCWZvcmdvdHRlbhgIIAEoBSJHCgxJdGVtc0NoYW5nZWQSEgoKbGlicmFyeV9pZBgBIAEoCRIQCghpdGVtX2lkcxgCIAMoCRIRCgl0cnVuY2F0ZWQYAyABKAgiNgoPVXNlckRhdGFDaGFuZ2VkEhAKCGl0ZW1faWRzGAEgAygJEhEKCXRydW5jYXRlZBgCIAEoCCIoChBEb3dubG9hZHNDaGFuZ2VkEhQKDGRvd25sb2FkX2lkcxgBIAMoCSIPCg1UaGVtZXNDaGFuZ2VkMmAKDEV2ZW50U2VydmljZRJQCglTdWJzY3JpYmUSHC5sYXRlcm5hLnYxLlN1YnNjcmliZVJlcXVlc3QaHS5sYXRlcm5hLnYxLlN1YnNjcmliZVJlc3BvbnNlIgSItRgCMAFCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_laterna_v1_options]);
+  fileDesc("ChdsYXRlcm5hL3YxL2V2ZW50cy5wcm90bxIKbGF0ZXJuYS52MSISChBTdWJzY3JpYmVSZXF1ZXN0IjUKEVN1YnNjcmliZVJlc3BvbnNlEiAKBWV2ZW50GAEgASgLMhEubGF0ZXJuYS52MS5FdmVudCKTBAoFRXZlbnQSKAoEdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKgoJaGVhcnRiZWF0GAIgASgLMhUubGF0ZXJuYS52MS5IZWFydGJlYXRIABIkCgZyZXN5bmMYAyABKAsyEi5sYXRlcm5hLnYxLlJlc3luY0gAEjkKEWxpYnJhcmllc19jaGFuZ2VkGAQgASgLMhwubGF0ZXJuYS52MS5MaWJyYXJpZXNDaGFuZ2VkSAASNQoPbGlicmFyeV9zY2FubmVkGAUgASgLMhoubGF0ZXJuYS52MS5MaWJyYXJ5U2Nhbm5lZEgAEjEKDWl0ZW1zX2NoYW5nZWQYBiABKAsyGC5sYXRlcm5hLnYxLkl0ZW1zQ2hhbmdlZEgAEjgKEXVzZXJfZGF0YV9jaGFuZ2VkGAcgASgLMhsubGF0ZXJuYS52MS5Vc2VyRGF0YUNoYW5nZWRIABI5ChFkb3dubG9hZHNfY2hhbmdlZBgIIAEoCzIcLmxhdGVybmEudjEuRG93bmxvYWRzQ2hhbmdlZEgAEjMKDnRoZW1lc19jaGFuZ2VkGAkgASgLMhkubGF0ZXJuYS52MS5UaGVtZXNDaGFuZ2VkSAASNwoQcmVxdWVzdHNfY2hhbmdlZBgKIAEoCzIbLmxhdGVybmEudjEuUmVxdWVzdHNDaGFuZ2VkSABCBgoEa2luZCILCglIZWFydGJlYXQiCAoGUmVzeW5jIhIKEExpYnJhcmllc0NoYW5nZWQimAEKDkxpYnJhcnlTY2FubmVkEhIKCmxpYnJhcnlfaWQYASABKAkSDQoFZmlsZXMYAiABKAUSDQoFYWRkZWQYAyABKAUSDwoHY2hhbmdlZBgEIAEoBRINCgVtb3ZlZBgFIAEoBRIPCgdtaXNzaW5nGAYgASgFEhAKCHJldHVybmVkGAcgASgFEhEKCWZvcmdvdHRlbhgIIAEoBSJHCgxJdGVtc0NoYW5nZWQSEgoKbGlicmFyeV9pZBgBIAEoCRIQCghpdGVtX2lkcxgCIAMoCRIRCgl0cnVuY2F0ZWQYAyABKAgiNgoPVXNlckRhdGFDaGFuZ2VkEhAKCGl0ZW1faWRzGAEgAygJEhEKCXRydW5jYXRlZBgCIAEoCCIoChBEb3dubG9hZHNDaGFuZ2VkEhQKDGRvd25sb2FkX2lkcxgBIAMoCSIPCg1UaGVtZXNDaGFuZ2VkIiYKD1JlcXVlc3RzQ2hhbmdlZBITCgtyZXF1ZXN0X2lkcxgBIAMoCTJgCgxFdmVudFNlcnZpY2USUAoJU3Vic2NyaWJlEhwubGF0ZXJuYS52MS5TdWJzY3JpYmVSZXF1ZXN0Gh0ubGF0ZXJuYS52MS5TdWJzY3JpYmVSZXNwb25zZSIEiLUYAjABQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_laterna_v1_options]);
 
 /**
  * @generated from message laterna.v1.SubscribeRequest
@@ -105,6 +105,12 @@ export type Event = Message<"laterna.v1.Event"> & {
      */
     value: ThemesChanged;
     case: "themesChanged";
+  } | {
+    /**
+     * @generated from field: laterna.v1.RequestsChanged requests_changed = 10;
+     */
+    value: RequestsChanged;
+    case: "requestsChanged";
   } | { case: undefined; value?: undefined };
 };
 
@@ -309,6 +315,27 @@ export type ThemesChanged = Message<"laterna.v1.ThemesChanged"> & {
  */
 export const ThemesChangedSchema: GenMessage<ThemesChanged> = /*@__PURE__*/
   messageDesc(file_laterna_v1_events, 10);
+
+/**
+ * RequestsChanged: requests changed (created, approved, declined, downloading, available,
+ * removed). Sent to the profile that made them and to the administrators; reload them
+ * (RequestService).
+ *
+ * @generated from message laterna.v1.RequestsChanged
+ */
+export type RequestsChanged = Message<"laterna.v1.RequestsChanged"> & {
+  /**
+   * @generated from field: repeated string request_ids = 1;
+   */
+  requestIds: string[];
+};
+
+/**
+ * Describes the message laterna.v1.RequestsChanged.
+ * Use `create(RequestsChangedSchema)` to create a new message.
+ */
+export const RequestsChangedSchema: GenMessage<RequestsChanged> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_events, 11);
 
 /**
  * EventService tells clients what changes, so that they can refresh without polling the server.
