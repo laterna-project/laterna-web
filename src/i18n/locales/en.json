@@ -87,7 +87,8 @@
     "downloads": "Downloads",
     "admin": "Administration",
     "switchProfile": "Switch profile",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "requests": "Requests"
   },
   "adminNav": {
     "label": "Administration",
@@ -109,7 +110,8 @@
     "settings": "Settings",
     "restrictedTitle": "Restricted profile",
     "restrictedText": "The server doesn't open administration from a kid profile or a profile under parental control, even on an administrator's account.",
-    "backups": "Backups"
+    "backups": "Backups",
+    "requests": "Requests"
   },
   "subtitlePrefs": {
     "title": "Subtitles",
@@ -373,7 +375,9 @@
     "metadata_purge": "Metadata purge",
     "subtitles_purge": "Subtitle purge",
     "store_optimize": "Database optimization",
-    "file_segments": "Intro and credits detection"
+    "file_segments": "Intro and credits detection",
+    "request_submit": "Request sent to Sonarr or Radarr",
+    "requests_refresh": "Request follow-up"
   },
   "logLevels": {
     "all": "All",
@@ -406,7 +410,9 @@
     "noLibrary": "no library",
     "unratedHidden": "unrated hidden",
     "noDownloads": "no downloads",
-    "disabled": "disabled"
+    "disabled": "disabled",
+    "noRequests": "no requests",
+    "autoApprove": "requests approved at once"
   },
   "playbackMethod": {
     "transcoded": "transcoded",
@@ -641,7 +647,14 @@
     "create": "Create account",
     "delete": "Delete account",
     "deleteTitle": "Delete account \"{{name}}\"?",
-    "deleteText": "Its profiles go with it, and their data: history, favorites, playlists."
+    "deleteText": "Its profiles go with it, and their data: history, favorites, playlists.",
+    "requests": "Requests",
+    "noRequests": "Requests removed",
+    "noRequestsHint": "This account can't ask for movies or series.",
+    "autoApprove": "Requests approved at once",
+    "autoApproveHint": "No administrator approval, except from a kid or controlled profile.",
+    "quota": "Requests per 7 days",
+    "quotaHint": "0 for no limit. Administrators have none."
   },
   "adminDevices": {
     "title": "Devices",
@@ -1742,5 +1755,111 @@
     "nightly": "Nightly backups",
     "keep": "Nightly backups kept",
     "keepHint": "Taken every night, the oldest dropped beyond this number; 0 = no automatic backup. Manual backups are kept until deleted."
+  },
+  "requests": {
+    "title": "Requests",
+    "subtitle": "Ask for a movie or a series the server doesn't have yet.",
+    "subtitleQuota_one": "Ask for a movie or a series the server doesn't have yet: {{count}} request every 7 days.",
+    "subtitleQuota_other": "Ask for a movie or a series the server doesn't have yet: {{count}} requests every 7 days.",
+    "denied": "Your account can't make requests. Ask an administrator.",
+    "closed": "Requests aren't open on this server yet.",
+    "searchTitle": "Find a title",
+    "kindLabel": "Kind of title",
+    "searchLabel": "Title to request",
+    "placeholderSeries": "A series to request…",
+    "placeholderMovie": "A movie to request…",
+    "searching": "Searching…",
+    "noResult": "Nothing found for \"{{q}}\".",
+    "seasonCount_one": "{{count}} season",
+    "seasonCount_other": "{{count}} seasons",
+    "ask": "Request",
+    "askLabel": "Request {{title}}",
+    "askTitle": "Request \"{{title}}\"",
+    "askHint": "An administrator approves requests, unless yours are approved at once. You will see here when it can be watched.",
+    "sent": "Request sent: \"{{title}}\" waits for an administrator.",
+    "sentApproved": "Request approved: \"{{title}}\" is on its way.",
+    "mine": "My requests",
+    "withdraw": "Withdraw",
+    "withdrawLabel": "Withdraw the request for {{title}}",
+    "watch": "Watch",
+    "by": "{{profile}} ({{account}})",
+    "progress": "Download of {{title}}",
+    "declineReason": "Reason: {{reason}}",
+    "seasonsLabel": "Seasons",
+    "season": "Season {{number}}",
+    "destination": "Destination",
+    "status": {
+      "pending": "Waiting for approval",
+      "approved": "Approved",
+      "downloading": "Downloading · {{percent}}",
+      "available": "Available",
+      "episodes": "Available · {{have}} of {{want}} episodes",
+      "declined": "Declined",
+      "failed": "Failed"
+    },
+    "seasons": {
+      "all": "Whole series",
+      "first": "First season",
+      "latest": "Latest season",
+      "pick": "Choose…",
+      "chosen_one": "Season {{seasons}}",
+      "chosen_other": "Seasons {{seasons}}"
+    },
+    "kind": {
+      "movie": "Movie",
+      "series": "Series"
+    },
+    "state": {
+      "available": "Already here",
+      "requested": "Requested",
+      "tracked": "On its way"
+    },
+    "seriesType": {
+      "standard": "Standard (S01E01)",
+      "anime": "Anime (absolute numbering)",
+      "daily": "Daily (by air date)"
+    }
+  },
+  "adminRequests": {
+    "title": "Requests",
+    "subtitle": "Movies and series asked for by the profiles; nothing waits for you.",
+    "pending_one": "{{count}} request waits for your approval.",
+    "pending_other": "{{count}} requests wait for your approval.",
+    "filterLabel": "Requests shown",
+    "filters": {
+      "pending": "Waiting",
+      "active": "On their way",
+      "done": "Done",
+      "all": "All"
+    },
+    "approve": "Approve",
+    "approveLabel": "Approve the request for {{title}}",
+    "approveTitle": "Approve \"{{title}}\"",
+    "approveHint": "Laterna adds the title to Sonarr or Radarr, monitored, and searches for it.",
+    "asAsked": "As asked ({{seasons}})",
+    "decline": "Decline",
+    "declineLabel": "Decline the request for {{title}}",
+    "declineTitle": "Decline \"{{title}}\"",
+    "reason": "Reason (optional)",
+    "reasonHint": "{{profile}} reads it in their requests.",
+    "forget": "Forget",
+    "forgetLabel": "Forget the request for {{title}}",
+    "destinations": "Destinations",
+    "destinationsHint": "Where requests land: a library and, on Sonarr or Radarr, a root folder and a quality profile. A profile only sees the destinations of libraries it may browse.",
+    "noDestination": "No destination: nobody can make requests of this kind yet.",
+    "newDestination": "New destination",
+    "editTitle": "Destination \"{{name}}\"",
+    "editLabel": "Edit the destination {{name}}",
+    "deleteLabel": "Delete the destination {{name}}",
+    "deleteTitle": "Delete the destination \"{{name}}\"?",
+    "deleteText": "Requests waiting for it are declined. What Sonarr or Radarr already has stays there.",
+    "name": "Name",
+    "kind": "Kind",
+    "library": "Library",
+    "noLibrary": "No library of this kind: create one first.",
+    "seriesType": "Series type",
+    "rootFolder": "Root folder",
+    "qualityProfile": "Quality profile",
+    "rootHint": "Pick the root folder that leads into the library: titles added there show up in it after the scan."
   }
 }

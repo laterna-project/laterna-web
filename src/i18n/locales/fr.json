@@ -90,7 +90,8 @@
     "downloads": "Téléchargements",
     "admin": "Administration",
     "switchProfile": "Changer de profil",
-    "signOut": "Se déconnecter"
+    "signOut": "Se déconnecter",
+    "requests": "Demandes"
   },
   "adminNav": {
     "label": "Administration",
@@ -112,7 +113,8 @@
     "settings": "Réglages",
     "restrictedTitle": "Profil restreint",
     "restrictedText": "Le serveur n'ouvre pas l'administration depuis un profil enfant ou sous contrôle parental, même sur le compte d'un administrateur.",
-    "backups": "Sauvegardes"
+    "backups": "Sauvegardes",
+    "requests": "Demandes"
   },
   "subtitlePrefs": {
     "title": "Sous-titres",
@@ -390,7 +392,9 @@
     "metadata_purge": "Purge des métadonnées",
     "subtitles_purge": "Purge des sous-titres",
     "store_optimize": "Optimisation de la base",
-    "file_segments": "Recherche des génériques"
+    "file_segments": "Recherche des génériques",
+    "request_submit": "Envoi d'une demande à Sonarr ou Radarr",
+    "requests_refresh": "Suivi des demandes"
   },
   "logLevels": {
     "all": "Tout",
@@ -425,7 +429,9 @@
     "noLibrary": "aucune bibliothèque",
     "unratedHidden": "sans classement caché",
     "noDownloads": "sans téléchargement",
-    "disabled": "désactivé"
+    "disabled": "désactivé",
+    "noRequests": "sans demandes",
+    "autoApprove": "demandes acceptées d'office"
   },
   "playbackMethod": {
     "transcoded": "réencodée",
@@ -677,7 +683,14 @@
     "create": "Créer le compte",
     "delete": "Supprimer le compte",
     "deleteTitle": "Supprimer le compte « {{name}} » ?",
-    "deleteText": "Ses profils disparaissent avec lui, et leurs données : historique, favoris, listes."
+    "deleteText": "Ses profils disparaissent avec lui, et leurs données : historique, favoris, listes.",
+    "requests": "Demandes",
+    "noRequests": "Demandes retirées",
+    "noRequestsHint": "Ce compte ne peut pas demander de films ni de séries.",
+    "autoApprove": "Demandes acceptées d'office",
+    "autoApproveHint": "Sans attendre un administrateur, sauf depuis un profil enfant ou contrôlé.",
+    "quota": "Demandes sur 7 jours",
+    "quotaHint": "0 pour aucune limite. Les administrateurs n'en ont pas."
   },
   "adminDevices": {
     "title": "Appareils",
@@ -1818,5 +1831,115 @@
     "nightly": "Sauvegardes nocturnes",
     "keep": "Sauvegardes nocturnes gardées",
     "keepHint": "Prises chaque nuit, les plus anciennes retirées au-delà de ce nombre ; 0 = aucune sauvegarde automatique. Les sauvegardes manuelles restent jusqu'à leur suppression."
+  },
+  "requests": {
+    "title": "Demandes",
+    "subtitle": "Demandez un film ou une série que le serveur n'a pas encore.",
+    "subtitleQuota_one": "Demandez un film ou une série que le serveur n'a pas encore : {{count}} demande tous les 7 jours.",
+    "subtitleQuota_other": "Demandez un film ou une série que le serveur n'a pas encore : {{count}} demandes tous les 7 jours.",
+    "subtitleQuota_many": "Demandez un film ou une série que le serveur n'a pas encore : {{count}} demandes tous les 7 jours.",
+    "denied": "Votre compte ne peut pas faire de demandes. Adressez-vous à un administrateur.",
+    "closed": "Les demandes ne sont pas encore ouvertes sur ce serveur.",
+    "searchTitle": "Trouver un titre",
+    "kindLabel": "Sorte de titre",
+    "searchLabel": "Titre à demander",
+    "placeholderSeries": "Une série à demander…",
+    "placeholderMovie": "Un film à demander…",
+    "searching": "Recherche…",
+    "noResult": "Rien trouvé pour « {{q}} ».",
+    "seasonCount_one": "{{count}} saison",
+    "seasonCount_other": "{{count}} saisons",
+    "seasonCount_many": "{{count}} saisons",
+    "ask": "Demander",
+    "askLabel": "Demander {{title}}",
+    "askTitle": "Demander « {{title}} »",
+    "askHint": "Un administrateur accepte les demandes, sauf si les vôtres le sont d'office. Vous verrez ici quand on pourra la regarder.",
+    "sent": "Demande envoyée : « {{title}} » attend un administrateur.",
+    "sentApproved": "Demande acceptée : « {{title}} » est en route.",
+    "mine": "Mes demandes",
+    "withdraw": "Retirer",
+    "withdrawLabel": "Retirer la demande de {{title}}",
+    "watch": "Regarder",
+    "by": "{{profile}} ({{account}})",
+    "progress": "Téléchargement de {{title}}",
+    "declineReason": "Motif : {{reason}}",
+    "seasonsLabel": "Saisons",
+    "season": "Saison {{number}}",
+    "destination": "Destination",
+    "status": {
+      "pending": "En attente",
+      "approved": "Acceptée",
+      "downloading": "Téléchargement · {{percent}}",
+      "available": "Disponible",
+      "episodes": "Disponible · {{have}} épisodes sur {{want}}",
+      "declined": "Refusée",
+      "failed": "Échec"
+    },
+    "seasons": {
+      "all": "Toute la série",
+      "first": "Première saison",
+      "latest": "Dernière saison",
+      "pick": "Choisir…",
+      "chosen_one": "Saison {{seasons}}",
+      "chosen_other": "Saisons {{seasons}}",
+      "chosen_many": "Saisons {{seasons}}"
+    },
+    "kind": {
+      "movie": "Film",
+      "series": "Série"
+    },
+    "state": {
+      "available": "Déjà là",
+      "requested": "Demandé",
+      "tracked": "En route"
+    },
+    "seriesType": {
+      "standard": "Standard (S01E01)",
+      "anime": "Anime (numérotation absolue)",
+      "daily": "Quotidienne (par date de diffusion)"
+    }
+  },
+  "adminRequests": {
+    "title": "Demandes",
+    "subtitle": "Films et séries demandés par les profils ; rien ne vous attend.",
+    "pending_one": "{{count}} demande attend votre accord.",
+    "pending_other": "{{count}} demandes attendent votre accord.",
+    "pending_many": "{{count}} demandes attendent votre accord.",
+    "filterLabel": "Demandes affichées",
+    "filters": {
+      "pending": "En attente",
+      "active": "En cours",
+      "done": "Terminées",
+      "all": "Toutes"
+    },
+    "approve": "Accepter",
+    "approveLabel": "Accepter la demande de {{title}}",
+    "approveTitle": "Accepter « {{title}} »",
+    "approveHint": "Laterna ajoute le titre à Sonarr ou Radarr, surveillé, et le fait chercher.",
+    "asAsked": "Comme demandé ({{seasons}})",
+    "decline": "Refuser",
+    "declineLabel": "Refuser la demande de {{title}}",
+    "declineTitle": "Refuser « {{title}} »",
+    "reason": "Motif (facultatif)",
+    "reasonHint": "{{profile}} le lira dans ses demandes.",
+    "forget": "Oublier",
+    "forgetLabel": "Oublier la demande de {{title}}",
+    "destinations": "Destinations",
+    "destinationsHint": "Où arrivent les demandes : une bibliothèque et, sur Sonarr ou Radarr, un dossier racine et un profil de qualité. Un profil ne voit que les destinations des bibliothèques qu'il peut parcourir.",
+    "noDestination": "Aucune destination : personne ne peut encore faire ce genre de demande.",
+    "newDestination": "Nouvelle destination",
+    "editTitle": "Destination « {{name}} »",
+    "editLabel": "Modifier la destination {{name}}",
+    "deleteLabel": "Supprimer la destination {{name}}",
+    "deleteTitle": "Supprimer la destination « {{name}} » ?",
+    "deleteText": "Les demandes qui l'attendent sont refusées. Ce que Sonarr ou Radarr a déjà y reste.",
+    "name": "Nom",
+    "kind": "Sorte",
+    "library": "Bibliothèque",
+    "noLibrary": "Aucune bibliothèque de cette sorte : créez-en une d'abord.",
+    "seriesType": "Type de série",
+    "rootFolder": "Dossier racine",
+    "qualityProfile": "Profil de qualité",
+    "rootHint": "Choisissez le dossier racine qui mène à la bibliothèque : les titres ajoutés y apparaissent après le scan."
   }
 }

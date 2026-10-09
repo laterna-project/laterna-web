@@ -17,7 +17,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/account.proto.
  */
 export const file_laterna_v1_account: GenFile = /*@__PURE__*/
-  fileDesc("ChhsYXRlcm5hL3YxL2FjY291bnQucHJvdG8SCmxhdGVybmEudjEigQEKDkFjY291bnRTdW1tYXJ5EiQKB2FjY291bnQYASABKAsyEy5sYXRlcm5hLnYxLkFjY291bnQSFQoNcHJvZmlsZV9jb3VudBgCIAEoBRIyCg5sYXN0X2FjdGl2ZV9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiFQoTTGlzdEFjY291bnRzUmVxdWVzdCJEChRMaXN0QWNjb3VudHNSZXNwb25zZRIsCghhY2NvdW50cxgBIAMoCzIaLmxhdGVybmEudjEuQWNjb3VudFN1bW1hcnkiwQEKFENyZWF0ZUFjY291bnRSZXF1ZXN0EhAKCHVzZXJuYW1lGAEgASgJEhAKCHBhc3N3b3JkGAIgASgJEhAKCGlzX2FkbWluGAMgASgIEiwKCWxpYnJhcmllcxgEIAEoCzIZLmxhdGVybmEudjEuTGlicmFyeUFjY2VzcxItCghwYXJlbnRhbBgFIAEoCzIbLmxhdGVybmEudjEuUGFyZW50YWxDb250cm9sEhYKDmRlbnlfZG93bmxvYWRzGAYgASgIIj0KFUNyZWF0ZUFjY291bnRSZXNwb25zZRIkCgdhY2NvdW50GAEgASgLMhMubGF0ZXJuYS52MS5BY2NvdW50IscCChRVcGRhdGVBY2NvdW50UmVxdWVzdBISCgphY2NvdW50X2lkGAEgASgJEhUKCHVzZXJuYW1lGAIgASgJSACIAQESFQoIcGFzc3dvcmQYAyABKAlIAYgBARIVCghpc19hZG1pbhgEIAEoCEgCiAEBEhUKCGRpc2FibGVkGAUgASgISAOIAQESLAoJbGlicmFyaWVzGAYgASgLMhkubGF0ZXJuYS52MS5MaWJyYXJ5QWNjZXNzEi0KCHBhcmVudGFsGAcgASgLMhsubGF0ZXJuYS52MS5QYXJlbnRhbENvbnRyb2wSGwoOZGVueV9kb3dubG9hZHMYCCABKAhIBIgBAUILCglfdXNlcm5hbWVCCwoJX3Bhc3N3b3JkQgsKCV9pc19hZG1pbkILCglfZGlzYWJsZWRCEQoPX2RlbnlfZG93bmxvYWRzIj0KFVVwZGF0ZUFjY291bnRSZXNwb25zZRIkCgdhY2NvdW50GAEgASgLMhMubGF0ZXJuYS52MS5BY2NvdW50IioKFERlbGV0ZUFjY291bnRSZXF1ZXN0EhIKCmFjY291bnRfaWQYASABKAkiFwoVRGVsZXRlQWNjb3VudFJlc3BvbnNlMoADCg5BY2NvdW50U2VydmljZRJaCgxMaXN0QWNjb3VudHMSHy5sYXRlcm5hLnYxLkxpc3RBY2NvdW50c1JlcXVlc3QaIC5sYXRlcm5hLnYxLkxpc3RBY2NvdW50c1Jlc3BvbnNlIgeQAgGItRgEEloKDUNyZWF0ZUFjY291bnQSIC5sYXRlcm5hLnYxLkNyZWF0ZUFjY291bnRSZXF1ZXN0GiEubGF0ZXJuYS52MS5DcmVhdGVBY2NvdW50UmVzcG9uc2UiBIi1GAQSWgoNVXBkYXRlQWNjb3VudBIgLmxhdGVybmEudjEuVXBkYXRlQWNjb3VudFJlcXVlc3QaIS5sYXRlcm5hLnYxLlVwZGF0ZUFjY291bnRSZXNwb25zZSIEiLUYBBJaCg1EZWxldGVBY2NvdW50EiAubGF0ZXJuYS52MS5EZWxldGVBY2NvdW50UmVxdWVzdBohLmxhdGVybmEudjEuRGVsZXRlQWNjb3VudFJlc3BvbnNlIgSItRgEQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_laterna_v1_auth, file_laterna_v1_options, file_laterna_v1_profile]);
+  fileDesc("ChhsYXRlcm5hL3YxL2FjY291bnQucHJvdG8SCmxhdGVybmEudjEigQEKDkFjY291bnRTdW1tYXJ5EiQKB2FjY291bnQYASABKAsyEy5sYXRlcm5hLnYxLkFjY291bnQSFQoNcHJvZmlsZV9jb3VudBgCIAEoBRIyCg5sYXN0X2FjdGl2ZV9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiFQoTTGlzdEFjY291bnRzUmVxdWVzdCJEChRMaXN0QWNjb3VudHNSZXNwb25zZRIsCghhY2NvdW50cxgBIAMoCzIaLmxhdGVybmEudjEuQWNjb3VudFN1bW1hcnkipQIKFENyZWF0ZUFjY291bnRSZXF1ZXN0EhAKCHVzZXJuYW1lGAEgASgJEhAKCHBhc3N3b3JkGAIgASgJEhAKCGlzX2FkbWluGAMgASgIEiwKCWxpYnJhcmllcxgEIAEoCzIZLmxhdGVybmEudjEuTGlicmFyeUFjY2VzcxItCghwYXJlbnRhbBgFIAEoCzIbLmxhdGVybmEudjEuUGFyZW50YWxDb250cm9sEhYKDmRlbnlfZG93bmxvYWRzGAYgASgIEhUKDWRlbnlfcmVxdWVzdHMYByABKAgSHQoVYXV0b19hcHByb3ZlX3JlcXVlc3RzGAggASgIEhoKDXJlcXVlc3RfcXVvdGEYCSABKAVIAIgBAUIQCg5fcmVxdWVzdF9xdW90YSI9ChVDcmVhdGVBY2NvdW50UmVzcG9uc2USJAoHYWNjb3VudBgBIAEoCzITLmxhdGVybmEudjEuQWNjb3VudCLhAwoUVXBkYXRlQWNjb3VudFJlcXVlc3QSEgoKYWNjb3VudF9pZBgBIAEoCRIVCgh1c2VybmFtZRgCIAEoCUgAiAEBEhUKCHBhc3N3b3JkGAMgASgJSAGIAQESFQoIaXNfYWRtaW4YBCABKAhIAogBARIVCghkaXNhYmxlZBgFIAEoCEgDiAEBEiwKCWxpYnJhcmllcxgGIAEoCzIZLmxhdGVybmEudjEuTGlicmFyeUFjY2VzcxItCghwYXJlbnRhbBgHIAEoCzIbLmxhdGVybmEudjEuUGFyZW50YWxDb250cm9sEhsKDmRlbnlfZG93bmxvYWRzGAggASgISASIAQESGgoNZGVueV9yZXF1ZXN0cxgJIAEoCEgFiAEBEiIKFWF1dG9fYXBwcm92ZV9yZXF1ZXN0cxgKIAEoCEgGiAEBEhoKDXJlcXVlc3RfcXVvdGEYCyABKAVIB4gBAUILCglfdXNlcm5hbWVCCwoJX3Bhc3N3b3JkQgsKCV9pc19hZG1pbkILCglfZGlzYWJsZWRCEQoPX2RlbnlfZG93bmxvYWRzQhAKDl9kZW55X3JlcXVlc3RzQhgKFl9hdXRvX2FwcHJvdmVfcmVxdWVzdHNCEAoOX3JlcXVlc3RfcXVvdGEiPQoVVXBkYXRlQWNjb3VudFJlc3BvbnNlEiQKB2FjY291bnQYASABKAsyEy5sYXRlcm5hLnYxLkFjY291bnQiKgoURGVsZXRlQWNjb3VudFJlcXVlc3QSEgoKYWNjb3VudF9pZBgBIAEoCSIXChVEZWxldGVBY2NvdW50UmVzcG9uc2UygAMKDkFjY291bnRTZXJ2aWNlEloKDExpc3RBY2NvdW50cxIfLmxhdGVybmEudjEuTGlzdEFjY291bnRzUmVxdWVzdBogLmxhdGVybmEudjEuTGlzdEFjY291bnRzUmVzcG9uc2UiB5ACAYi1GAQSWgoNQ3JlYXRlQWNjb3VudBIgLmxhdGVybmEudjEuQ3JlYXRlQWNjb3VudFJlcXVlc3QaIS5sYXRlcm5hLnYxLkNyZWF0ZUFjY291bnRSZXNwb25zZSIEiLUYBBJaCg1VcGRhdGVBY2NvdW50EiAubGF0ZXJuYS52MS5VcGRhdGVBY2NvdW50UmVxdWVzdBohLmxhdGVybmEudjEuVXBkYXRlQWNjb3VudFJlc3BvbnNlIgSItRgEEloKDURlbGV0ZUFjY291bnQSIC5sYXRlcm5hLnYxLkRlbGV0ZUFjY291bnRSZXF1ZXN0GiEubGF0ZXJuYS52MS5EZWxldGVBY2NvdW50UmVzcG9uc2UiBIi1GARCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_laterna_v1_auth, file_laterna_v1_options, file_laterna_v1_profile]);
 
 /**
  * AccountSummary is an account as an administrator sees it.
@@ -121,6 +121,27 @@ export type CreateAccountRequest = Message<"laterna.v1.CreateAccountRequest"> & 
    * @generated from field: bool deny_downloads = 6;
    */
   denyDownloads: boolean;
+
+  /**
+   * Takes requests away (refused for an administrator).
+   *
+   * @generated from field: bool deny_requests = 7;
+   */
+  denyRequests: boolean;
+
+  /**
+   * Approves the account's requests without an administrator.
+   *
+   * @generated from field: bool auto_approve_requests = 8;
+   */
+  autoApproveRequests: boolean;
+
+  /**
+   * Requests in seven days; unset means 10, 0 means no limit.
+   *
+   * @generated from field: optional int32 request_quota = 9;
+   */
+  requestQuota?: number | undefined;
 };
 
 /**
@@ -202,6 +223,27 @@ export type UpdateAccountRequest = Message<"laterna.v1.UpdateAccountRequest"> & 
    * @generated from field: optional bool deny_downloads = 8;
    */
   denyDownloads?: boolean | undefined;
+
+  /**
+   * Takes requests away (true) or gives them back (false); unset leaves it unchanged.
+   *
+   * @generated from field: optional bool deny_requests = 9;
+   */
+  denyRequests?: boolean | undefined;
+
+  /**
+   * Unset leaves it unchanged.
+   *
+   * @generated from field: optional bool auto_approve_requests = 10;
+   */
+  autoApproveRequests?: boolean | undefined;
+
+  /**
+   * Requests in seven days, 0 for no limit; unset leaves it unchanged.
+   *
+   * @generated from field: optional int32 request_quota = 11;
+   */
+  requestQuota?: number | undefined;
 };
 
 /**

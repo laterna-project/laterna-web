@@ -87,7 +87,8 @@
     "downloads": "Downloads",
     "admin": "Verwaltung",
     "switchProfile": "Profil wechseln",
-    "signOut": "Abmelden"
+    "signOut": "Abmelden",
+    "requests": "Anfragen"
   },
   "adminNav": {
     "label": "Verwaltung",
@@ -109,7 +110,8 @@
     "settings": "Einstellungen",
     "restrictedTitle": "Eingeschränktes Profil",
     "restrictedText": "Der Server öffnet die Verwaltung nicht aus einem Kinderprofil oder einem Profil mit Jugendschutz, selbst im Konto eines Administrators.",
-    "backups": "Sicherungen"
+    "backups": "Sicherungen",
+    "requests": "Anfragen"
   },
   "subtitlePrefs": {
     "title": "Untertitel",
@@ -373,7 +375,9 @@
     "metadata_purge": "Metadaten-Bereinigung",
     "subtitles_purge": "Untertitel-Bereinigung",
     "store_optimize": "Datenbankoptimierung",
-    "file_segments": "Intro- und Abspannerkennung"
+    "file_segments": "Intro- und Abspannerkennung",
+    "request_submit": "Anfrage an Sonarr oder Radarr",
+    "requests_refresh": "Verfolgung der Anfragen"
   },
   "logLevels": {
     "all": "Alle",
@@ -406,7 +410,9 @@
     "noLibrary": "keine Mediathek",
     "unratedHidden": "ohne Freigabe ausgeblendet",
     "noDownloads": "keine Downloads",
-    "disabled": "deaktiviert"
+    "disabled": "deaktiviert",
+    "noRequests": "keine Anfragen",
+    "autoApprove": "Anfragen sofort angenommen"
   },
   "playbackMethod": {
     "transcoded": "transkodiert",
@@ -641,7 +647,14 @@
     "create": "Konto erstellen",
     "delete": "Konto löschen",
     "deleteTitle": "Konto „{{name}}“ löschen?",
-    "deleteText": "Seine Profile werden mit gelöscht, samt ihren Daten: Verlauf, Favoriten, Playlists."
+    "deleteText": "Seine Profile werden mit gelöscht, samt ihren Daten: Verlauf, Favoriten, Playlists.",
+    "requests": "Anfragen",
+    "noRequests": "Anfragen entzogen",
+    "noRequestsHint": "Dieses Konto kann keine Filme oder Serien anfragen.",
+    "autoApprove": "Anfragen sofort angenommen",
+    "autoApproveHint": "Ohne Freigabe durch einen Administrator, außer von einem Kinder- oder kontrollierten Profil.",
+    "quota": "Anfragen pro 7 Tage",
+    "quotaHint": "0 für keine Begrenzung. Administratoren haben keine."
   },
   "adminDevices": {
     "title": "Geräte",
@@ -1742,5 +1755,111 @@
     "nightly": "Nächtliche Sicherungen",
     "keep": "Aufbewahrte nächtliche Sicherungen",
     "keepHint": "Jede Nacht erstellt, die ältesten werden über diese Anzahl hinaus entfernt; 0 = keine automatische Sicherung. Manuelle Sicherungen bleiben, bis sie gelöscht werden."
+  },
+  "requests": {
+    "title": "Anfragen",
+    "subtitle": "Fragen Sie einen Film oder eine Serie an, die der Server noch nicht hat.",
+    "subtitleQuota_one": "Fragen Sie einen Film oder eine Serie an, die der Server noch nicht hat: {{count}} Anfrage alle 7 Tage.",
+    "subtitleQuota_other": "Fragen Sie einen Film oder eine Serie an, die der Server noch nicht hat: {{count}} Anfragen alle 7 Tage.",
+    "denied": "Ihr Konto kann keine Anfragen stellen. Wenden Sie sich an einen Administrator.",
+    "closed": "Anfragen sind auf diesem Server noch nicht möglich.",
+    "searchTitle": "Einen Titel finden",
+    "kindLabel": "Art des Titels",
+    "searchLabel": "Anzufragender Titel",
+    "placeholderSeries": "Eine Serie anfragen…",
+    "placeholderMovie": "Einen Film anfragen…",
+    "searching": "Suche…",
+    "noResult": "Nichts gefunden für „{{q}}“.",
+    "seasonCount_one": "{{count}} Staffel",
+    "seasonCount_other": "{{count}} Staffeln",
+    "ask": "Anfragen",
+    "askLabel": "{{title}} anfragen",
+    "askTitle": "„{{title}}“ anfragen",
+    "askHint": "Ein Administrator nimmt Anfragen an, außer Ihre werden sofort angenommen. Hier sehen Sie, wann der Titel verfügbar ist.",
+    "sent": "Anfrage gesendet: „{{title}}“ wartet auf einen Administrator.",
+    "sentApproved": "Anfrage angenommen: „{{title}}“ ist unterwegs.",
+    "mine": "Meine Anfragen",
+    "withdraw": "Zurückziehen",
+    "withdrawLabel": "Anfrage für {{title}} zurückziehen",
+    "watch": "Ansehen",
+    "by": "{{profile}} ({{account}})",
+    "progress": "Download von {{title}}",
+    "declineReason": "Begründung: {{reason}}",
+    "seasonsLabel": "Staffeln",
+    "season": "Staffel {{number}}",
+    "destination": "Ziel",
+    "status": {
+      "pending": "Wartet auf Freigabe",
+      "approved": "Angenommen",
+      "downloading": "Wird geladen · {{percent}}",
+      "available": "Verfügbar",
+      "episodes": "Verfügbar · {{have}} von {{want}} Folgen",
+      "declined": "Abgelehnt",
+      "failed": "Fehlgeschlagen"
+    },
+    "seasons": {
+      "all": "Ganze Serie",
+      "first": "Erste Staffel",
+      "latest": "Neueste Staffel",
+      "pick": "Auswählen…",
+      "chosen_one": "Staffel {{seasons}}",
+      "chosen_other": "Staffeln {{seasons}}"
+    },
+    "kind": {
+      "movie": "Film",
+      "series": "Serie"
+    },
+    "state": {
+      "available": "Schon da",
+      "requested": "Angefragt",
+      "tracked": "Unterwegs"
+    },
+    "seriesType": {
+      "standard": "Standard (S01E01)",
+      "anime": "Anime (absolute Nummerierung)",
+      "daily": "Täglich (nach Sendedatum)"
+    }
+  },
+  "adminRequests": {
+    "title": "Anfragen",
+    "subtitle": "Von den Profilen angefragte Filme und Serien; nichts wartet auf Sie.",
+    "pending_one": "{{count}} Anfrage wartet auf Ihre Freigabe.",
+    "pending_other": "{{count}} Anfragen warten auf Ihre Freigabe.",
+    "filterLabel": "Angezeigte Anfragen",
+    "filters": {
+      "pending": "Wartend",
+      "active": "Unterwegs",
+      "done": "Erledigt",
+      "all": "Alle"
+    },
+    "approve": "Annehmen",
+    "approveLabel": "Anfrage für {{title}} annehmen",
+    "approveTitle": "„{{title}}“ annehmen",
+    "approveHint": "Laterna fügt den Titel überwacht zu Sonarr oder Radarr hinzu und lässt ihn suchen.",
+    "asAsked": "Wie angefragt ({{seasons}})",
+    "decline": "Ablehnen",
+    "declineLabel": "Anfrage für {{title}} ablehnen",
+    "declineTitle": "„{{title}}“ ablehnen",
+    "reason": "Begründung (optional)",
+    "reasonHint": "{{profile}} sieht sie in den eigenen Anfragen.",
+    "forget": "Vergessen",
+    "forgetLabel": "Anfrage für {{title}} vergessen",
+    "destinations": "Ziele",
+    "destinationsHint": "Wohin Anfragen gehen: eine Mediathek und auf Sonarr oder Radarr ein Stammordner und ein Qualitätsprofil. Ein Profil sieht nur die Ziele der Mediatheken, die es durchsuchen darf.",
+    "noDestination": "Kein Ziel: Niemand kann diese Art von Anfrage bisher stellen.",
+    "newDestination": "Neues Ziel",
+    "editTitle": "Ziel „{{name}}“",
+    "editLabel": "Ziel {{name}} bearbeiten",
+    "deleteLabel": "Ziel {{name}} löschen",
+    "deleteTitle": "Ziel „{{name}}“ löschen?",
+    "deleteText": "Darauf wartende Anfragen werden abgelehnt. Was Sonarr oder Radarr schon hat, bleibt dort.",
+    "name": "Name",
+    "kind": "Art",
+    "library": "Mediathek",
+    "noLibrary": "Keine Mediathek dieser Art: Legen Sie zuerst eine an.",
+    "seriesType": "Serientyp",
+    "rootFolder": "Stammordner",
+    "qualityProfile": "Qualitätsprofil",
+    "rootHint": "Wählen Sie den Stammordner, der in die Mediathek führt: Dort hinzugefügte Titel erscheinen nach dem Scan."
   }
 }

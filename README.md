@@ -14,6 +14,7 @@ the web app does what the server does, no more.
 
 | Laterna Web | Laterna server |
 |---|---|
+| 0.5.x | 0.8.x; 0.5.x to 0.7.x without requests |
 | 0.4.x | 0.5.x to 0.7.x |
 | 0.3.x | 0.5.x; 0.1.x to 0.4.x without the subtitle setting |
 | 0.2.x | 0.1.x to 0.4.x |
@@ -43,11 +44,14 @@ The contract and the server's text catalogs are taken from the server version pi
   place and slideshow.
 - **Collections, playlists and watch parties**: hand-made collections, playlists played in a row,
   watching together with synchronized playback, chat and reactions.
+- **Requests**: search for a movie or a series the server doesn't have, ask for it (the whole
+  series or some seasons) and follow it until it can be watched.
 - **Account**: profiles with PINs and parental controls, passkeys, password, signed-in devices,
   pairing a TV with a code, statistics, year in review, history, offline downloads.
-- **Administration**: overview, libraries, accounts, devices, activity, jobs, logs, Sonarr and
-  Radarr, settings, backups, authentication (passkeys, OpenID Connect, device login), server
-  themes, metrics, import from Jellyfin.
+- **Administration**: overview, libraries, accounts, requests (approval queue and where they land
+  on Sonarr and Radarr), devices, activity, jobs, logs, Sonarr and Radarr, settings, backups,
+  authentication (passkeys, OpenID Connect, device login), server themes, metrics, import from
+  Jellyfin.
 - **Themes**: colors, radius, density and font come from the profile's theme on the server; each
   device picks a style for layout and shapes, and can import a theme file
   ([guide](docs/themes.md)).
@@ -73,7 +77,7 @@ and send the server's routes to Laterna:
 
 | Paths | Go to |
 |---|---|
-| `/laterna.v1.*` (the API), `/images/`, `/playback/`, `/fonts/`, `/trickplay/`, `/books/`, `/downloads/`, `/logs/`, `/backups/`, `/hooks/`, `/auth/oidc/`, `/health`, `/metrics` | the server |
+| `/laterna.v1.*` (the API), `/images/`, `/requests/posters/`, `/playback/`, `/fonts/`, `/trickplay/`, `/books/`, `/downloads/`, `/logs/`, `/backups/`, `/hooks/`, `/auth/oidc/`, `/health`, `/metrics` | the server |
 | everything else | the client's files, with `index.html` for any path that is not a file |
 
 With [Caddy](https://caddyserver.com/), the client unpacked in `/srv/laterna-web` and the server
@@ -81,7 +85,7 @@ on port 8096:
 
 ```caddyfile
 media.example.com {
-	@server path /laterna.v1.* /images/* /playback/* /fonts/* /trickplay/* /books/* /downloads/* /logs/* /backups/* /hooks/* /auth/oidc/* /health /metrics
+	@server path /laterna.v1.* /images/* /requests/posters/* /playback/* /fonts/* /trickplay/* /books/* /downloads/* /logs/* /backups/* /hooks/* /auth/oidc/* /health /metrics
 	handle @server {
 		reverse_proxy localhost:8096 {
 			flush_interval -1

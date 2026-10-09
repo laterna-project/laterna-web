@@ -126,6 +126,8 @@ const jobKinds = [
   "subtitles.purge",
   "store.optimize",
   "file.segments",
+  "request.submit",
+  "requests.refresh",
 ] as const;
 
 /** Job kind in plain words; a kind unknown to the app stays as is. */
@@ -156,6 +158,8 @@ export function activityTone(kind: ActivityKind, warning: boolean): Universe | "
       return "music";
     case ActivityKind.JOB_FAILED:
       return "danger";
+    case ActivityKind.REQUEST:
+      return "movies";
     default:
       return "playlists";
   }
@@ -244,6 +248,8 @@ export function accountTags(s: AccountSummary, libraryNames: ReadonlyMap<string,
   if (age) tags.push({ label: age });
   if (!a.isAdmin && a.parental?.blockUnrated) tags.push({ label: i18n.t("accountTags.unratedHidden") });
   if (a.denyDownloads) tags.push({ label: i18n.t("accountTags.noDownloads"), tone: "warn" });
+  if (!a.isAdmin && a.denyRequests) tags.push({ label: i18n.t("accountTags.noRequests"), tone: "warn" });
+  else if (!a.isAdmin && a.autoApproveRequests) tags.push({ label: i18n.t("accountTags.autoApprove") });
   if (a.disabled) tags.push({ label: i18n.t("accountTags.disabled"), tone: "warn" });
   return tags;
 }
