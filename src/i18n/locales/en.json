@@ -411,6 +411,7 @@
   "playbackMethod": {
     "transcoded": "transcoded",
     "gpu": "GPU",
+    "decoder": "{{decoder}} decoding",
     "audio": "audio",
     "remux": "no transcoding",
     "direct": "direct play"
@@ -502,9 +503,10 @@
     "encoders": "Encoders",
     "toneMapping": "HDR → SDR",
     "noToneMapping": "no conversion possible",
-    "gpu": "Graphics card",
-    "gpuOn": "full pipeline available",
-    "gpuOff": "not used",
+    "decoding": "Video decoding",
+    "decodingGpu": "on the card: decoding, scaling and HDR",
+    "decodingHardware": "on the card ({{decoder}})",
+    "decodingCpu": "by the CPU",
     "system": "System",
     "librariesTitle": "Libraries",
     "manage": "Manage",
@@ -1158,6 +1160,7 @@
       "video": "picture re-encoded",
       "videoWith": "picture re-encoded ({{encoder}})",
       "videoGpu": "picture re-encoded ({{encoder}}, on the graphics card)",
+      "videoDecoder": "picture re-encoded ({{encoder}}, decoded by the graphics card)",
       "toneMapping": "HDR converted to SDR ({{method}})",
       "audio": "sound re-encoded to AAC",
       "audioViaHls": "This browser only plays a file's default audio track: the server puts the chosen one in an HLS stream."

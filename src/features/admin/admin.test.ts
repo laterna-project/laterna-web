@@ -112,6 +112,9 @@ describe("administration", () => {
     expect(playbackMethod(p({ method: "transcode", encoder: "h264_nvenc", gpu: true })).label).toBe(
       "transcoded · h264_nvenc · GPU",
     );
+    expect(playbackMethod(p({ method: "transcode", encoder: "h264_nvenc", decoder: "cuda" })).label).toBe(
+      "transcoded · h264_nvenc · cuda decoding",
+    );
     expect(playbackMethod(p({ method: "transcode", copyVideo: true })).label).toBe("transcoded · audio");
   });
 

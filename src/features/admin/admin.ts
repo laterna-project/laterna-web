@@ -252,7 +252,12 @@ export function accountTags(s: AccountSummary, libraryNames: ReadonlyMap<string,
 export function playbackMethod(p: ActivePlayback): { label: string; transcoded: boolean } {
   if (p.method === "transcode") {
     const what = !p.copyVideo
-      ? [p.encoder, p.toneMap ? "HDR → SDR" : "", p.gpu ? i18n.t("playbackMethod.gpu") : ""]
+      ? [
+          p.encoder,
+          p.toneMap ? "HDR → SDR" : "",
+          p.gpu ? i18n.t("playbackMethod.gpu") : "",
+          p.decoder ? i18n.t("playbackMethod.decoder", { decoder: p.decoder }) : "",
+        ]
       : [i18n.t("playbackMethod.audio")];
     return {
       label: [i18n.t("playbackMethod.transcoded"), ...what].filter(Boolean).join(" · "),
