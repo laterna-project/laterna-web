@@ -49,8 +49,17 @@ export function requestStatus(
   }
 }
 
-/** Seasons asked for, in words; empty for a movie. */
+/** Seasons of a series or albums of an artist asked for, in words; empty for the other kinds. */
 export function seasonsLabel(r: Pick<MediaRequest, "kind" | "seasons" | "seasonNumbers">): string {
+  if (r.kind === RequestKind.ARTIST)
+    switch (r.seasons) {
+      case RequestSeasons.FIRST:
+        return i18n.t("requests.albums.first");
+      case RequestSeasons.LATEST:
+        return i18n.t("requests.albums.latest");
+      default:
+        return i18n.t("requests.albums.all");
+    }
   if (r.kind !== RequestKind.SERIES) return "";
   switch (r.seasons) {
     case RequestSeasons.FIRST:
@@ -67,11 +76,38 @@ export function seasonsLabel(r: Pick<MediaRequest, "kind" | "seasons" | "seasonN
   }
 }
 
-/** Kind of a request in words, and its universe. */
+/** Kind of a request (or family of a destination) in words, and its universe. */
 export function requestKind(kind: RequestKind): { label: string; universe: Universe } {
-  return kind === RequestKind.MOVIE
-    ? { label: i18n.t("requests.kind.movie"), universe: "movies" }
-    : { label: i18n.t("requests.kind.series"), universe: "series" };
+  switch (kind) {
+    case RequestKind.MOVIE:
+      return { label: i18n.t("requests.kind.movie"), universe: "movies" };
+    case RequestKind.MUSIC:
+      return { label: i18n.t("requests.kind.music"), universe: "music" };
+    case RequestKind.ARTIST:
+      return { label: i18n.t("requests.kind.artist"), universe: "music" };
+    case RequestKind.ALBUM:
+      return { label: i18n.t("requests.kind.album"), universe: "music" };
+    case RequestKind.BOOK:
+      return { label: i18n.t("requests.kind.book"), universe: "books" };
+    default:
+      return { label: i18n.t("requests.kind.series"), universe: "series" };
+  }
+}
+
+/** What a search or a destination is for: music for an artist or an album, the kind otherwise. */
+export function requestFamily(kind: RequestKind): RequestKind {
+  return kind === RequestKind.ARTIST || kind === RequestKind.ALBUM ? RequestKind.MUSIC : kind;
+}
+
+/** Series and movies are known by a number, the others by a text key. */
+export function byNumber(kind: RequestKind): boolean {
+  return kind === RequestKind.SERIES || kind === RequestKind.MOVIE;
+}
+
+/** Shape of a poster: an album cover is square, an artist round, the others a 2:3 poster. */
+export function posterShape(kind: RequestKind): "square" | "round" | undefined {
+  if (kind === RequestKind.ALBUM) return "square";
+  return kind === RequestKind.ARTIST ? "round" : undefined;
 }
 
 /** A search result's state in words; empty when it can be requested. */

@@ -15,7 +15,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/request.proto.
  */
 export const file_laterna_v1_request: GenFile = /*@__PURE__*/
-  fileDesc("ChhsYXRlcm5hL3YxL3JlcXVlc3QucHJvdG8SCmxhdGVybmEudjEiigIKEFJlcXVlc3RhYmxlVGl0bGUSJQoEa2luZBgBIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQSEwoLZXh0ZXJuYWxfaWQYAiABKAMSDQoFdGl0bGUYAyABKAkSDAoEeWVhchgEIAEoBRIQCghvdmVydmlldxgFIAEoCRISCgpwb3N0ZXJfdXJsGAYgASgJEisKBXN0YXRlGAcgASgOMhwubGF0ZXJuYS52MS5SZXF1ZXN0YWJsZVN0YXRlEg8KB2l0ZW1faWQYCCABKAkSEgoKcmVxdWVzdF9pZBgJIAEoCRIUCgxzZWFzb25fY291bnQYCiABKAUSDwoHbmV0d29yaxgLIAEoCSJQChhTZWFyY2hSZXF1ZXN0YWJsZVJlcXVlc3QSJQoEa2luZBgBIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQSDQoFcXVlcnkYAiABKAkiSgoZU2VhcmNoUmVxdWVzdGFibGVSZXNwb25zZRItCgdyZXN1bHRzGAEgAygLMhwubGF0ZXJuYS52MS5SZXF1ZXN0YWJsZVRpdGxlIoICChJSZXF1ZXN0RGVzdGluYXRpb24SCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIlCgRraW5kGAMgASgOMhcubGF0ZXJuYS52MS5SZXF1ZXN0S2luZBISCgpsaWJyYXJ5X2lkGAQgASgJEhQKDGxpYnJhcnlfbmFtZRgFIAEoCRITCgtyb290X2ZvbGRlchgGIAEoCRIaChJxdWFsaXR5X3Byb2ZpbGVfaWQYByABKAUSHAoUcXVhbGl0eV9wcm9maWxlX25hbWUYCCABKAkSMgoLc2VyaWVzX3R5cGUYCSABKA4yHS5sYXRlcm5hLnYxLlJlcXVlc3RTZXJpZXNUeXBlIkcKHkxpc3RSZXF1ZXN0RGVzdGluYXRpb25zUmVxdWVzdBIlCgRraW5kGAEgASgOMhcubGF0ZXJuYS52MS5SZXF1ZXN0S2luZCJXCh9MaXN0UmVxdWVzdERlc3RpbmF0aW9uc1Jlc3BvbnNlEjQKDGRlc3RpbmF0aW9ucxgBIAMoCzIeLmxhdGVybmEudjEuUmVxdWVzdERlc3RpbmF0aW9uIscFCgxNZWRpYVJlcXVlc3QSCgoCaWQYASABKAkSJQoEa2luZBgCIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQSEwoLZXh0ZXJuYWxfaWQYAyABKAMSDQoFdGl0bGUYBCABKAkSDAoEeWVhchgFIAEoBRISCgpwb3N0ZXJfdXJsGAYgASgJEikKBnN0YXR1cxgHIAEoDjIZLmxhdGVybmEudjEuUmVxdWVzdFN0YXR1cxIrCgdzZWFzb25zGAggASgOMhoubGF0ZXJuYS52MS5SZXF1ZXN0U2Vhc29ucxIWCg5zZWFzb25fbnVtYmVycxgJIAMoBRIzCgtkZXN0aW5hdGlvbhgKIAEoCzIeLmxhdGVybmEudjEuUmVxdWVzdERlc3RpbmF0aW9uEhIKCmFjY291bnRfaWQYCyABKAkSEAoIdXNlcm5hbWUYDCABKAkSEgoKcHJvZmlsZV9pZBgNIAEoCRIUCgxwcm9maWxlX25hbWUYDiABKAkSLgoKY3JlYXRlZF9hdBgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKZGVjaWRlZF9hdBgQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKZGVjaWRlZF9ieRgRIAEoCRIWCg5kZWNsaW5lX3JlYXNvbhgSIAEoCRINCgVlcnJvchgTIAEoCRIkCgplcnJvcl90ZXh0GBQgASgLMhAubGF0ZXJuYS52MS5UZXh0EhAKCHByb2dyZXNzGBUgASgBEg8KB2l0ZW1faWQYFiABKAkSGgoSZXBpc29kZXNfYXZhaWxhYmxlGBcgASgFEhcKD2VwaXNvZGVzX3dhbnRlZBgYIAEoBRIwCgxhdmFpbGFibGVfYXQYGSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIq8BChRDcmVhdGVSZXF1ZXN0UmVxdWVzdBIlCgRraW5kGAEgASgOMhcubGF0ZXJuYS52MS5SZXF1ZXN0S2luZBITCgtleHRlcm5hbF9pZBgCIAEoAxIWCg5kZXN0aW5hdGlvbl9pZBgDIAEoCRIrCgdzZWFzb25zGAQgASgOMhoubGF0ZXJuYS52MS5SZXF1ZXN0U2Vhc29ucxIWCg5zZWFzb25fbnVtYmVycxgFIAMoBSJCChVDcmVhdGVSZXF1ZXN0UmVzcG9uc2USKQoHcmVxdWVzdBgBIAEoCzIYLmxhdGVybmEudjEuTWVkaWFSZXF1ZXN0Ij4KFUxpc3RNeVJlcXVlc3RzUmVxdWVzdBISCgpwYWdlX3Rva2VuGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBSJdChZMaXN0TXlSZXF1ZXN0c1Jlc3BvbnNlEioKCHJlcXVlc3RzGAEgAygLMhgubGF0ZXJuYS52MS5NZWRpYVJlcXVlc3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIicKEUdldFJlcXVlc3RSZXF1ZXN0EhIKCnJlcXVlc3RfaWQYASABKAkiPwoSR2V0UmVxdWVzdFJlc3BvbnNlEikKB3JlcXVlc3QYASABKAsyGC5sYXRlcm5hLnYxLk1lZGlhUmVxdWVzdCIqChRDYW5jZWxSZXF1ZXN0UmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJIhcKFUNhbmNlbFJlcXVlc3RSZXNwb25zZSJpChNMaXN0UmVxdWVzdHNSZXF1ZXN0EhIKCnBhZ2VfdG9rZW4YASABKAkSEQoJcGFnZV9zaXplGAIgASgFEisKCHN0YXR1c2VzGAMgAygOMhkubGF0ZXJuYS52MS5SZXF1ZXN0U3RhdHVzInIKFExpc3RSZXF1ZXN0c1Jlc3BvbnNlEioKCHJlcXVlc3RzGAEgAygLMhgubGF0ZXJuYS52MS5NZWRpYVJlcXVlc3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhUKDXBlbmRpbmdfY291bnQYAyABKAUioAEKFUFwcHJvdmVSZXF1ZXN0UmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJEhsKDmRlc3RpbmF0aW9uX2lkGAIgASgJSACIAQESKwoHc2Vhc29ucxgDIAEoDjIaLmxhdGVybmEudjEuUmVxdWVzdFNlYXNvbnMSFgoOc2Vhc29uX251bWJlcnMYBCADKAVCEQoPX2Rlc3RpbmF0aW9uX2lkIkMKFkFwcHJvdmVSZXF1ZXN0UmVzcG9uc2USKQoHcmVxdWVzdBgBIAEoCzIYLmxhdGVybmEudjEuTWVkaWFSZXF1ZXN0IjsKFURlY2xpbmVSZXF1ZXN0UmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJEg4KBnJlYXNvbhgCIAEoCSJDChZEZWNsaW5lUmVxdWVzdFJlc3BvbnNlEikKB3JlcXVlc3QYASABKAsyGC5sYXRlcm5hLnYxLk1lZGlhUmVxdWVzdCIqChREZWxldGVSZXF1ZXN0UmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJIhcKFURlbGV0ZVJlcXVlc3RSZXNwb25zZSI1ChFSZXF1ZXN0Um9vdEZvbGRlchIMCgRwYXRoGAEgASgJEhIKCmZyZWVfc3BhY2UYAiABKAMiMQoVUmVxdWVzdFF1YWxpdHlQcm9maWxlEgoKAmlkGAEgASgFEgwKBG5hbWUYAiABKAkiQQoYR2V0UmVxdWVzdE9wdGlvbnNSZXF1ZXN0EiUKBGtpbmQYASABKA4yFy5sYXRlcm5hLnYxLlJlcXVlc3RLaW5kIo0BChlHZXRSZXF1ZXN0T3B0aW9uc1Jlc3BvbnNlEjMKDHJvb3RfZm9sZGVycxgBIAMoCzIdLmxhdGVybmEudjEuUmVxdWVzdFJvb3RGb2xkZXISOwoQcXVhbGl0eV9wcm9maWxlcxgCIAMoCzIhLmxhdGVybmEudjEuUmVxdWVzdFF1YWxpdHlQcm9maWxlIs8BCh9DcmVhdGVSZXF1ZXN0RGVzdGluYXRpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkSJQoEa2luZBgCIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQSEgoKbGlicmFyeV9pZBgDIAEoCRITCgtyb290X2ZvbGRlchgEIAEoCRIaChJxdWFsaXR5X3Byb2ZpbGVfaWQYBSABKAUSMgoLc2VyaWVzX3R5cGUYBiABKA4yHS5sYXRlcm5hLnYxLlJlcXVlc3RTZXJpZXNUeXBlIlcKIENyZWF0ZVJlcXVlc3REZXN0aW5hdGlvblJlc3BvbnNlEjMKC2Rlc3RpbmF0aW9uGAEgASgLMh4ubGF0ZXJuYS52MS5SZXF1ZXN0RGVzdGluYXRpb24ikwIKH1VwZGF0ZVJlcXVlc3REZXN0aW5hdGlvblJlcXVlc3QSFgoOZGVzdGluYXRpb25faWQYASABKAkSEQoEbmFtZRgCIAEoCUgAiAEBEhcKCmxpYnJhcnlfaWQYAyABKAlIAYgBARIYCgtyb290X2ZvbGRlchgEIAEoCUgCiAEBEh8KEnF1YWxpdHlfcHJvZmlsZV9pZBgFIAEoBUgDiAEBEjIKC3Nlcmllc190eXBlGAYgASgOMh0ubGF0ZXJuYS52MS5SZXF1ZXN0U2VyaWVzVHlwZUIHCgVfbmFtZUINCgtfbGlicmFyeV9pZEIOCgxfcm9vdF9mb2xkZXJCFQoTX3F1YWxpdHlfcHJvZmlsZV9pZCJXCiBVcGRhdGVSZXF1ZXN0RGVzdGluYXRpb25SZXNwb25zZRIzCgtkZXN0aW5hdGlvbhgBIAEoCzIeLmxhdGVybmEudjEuUmVxdWVzdERlc3RpbmF0aW9uIjkKH0RlbGV0ZVJlcXVlc3REZXN0aW5hdGlvblJlcXVlc3QSFgoOZGVzdGluYXRpb25faWQYASABKAkiIgogRGVsZXRlUmVxdWVzdERlc3RpbmF0aW9uUmVzcG9uc2UqXAoLUmVxdWVzdEtpbmQSHAoYUkVRVUVTVF9LSU5EX1VOU1BFQ0lGSUVEEAASFwoTUkVRVUVTVF9LSU5EX1NFUklFUxABEhYKElJFUVVFU1RfS0lORF9NT1ZJRRACKrkBChBSZXF1ZXN0YWJsZVN0YXRlEiEKHVJFUVVFU1RBQkxFX1NUQVRFX1VOU1BFQ0lGSUVEEAASIQodUkVRVUVTVEFCTEVfU1RBVEVfUkVRVUVTVEFCTEUQARIfChtSRVFVRVNUQUJMRV9TVEFURV9BVkFJTEFCTEUQAhIfChtSRVFVRVNUQUJMRV9TVEFURV9SRVFVRVNURUQQAxIdChlSRVFVRVNUQUJMRV9TVEFURV9UUkFDS0VEEAQq3gEKDVJlcXVlc3RTdGF0dXMSHgoaUkVRVUVTVF9TVEFUVVNfVU5TUEVDSUZJRUQQABIaChZSRVFVRVNUX1NUQVRVU19QRU5ESU5HEAESGwoXUkVRVUVTVF9TVEFUVVNfQVBQUk9WRUQQAhIeChpSRVFVRVNUX1NUQVRVU19ET1dOTE9BRElORxADEhwKGFJFUVVFU1RfU1RBVFVTX0FWQUlMQUJMRRAEEhsKF1JFUVVFU1RfU1RBVFVTX0RFQ0xJTkVEEAUSGQoVUkVRVUVTVF9TVEFUVVNfRkFJTEVEEAYqnQEKDlJlcXVlc3RTZWFzb25zEh8KG1JFUVVFU1RfU0VBU09OU19VTlNQRUNJRklFRBAAEhcKE1JFUVVFU1RfU0VBU09OU19BTEwQARIZChVSRVFVRVNUX1NFQVNPTlNfRklSU1QQAhIaChZSRVFVRVNUX1NFQVNPTlNfTEFURVNUEAMSGgoWUkVRVUVTVF9TRUFTT05TX0NIT1NFThAEKpgBChFSZXF1ZXN0U2VyaWVzVHlwZRIjCh9SRVFVRVNUX1NFUklFU19UWVBFX1VOU1BFQ0lGSUVEEAASIAocUkVRVUVTVF9TRVJJRVNfVFlQRV9TVEFOREFSRBABEh0KGVJFUVVFU1RfU0VSSUVTX1RZUEVfQU5JTUUQAhIdChlSRVFVRVNUX1NFUklFU19UWVBFX0RBSUxZEAMyqgsKDlJlcXVlc3RTZXJ2aWNlEmUKEVNlYXJjaFJlcXVlc3RhYmxlEiQubGF0ZXJuYS52MS5TZWFyY2hSZXF1ZXN0YWJsZVJlcXVlc3QaJS5sYXRlcm5hLnYxLlNlYXJjaFJlcXVlc3RhYmxlUmVzcG9uc2UiA5ACARJ3ChdMaXN0UmVxdWVzdERlc3RpbmF0aW9ucxIqLmxhdGVybmEudjEuTGlzdFJlcXVlc3REZXN0aW5hdGlvbnNSZXF1ZXN0GisubGF0ZXJuYS52MS5MaXN0UmVxdWVzdERlc3RpbmF0aW9uc1Jlc3BvbnNlIgOQAgESVAoNQ3JlYXRlUmVxdWVzdBIgLmxhdGVybmEudjEuQ3JlYXRlUmVxdWVzdFJlcXVlc3QaIS5sYXRlcm5hLnYxLkNyZWF0ZVJlcXVlc3RSZXNwb25zZRJcCg5MaXN0TXlSZXF1ZXN0cxIhLmxhdGVybmEudjEuTGlzdE15UmVxdWVzdHNSZXF1ZXN0GiIubGF0ZXJuYS52MS5MaXN0TXlSZXF1ZXN0c1Jlc3BvbnNlIgOQAgESUAoKR2V0UmVxdWVzdBIdLmxhdGVybmEudjEuR2V0UmVxdWVzdFJlcXVlc3QaHi5sYXRlcm5hLnYxLkdldFJlcXVlc3RSZXNwb25zZSIDkAIBElQKDUNhbmNlbFJlcXVlc3QSIC5sYXRlcm5hLnYxLkNhbmNlbFJlcXVlc3RSZXF1ZXN0GiEubGF0ZXJuYS52MS5DYW5jZWxSZXF1ZXN0UmVzcG9uc2USWgoMTGlzdFJlcXVlc3RzEh8ubGF0ZXJuYS52MS5MaXN0UmVxdWVzdHNSZXF1ZXN0GiAubGF0ZXJuYS52MS5MaXN0UmVxdWVzdHNSZXNwb25zZSIHkAIBiLUYBBJdCg5BcHByb3ZlUmVxdWVzdBIhLmxhdGVybmEudjEuQXBwcm92ZVJlcXVlc3RSZXF1ZXN0GiIubGF0ZXJuYS52MS5BcHByb3ZlUmVxdWVzdFJlc3BvbnNlIgSItRgEEl0KDkRlY2xpbmVSZXF1ZXN0EiEubGF0ZXJuYS52MS5EZWNsaW5lUmVxdWVzdFJlcXVlc3QaIi5sYXRlcm5hLnYxLkRlY2xpbmVSZXF1ZXN0UmVzcG9uc2UiBIi1GAQSXQoNRGVsZXRlUmVxdWVzdBIgLmxhdGVybmEudjEuRGVsZXRlUmVxdWVzdFJlcXVlc3QaIS5sYXRlcm5hLnYxLkRlbGV0ZVJlcXVlc3RSZXNwb25zZSIHkAICiLUYBBJpChFHZXRSZXF1ZXN0T3B0aW9ucxIkLmxhdGVybmEudjEuR2V0UmVxdWVzdE9wdGlvbnNSZXF1ZXN0GiUubGF0ZXJuYS52MS5HZXRSZXF1ZXN0T3B0aW9uc1Jlc3BvbnNlIgeQAgGItRgEEnsKGENyZWF0ZVJlcXVlc3REZXN0aW5hdGlvbhIrLmxhdGVybmEudjEuQ3JlYXRlUmVxdWVzdERlc3RpbmF0aW9uUmVxdWVzdBosLmxhdGVybmEudjEuQ3JlYXRlUmVxdWVzdERlc3RpbmF0aW9uUmVzcG9uc2UiBIi1GAQSewoYVXBkYXRlUmVxdWVzdERlc3RpbmF0aW9uEisubGF0ZXJuYS52MS5VcGRhdGVSZXF1ZXN0RGVzdGluYXRpb25SZXF1ZXN0GiwubGF0ZXJuYS52MS5VcGRhdGVSZXF1ZXN0RGVzdGluYXRpb25SZXNwb25zZSIEiLUYBBJ+ChhEZWxldGVSZXF1ZXN0RGVzdGluYXRpb24SKy5sYXRlcm5hLnYxLkRlbGV0ZVJlcXVlc3REZXN0aW5hdGlvblJlcXVlc3QaLC5sYXRlcm5hLnYxLkRlbGV0ZVJlcXVlc3REZXN0aW5hdGlvblJlc3BvbnNlIgeQAgKItRgEQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_laterna_v1_options, file_laterna_v1_text]);
+  fileDesc("ChhsYXRlcm5hL3YxL3JlcXVlc3QucHJvdG8SCmxhdGVybmEudjEioAIKEFJlcXVlc3RhYmxlVGl0bGUSJQoEa2luZBgBIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQSEwoLZXh0ZXJuYWxfaWQYAiABKAMSDQoFdGl0bGUYAyABKAkSDAoEeWVhchgEIAEoBRIQCghvdmVydmlldxgFIAEoCRISCgpwb3N0ZXJfdXJsGAYgASgJEisKBXN0YXRlGAcgASgOMhwubGF0ZXJuYS52MS5SZXF1ZXN0YWJsZVN0YXRlEg8KB2l0ZW1faWQYCCABKAkSEgoKcmVxdWVzdF9pZBgJIAEoCRIUCgxzZWFzb25fY291bnQYCiABKAUSDwoHbmV0d29yaxgLIAEoCRIUCgxleHRlcm5hbF9rZXkYDCABKAkiUAoYU2VhcmNoUmVxdWVzdGFibGVSZXF1ZXN0EiUKBGtpbmQYASABKA4yFy5sYXRlcm5hLnYxLlJlcXVlc3RLaW5kEg0KBXF1ZXJ5GAIgASgJIkoKGVNlYXJjaFJlcXVlc3RhYmxlUmVzcG9uc2USLQoHcmVzdWx0cxgBIAMoCzIcLmxhdGVybmEudjEuUmVxdWVzdGFibGVUaXRsZSK+AgoSUmVxdWVzdERlc3RpbmF0aW9uEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSJQoEa2luZBgDIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQSEgoKbGlicmFyeV9pZBgEIAEoCRIUCgxsaWJyYXJ5X25hbWUYBSABKAkSEwoLcm9vdF9mb2xkZXIYBiABKAkSGgoScXVhbGl0eV9wcm9maWxlX2lkGAcgASgFEhwKFHF1YWxpdHlfcHJvZmlsZV9uYW1lGAggASgJEjIKC3Nlcmllc190eXBlGAkgASgOMh0ubGF0ZXJuYS52MS5SZXF1ZXN0U2VyaWVzVHlwZRIbChNtZXRhZGF0YV9wcm9maWxlX2lkGAogASgFEh0KFW1ldGFkYXRhX3Byb2ZpbGVfbmFtZRgLIAEoCSJHCh5MaXN0UmVxdWVzdERlc3RpbmF0aW9uc1JlcXVlc3QSJQoEa2luZBgBIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQiVwofTGlzdFJlcXVlc3REZXN0aW5hdGlvbnNSZXNwb25zZRI0CgxkZXN0aW5hdGlvbnMYASADKAsyHi5sYXRlcm5hLnYxLlJlcXVlc3REZXN0aW5hdGlvbiLvBQoMTWVkaWFSZXF1ZXN0EgoKAmlkGAEgASgJEiUKBGtpbmQYAiABKA4yFy5sYXRlcm5hLnYxLlJlcXVlc3RLaW5kEhMKC2V4dGVybmFsX2lkGAMgASgDEg0KBXRpdGxlGAQgASgJEgwKBHllYXIYBSABKAUSEgoKcG9zdGVyX3VybBgGIAEoCRIpCgZzdGF0dXMYByABKA4yGS5sYXRlcm5hLnYxLlJlcXVlc3RTdGF0dXMSKwoHc2Vhc29ucxgIIAEoDjIaLmxhdGVybmEudjEuUmVxdWVzdFNlYXNvbnMSFgoOc2Vhc29uX251bWJlcnMYCSADKAUSMwoLZGVzdGluYXRpb24YCiABKAsyHi5sYXRlcm5hLnYxLlJlcXVlc3REZXN0aW5hdGlvbhISCgphY2NvdW50X2lkGAsgASgJEhAKCHVzZXJuYW1lGAwgASgJEhIKCnByb2ZpbGVfaWQYDSABKAkSFAoMcHJvZmlsZV9uYW1lGA4gASgJEi4KCmNyZWF0ZWRfYXQYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCmRlY2lkZWRfYXQYECABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmRlY2lkZWRfYnkYESABKAkSFgoOZGVjbGluZV9yZWFzb24YEiABKAkSDQoFZXJyb3IYEyABKAkSJAoKZXJyb3JfdGV4dBgUIAEoCzIQLmxhdGVybmEudjEuVGV4dBIQCghwcm9ncmVzcxgVIAEoARIPCgdpdGVtX2lkGBYgASgJEhoKEmVwaXNvZGVzX2F2YWlsYWJsZRgXIAEoBRIXCg9lcGlzb2Rlc193YW50ZWQYGCABKAUSMAoMYXZhaWxhYmxlX2F0GBkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIUCgxleHRlcm5hbF9rZXkYGiABKAkSEAoIc3VidGl0bGUYGyABKAkixQEKFENyZWF0ZVJlcXVlc3RSZXF1ZXN0EiUKBGtpbmQYASABKA4yFy5sYXRlcm5hLnYxLlJlcXVlc3RLaW5kEhMKC2V4dGVybmFsX2lkGAIgASgDEhYKDmRlc3RpbmF0aW9uX2lkGAMgASgJEisKB3NlYXNvbnMYBCABKA4yGi5sYXRlcm5hLnYxLlJlcXVlc3RTZWFzb25zEhYKDnNlYXNvbl9udW1iZXJzGAUgAygFEhQKDGV4dGVybmFsX2tleRgGIAEoCSJCChVDcmVhdGVSZXF1ZXN0UmVzcG9uc2USKQoHcmVxdWVzdBgBIAEoCzIYLmxhdGVybmEudjEuTWVkaWFSZXF1ZXN0Ij4KFUxpc3RNeVJlcXVlc3RzUmVxdWVzdBISCgpwYWdlX3Rva2VuGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBSJdChZMaXN0TXlSZXF1ZXN0c1Jlc3BvbnNlEioKCHJlcXVlc3RzGAEgAygLMhgubGF0ZXJuYS52MS5NZWRpYVJlcXVlc3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIicKEUdldFJlcXVlc3RSZXF1ZXN0EhIKCnJlcXVlc3RfaWQYASABKAkiPwoSR2V0UmVxdWVzdFJlc3BvbnNlEikKB3JlcXVlc3QYASABKAsyGC5sYXRlcm5hLnYxLk1lZGlhUmVxdWVzdCIqChRDYW5jZWxSZXF1ZXN0UmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJIhcKFUNhbmNlbFJlcXVlc3RSZXNwb25zZSJpChNMaXN0UmVxdWVzdHNSZXF1ZXN0EhIKCnBhZ2VfdG9rZW4YASABKAkSEQoJcGFnZV9zaXplGAIgASgFEisKCHN0YXR1c2VzGAMgAygOMhkubGF0ZXJuYS52MS5SZXF1ZXN0U3RhdHVzInIKFExpc3RSZXF1ZXN0c1Jlc3BvbnNlEioKCHJlcXVlc3RzGAEgAygLMhgubGF0ZXJuYS52MS5NZWRpYVJlcXVlc3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhUKDXBlbmRpbmdfY291bnQYAyABKAUioAEKFUFwcHJvdmVSZXF1ZXN0UmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJEhsKDmRlc3RpbmF0aW9uX2lkGAIgASgJSACIAQESKwoHc2Vhc29ucxgDIAEoDjIaLmxhdGVybmEudjEuUmVxdWVzdFNlYXNvbnMSFgoOc2Vhc29uX251bWJlcnMYBCADKAVCEQoPX2Rlc3RpbmF0aW9uX2lkIkMKFkFwcHJvdmVSZXF1ZXN0UmVzcG9uc2USKQoHcmVxdWVzdBgBIAEoCzIYLmxhdGVybmEudjEuTWVkaWFSZXF1ZXN0IjsKFURlY2xpbmVSZXF1ZXN0UmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJEg4KBnJlYXNvbhgCIAEoCSJDChZEZWNsaW5lUmVxdWVzdFJlc3BvbnNlEikKB3JlcXVlc3QYASABKAsyGC5sYXRlcm5hLnYxLk1lZGlhUmVxdWVzdCIqChREZWxldGVSZXF1ZXN0UmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJIhcKFURlbGV0ZVJlcXVlc3RSZXNwb25zZSI1ChFSZXF1ZXN0Um9vdEZvbGRlchIMCgRwYXRoGAEgASgJEhIKCmZyZWVfc3BhY2UYAiABKAMiMQoVUmVxdWVzdFF1YWxpdHlQcm9maWxlEgoKAmlkGAEgASgFEgwKBG5hbWUYAiABKAkiQQoYR2V0UmVxdWVzdE9wdGlvbnNSZXF1ZXN0EiUKBGtpbmQYASABKA4yFy5sYXRlcm5hLnYxLlJlcXVlc3RLaW5kIssBChlHZXRSZXF1ZXN0T3B0aW9uc1Jlc3BvbnNlEjMKDHJvb3RfZm9sZGVycxgBIAMoCzIdLmxhdGVybmEudjEuUmVxdWVzdFJvb3RGb2xkZXISOwoQcXVhbGl0eV9wcm9maWxlcxgCIAMoCzIhLmxhdGVybmEudjEuUmVxdWVzdFF1YWxpdHlQcm9maWxlEjwKEW1ldGFkYXRhX3Byb2ZpbGVzGAMgAygLMiEubGF0ZXJuYS52MS5SZXF1ZXN0UXVhbGl0eVByb2ZpbGUi7AEKH0NyZWF0ZVJlcXVlc3REZXN0aW5hdGlvblJlcXVlc3QSDAoEbmFtZRgBIAEoCRIlCgRraW5kGAIgASgOMhcubGF0ZXJuYS52MS5SZXF1ZXN0S2luZBISCgpsaWJyYXJ5X2lkGAMgASgJEhMKC3Jvb3RfZm9sZGVyGAQgASgJEhoKEnF1YWxpdHlfcHJvZmlsZV9pZBgFIAEoBRIyCgtzZXJpZXNfdHlwZRgGIAEoDjIdLmxhdGVybmEudjEuUmVxdWVzdFNlcmllc1R5cGUSGwoTbWV0YWRhdGFfcHJvZmlsZV9pZBgHIAEoBSJXCiBDcmVhdGVSZXF1ZXN0RGVzdGluYXRpb25SZXNwb25zZRIzCgtkZXN0aW5hdGlvbhgBIAEoCzIeLmxhdGVybmEudjEuUmVxdWVzdERlc3RpbmF0aW9uIs0CCh9VcGRhdGVSZXF1ZXN0RGVzdGluYXRpb25SZXF1ZXN0EhYKDmRlc3RpbmF0aW9uX2lkGAEgASgJEhEKBG5hbWUYAiABKAlIAIgBARIXCgpsaWJyYXJ5X2lkGAMgASgJSAGIAQESGAoLcm9vdF9mb2xkZXIYBCABKAlIAogBARIfChJxdWFsaXR5X3Byb2ZpbGVfaWQYBSABKAVIA4gBARIyCgtzZXJpZXNfdHlwZRgGIAEoDjIdLmxhdGVybmEudjEuUmVxdWVzdFNlcmllc1R5cGUSIAoTbWV0YWRhdGFfcHJvZmlsZV9pZBgHIAEoBUgEiAEBQgcKBV9uYW1lQg0KC19saWJyYXJ5X2lkQg4KDF9yb290X2ZvbGRlckIVChNfcXVhbGl0eV9wcm9maWxlX2lkQhYKFF9tZXRhZGF0YV9wcm9maWxlX2lkIlcKIFVwZGF0ZVJlcXVlc3REZXN0aW5hdGlvblJlc3BvbnNlEjMKC2Rlc3RpbmF0aW9uGAEgASgLMh4ubGF0ZXJuYS52MS5SZXF1ZXN0RGVzdGluYXRpb24iOQofRGVsZXRlUmVxdWVzdERlc3RpbmF0aW9uUmVxdWVzdBIWCg5kZXN0aW5hdGlvbl9pZBgBIAEoCSIiCiBEZWxldGVSZXF1ZXN0RGVzdGluYXRpb25SZXNwb25zZSq8AQoLUmVxdWVzdEtpbmQSHAoYUkVRVUVTVF9LSU5EX1VOU1BFQ0lGSUVEEAASFwoTUkVRVUVTVF9LSU5EX1NFUklFUxABEhYKElJFUVVFU1RfS0lORF9NT1ZJRRACEhYKElJFUVVFU1RfS0lORF9NVVNJQxADEhcKE1JFUVVFU1RfS0lORF9BUlRJU1QQBBIWChJSRVFVRVNUX0tJTkRfQUxCVU0QBRIVChFSRVFVRVNUX0tJTkRfQk9PSxAGKrkBChBSZXF1ZXN0YWJsZVN0YXRlEiEKHVJFUVVFU1RBQkxFX1NUQVRFX1VOU1BFQ0lGSUVEEAASIQodUkVRVUVTVEFCTEVfU1RBVEVfUkVRVUVTVEFCTEUQARIfChtSRVFVRVNUQUJMRV9TVEFURV9BVkFJTEFCTEUQAhIfChtSRVFVRVNUQUJMRV9TVEFURV9SRVFVRVNURUQQAxIdChlSRVFVRVNUQUJMRV9TVEFURV9UUkFDS0VEEAQq3gEKDVJlcXVlc3RTdGF0dXMSHgoaUkVRVUVTVF9TVEFUVVNfVU5TUEVDSUZJRUQQABIaChZSRVFVRVNUX1NUQVRVU19QRU5ESU5HEAESGwoXUkVRVUVTVF9TVEFUVVNfQVBQUk9WRUQQAhIeChpSRVFVRVNUX1NUQVRVU19ET1dOTE9BRElORxADEhwKGFJFUVVFU1RfU1RBVFVTX0FWQUlMQUJMRRAEEhsKF1JFUVVFU1RfU1RBVFVTX0RFQ0xJTkVEEAUSGQoVUkVRVUVTVF9TVEFUVVNfRkFJTEVEEAYqnQEKDlJlcXVlc3RTZWFzb25zEh8KG1JFUVVFU1RfU0VBU09OU19VTlNQRUNJRklFRBAAEhcKE1JFUVVFU1RfU0VBU09OU19BTEwQARIZChVSRVFVRVNUX1NFQVNPTlNfRklSU1QQAhIaChZSRVFVRVNUX1NFQVNPTlNfTEFURVNUEAMSGgoWUkVRVUVTVF9TRUFTT05TX0NIT1NFThAEKpgBChFSZXF1ZXN0U2VyaWVzVHlwZRIjCh9SRVFVRVNUX1NFUklFU19UWVBFX1VOU1BFQ0lGSUVEEAASIAocUkVRVUVTVF9TRVJJRVNfVFlQRV9TVEFOREFSRBABEh0KGVJFUVVFU1RfU0VSSUVTX1RZUEVfQU5JTUUQAhIdChlSRVFVRVNUX1NFUklFU19UWVBFX0RBSUxZEAMyqgsKDlJlcXVlc3RTZXJ2aWNlEmUKEVNlYXJjaFJlcXVlc3RhYmxlEiQubGF0ZXJuYS52MS5TZWFyY2hSZXF1ZXN0YWJsZVJlcXVlc3QaJS5sYXRlcm5hLnYxLlNlYXJjaFJlcXVlc3RhYmxlUmVzcG9uc2UiA5ACARJ3ChdMaXN0UmVxdWVzdERlc3RpbmF0aW9ucxIqLmxhdGVybmEudjEuTGlzdFJlcXVlc3REZXN0aW5hdGlvbnNSZXF1ZXN0GisubGF0ZXJuYS52MS5MaXN0UmVxdWVzdERlc3RpbmF0aW9uc1Jlc3BvbnNlIgOQAgESVAoNQ3JlYXRlUmVxdWVzdBIgLmxhdGVybmEudjEuQ3JlYXRlUmVxdWVzdFJlcXVlc3QaIS5sYXRlcm5hLnYxLkNyZWF0ZVJlcXVlc3RSZXNwb25zZRJcCg5MaXN0TXlSZXF1ZXN0cxIhLmxhdGVybmEudjEuTGlzdE15UmVxdWVzdHNSZXF1ZXN0GiIubGF0ZXJuYS52MS5MaXN0TXlSZXF1ZXN0c1Jlc3BvbnNlIgOQAgESUAoKR2V0UmVxdWVzdBIdLmxhdGVybmEudjEuR2V0UmVxdWVzdFJlcXVlc3QaHi5sYXRlcm5hLnYxLkdldFJlcXVlc3RSZXNwb25zZSIDkAIBElQKDUNhbmNlbFJlcXVlc3QSIC5sYXRlcm5hLnYxLkNhbmNlbFJlcXVlc3RSZXF1ZXN0GiEubGF0ZXJuYS52MS5DYW5jZWxSZXF1ZXN0UmVzcG9uc2USWgoMTGlzdFJlcXVlc3RzEh8ubGF0ZXJuYS52MS5MaXN0UmVxdWVzdHNSZXF1ZXN0GiAubGF0ZXJuYS52MS5MaXN0UmVxdWVzdHNSZXNwb25zZSIHkAIBiLUYBBJdCg5BcHByb3ZlUmVxdWVzdBIhLmxhdGVybmEudjEuQXBwcm92ZVJlcXVlc3RSZXF1ZXN0GiIubGF0ZXJuYS52MS5BcHByb3ZlUmVxdWVzdFJlc3BvbnNlIgSItRgEEl0KDkRlY2xpbmVSZXF1ZXN0EiEubGF0ZXJuYS52MS5EZWNsaW5lUmVxdWVzdFJlcXVlc3QaIi5sYXRlcm5hLnYxLkRlY2xpbmVSZXF1ZXN0UmVzcG9uc2UiBIi1GAQSXQoNRGVsZXRlUmVxdWVzdBIgLmxhdGVybmEudjEuRGVsZXRlUmVxdWVzdFJlcXVlc3QaIS5sYXRlcm5hLnYxLkRlbGV0ZVJlcXVlc3RSZXNwb25zZSIHkAICiLUYBBJpChFHZXRSZXF1ZXN0T3B0aW9ucxIkLmxhdGVybmEudjEuR2V0UmVxdWVzdE9wdGlvbnNSZXF1ZXN0GiUubGF0ZXJuYS52MS5HZXRSZXF1ZXN0T3B0aW9uc1Jlc3BvbnNlIgeQAgGItRgEEnsKGENyZWF0ZVJlcXVlc3REZXN0aW5hdGlvbhIrLmxhdGVybmEudjEuQ3JlYXRlUmVxdWVzdERlc3RpbmF0aW9uUmVxdWVzdBosLmxhdGVybmEudjEuQ3JlYXRlUmVxdWVzdERlc3RpbmF0aW9uUmVzcG9uc2UiBIi1GAQSewoYVXBkYXRlUmVxdWVzdERlc3RpbmF0aW9uEisubGF0ZXJuYS52MS5VcGRhdGVSZXF1ZXN0RGVzdGluYXRpb25SZXF1ZXN0GiwubGF0ZXJuYS52MS5VcGRhdGVSZXF1ZXN0RGVzdGluYXRpb25SZXNwb25zZSIEiLUYBBJ+ChhEZWxldGVSZXF1ZXN0RGVzdGluYXRpb24SKy5sYXRlcm5hLnYxLkRlbGV0ZVJlcXVlc3REZXN0aW5hdGlvblJlcXVlc3QaLC5sYXRlcm5hLnYxLkRlbGV0ZVJlcXVlc3REZXN0aW5hdGlvblJlc3BvbnNlIgeQAgKItRgEQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_laterna_v1_options, file_laterna_v1_text]);
 
 /**
  * RequestableTitle is a search result.
@@ -29,7 +29,7 @@ export type RequestableTitle = Message<"laterna.v1.RequestableTitle"> & {
   kind: RequestKind;
 
   /**
-   * TVDB ID of a series, TMDB ID of a movie.
+   * TVDB ID of a series, TMDB ID of a movie; 0 for the others.
    *
    * @generated from field: int64 external_id = 2;
    */
@@ -86,11 +86,19 @@ export type RequestableTitle = Message<"laterna.v1.RequestableTitle"> & {
   seasonCount: number;
 
   /**
-   * Network of a series, studio of a movie.
+   * Network of a series, studio of a movie, artist of an album, author of a book.
    *
    * @generated from field: string network = 11;
    */
   network: string;
+
+  /**
+   * MusicBrainz ID of an artist or of an album's release group, OpenLibrary work ID of a book;
+   * empty for series and movies.
+   *
+   * @generated from field: string external_key = 12;
+   */
+  externalKey: string;
 };
 
 /**
@@ -105,6 +113,8 @@ export const RequestableTitleSchema: GenMessage<RequestableTitle> = /*@__PURE__*
  */
 export type SearchRequestableRequest = Message<"laterna.v1.SearchRequestableRequest"> & {
   /**
+   * SERIES, MOVIE, MUSIC (artists and albums) or BOOK.
+   *
    * @generated from field: laterna.v1.RequestKind kind = 1;
    */
   kind: RequestKind;
@@ -160,6 +170,8 @@ export type RequestDestination = Message<"laterna.v1.RequestDestination"> & {
   name: string;
 
   /**
+   * SERIES, MOVIE, MUSIC or BOOK.
+   *
    * @generated from field: laterna.v1.RequestKind kind = 3;
    */
   kind: RequestKind;
@@ -175,7 +187,8 @@ export type RequestDestination = Message<"laterna.v1.RequestDestination"> & {
   libraryName: string;
 
   /**
-   * On the instance; administrators only (empty otherwise).
+   * On the instance; administrators only (empty otherwise). Empty for books: LazyLibrarian decides
+   * where they go.
    *
    * @generated from field: string root_folder = 6;
    */
@@ -197,6 +210,18 @@ export type RequestDestination = Message<"laterna.v1.RequestDestination"> & {
    * @generated from field: laterna.v1.RequestSeriesType series_type = 9;
    */
   seriesType: RequestSeriesType;
+
+  /**
+   * Music only: the Lidarr metadata profile (which kinds of releases an artist's albums include).
+   *
+   * @generated from field: int32 metadata_profile_id = 10;
+   */
+  metadataProfileId: number;
+
+  /**
+   * @generated from field: string metadata_profile_name = 11;
+   */
+  metadataProfileName: string;
 };
 
 /**
@@ -211,7 +236,7 @@ export const RequestDestinationSchema: GenMessage<RequestDestination> = /*@__PUR
  */
 export type ListRequestDestinationsRequest = Message<"laterna.v1.ListRequestDestinationsRequest"> & {
   /**
-   * Unset lists both kinds.
+   * SERIES, MOVIE, MUSIC or BOOK; unset lists them all.
    *
    * @generated from field: laterna.v1.RequestKind kind = 1;
    */
@@ -375,7 +400,8 @@ export type MediaRequest = Message<"laterna.v1.MediaRequest"> & {
   itemId: string;
 
   /**
-   * Series: episodes in the catalog and episodes monitored on the instance.
+   * Series: episodes in the catalog and episodes monitored on the instance. Artist or album: tracks
+   * with a file and tracks monitored on Lidarr.
    *
    * @generated from field: int32 episodes_available = 23;
    */
@@ -390,6 +416,20 @@ export type MediaRequest = Message<"laterna.v1.MediaRequest"> & {
    * @generated from field: google.protobuf.Timestamp available_at = 25;
    */
   availableAt?: Timestamp | undefined;
+
+  /**
+   * See RequestableTitle.external_key.
+   *
+   * @generated from field: string external_key = 26;
+   */
+  externalKey: string;
+
+  /**
+   * Artist of an album, author of a book; empty otherwise.
+   *
+   * @generated from field: string subtitle = 27;
+   */
+  subtitle: string;
 };
 
 /**
@@ -404,6 +444,8 @@ export const MediaRequestSchema: GenMessage<MediaRequest> = /*@__PURE__*/
  */
 export type CreateRequestRequest = Message<"laterna.v1.CreateRequestRequest"> & {
   /**
+   * SERIES, MOVIE, ARTIST, ALBUM or BOOK.
+   *
    * @generated from field: laterna.v1.RequestKind kind = 1;
    */
   kind: RequestKind;
@@ -423,6 +465,8 @@ export type CreateRequestRequest = Message<"laterna.v1.CreateRequestRequest"> & 
   destinationId: string;
 
   /**
+   * Series: which seasons; artist: which albums (ALL, FIRST or LATEST). Ignored for the others.
+   *
    * @generated from field: laterna.v1.RequestSeasons seasons = 4;
    */
   seasons: RequestSeasons;
@@ -431,6 +475,13 @@ export type CreateRequestRequest = Message<"laterna.v1.CreateRequestRequest"> & 
    * @generated from field: repeated int32 season_numbers = 5;
    */
   seasonNumbers: number[];
+
+  /**
+   * Artist, album or book (RequestableTitle.external_key).
+   *
+   * @generated from field: string external_key = 6;
+   */
+  externalKey: string;
 };
 
 /**
@@ -810,6 +861,8 @@ export const RequestQualityProfileSchema: GenMessage<RequestQualityProfile> = /*
  */
 export type GetRequestOptionsRequest = Message<"laterna.v1.GetRequestOptionsRequest"> & {
   /**
+   * SERIES, MOVIE or MUSIC; BOOK has no options.
+   *
    * @generated from field: laterna.v1.RequestKind kind = 1;
    */
   kind: RequestKind;
@@ -835,6 +888,13 @@ export type GetRequestOptionsResponse = Message<"laterna.v1.GetRequestOptionsRes
    * @generated from field: repeated laterna.v1.RequestQualityProfile quality_profiles = 2;
    */
   qualityProfiles: RequestQualityProfile[];
+
+  /**
+   * Music: Lidarr's metadata profiles.
+   *
+   * @generated from field: repeated laterna.v1.RequestQualityProfile metadata_profiles = 3;
+   */
+  metadataProfiles: RequestQualityProfile[];
 };
 
 /**
@@ -877,6 +937,13 @@ export type CreateRequestDestinationRequest = Message<"laterna.v1.CreateRequestD
    * @generated from field: laterna.v1.RequestSeriesType series_type = 6;
    */
   seriesType: RequestSeriesType;
+
+  /**
+   * Music: Lidarr's metadata profile.
+   *
+   * @generated from field: int32 metadata_profile_id = 7;
+   */
+  metadataProfileId: number;
 };
 
 /**
@@ -938,6 +1005,11 @@ export type UpdateRequestDestinationRequest = Message<"laterna.v1.UpdateRequestD
    * @generated from field: laterna.v1.RequestSeriesType series_type = 6;
    */
   seriesType: RequestSeriesType;
+
+  /**
+   * @generated from field: optional int32 metadata_profile_id = 7;
+   */
+  metadataProfileId?: number | undefined;
 };
 
 /**
@@ -995,6 +1067,9 @@ export const DeleteRequestDestinationResponseSchema: GenMessage<DeleteRequestDes
   messageDesc(file_laterna_v1_request, 32);
 
 /**
+ * RequestKind is what a request is for. Searches and destinations use SERIES, MOVIE, MUSIC and
+ * BOOK; search results and requests use SERIES, MOVIE, ARTIST, ALBUM and BOOK.
+ *
  * @generated from enum laterna.v1.RequestKind
  */
 export enum RequestKind {
@@ -1004,18 +1079,47 @@ export enum RequestKind {
   UNSPECIFIED = 0,
 
   /**
-   * A series, through Sonarr, by its TVDB ID.
+   * A series, through Sonarr, by its TVDB ID (external_id).
    *
    * @generated from enum value: REQUEST_KIND_SERIES = 1;
    */
   SERIES = 1,
 
   /**
-   * A movie, through Radarr, by its TMDB ID.
+   * A movie, through Radarr, by its TMDB ID (external_id).
    *
    * @generated from enum value: REQUEST_KIND_MOVIE = 2;
    */
   MOVIE = 2,
+
+  /**
+   * Music, through Lidarr: searches find artists and albums, a destination takes both.
+   *
+   * @generated from enum value: REQUEST_KIND_MUSIC = 3;
+   */
+  MUSIC = 3,
+
+  /**
+   * An artist, through Lidarr, by its MusicBrainz ID (external_key).
+   *
+   * @generated from enum value: REQUEST_KIND_ARTIST = 4;
+   */
+  ARTIST = 4,
+
+  /**
+   * An album, through Lidarr, by the MusicBrainz ID of its release group (external_key).
+   *
+   * @generated from enum value: REQUEST_KIND_ALBUM = 5;
+   */
+  ALBUM = 5,
+
+  /**
+   * A book, through LazyLibrarian, by its OpenLibrary work ID (external_key); asked for as an
+   * ebook.
+   *
+   * @generated from enum value: REQUEST_KIND_BOOK = 6;
+   */
+  BOOK = 6,
 }
 
 /**
@@ -1129,7 +1233,7 @@ export const RequestStatusSchema: GenEnum<RequestStatus> = /*@__PURE__*/
   enumDesc(file_laterna_v1_request, 2);
 
 /**
- * RequestSeasons says which seasons of a series are requested.
+ * RequestSeasons says which seasons of a series are requested, or which albums of an artist.
  *
  * @generated from enum laterna.v1.RequestSeasons
  */
@@ -1142,24 +1246,29 @@ export enum RequestSeasons {
   UNSPECIFIED = 0,
 
   /**
-   * Every season, and the next ones as they air.
+   * Every season, and the next ones as they air; every album of an artist (those the
+   * destination's metadata profile keeps).
    *
    * @generated from enum value: REQUEST_SEASONS_ALL = 1;
    */
   ALL = 1,
 
   /**
+   * The first season, or the first album.
+   *
    * @generated from enum value: REQUEST_SEASONS_FIRST = 2;
    */
   FIRST = 2,
 
   /**
+   * The latest season, or the latest album.
+   *
    * @generated from enum value: REQUEST_SEASONS_LATEST = 3;
    */
   LATEST = 3,
 
   /**
-   * The seasons in season_numbers.
+   * The seasons in season_numbers (series only).
    *
    * @generated from enum value: REQUEST_SEASONS_CHOSEN = 4;
    */
@@ -1212,9 +1321,10 @@ export const RequestSeriesTypeSchema: GenEnum<RequestSeriesType> = /*@__PURE__*/
   enumDesc(file_laterna_v1_request, 4);
 
 /**
- * RequestService lets a profile ask for a movie or a series the libraries do not have. Searching
- * goes through Radarr and Sonarr (IntegrationService), which ask TMDB and TVDB: Laterna itself
- * talks to no metadata provider. A request lands in a destination, set by an administrator (a
+ * RequestService lets a profile ask for a movie, a series, music or a book the libraries do not
+ * have. Searching goes through Radarr and Sonarr (IntegrationService), which ask TMDB and TVDB,
+ * Lidarr, which asks MusicBrainz, and LazyLibrarian, which asks OpenLibrary: Laterna itself talks
+ * to no metadata provider. A request lands in a destination, set by an administrator (a
  * library, and on the instance a root folder and a quality profile). An administrator's requests
  * are approved at once, and so are those of an account marked auto_approve_requests (unless they
  * come from a restricted profile); the others wait for an administrator. Once approved, the server
@@ -1339,7 +1449,7 @@ export const RequestService: GenService<{
   },
   /**
    * GetRequestOptions reads from the instance for that kind what a destination can use: its root
-   * folders and quality profiles.
+   * folders and quality profiles, and Lidarr's metadata profiles.
    *
    * @generated from rpc laterna.v1.RequestService.GetRequestOptions
    */
@@ -1350,7 +1460,8 @@ export const RequestService: GenService<{
   },
   /**
    * CreateRequestDestination adds a destination. Its library must be of the matching kind (shows
-   * for series, movies for movies) and its root folder one of the instance's.
+   * for series, movies for movies, music, books) and its root folder and profiles the instance's
+   * (none for books).
    *
    * @generated from rpc laterna.v1.RequestService.CreateRequestDestination
    */

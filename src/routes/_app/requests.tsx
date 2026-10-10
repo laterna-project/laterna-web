@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { errorMessage } from "../../api/errors";
 import { useInvalidate } from "../../api/invalidate";
-import { requestKind, stateLabel } from "../../features/requests/requests";
+import { requestFamily, requestKind, stateLabel } from "../../features/requests/requests";
 import styles from "../../features/requests/requests.module.css";
 import { Poster, RequestDialog, RequestRow, WatchLink } from "../../features/requests/ui";
 import {
@@ -20,24 +20,28 @@ import { Button } from "../../ui/Button";
 import { Icon } from "../../ui/Icon";
 import { Status } from "../../ui/Status";
 
-type Kind = "series" | "movies";
+type Kind = "series" | "movies" | "music" | "books";
+
+/** Families of requests, each with its search: Sonarr, Radarr, Lidarr, LazyLibrarian. */
+const kinds = [
+  { id: "series", value: RequestKind.SERIES, label: "nav.series", placeholder: "requests.placeholderSeries" },
+  { id: "movies", value: RequestKind.MOVIE, label: "nav.movies", placeholder: "requests.placeholderMovie" },
+  { id: "music", value: RequestKind.MUSIC, label: "nav.music", placeholder: "requests.placeholderMusic" },
+  { id: "books", value: RequestKind.BOOK, label: "nav.books", placeholder: "requests.placeholderBook" },
+] as const;
 
 export const Route = createFileRoute("/_app/requests")({
   validateSearch: (s: Record<string, unknown>): { q?: string; kind?: Kind } => ({
     ...(typeof s.q === "string" && s.q ? { q: s.q } : {}),
-    ...(s.kind === "series" || s.kind === "movies" ? { kind: s.kind } : {}),
+    ...(kinds.some((k) => k.id === s.kind) ? { kind: s.kind as Kind } : {}),
   }),
   component: RequestsPage,
 });
 
-const kinds = [
-  { id: "series", value: RequestKind.SERIES, label: "nav.series" },
-  { id: "movies", value: RequestKind.MOVIE, label: "nav.movies" },
-] as const;
-
 /**
- * Requests (server: docs/design/requests.md): search Sonarr or Radarr for a movie or a series the
- * libraries don't have, ask for it, and follow one's requests until they can be watched.
+ * Requests (server: docs/design/requests.md): search Sonarr, Radarr, Lidarr or LazyLibrarian for a
+ * series, a movie, music or a book the libraries don't have, ask for it, and follow one's requests
+ * until they can be watched, listened to or read.
  */
 function RequestsPage() {
   const { t } = useTranslation();
@@ -144,11 +148,7 @@ function RequestsPage() {
                 className={styles.input}
                 type="search"
                 autoComplete="off"
-                placeholder={
-                  kind.value === RequestKind.MOVIE
-                    ? t("requests.placeholderMovie")
-                    : t("requests.placeholderSeries")
-                }
+                placeholder={t(kind.placeholder)}
                 value={text}
                 onChange={(e) => setText(e.target.value)}
               />
@@ -212,7 +212,9 @@ function RequestsPage() {
       {asking && (
         <RequestDialog
           title={asking}
-          destinations={destinations.data?.destinations.filter((d) => d.kind === asking.kind) ?? []}
+          destinations={
+            destinations.data?.destinations.filter((d) => d.kind === requestFamily(asking.kind)) ?? []
+          }
           onClose={() => setAsking(undefined)}
           onDone={asked}
         />
@@ -225,8 +227,10 @@ function RequestsPage() {
 function Result({ title: r, onAsk }: { title: RequestableTitle; onAsk: () => void }) {
   const { t } = useTranslation();
   const meta = [
-    r.year > 0 ? String(r.year) : "",
+    // An artist and an album look alike in a music search: their kind tells them apart.
+    r.kind === RequestKind.ARTIST || r.kind === RequestKind.ALBUM ? requestKind(r.kind).label : "",
     r.network,
+    r.year > 0 ? String(r.year) : "",
     r.kind === RequestKind.SERIES && r.seasonCount > 0
       ? t("requests.seasonCount", { count: r.seasonCount })
       : "",

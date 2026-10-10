@@ -7,7 +7,7 @@ import { useInvalidate } from "../../../api/invalidate";
 import styles from "../../../features/admin/admin.module.css";
 import { RequestDestinations } from "../../../features/admin/RequestDestinations";
 import { AdminHead } from "../../../features/admin/ui";
-import { decidable, seasonsLabel } from "../../../features/requests/requests";
+import { decidable, requestFamily, seasonsLabel } from "../../../features/requests/requests";
 import requestStyles from "../../../features/requests/requests.module.css";
 import { DestinationPicker, RequestRow } from "../../../features/requests/ui";
 import { ActivityService } from "../../../gen/laterna/v1/activity_pb";
@@ -144,7 +144,7 @@ function AdminRequests() {
       {approving && (
         <ApproveDialog
           request={approving}
-          destinations={destinations.filter((d) => d.kind === approving.kind)}
+          destinations={destinations.filter((d) => d.kind === requestFamily(approving.kind))}
           onClose={() => setApproving(undefined)}
           onDone={async () => {
             setApproving(undefined);
@@ -167,9 +167,9 @@ function AdminRequests() {
 }
 
 const seasonChoices = [
-  { value: RequestSeasons.ALL, label: "requests.seasons.all" },
-  { value: RequestSeasons.FIRST, label: "requests.seasons.first" },
-  { value: RequestSeasons.LATEST, label: "requests.seasons.latest" },
+  { value: RequestSeasons.ALL, label: "requests.seasons.all", album: "requests.albums.all" },
+  { value: RequestSeasons.FIRST, label: "requests.seasons.first", album: "requests.albums.first" },
+  { value: RequestSeasons.LATEST, label: "requests.seasons.latest", album: "requests.albums.latest" },
 ] as const;
 
 /** Approves a request, in its destination or another one, for the seasons asked or others. */
@@ -200,9 +200,11 @@ function ApproveDialog({
   return (
     <Dialog title={t("adminRequests.approveTitle", { title: r.title })} onClose={onClose}>
       <form className={styles.form} onSubmit={submit}>
-        {r.kind === RequestKind.SERIES && (
+        {(r.kind === RequestKind.SERIES || r.kind === RequestKind.ARTIST) && (
           <fieldset className={styles.fieldset}>
-            <legend className={styles.label}>{t("requests.seasonsLabel")}</legend>
+            <legend className={styles.label}>
+              {r.kind === RequestKind.ARTIST ? t("requests.albumsLabel") : t("requests.seasonsLabel")}
+            </legend>
             <div className={styles.choices}>
               <button
                 type="button"
@@ -222,7 +224,7 @@ function ApproveDialog({
                     aria-pressed={seasons === c.value}
                     onClick={() => setSeasons(c.value)}
                   >
-                    {t(c.label)}
+                    {r.kind === RequestKind.ARTIST ? t(c.album) : t(c.label)}
                   </button>
                 ))}
             </div>

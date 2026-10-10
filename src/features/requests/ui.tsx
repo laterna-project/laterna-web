@@ -20,16 +20,20 @@ import { Alert } from "../../ui/Alert";
 import { Button } from "../../ui/Button";
 import { Dialog } from "../../ui/Dialog";
 import { relativeTime } from "../catalog/format";
-import { dateOf, requestKind, requestStatus, seasonsLabel } from "./requests";
+import { byNumber, dateOf, posterShape, requestKind, requestStatus, seasonsLabel } from "./requests";
 import styles from "./requests.module.css";
 
-/** Poster served by the server for a search result or a request; the universe color without one. */
+/**
+ * Poster served by the server for a search result or a request; the universe color without one.
+ * An album cover is square, an artist round.
+ */
 export function Poster({ url, kind, size }: { url: string; kind: RequestKind; size?: "sm" }) {
   const [failed, setFailed] = useState(false);
   return (
     <span
       className={styles.poster}
       data-size={size}
+      data-shape={posterShape(kind)}
       style={{ background: `var(--color-${requestKind(kind).universe}-soft)` }}
     >
       {url && !failed && (
@@ -39,18 +43,42 @@ export function Poster({ url, kind, size }: { url: string; kind: RequestKind; si
   );
 }
 
-/** Link to the catalog item a request brought, once available. */
+/** Link to the catalog item a request brought, once available: to watch, listen to or read it. */
 export function WatchLink({ kind, itemId }: { kind: RequestKind; itemId: string }) {
   const { t } = useTranslation();
-  return kind === RequestKind.MOVIE ? (
-    <Link to="/movies/$id" params={{ id: itemId }} className={styles.link}>
-      {t("requests.watch")}
-    </Link>
-  ) : (
-    <Link to="/series/$id" params={{ id: itemId }} className={styles.link}>
-      {t("requests.watch")}
-    </Link>
-  );
+  const params = { id: itemId };
+  switch (kind) {
+    case RequestKind.MOVIE:
+      return (
+        <Link to="/movies/$id" params={params} className={styles.link}>
+          {t("requests.watch")}
+        </Link>
+      );
+    case RequestKind.ALBUM:
+      return (
+        <Link to="/music/albums/$id" params={params} className={styles.link}>
+          {t("requests.listen")}
+        </Link>
+      );
+    case RequestKind.ARTIST:
+      return (
+        <Link to="/music/artists/$id" params={params} className={styles.link}>
+          {t("requests.listen")}
+        </Link>
+      );
+    case RequestKind.BOOK:
+      return (
+        <Link to="/play/book/$id" params={params} className={styles.link}>
+          {t("requests.read")}
+        </Link>
+      );
+    default:
+      return (
+        <Link to="/series/$id" params={params} className={styles.link}>
+          {t("requests.watch")}
+        </Link>
+      );
+  }
 }
 
 /**
@@ -72,6 +100,7 @@ export function RequestRow({
   const kind = requestKind(r.kind);
   const meta = [
     kind.label,
+    r.subtitle,
     seasonsLabel(r),
     // The account's name only when the profile has another one.
     who
@@ -184,6 +213,41 @@ export function SeasonPicker({
   );
 }
 
+const albumChoices = [
+  { value: RequestSeasons.ALL, label: "requests.albums.all" },
+  { value: RequestSeasons.FIRST, label: "requests.albums.first" },
+  { value: RequestSeasons.LATEST, label: "requests.albums.latest" },
+] as const;
+
+/** Which albums of an artist: every one, the first or the latest. */
+export function AlbumPicker({
+  albums,
+  onChange,
+}: {
+  albums: RequestSeasons;
+  onChange: (albums: RequestSeasons) => void;
+}) {
+  const { t } = useTranslation();
+  return (
+    <fieldset className={styles.fieldset}>
+      <legend className={styles.label}>{t("requests.albumsLabel")}</legend>
+      <div className={styles.choices}>
+        {albumChoices.map((c) => (
+          <button
+            key={c.value}
+            type="button"
+            className={styles.choice}
+            aria-pressed={albums === c.value}
+            onClick={() => onChange(c.value)}
+          >
+            {t(c.label)}
+          </button>
+        ))}
+      </div>
+    </fieldset>
+  );
+}
+
 /** Where a request lands, when there is a choice. */
 export function DestinationPicker({
   destinations,
@@ -210,7 +274,7 @@ export function DestinationPicker({
   );
 }
 
-/** Asks for a title: seasons of a series, destination if there are several. */
+/** Asks for a title: seasons of a series or albums of an artist, destination if there are several. */
 export function RequestDialog({
   title,
   destinations,
@@ -218,7 +282,7 @@ export function RequestDialog({
   onDone,
 }: {
   title: RequestableTitle;
-  /** Destinations of the title's kind. */
+  /** Destinations of the title's family. */
   destinations: readonly RequestDestination[];
   onClose: () => void;
   onDone: (request: MediaRequest) => void;
@@ -240,7 +304,7 @@ export function RequestDialog({
     e.preventDefault();
     create.mutate({
       kind: title.kind,
-      externalId: title.externalId,
+      ...(byNumber(title.kind) ? { externalId: title.externalId } : { externalKey: title.externalKey }),
       destinationId: destinations.length > 1 ? destination : "",
       seasons,
       seasonNumbers: seasons === RequestSeasons.CHOSEN ? numbers : [],
@@ -260,8 +324,15 @@ export function RequestDialog({
             }}
           />
         )}
+        {title.kind === RequestKind.ARTIST && <AlbumPicker albums={seasons} onChange={setSeasons} />}
         <DestinationPicker destinations={destinations} value={destination} onChange={setDestination} />
-        <p className={styles.muted}>{t("requests.askHint")}</p>
+        <p className={styles.muted}>
+          {title.kind === RequestKind.BOOK
+            ? t("requests.askHintBook")
+            : requestKind(title.kind).universe === "music"
+              ? t("requests.askHintMusic")
+              : t("requests.askHint")}
+        </p>
         {create.isError && <Alert>{errorMessage(create.error)}</Alert>}
         <div className={styles.actions}>
           <span className={styles.spacer} />
