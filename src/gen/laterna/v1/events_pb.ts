@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/events.proto.
  */
 export const file_laterna_v1_events: GenFile = /*@__PURE__*/
-  fileDesc("ChdsYXRlcm5hL3YxL2V2ZW50cy5wcm90bxIKbGF0ZXJuYS52MSISChBTdWJzY3JpYmVSZXF1ZXN0IjUKEVN1YnNjcmliZVJlc3BvbnNlEiAKBWV2ZW50GAEgASgLMhEubGF0ZXJuYS52MS5FdmVudCKTBAoFRXZlbnQSKAoEdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKgoJaGVhcnRiZWF0GAIgASgLMhUubGF0ZXJuYS52MS5IZWFydGJlYXRIABIkCgZyZXN5bmMYAyABKAsyEi5sYXRlcm5hLnYxLlJlc3luY0gAEjkKEWxpYnJhcmllc19jaGFuZ2VkGAQgASgLMhwubGF0ZXJuYS52MS5MaWJyYXJpZXNDaGFuZ2VkSAASNQoPbGlicmFyeV9zY2FubmVkGAUgASgLMhoubGF0ZXJuYS52MS5MaWJyYXJ5U2Nhbm5lZEgAEjEKDWl0ZW1zX2NoYW5nZWQYBiABKAsyGC5sYXRlcm5hLnYxLkl0ZW1zQ2hhbmdlZEgAEjgKEXVzZXJfZGF0YV9jaGFuZ2VkGAcgASgLMhsubGF0ZXJuYS52MS5Vc2VyRGF0YUNoYW5nZWRIABI5ChFkb3dubG9hZHNfY2hhbmdlZBgIIAEoCzIcLmxhdGVybmEudjEuRG93bmxvYWRzQ2hhbmdlZEgAEjMKDnRoZW1lc19jaGFuZ2VkGAkgASgLMhkubGF0ZXJuYS52MS5UaGVtZXNDaGFuZ2VkSAASNwoQcmVxdWVzdHNfY2hhbmdlZBgKIAEoCzIbLmxhdGVybmEudjEuUmVxdWVzdHNDaGFuZ2VkSABCBgoEa2luZCILCglIZWFydGJlYXQiCAoGUmVzeW5jIhIKEExpYnJhcmllc0NoYW5nZWQimAEKDkxpYnJhcnlTY2FubmVkEhIKCmxpYnJhcnlfaWQYASABKAkSDQoFZmlsZXMYAiABKAUSDQoFYWRkZWQYAyABKAUSDwoHY2hhbmdlZBgEIAEoBRINCgVtb3ZlZBgFIAEoBRIPCgdtaXNzaW5nGAYgASgFEhAKCHJldHVybmVkGAcgASgFEhEKCWZvcmdvdHRlbhgIIAEoBSJHCgxJdGVtc0NoYW5nZWQSEgoKbGlicmFyeV9pZBgBIAEoCRIQCghpdGVtX2lkcxgCIAMoCRIRCgl0cnVuY2F0ZWQYAyABKAgiNgoPVXNlckRhdGFDaGFuZ2VkEhAKCGl0ZW1faWRzGAEgAygJEhEKCXRydW5jYXRlZBgCIAEoCCIoChBEb3dubG9hZHNDaGFuZ2VkEhQKDGRvd25sb2FkX2lkcxgBIAMoCSIPCg1UaGVtZXNDaGFuZ2VkIiYKD1JlcXVlc3RzQ2hhbmdlZBITCgtyZXF1ZXN0X2lkcxgBIAMoCTJgCgxFdmVudFNlcnZpY2USUAoJU3Vic2NyaWJlEhwubGF0ZXJuYS52MS5TdWJzY3JpYmVSZXF1ZXN0Gh0ubGF0ZXJuYS52MS5TdWJzY3JpYmVSZXNwb25zZSIEiLUYAjABQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_laterna_v1_options]);
+  fileDesc("ChdsYXRlcm5hL3YxL2V2ZW50cy5wcm90bxIKbGF0ZXJuYS52MSISChBTdWJzY3JpYmVSZXF1ZXN0IjUKEVN1YnNjcmliZVJlc3BvbnNlEiAKBWV2ZW50GAEgASgLMhEubGF0ZXJuYS52MS5FdmVudCKcBQoFRXZlbnQSKAoEdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKgoJaGVhcnRiZWF0GAIgASgLMhUubGF0ZXJuYS52MS5IZWFydGJlYXRIABIkCgZyZXN5bmMYAyABKAsyEi5sYXRlcm5hLnYxLlJlc3luY0gAEjkKEWxpYnJhcmllc19jaGFuZ2VkGAQgASgLMhwubGF0ZXJuYS52MS5MaWJyYXJpZXNDaGFuZ2VkSAASNQoPbGlicmFyeV9zY2FubmVkGAUgASgLMhoubGF0ZXJuYS52MS5MaWJyYXJ5U2Nhbm5lZEgAEjEKDWl0ZW1zX2NoYW5nZWQYBiABKAsyGC5sYXRlcm5hLnYxLkl0ZW1zQ2hhbmdlZEgAEjgKEXVzZXJfZGF0YV9jaGFuZ2VkGAcgASgLMhsubGF0ZXJuYS52MS5Vc2VyRGF0YUNoYW5nZWRIABI5ChFkb3dubG9hZHNfY2hhbmdlZBgIIAEoCzIcLmxhdGVybmEudjEuRG93bmxvYWRzQ2hhbmdlZEgAEjMKDnRoZW1lc19jaGFuZ2VkGAkgASgLMhkubGF0ZXJuYS52MS5UaGVtZXNDaGFuZ2VkSAASNwoQcmVxdWVzdHNfY2hhbmdlZBgKIAEoCzIbLmxhdGVybmEudjEuUmVxdWVzdHNDaGFuZ2VkSAASQQoVbm90aWZpY2F0aW9uc19jaGFuZ2VkGAsgASgLMiAubGF0ZXJuYS52MS5Ob3RpZmljYXRpb25zQ2hhbmdlZEgAEkQKF3N1YnRpdGxlX3NlYXJjaF9jaGFuZ2VkGAwgASgLMiEubGF0ZXJuYS52MS5TdWJ0aXRsZVNlYXJjaENoYW5nZWRIAEIGCgRraW5kIgsKCUhlYXJ0YmVhdCIICgZSZXN5bmMiEgoQTGlicmFyaWVzQ2hhbmdlZCKYAQoOTGlicmFyeVNjYW5uZWQSEgoKbGlicmFyeV9pZBgBIAEoCRINCgVmaWxlcxgCIAEoBRINCgVhZGRlZBgDIAEoBRIPCgdjaGFuZ2VkGAQgASgFEg0KBW1vdmVkGAUgASgFEg8KB21pc3NpbmcYBiABKAUSEAoIcmV0dXJuZWQYByABKAUSEQoJZm9yZ290dGVuGAggASgFIkcKDEl0ZW1zQ2hhbmdlZBISCgpsaWJyYXJ5X2lkGAEgASgJEhAKCGl0ZW1faWRzGAIgAygJEhEKCXRydW5jYXRlZBgDIAEoCCI2Cg9Vc2VyRGF0YUNoYW5nZWQSEAoIaXRlbV9pZHMYASADKAkSEQoJdHJ1bmNhdGVkGAIgASgIIigKEERvd25sb2Fkc0NoYW5nZWQSFAoMZG93bmxvYWRfaWRzGAEgAygJIg8KDVRoZW1lc0NoYW5nZWQiJgoPUmVxdWVzdHNDaGFuZ2VkEhMKC3JlcXVlc3RfaWRzGAEgAygJIhYKFE5vdGlmaWNhdGlvbnNDaGFuZ2VkIigKFVN1YnRpdGxlU2VhcmNoQ2hhbmdlZBIPCgdmaWxlX2lkGAEgASgJMmAKDEV2ZW50U2VydmljZRJQCglTdWJzY3JpYmUSHC5sYXRlcm5hLnYxLlN1YnNjcmliZVJlcXVlc3QaHS5sYXRlcm5hLnYxLlN1YnNjcmliZVJlc3BvbnNlIgSItRgCMAFCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_laterna_v1_options]);
 
 /**
  * @generated from message laterna.v1.SubscribeRequest
@@ -111,6 +111,18 @@ export type Event = Message<"laterna.v1.Event"> & {
      */
     value: RequestsChanged;
     case: "requestsChanged";
+  } | {
+    /**
+     * @generated from field: laterna.v1.NotificationsChanged notifications_changed = 11;
+     */
+    value: NotificationsChanged;
+    case: "notificationsChanged";
+  } | {
+    /**
+     * @generated from field: laterna.v1.SubtitleSearchChanged subtitle_search_changed = 12;
+     */
+    value: SubtitleSearchChanged;
+    case: "subtitleSearchChanged";
   } | { case: undefined; value?: undefined };
 };
 
@@ -336,6 +348,42 @@ export type RequestsChanged = Message<"laterna.v1.RequestsChanged"> & {
  */
 export const RequestsChangedSchema: GenMessage<RequestsChanged> = /*@__PURE__*/
   messageDesc(file_laterna_v1_events, 11);
+
+/**
+ * NotificationsChanged: the notifications of the profile changed (one arrived, or some were read or
+ * deleted, possibly from another device); reload them (NotificationService).
+ *
+ * @generated from message laterna.v1.NotificationsChanged
+ */
+export type NotificationsChanged = Message<"laterna.v1.NotificationsChanged"> & {
+};
+
+/**
+ * Describes the message laterna.v1.NotificationsChanged.
+ * Use `create(NotificationsChangedSchema)` to create a new message.
+ */
+export const NotificationsChangedSchema: GenMessage<NotificationsChanged> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_events, 12);
+
+/**
+ * SubtitleSearchChanged: a subtitle search of the profile started or ended; read where it stands
+ * (SubtitleService.GetSubtitleSearch) and, once a subtitle is found, the subtitles of the file.
+ *
+ * @generated from message laterna.v1.SubtitleSearchChanged
+ */
+export type SubtitleSearchChanged = Message<"laterna.v1.SubtitleSearchChanged"> & {
+  /**
+   * @generated from field: string file_id = 1;
+   */
+  fileId: string;
+};
+
+/**
+ * Describes the message laterna.v1.SubtitleSearchChanged.
+ * Use `create(SubtitleSearchChangedSchema)` to create a new message.
+ */
+export const SubtitleSearchChangedSchema: GenMessage<SubtitleSearchChanged> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_events, 13);
 
 /**
  * EventService tells clients what changes, so that they can refresh without polling the server.

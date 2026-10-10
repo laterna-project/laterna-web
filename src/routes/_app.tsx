@@ -10,6 +10,7 @@ import { catalogLibrariesQuery, sessionQuery } from "../api/queries";
 import { sessionToken } from "../api/session";
 import { SkipLink } from "../app/PageFocus";
 import { restricted } from "../features/account/parental";
+import { NotificationsBell, usePushClicks, usePushSync } from "../features/notifications/ui";
 import { AuthService } from "../gen/laterna/v1/auth_pb";
 import { CatalogService } from "../gen/laterna/v1/catalog_pb";
 import { LibraryKind } from "../gen/laterna/v1/library_pb";
@@ -87,6 +88,8 @@ function Shell() {
   // Section shown ("movies", "music"...), for themes: [data-ui="main"][data-page="movies"].
   const page = useLocation({ select: (l) => l.pathname.split("/")[1] || "home" });
   useServerEvents(profile.id);
+  usePushSync();
+  usePushClicks();
   const kinds = new Set(
     (useQuery(CatalogService.method.listCatalogLibraries, {}).data?.libraries ?? []).map((l) => l.kind),
   );
@@ -158,6 +161,7 @@ function Shell() {
             <span className={styles.searchText}>{t("nav.search")}</span>
             <kbd className={styles.kbd}>/</kbd>
           </Link>
+          <NotificationsBell />
           <ProfileMenu
             name={profile.name}
             id={profile.id}

@@ -7,8 +7,11 @@ import { CatalogService } from "../../gen/laterna/v1/catalog_pb";
 import { HomeService } from "../../gen/laterna/v1/home_pb";
 import { Alert } from "../../ui/Alert";
 
-/** Items per row: enough to fill a scrolling strip on a large screen. */
-const home = { rowSize: 12 };
+/**
+ * Items per row: enough to fill a scrolling strip on a large screen. "Coming soon" is asked for:
+ * the server only sends it to a client that shows its entries.
+ */
+const home = { rowSize: 12, upcoming: true };
 
 export const Route = createFileRoute("/_app/")({
   // Loaded before rendering; the event stream refetches it when it changes.

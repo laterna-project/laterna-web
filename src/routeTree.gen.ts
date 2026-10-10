@@ -19,6 +19,7 @@ import { Route as AppAccountRouteImport } from './routes/_app/account'
 import { Route as AppAdminRouteImport } from './routes/_app/admin'
 import { Route as AppCollectionsRouteImport } from './routes/_app/collections'
 import { Route as AppDiscoverRouteImport } from './routes/_app/discover'
+import { Route as AppNotificationsRouteImport } from './routes/_app/notifications'
 import { Route as AppOfflineRouteImport } from './routes/_app/offline'
 import { Route as AppPartyRouteImport } from './routes/_app/party'
 import { Route as AppPlaylistsRouteImport } from './routes/_app/playlists'
@@ -109,6 +110,11 @@ const AppCollectionsRoute = AppCollectionsRouteImport.update({
 const AppDiscoverRoute = AppDiscoverRouteImport.update({
   id: '/discover',
   path: '/discover',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppNotificationsRoute = AppNotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
   getParentRoute: () => AppRoute,
 } as any)
 const AppOfflineRoute = AppOfflineRouteImport.update({
@@ -332,6 +338,7 @@ export interface FileRoutesByFullPath {
   '/admin': typeof AppAdminRouteWithChildren
   '/collections': typeof AppCollectionsRoute
   '/discover': typeof AppDiscoverRoute
+  '/notifications': typeof AppNotificationsRoute
   '/offline': typeof AppOfflineRoute
   '/party': typeof AppPartyRoute
   '/playlists': typeof AppPlaylistsRoute
@@ -382,6 +389,7 @@ export interface FileRoutesByTo {
   '/setup': typeof SetupRoute
   '/collections': typeof AppCollectionsRoute
   '/discover': typeof AppDiscoverRoute
+  '/notifications': typeof AppNotificationsRoute
   '/offline': typeof AppOfflineRoute
   '/party': typeof AppPartyRoute
   '/playlists': typeof AppPlaylistsRoute
@@ -437,6 +445,7 @@ export interface FileRoutesById {
   '/_app/admin': typeof AppAdminRouteWithChildren
   '/_app/collections': typeof AppCollectionsRoute
   '/_app/discover': typeof AppDiscoverRoute
+  '/_app/notifications': typeof AppNotificationsRoute
   '/_app/offline': typeof AppOfflineRoute
   '/_app/party': typeof AppPartyRoute
   '/_app/playlists': typeof AppPlaylistsRoute
@@ -493,6 +502,7 @@ export interface FileRouteTypes {
     | '/admin'
     | '/collections'
     | '/discover'
+    | '/notifications'
     | '/offline'
     | '/party'
     | '/playlists'
@@ -543,6 +553,7 @@ export interface FileRouteTypes {
     | '/setup'
     | '/collections'
     | '/discover'
+    | '/notifications'
     | '/offline'
     | '/party'
     | '/playlists'
@@ -597,6 +608,7 @@ export interface FileRouteTypes {
     | '/_app/admin'
     | '/_app/collections'
     | '/_app/discover'
+    | '/_app/notifications'
     | '/_app/offline'
     | '/_app/party'
     | '/_app/playlists'
@@ -720,6 +732,13 @@ declare module '@tanstack/react-router' {
       path: '/discover'
       fullPath: '/discover'
       preLoaderRoute: typeof AppDiscoverRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/notifications': {
+      id: '/_app/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof AppNotificationsRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/offline': {
@@ -1084,6 +1103,7 @@ interface AppRouteChildren {
   AppAdminRoute: typeof AppAdminRouteWithChildren
   AppCollectionsRoute: typeof AppCollectionsRoute
   AppDiscoverRoute: typeof AppDiscoverRoute
+  AppNotificationsRoute: typeof AppNotificationsRoute
   AppOfflineRoute: typeof AppOfflineRoute
   AppPartyRoute: typeof AppPartyRoute
   AppPlaylistsRoute: typeof AppPlaylistsRoute
@@ -1114,6 +1134,7 @@ const AppRouteChildren: AppRouteChildren = {
   AppAdminRoute: AppAdminRouteWithChildren,
   AppCollectionsRoute: AppCollectionsRoute,
   AppDiscoverRoute: AppDiscoverRoute,
+  AppNotificationsRoute: AppNotificationsRoute,
   AppOfflineRoute: AppOfflineRoute,
   AppPartyRoute: AppPartyRoute,
   AppPlaylistsRoute: AppPlaylistsRoute,

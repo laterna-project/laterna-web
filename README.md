@@ -14,6 +14,7 @@ the web app does what the server does, no more.
 
 | Laterna Web | Laterna server |
 |---|---|
+| 0.7.x | 0.10.x; 0.9.x without notifications, "Coming soon" and subtitle search; older ones as 0.6.x |
 | 0.6.x | 0.9.x; 0.8.x without music and book requests, 0.5.x to 0.7.x without requests |
 | 0.5.x | 0.8.x; 0.5.x to 0.7.x without requests |
 | 0.4.x | 0.5.x to 0.7.x |
@@ -26,15 +27,16 @@ The contract and the server's text catalogs are taken from the server version pi
 
 ## What it does
 
-- **Home** as the server arranges it: resume, next up, recently added per library,
-  recommendations, recently played music, continue reading. A **Discover** page with the full
-  recommendation rows.
+- **Home** as the server arranges it: resume, next up, what is coming soon (the episodes, movies
+  and albums Sonarr, Radarr and Lidarr expect), recently added per library, recommendations,
+  recently played music, continue reading. A **Discover** page with the full recommendation rows.
 - **Movies and series**: lists with sorts and filters, detail pages with cast, files, versions,
   audio and subtitle tracks, similar titles, watched and favorite marks.
 - **Video player**: direct play or HLS, resume, audio and subtitle tracks (WebVTT in the browser,
   styled ASS with their fonts through [JASSUB](https://github.com/ThaUnknown/jassub), burned in
   by the server otherwise), versions, chapters, scrubbing thumbnails, skip intro and recap, next
-  episode at the end credits, keyboard shortcuts.
+  episode at the end credits, keyboard shortcuts. A missing subtitle can be asked for from the
+  player when the server is linked to Bazarr.
 - **Music**: albums, artists and tracks, a player that keeps playing across pages, queue, shuffle
   and repeat, ReplayGain, media keys.
 - **Books**: an EPUB reader ([foliate-js](https://github.com/johnfactotum/foliate-js)) with fonts,
@@ -48,11 +50,14 @@ The contract and the server's text catalogs are taken from the server version pi
 - **Requests**: search for a movie, a series, an artist, an album or a book the server doesn't
   have, ask for it (the whole series or some seasons, every album or the first or latest one) and
   follow it until it can be watched, listened to or read.
+- **Notifications**: a request approved, declined or available, new episodes of the series the
+  profile follows; the same list on every device, and web push for the devices that ask for it,
+  even while the app is closed.
 - **Account**: profiles with PINs and parental controls, passkeys, password, signed-in devices,
   pairing a TV with a code, statistics, year in review, history, offline downloads.
 - **Administration**: overview, libraries, accounts, requests (approval queue and where they land
   on Sonarr, Radarr, Lidarr and LazyLibrarian), devices, activity, jobs, logs, integrations
-  (Sonarr, Radarr, Lidarr, LazyLibrarian), settings, backups,
+  (Sonarr, Radarr, Lidarr, LazyLibrarian, Bazarr), settings, backups,
   authentication (passkeys, OpenID Connect, device login), server themes, metrics, import from
   Jellyfin.
 - **Themes**: colors, radius, density and font come from the profile's theme on the server; each

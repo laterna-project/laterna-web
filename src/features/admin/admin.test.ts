@@ -142,6 +142,29 @@ describe("administration", () => {
     });
   });
 
+  it("describes Bazarr by its connection only", () => {
+    const bazarr = create(IntegrationSchema, {
+      kind: IntegrationKind.BAZARR,
+      url: "http://nas:6767",
+      reachable: true,
+    });
+    expect(integrationState(bazarr)).toEqual({
+      pill: "connected",
+      tone: "ok",
+      checks: [
+        {
+          ok: true,
+          label: "Linked for subtitle searches: a missing subtitle is asked for from the player.",
+        },
+      ],
+    });
+    expect(integrationName(IntegrationKind.BAZARR)).toEqual({
+      name: "Bazarr",
+      what: "subtitles",
+      port: "6767",
+    });
+  });
+
   it("describes the state of Sonarr and Radarr", () => {
     const i = (fields: object) => create(IntegrationSchema, { kind: IntegrationKind.RADARR, ...fields });
     expect(integrationState(i({}))).toEqual({
