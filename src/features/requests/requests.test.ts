@@ -7,7 +7,16 @@ import {
   RequestSeasons,
   RequestStatus,
 } from "../../gen/laterna/v1/request_pb";
-import { decidable, requestKind, requestStatus, seasonsLabel, stateLabel } from "./requests";
+import {
+  byNumber,
+  decidable,
+  posterShape,
+  requestFamily,
+  requestKind,
+  requestStatus,
+  seasonsLabel,
+  stateLabel,
+} from "./requests";
 
 describe("requests", () => {
   it("tells where a request stands", () => {
@@ -44,6 +53,27 @@ describe("requests", () => {
     expect(seasonsLabel({ kind: RequestKind.MOVIE, seasons: RequestSeasons.ALL, seasonNumbers: [] })).toBe(
       "",
     );
+  });
+
+  it("names the albums asked for an artist", () => {
+    const artist = { kind: RequestKind.ARTIST, seasonNumbers: [] as number[] };
+    expect(seasonsLabel({ ...artist, seasons: RequestSeasons.ALL })).toBe("Every album");
+    expect(seasonsLabel({ ...artist, seasons: RequestSeasons.LATEST })).toBe("Latest album");
+    expect(seasonsLabel({ kind: RequestKind.ALBUM, seasons: RequestSeasons.ALL, seasonNumbers: [] })).toBe(
+      "",
+    );
+  });
+
+  it("sorts kinds into families", () => {
+    expect(requestFamily(RequestKind.ALBUM)).toBe(RequestKind.MUSIC);
+    expect(requestFamily(RequestKind.BOOK)).toBe(RequestKind.BOOK);
+    expect(byNumber(RequestKind.SERIES)).toBe(true);
+    expect(byNumber(RequestKind.ARTIST)).toBe(false);
+    expect(requestKind(RequestKind.BOOK)).toEqual({ label: "Book", universe: "books" });
+    expect(requestKind(RequestKind.ALBUM).universe).toBe("music");
+    expect(posterShape(RequestKind.ALBUM)).toBe("square");
+    expect(posterShape(RequestKind.ARTIST)).toBe("round");
+    expect(posterShape(RequestKind.BOOK)).toBeUndefined();
   });
 
   it("names kinds and search states", () => {

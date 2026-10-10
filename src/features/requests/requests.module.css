@@ -158,6 +158,7 @@
 
 .poster {
   flex-shrink: 0;
+  align-self: flex-start;
   width: 96px;
   aspect-ratio: 2 / 3;
   overflow: hidden;
@@ -166,6 +167,16 @@
 
 .poster[data-size="sm"] {
   width: 56px;
+}
+
+.poster[data-shape="square"] {
+  aspect-ratio: 1;
+  border-radius: var(--radius-cover);
+}
+
+.poster[data-shape="round"] {
+  aspect-ratio: 1;
+  border-radius: var(--radius-pill);
 }
 
 .poster img {

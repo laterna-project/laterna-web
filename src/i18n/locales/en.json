@@ -105,7 +105,7 @@
     "tasks": "Tasks",
     "logs": "Logs",
     "observability": "Observability",
-    "arr": "Sonarr and Radarr",
+    "arr": "Integrations",
     "jellyfin": "Jellyfin import",
     "settings": "Settings",
     "restrictedTitle": "Restricted profile",
@@ -376,7 +376,7 @@
     "subtitles_purge": "Subtitle purge",
     "store_optimize": "Database optimization",
     "file_segments": "Intro and credits detection",
-    "request_submit": "Request sent to Sonarr or Radarr",
+    "request_submit": "Request handed to its source",
     "requests_refresh": "Request follow-up"
   },
   "logLevels": {
@@ -438,7 +438,10 @@
     "unmapped": "{{count}} {{what}} out of {{total}} outside Laterna's libraries",
     "allMapped": "All {{what}} are in a library",
     "withoutNfo": "{{count}} without an NFO: {{titles}}",
-    "allNfo": "All {{what}} have their NFO"
+    "allNfo": "All {{what}} have their NFO",
+    "artists": "artists",
+    "books": "books",
+    "requestsOnly": "Linked for book requests: LazyLibrarian writes no metadata and takes no webhook."
   },
   "settings": {
     "title": "Settings",
@@ -706,10 +709,10 @@
     "save": "Save"
   },
   "adminArr": {
-    "title": "Sonarr and Radarr",
-    "subtitle": "They write NFOs and images, and notify Laterna of every import.",
+    "title": "Integrations",
+    "subtitle": "Sonarr, Radarr and Lidarr write NFOs and images, and notify Laterna of every import; LazyLibrarian fetches the books asked for.",
     "webhookAddressLabel": "Laterna's address for the webhook",
-    "webhookAddress": "Laterna's address as seen from Sonarr and Radarr, for the webhook",
+    "webhookAddress": "Laterna's address as seen from Sonarr, Radarr and Lidarr, for the webhook",
     "webhookHint": "From a container, \"localhost\" means the container: give the machine's address instead (http://192.0.2.10:8096).",
     "linked": "{{name}} responds: address and key saved.",
     "refreshing": "{{name}} is refreshing its {{what}}; the libraries will be rescanned.",
@@ -725,7 +728,8 @@
     "reinstallWebhook": "Reinstall the webhook",
     "installWebhook": "Install the webhook",
     "refreshAll": "Refresh everything",
-    "forget": "Forget"
+    "forget": "Forget",
+    "apiKeyWhereLazy": "In Config, then Interface."
   },
   "adminAuth": {
     "title": "Authentication",
@@ -1758,9 +1762,9 @@
   },
   "requests": {
     "title": "Requests",
-    "subtitle": "Ask for a movie or a series the server doesn't have yet.",
-    "subtitleQuota_one": "Ask for a movie or a series the server doesn't have yet: {{count}} request every 7 days.",
-    "subtitleQuota_other": "Ask for a movie or a series the server doesn't have yet: {{count}} requests every 7 days.",
+    "subtitle": "Ask for a movie, a series, music or a book the server doesn't have yet.",
+    "subtitleQuota_one": "Ask for a movie, a series, music or a book the server doesn't have yet: {{count}} request every 7 days.",
+    "subtitleQuota_other": "Ask for a movie, a series, music or a book the server doesn't have yet: {{count}} requests every 7 days.",
     "denied": "Your account can't make requests. Ask an administrator.",
     "closed": "Requests aren't open on this server yet.",
     "searchTitle": "Find a title",
@@ -1807,7 +1811,11 @@
     },
     "kind": {
       "movie": "Movie",
-      "series": "Series"
+      "series": "Series",
+      "music": "Music",
+      "artist": "Artist",
+      "album": "Album",
+      "book": "Book"
     },
     "state": {
       "available": "Already here",
@@ -1818,11 +1826,23 @@
       "standard": "Standard (S01E01)",
       "anime": "Anime (absolute numbering)",
       "daily": "Daily (by air date)"
-    }
+    },
+    "albumsLabel": "Albums",
+    "albums": {
+      "all": "Every album",
+      "first": "First album",
+      "latest": "Latest album"
+    },
+    "placeholderMusic": "An artist or an album to request…",
+    "placeholderBook": "A book or an author to request…",
+    "listen": "Listen",
+    "read": "Read",
+    "askHintBook": "Books are asked for as ebooks. An administrator approves requests, unless yours are approved at once. You will see here when it can be read.",
+    "askHintMusic": "An administrator approves requests, unless yours are approved at once. You will see here when it can be listened to."
   },
   "adminRequests": {
     "title": "Requests",
-    "subtitle": "Movies and series asked for by the profiles; nothing waits for you.",
+    "subtitle": "Movies, series, music and books asked for by the profiles; nothing waits for you.",
     "pending_one": "{{count}} request waits for your approval.",
     "pending_other": "{{count}} requests wait for your approval.",
     "filterLabel": "Requests shown",
@@ -1835,7 +1855,7 @@
     "approve": "Approve",
     "approveLabel": "Approve the request for {{title}}",
     "approveTitle": "Approve \"{{title}}\"",
-    "approveHint": "Laterna adds the title to Sonarr or Radarr, monitored, and searches for it.",
+    "approveHint": "Laterna hands the title to Sonarr, Radarr, Lidarr or LazyLibrarian, which searches for it.",
     "asAsked": "As asked ({{seasons}})",
     "decline": "Decline",
     "declineLabel": "Decline the request for {{title}}",
@@ -1845,7 +1865,7 @@
     "forget": "Forget",
     "forgetLabel": "Forget the request for {{title}}",
     "destinations": "Destinations",
-    "destinationsHint": "Where requests land: a library and, on Sonarr or Radarr, a root folder and a quality profile. A profile only sees the destinations of libraries it may browse.",
+    "destinationsHint": "Where requests land: a library and, on Sonarr, Radarr or Lidarr, a root folder and a quality profile (LazyLibrarian decides for books). A profile only sees the destinations of libraries it may browse.",
     "noDestination": "No destination: nobody can make requests of this kind yet.",
     "newDestination": "New destination",
     "editTitle": "Destination \"{{name}}\"",
@@ -1860,6 +1880,8 @@
     "seriesType": "Series type",
     "rootFolder": "Root folder",
     "qualityProfile": "Quality profile",
-    "rootHint": "Pick the root folder that leads into the library: titles added there show up in it after the scan."
+    "rootHint": "Pick the root folder that leads into the library: titles added there show up in it after the scan.",
+    "metadataProfile": "Metadata profile",
+    "bookHint": "LazyLibrarian decides where books go: only the library they show up in counts here."
   }
 }
