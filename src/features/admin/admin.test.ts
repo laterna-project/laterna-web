@@ -153,11 +153,11 @@ describe("administration", () => {
       tone: "warn",
       checks: [{ ok: false, label: "connection refused" }],
     });
+    // Without managesMetadata, as from a server before 0.9.
     const state = integrationState(
       i({
         url: "http://nas:7878",
         reachable: true,
-        managesMetadata: true,
         webhook: true,
         missingOptions: ["Collection images", "Fanart"],
         folders: 40,

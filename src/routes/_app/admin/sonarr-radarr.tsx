@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { errorMessage } from "../../../api/errors";
 import { serverUrl } from "../../../api/transport";
+import { managesMetadata } from "../../../features/admin/admin";
 import styles from "../../../features/admin/admin.module.css";
 import { IntegrationCard } from "../../../features/admin/IntegrationCard";
 import { AdminHead } from "../../../features/admin/ui";
@@ -36,7 +37,7 @@ function Integrations() {
         ))}
       </div>
       {/* The webhook is only installed on an instance that answers and takes one. */}
-      {list.data?.integrations.some((i) => i.reachable && i.managesMetadata) && (
+      {list.data?.integrations.some((i) => i.reachable && managesMetadata(i)) && (
         <section className={styles.card} aria-label={t("adminArr.webhookAddressLabel")}>
           <Field
             label={t("adminArr.webhookAddress")}

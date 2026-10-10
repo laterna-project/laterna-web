@@ -295,6 +295,13 @@ export function integrationName(kind: IntegrationKind): { name: string; what: st
   }
 }
 
+/**
+ * Whether Laterna turns on the instance's metadata and installs its webhook. Servers before 0.9
+ * don't send the field, and only knew Sonarr and Radarr, which always do.
+ */
+export const managesMetadata = (i: Integration) =>
+  i.managesMetadata || i.kind === IntegrationKind.SONARR || i.kind === IntegrationKind.RADARR;
+
 export interface IntegrationState {
   pill: string;
   tone?: "ok" | "warn";
@@ -311,7 +318,7 @@ export function integrationState(i: Integration): IntegrationState {
       checks: [{ ok: false, label: serverText(i.errorText) || i.error || i18n.t("arr.noResponse") }],
     };
   // LazyLibrarian writes no metadata and takes no webhook: only its connection counts.
-  if (!i.managesMetadata)
+  if (!managesMetadata(i))
     return {
       pill: i18n.t("arr.connected"),
       tone: "ok",

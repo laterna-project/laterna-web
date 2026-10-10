@@ -8,7 +8,7 @@ import { Alert } from "../../ui/Alert";
 import { Button } from "../../ui/Button";
 import { Field } from "../../ui/Field";
 import { Status } from "../../ui/Status";
-import { integrationName, integrationState } from "./admin";
+import { integrationName, integrationState, managesMetadata } from "./admin";
 import styles from "./admin.module.css";
 
 /**
@@ -118,7 +118,7 @@ export function IntegrationCard({
           <Button type="submit" variant="primary" disabled={busy || !url.trim() || !apiKey.trim()}>
             {t("adminArr.trySave")}
           </Button>
-          {i.reachable && i.managesMetadata && (
+          {i.reachable && managesMetadata(i) && (
             <>
               <button
                 type="button"
