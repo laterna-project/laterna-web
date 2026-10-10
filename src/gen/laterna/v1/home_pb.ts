@@ -4,7 +4,9 @@
 
 import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
-import type { AlbumSummary, BookSummary, Episode, MovieSummary, PhotoSummary, SeriesSummary } from "./catalog_pb";
+import type { Timestamp } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { AlbumSummary, BookSummary, Episode, Image, MovieSummary, PhotoSummary, SeriesSummary } from "./catalog_pb";
 import { file_laterna_v1_catalog } from "./catalog_pb";
 import type { Text } from "./text_pb";
 import { file_laterna_v1_text } from "./text_pb";
@@ -14,7 +16,92 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/home.proto.
  */
 export const file_laterna_v1_home: GenFile = /*@__PURE__*/
-  fileDesc("ChVsYXRlcm5hL3YxL2hvbWUucHJvdG8SCmxhdGVybmEudjEikQIKCEhvbWVJdGVtEikKBW1vdmllGAEgASgLMhgubGF0ZXJuYS52MS5Nb3ZpZVN1bW1hcnlIABIrCgZzZXJpZXMYAiABKAsyGS5sYXRlcm5hLnYxLlNlcmllc1N1bW1hcnlIABImCgdlcGlzb2RlGAMgASgLMhMubGF0ZXJuYS52MS5FcGlzb2RlSAASKQoFYWxidW0YBCABKAsyGC5sYXRlcm5hLnYxLkFsYnVtU3VtbWFyeUgAEicKBGJvb2sYBSABKAsyFy5sYXRlcm5hLnYxLkJvb2tTdW1tYXJ5SAASKQoFcGhvdG8YBiABKAsyGC5sYXRlcm5hLnYxLlBob3RvU3VtbWFyeUgAQgYKBGl0ZW0itgEKB0hvbWVSb3cSJQoEa2luZBgBIAEoDjIXLmxhdGVybmEudjEuSG9tZVJvd0tpbmQSDQoFdGl0bGUYAiABKAkSEgoKbGlicmFyeV9pZBgDIAEoCRIjCgVpdGVtcxgEIAMoCzIULmxhdGVybmEudjEuSG9tZUl0ZW0SFgoOc291cmNlX2l0ZW1faWQYBSABKAkSJAoKdGl0bGVfdGV4dBgGIAEoCzIQLmxhdGVybmEudjEuVGV4dCIiCg5HZXRIb21lUmVxdWVzdBIQCghyb3dfc2l6ZRgBIAEoBSI0Cg9HZXRIb21lUmVzcG9uc2USIQoEcm93cxgBIAMoCzITLmxhdGVybmEudjEuSG9tZVJvdyqHAwoLSG9tZVJvd0tpbmQSHQoZSE9NRV9ST1dfS0lORF9VTlNQRUNJRklFRBAAEhgKFEhPTUVfUk9XX0tJTkRfUkVTVU1FEAESGQoVSE9NRV9ST1dfS0lORF9ORVhUX1VQEAISHwobSE9NRV9ST1dfS0lORF9MQVRFU1RfTU9WSUVTEAMSHwobSE9NRV9ST1dfS0lORF9MQVRFU1RfU0VSSUVTEAQSHwobSE9NRV9ST1dfS0lORF9SRUNFTlRfQUxCVU1TEAUSHwobSE9NRV9ST1dfS0lORF9MQVRFU1RfQUxCVU1TEAYSGQoVSE9NRV9ST1dfS0lORF9SRUFESU5HEAcSHgoaSE9NRV9ST1dfS0lORF9MQVRFU1RfQk9PS1MQCBIfChtIT01FX1JPV19LSU5EX0xBVEVTVF9QSE9UT1MQCRIdChlIT01FX1JPV19LSU5EX1JFQ09NTUVOREVEEAoSJQohSE9NRV9ST1dfS0lORF9CRUNBVVNFX1lPVV9XQVRDSEVEEAsyVgoLSG9tZVNlcnZpY2USRwoHR2V0SG9tZRIaLmxhdGVybmEudjEuR2V0SG9tZVJlcXVlc3QaGy5sYXRlcm5hLnYxLkdldEhvbWVSZXNwb25zZSIDkAIBQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_laterna_v1_catalog, file_laterna_v1_text]);
+  fileDesc("ChVsYXRlcm5hL3YxL2hvbWUucHJvdG8SCmxhdGVybmEudjEimAIKD1VwY29taW5nUmVsZWFzZRImCgRraW5kGAEgASgOMhgubGF0ZXJuYS52MS5VcGNvbWluZ0tpbmQSDQoFdGl0bGUYAiABKAkSFAoMcGFyZW50X3RpdGxlGAMgASgJEhUKDXNlYXNvbl9udW1iZXIYBCABKAUSFgoOZXBpc29kZV9udW1iZXIYBSABKAUSMAoMcmVsZWFzZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIPCgdhbGxfZGF5GAcgASgIEg8KB2l0ZW1faWQYCCABKAkSIQoGaW1hZ2VzGAkgAygLMhEubGF0ZXJuYS52MS5JbWFnZRISCgpwb3N0ZXJfdXJsGAogASgJIpECCghIb21lSXRlbRIpCgVtb3ZpZRgBIAEoCzIYLmxhdGVybmEudjEuTW92aWVTdW1tYXJ5SAASKwoGc2VyaWVzGAIgASgLMhkubGF0ZXJuYS52MS5TZXJpZXNTdW1tYXJ5SAASJgoHZXBpc29kZRgDIAEoCzITLmxhdGVybmEudjEuRXBpc29kZUgAEikKBWFsYnVtGAQgASgLMhgubGF0ZXJuYS52MS5BbGJ1bVN1bW1hcnlIABInCgRib29rGAUgASgLMhcubGF0ZXJuYS52MS5Cb29rU3VtbWFyeUgAEikKBXBob3RvGAYgASgLMhgubGF0ZXJuYS52MS5QaG90b1N1bW1hcnlIAEIGCgRpdGVtIuUBCgdIb21lUm93EiUKBGtpbmQYASABKA4yFy5sYXRlcm5hLnYxLkhvbWVSb3dLaW5kEg0KBXRpdGxlGAIgASgJEhIKCmxpYnJhcnlfaWQYAyABKAkSIwoFaXRlbXMYBCADKAsyFC5sYXRlcm5hLnYxLkhvbWVJdGVtEhYKDnNvdXJjZV9pdGVtX2lkGAUgASgJEiQKCnRpdGxlX3RleHQYBiABKAsyEC5sYXRlcm5hLnYxLlRleHQSLQoIdXBjb21pbmcYByADKAsyGy5sYXRlcm5hLnYxLlVwY29taW5nUmVsZWFzZSI0Cg5HZXRIb21lUmVxdWVzdBIQCghyb3dfc2l6ZRgBIAEoBRIQCgh1cGNvbWluZxgCIAEoCCI0Cg9HZXRIb21lUmVzcG9uc2USIQoEcm93cxgBIAMoCzITLmxhdGVybmEudjEuSG9tZVJvdyqjAwoLSG9tZVJvd0tpbmQSHQoZSE9NRV9ST1dfS0lORF9VTlNQRUNJRklFRBAAEhgKFEhPTUVfUk9XX0tJTkRfUkVTVU1FEAESGQoVSE9NRV9ST1dfS0lORF9ORVhUX1VQEAISHwobSE9NRV9ST1dfS0lORF9MQVRFU1RfTU9WSUVTEAMSHwobSE9NRV9ST1dfS0lORF9MQVRFU1RfU0VSSUVTEAQSHwobSE9NRV9ST1dfS0lORF9SRUNFTlRfQUxCVU1TEAUSHwobSE9NRV9ST1dfS0lORF9MQVRFU1RfQUxCVU1TEAYSGQoVSE9NRV9ST1dfS0lORF9SRUFESU5HEAcSHgoaSE9NRV9ST1dfS0lORF9MQVRFU1RfQk9PS1MQCBIfChtIT01FX1JPV19LSU5EX0xBVEVTVF9QSE9UT1MQCRIdChlIT01FX1JPV19LSU5EX1JFQ09NTUVOREVEEAoSJQohSE9NRV9ST1dfS0lORF9CRUNBVVNFX1lPVV9XQVRDSEVEEAsSGgoWSE9NRV9ST1dfS0lORF9VUENPTUlORxAMKnoKDFVwY29taW5nS2luZBIdChlVUENPTUlOR19LSU5EX1VOU1BFQ0lGSUVEEAASGQoVVVBDT01JTkdfS0lORF9FUElTT0RFEAESFwoTVVBDT01JTkdfS0lORF9NT1ZJRRACEhcKE1VQQ09NSU5HX0tJTkRfQUxCVU0QAzJWCgtIb21lU2VydmljZRJHCgdHZXRIb21lEhoubGF0ZXJuYS52MS5HZXRIb21lUmVxdWVzdBobLmxhdGVybmEudjEuR2V0SG9tZVJlc3BvbnNlIgOQAgFCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_laterna_v1_catalog, file_laterna_v1_text]);
+
+/**
+ * UpcomingRelease is an episode, a movie or an album that an instance monitors and does not have
+ * yet. A profile only gets those of libraries it may browse, under its parental control.
+ *
+ * @generated from message laterna.v1.UpcomingRelease
+ */
+export type UpcomingRelease = Message<"laterna.v1.UpcomingRelease"> & {
+  /**
+   * @generated from field: laterna.v1.UpcomingKind kind = 1;
+   */
+  kind: UpcomingKind;
+
+  /**
+   * Title of the episode, the movie or the album.
+   *
+   * @generated from field: string title = 2;
+   */
+  title: string;
+
+  /**
+   * Series of an episode, artist of an album; empty for a movie.
+   *
+   * @generated from field: string parent_title = 3;
+   */
+  parentTitle: string;
+
+  /**
+   * Season and number of an episode.
+   *
+   * @generated from field: int32 season_number = 4;
+   */
+  seasonNumber: number;
+
+  /**
+   * @generated from field: int32 episode_number = 5;
+   */
+  episodeNumber: number;
+
+  /**
+   * When the episode airs. For a movie (the day it comes out at home, not in theaters) or an
+   * album, midnight UTC of that day.
+   *
+   * @generated from field: google.protobuf.Timestamp release_time = 6;
+   */
+  releaseTime?: Timestamp | undefined;
+
+  /**
+   * True when release_time is a day and not a moment: read its date in UTC, whatever the time zone
+   * of the device.
+   *
+   * @generated from field: bool all_day = 7;
+   */
+  allDay: boolean;
+
+  /**
+   * Series or artist in the catalog, when the profile sees it there; empty for a movie, or for a
+   * series or an artist that has nothing yet.
+   *
+   * @generated from field: string item_id = 8;
+   */
+  itemId: string;
+
+  /**
+   * Images of that series or artist.
+   *
+   * @generated from field: repeated laterna.v1.Image images = 9;
+   */
+  images: Image[];
+
+  /**
+   * Without images, the poster the instance names (the album's cover for an album), served by the
+   * server: a path to append to the server's address. Empty without one.
+   *
+   * @generated from field: string poster_url = 10;
+   */
+  posterUrl: string;
+};
+
+/**
+ * Describes the message laterna.v1.UpcomingRelease.
+ * Use `create(UpcomingReleaseSchema)` to create a new message.
+ */
+export const UpcomingReleaseSchema: GenMessage<UpcomingRelease> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_home, 0);
 
 /**
  * @generated from message laterna.v1.HomeItem
@@ -67,7 +154,7 @@ export type HomeItem = Message<"laterna.v1.HomeItem"> & {
  * Use `create(HomeItemSchema)` to create a new message.
  */
 export const HomeItemSchema: GenMessage<HomeItem> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_home, 0);
+  messageDesc(file_laterna_v1_home, 1);
 
 /**
  * @generated from message laterna.v1.HomeRow
@@ -112,6 +199,13 @@ export type HomeRow = Message<"laterna.v1.HomeRow"> & {
    * @generated from field: laterna.v1.Text title_text = 6;
    */
   titleText?: Text | undefined;
+
+  /**
+   * Entries of a HOME_ROW_KIND_UPCOMING row; empty otherwise.
+   *
+   * @generated from field: repeated laterna.v1.UpcomingRelease upcoming = 7;
+   */
+  upcoming: UpcomingRelease[];
 };
 
 /**
@@ -119,7 +213,7 @@ export type HomeRow = Message<"laterna.v1.HomeRow"> & {
  * Use `create(HomeRowSchema)` to create a new message.
  */
 export const HomeRowSchema: GenMessage<HomeRow> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_home, 1);
+  messageDesc(file_laterna_v1_home, 2);
 
 /**
  * @generated from message laterna.v1.GetHomeRequest
@@ -131,6 +225,14 @@ export type GetHomeRequest = Message<"laterna.v1.GetHomeRequest"> & {
    * @generated from field: int32 row_size = 1;
    */
   rowSize: number;
+
+  /**
+   * True to also get the row of what is coming (HOME_ROW_KIND_UPCOMING), for a client that shows
+   * its entries.
+   *
+   * @generated from field: bool upcoming = 2;
+   */
+  upcoming: boolean;
 };
 
 /**
@@ -138,7 +240,7 @@ export type GetHomeRequest = Message<"laterna.v1.GetHomeRequest"> & {
  * Use `create(GetHomeRequestSchema)` to create a new message.
  */
 export const GetHomeRequestSchema: GenMessage<GetHomeRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_home, 2);
+  messageDesc(file_laterna_v1_home, 3);
 
 /**
  * @generated from message laterna.v1.GetHomeResponse
@@ -155,7 +257,7 @@ export type GetHomeResponse = Message<"laterna.v1.GetHomeResponse"> & {
  * Use `create(GetHomeResponseSchema)` to create a new message.
  */
 export const GetHomeResponseSchema: GenMessage<GetHomeResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_home, 3);
+  messageDesc(file_laterna_v1_home, 4);
 
 /**
  * @generated from enum laterna.v1.HomeRowKind
@@ -243,6 +345,15 @@ export enum HomeRowKind {
    * @generated from enum value: HOME_ROW_KIND_BECAUSE_YOU_WATCHED = 11;
    */
   BECAUSE_YOU_WATCHED = 11,
+
+  /**
+   * Episodes, movies and albums that Sonarr, Radarr and Lidarr expect in the next two weeks and do
+   * not have yet, soonest first. Nothing of it is in the catalog: the row has no items, its entries
+   * are in HomeRow.upcoming. Only sent to a client that asks for it (GetHomeRequest.upcoming).
+   *
+   * @generated from enum value: HOME_ROW_KIND_UPCOMING = 12;
+   */
+  UPCOMING = 12,
 }
 
 /**
@@ -252,14 +363,45 @@ export const HomeRowKindSchema: GenEnum<HomeRowKind> = /*@__PURE__*/
   enumDesc(file_laterna_v1_home, 0);
 
 /**
+ * @generated from enum laterna.v1.UpcomingKind
+ */
+export enum UpcomingKind {
+  /**
+   * @generated from enum value: UPCOMING_KIND_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: UPCOMING_KIND_EPISODE = 1;
+   */
+  EPISODE = 1,
+
+  /**
+   * @generated from enum value: UPCOMING_KIND_MOVIE = 2;
+   */
+  MOVIE = 2,
+
+  /**
+   * @generated from enum value: UPCOMING_KIND_ALBUM = 3;
+   */
+  ALBUM = 3,
+}
+
+/**
+ * Describes the enum laterna.v1.UpcomingKind.
+ */
+export const UpcomingKindSchema: GenEnum<UpcomingKind> = /*@__PURE__*/
+  enumDesc(file_laterna_v1_home, 1);
+
+/**
  * HomeService builds the home page of the picked profile. The server decides which rows there are
  * and in what order: every client shows the same home page, and it gets better without updating
  * them.
  *
  * The order: what is in progress (resume, next up, continue reading); recently added in movie and
- * series libraries; recommendations; music (recently played albums, then recently added); recently
- * added books, then photos. Within each group, libraries follow the order chosen by the
- * administrator (LibraryService.ReorderLibraries).
+ * series libraries; what is coming; recommendations; music (recently played albums, then recently
+ * added); recently added books, then photos. Within each group, libraries follow the order chosen
+ * by the administrator (LibraryService.ReorderLibraries).
  *
  * @generated from service laterna.v1.HomeService
  */

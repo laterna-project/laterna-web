@@ -1,11 +1,11 @@
 import { Link, type LinkProps } from "@tanstack/react-router";
-import { type KeyboardEvent, useEffect, useRef, useState } from "react";
+import { type KeyboardEvent, type ReactNode, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { formatRuntime, ImageKind, pickImage, seconds } from "../../api/media";
+import { formatRuntime, ImageKind, mediaUrl, pickImage, seconds } from "../../api/media";
 import { named, serverText } from "../../api/text";
 import { progressLabel } from "../../books/logic";
 import type { BookSummary, Episode, PhotoSummary } from "../../gen/laterna/v1/catalog_pb";
-import { type HomeRow, HomeRowKind } from "../../gen/laterna/v1/home_pb";
+import { type HomeRow, HomeRowKind, UpcomingKind, type UpcomingRelease } from "../../gen/laterna/v1/home_pb";
 import i18n from "../../i18n";
 import type { Universe } from "../../theme/contract";
 import { Artwork } from "../../ui/Artwork";
@@ -16,6 +16,7 @@ import { MovieCard, SeriesCard } from "../catalog/cards";
 import { episodeCode } from "../catalog/format";
 import { AlbumCard } from "../music/cards";
 import styles from "./home.module.css";
+import { upcomingKey, upcomingLines, upcomingUniverse, whenLabel } from "./upcoming";
 
 type Item = HomeRow["items"][number]["item"];
 
@@ -156,7 +157,7 @@ export function Block({
 }
 
 function SingleRow({ id, row }: { id: string; row: HomeRow }) {
-  const strip = useStrip(row.items.length);
+  const strip = useStrip(row.items.length + row.upcoming.length);
   return (
     <section className={styles.section} aria-labelledby={id} data-ui="home-block">
       <div className={styles.head} data-ui="block-head">
@@ -403,9 +404,92 @@ function RowStrip({ row, stripRef }: { row: HomeRow; stripRef: Strip["ref"] }) {
           {items.map((it) => it.case === "photo" && <PhotoTile key={it.value.id} photo={it.value} />)}
         </ul>
       );
+    case HomeRowKind.UPCOMING:
+      return (
+        <ul ref={stripRef} data-ui="strip" className={`${styles.strip} ${styles.posters}`}>
+          {row.upcoming.map((u) => <UpcomingCard key={upcomingKey(u)} release={u} />)}
+        </ul>
+      );
     default:
       return null;
   }
+}
+
+// --- Coming soon --------------------------------------------------------------------------------
+
+/**
+ * Something on its way: an episode, a movie or an album the server does not have yet. It opens the
+ * series or the artist when the catalog has it; a movie, or a series with nothing yet, opens
+ * nothing.
+ */
+function UpcomingCard({ release: u }: { release: UpcomingRelease }) {
+  const { title, meta } = upcomingLines(u);
+  const universe = upcomingUniverse(u.kind);
+  const album = u.kind === UpcomingKind.ALBUM;
+  const image = pickImage(u.images, ImageKind.POSTER, ImageKind.THUMB, ImageKind.BACKDROP);
+  const ratio = album ? 1 : 2 / 3;
+  const body = (
+    <>
+      {/* Without an image, only the color of the universe: the date sits where a title would. */}
+      <span className={styles.art}>
+        {image || !u.posterUrl ? (
+          <Artwork
+            image={image}
+            sizes="180px"
+            ratio={ratio}
+            universe={universe}
+            shape={album ? "disc" : "poster"}
+          />
+        ) : (
+          <RemotePoster url={u.posterUrl} ratio={ratio} universe={universe} />
+        )}
+        <span className={styles.when} data-ui="badge">
+          {whenLabel(u)}
+        </span>
+      </span>
+      <span className={styles.cardTitle} data-ui="card-title">
+        {title}
+      </span>
+      {meta && (
+        <span className={styles.muted} data-ui="card-meta">
+          {meta}
+        </span>
+      )}
+    </>
+  );
+  const card = (children: ReactNode) =>
+    u.itemId && u.kind !== UpcomingKind.MOVIE ? (
+      <Link
+        to={album ? "/music/artists/$id" : "/series/$id"}
+        params={{ id: u.itemId }}
+        className={styles.card}
+        data-ui="card"
+        data-kind="upcoming"
+        data-universe={universe}
+      >
+        {children}
+      </Link>
+    ) : (
+      <div className={styles.card} data-ui="card" data-kind="upcoming" data-universe={universe}>
+        {children}
+      </div>
+    );
+  return <li>{card(body)}</li>;
+}
+
+/** Poster the server fetched for a title the catalog does not have (the route of request posters). */
+function RemotePoster({ url, ratio, universe }: { url: string; ratio: number; universe: Universe }) {
+  const [failed, setFailed] = useState(false);
+  return (
+    <span
+      className={styles.remote}
+      style={{ aspectRatio: String(ratio), background: `var(--color-${universe}-soft)` }}
+    >
+      {!failed && (
+        <img src={mediaUrl(url)} alt="" loading="lazy" decoding="async" onError={() => setFailed(true)} />
+      )}
+    </span>
+  );
 }
 
 // --- Resume -------------------------------------------------------------------------------------

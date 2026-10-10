@@ -1,5 +1,5 @@
 import { createClient } from "@connectrpc/connect";
-import { useTransport } from "@connectrpc/connect-query";
+import { useQuery, useTransport } from "@connectrpc/connect-query";
 import { Link, type LinkProps, useNavigate } from "@tanstack/react-router";
 import { type CSSProperties, type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -12,6 +12,7 @@ import {
   languageName,
   resolutionLabel,
 } from "../features/catalog/format";
+import { AuthService } from "../gen/laterna/v1/auth_pb";
 import { type Image, type MediaFile, MediaSegmentKind, StreamKind } from "../gen/laterna/v1/catalog_pb";
 import {
   PlaybackMethod,
@@ -19,7 +20,7 @@ import {
   type StartPlaybackResponse,
   type SubtitleTrack,
 } from "../gen/laterna/v1/playback_pb";
-import i18n from "../i18n";
+import i18n, { locale } from "../i18n";
 import { StartParty } from "../party/StartParty";
 import type { Universe } from "../theme/contract";
 import { barColor } from "../theme/theme";
@@ -46,6 +47,8 @@ import {
 import { attachStream, SubtitleLayer } from "./media";
 import styles from "./player.module.css";
 import { stopOnUnload } from "./stop";
+import { sameTrack } from "./subtitleSearch";
+import { SubtitleSearchForm, useSubtitleSearch } from "./SubtitleSearchForm";
 
 export interface PlayerProps {
   itemId: string;
@@ -523,6 +526,32 @@ export function Player(p: PlayerProps) {
     }
   };
 
+  // --- A subtitle asked for (server: docs/design/subtitles.md) ---------------------------------
+
+  // A search found a subtitle: the list of the file is read again. A subtitle is named by its
+  // place in that list, which the new one may have moved: the one chosen keeps its mark. What the
+  // browser shows stays as it is.
+  const reloadSubtitles = useCallback(async () => {
+    const s = current.current;
+    if (!s) return;
+    const res = await playback.getSubtitles({ sessionId: s.sessionId, wait: true }).catch(() => null);
+    if (!res || current.current !== s) return;
+    const ready = {
+      ...s,
+      subtitles: res.subtitles,
+      fonts: res.fonts,
+      subtitlesReady: res.subtitlesReady,
+      burnedSubtitleIndex: sameTrack(s.subtitles, s.burnedSubtitleIndex, res.subtitles) ?? undefined,
+    };
+    current.current = ready;
+    setSession(ready);
+    setChoice((c) => ({ ...c, subtitle: sameTrack(s.subtitles, c.subtitle, res.subtitles) }));
+  }, [playback]);
+  const subtitleSearch = useSubtitleSearch(session?.fileId, () => void reloadSubtitles());
+  // Languages offered first: the one the profile reads its subtitles in, its own, the interface's.
+  const viewer = useQuery(AuthService.method.getSession, {}).data?.session?.profile;
+  const wanted = [viewer?.subtitleLanguage ?? "", viewer?.language ?? "", locale()];
+
   // --- Rendering ------------------------------------------------------------------------------
 
   const audioTracks = (file?.streams ?? []).filter((s) => s.kind === StreamKind.AUDIO);
@@ -753,6 +782,7 @@ export function Player(p: PlayerProps) {
             ))}
             {!session.subtitlesReady && <p className={styles.note}>{t("player.extracting")}</p>}
           </Group>
+          <SubtitleSearchForm fileId={session.fileId} search={subtitleSearch} wanted={wanted} />
           {p.files.length > 1 && (
             <Group title={t("player.version")}>
               {p.files.map((f) => {

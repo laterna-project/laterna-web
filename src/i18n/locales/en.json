@@ -88,7 +88,8 @@
     "admin": "Administration",
     "switchProfile": "Switch profile",
     "signOut": "Sign out",
-    "requests": "Requests"
+    "requests": "Requests",
+    "notifications": "Notifications"
   },
   "adminNav": {
     "label": "Administration",
@@ -441,7 +442,9 @@
     "allNfo": "All {{what}} have their NFO",
     "artists": "artists",
     "books": "books",
-    "requestsOnly": "Linked for book requests: LazyLibrarian writes no metadata and takes no webhook."
+    "requestsOnly": "Linked for book requests: LazyLibrarian writes no metadata and takes no webhook.",
+    "subtitles": "subtitles",
+    "subtitlesOnly": "Linked for subtitle searches: a missing subtitle is asked for from the player."
   },
   "settings": {
     "title": "Settings",
@@ -710,7 +713,7 @@
   },
   "adminArr": {
     "title": "Integrations",
-    "subtitle": "Sonarr, Radarr and Lidarr write NFOs and images, and notify Laterna of every import; LazyLibrarian fetches the books asked for.",
+    "subtitle": "Sonarr, Radarr and Lidarr write NFOs and images, and notify Laterna of every import; LazyLibrarian fetches the books asked for, Bazarr the missing subtitles.",
     "webhookAddressLabel": "Laterna's address for the webhook",
     "webhookAddress": "Laterna's address as seen from Sonarr, Radarr and Lidarr, for the webhook",
     "webhookHint": "From a container, \"localhost\" means the container: give the machine's address instead (http://192.0.2.10:8096).",
@@ -1883,5 +1886,48 @@
     "rootHint": "Pick the root folder that leads into the library: titles added there show up in it after the scan.",
     "metadataProfile": "Metadata profile",
     "bookHint": "LazyLibrarian decides where books go: only the library they show up in counts here."
+  },
+  "upcoming": {
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "dayAt": "{{day}}, {{time}}",
+    "onItsWay": "On its way",
+    "movie": "Movie"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "subtitle": "Profile {{name}} · its requests, and the new episodes of the series it follows",
+    "unread_one": "{{count}} unread notification",
+    "unread_other": "{{count}} unread notifications",
+    "unreadMark": "Unread",
+    "markAllRead": "Mark all as read",
+    "deleteAll": "Delete all",
+    "deleteLabel": "Delete the notification: {{text}}",
+    "empty": "Nothing yet. You are told here when one of your requests moves forward, and when an episode arrives for a series you follow.",
+    "allRead": "All notifications are marked as read.",
+    "deleted": "Notification deleted.",
+    "allDeleted": "All notifications deleted."
+  },
+  "push": {
+    "title": "On this device",
+    "label": "Notify this device",
+    "hint": "Even while Laterna is closed. Each device decides for itself.",
+    "unsupported": "This browser cannot be notified here. It takes a page served over https and, on an iPhone or iPad, Laterna added to the home screen.",
+    "denied": "Notifications are blocked for this site: allow them in the browser's settings.",
+    "failed": "The browser could not subscribe to its push service.",
+    "on": "This device will be notified.",
+    "off": "This device will no longer be notified."
+  },
+  "subtitleSearch": {
+    "title": "Missing a subtitle?",
+    "language": "Language",
+    "hearingImpaired": "For the deaf and hard of hearing",
+    "forced": "Foreign parts only",
+    "search": "Look for it",
+    "searching": "{{what}}: searching...",
+    "found": "{{what}}: found, it is in the list.",
+    "notFound": "{{what}}: nothing found.",
+    "failed": "{{what}}: {{reason}}",
+    "failedUnknown": "The search could not go through."
   }
 }

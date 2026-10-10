@@ -39,6 +39,12 @@ refetch: the stream already says what changed.
 Pages that show something the server does not announce (current playback, jobs, server state)
 poll while they are open.
 
+Two events are about one screen each. `NotificationsChanged` refreshes the bell of the header and
+the notifications page. `SubtitleSearchChanged` tells the player that a subtitle it asked for was
+found, or not: the player reads the searches of its file again and, when one found a subtitle,
+the list of subtitles of the playback. A subtitle is named by its place in that list, so the one
+chosen is followed to its new place (`sameTrack` in `src/player/subtitleSearch.ts`).
+
 ## Leaving a page
 
 What must reach the server when a tab closes (end of a playback, position in a book) is sent
