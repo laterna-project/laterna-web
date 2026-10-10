@@ -46,9 +46,9 @@ import {
 } from "./logic";
 import { attachStream, SubtitleLayer } from "./media";
 import styles from "./player.module.css";
+import { SubtitleSearchForm, useSubtitleSearch } from "./SubtitleSearchForm";
 import { stopOnUnload } from "./stop";
 import { sameTrack } from "./subtitleSearch";
-import { SubtitleSearchForm, useSubtitleSearch } from "./SubtitleSearchForm";
 
 export interface PlayerProps {
   itemId: string;

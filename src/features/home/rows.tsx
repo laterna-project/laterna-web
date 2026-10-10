@@ -407,7 +407,9 @@ function RowStrip({ row, stripRef }: { row: HomeRow; stripRef: Strip["ref"] }) {
     case HomeRowKind.UPCOMING:
       return (
         <ul ref={stripRef} data-ui="strip" className={`${styles.strip} ${styles.posters}`}>
-          {row.upcoming.map((u) => <UpcomingCard key={upcomingKey(u)} release={u} />)}
+          {row.upcoming.map((u) => (
+            <UpcomingCard key={upcomingKey(u)} release={u} />
+          ))}
         </ul>
       );
     default:

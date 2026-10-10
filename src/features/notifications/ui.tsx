@@ -185,8 +185,8 @@ export function PushSwitch() {
       current = false;
     };
   }, [endpoint]);
-  if (!config.data || !config.data.publicKey || state === undefined) return null;
-  const { publicKey } = config.data;
+  const publicKey = config.data?.publicKey;
+  if (!publicKey || state === undefined) return null;
 
   const change = async (on: boolean) => {
     setWorking(true);
