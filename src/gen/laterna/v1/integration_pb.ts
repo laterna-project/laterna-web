@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/integration.proto.
  */
 export const file_laterna_v1_integration: GenFile = /*@__PURE__*/
-  fileDesc("ChxsYXRlcm5hL3YxL2ludGVncmF0aW9uLnByb3RvEgpsYXRlcm5hLnYxIrMCCgtJbnRlZ3JhdGlvbhIpCgRraW5kGAEgASgOMhsubGF0ZXJuYS52MS5JbnRlZ3JhdGlvbktpbmQSCwoDdXJsGAIgASgJEhEKCXJlYWNoYWJsZRgDIAEoCBINCgVlcnJvchgEIAEoCRIPCgd2ZXJzaW9uGAUgASgJEhUKDWtvZGlfbWV0YWRhdGEYBiABKAgSFwoPbWlzc2luZ19vcHRpb25zGAcgAygJEg8KB3dlYmhvb2sYCCABKAgSDwoHZm9sZGVycxgJIAEoBRIQCgh1bm1hcHBlZBgKIAEoBRITCgt3aXRob3V0X25mbxgLIAEoBRIaChJ3aXRob3V0X25mb190aXRsZXMYDCADKAkSJAoKZXJyb3JfdGV4dBgNIAEoCzIQLmxhdGVybmEudjEuVGV4dCIZChdMaXN0SW50ZWdyYXRpb25zUmVxdWVzdCJJChhMaXN0SW50ZWdyYXRpb25zUmVzcG9uc2USLQoMaW50ZWdyYXRpb25zGAEgAygLMhcubGF0ZXJuYS52MS5JbnRlZ3JhdGlvbiJgChVTZXRJbnRlZ3JhdGlvblJlcXVlc3QSKQoEa2luZBgBIAEoDjIbLmxhdGVybmEudjEuSW50ZWdyYXRpb25LaW5kEgsKA3VybBgCIAEoCRIPCgdhcGlfa2V5GAMgASgJIkYKFlNldEludGVncmF0aW9uUmVzcG9uc2USLAoLaW50ZWdyYXRpb24YASABKAsyFy5sYXRlcm5hLnYxLkludGVncmF0aW9uIkUKGERlbGV0ZUludGVncmF0aW9uUmVxdWVzdBIpCgRraW5kGAEgASgOMhsubGF0ZXJuYS52MS5JbnRlZ3JhdGlvbktpbmQiGwoZRGVsZXRlSW50ZWdyYXRpb25SZXNwb25zZSKFAQobQ29uZmlndXJlSW50ZWdyYXRpb25SZXF1ZXN0EikKBGtpbmQYASABKA4yGy5sYXRlcm5hLnYxLkludGVncmF0aW9uS2luZBIVCg1rb2RpX21ldGFkYXRhGAIgASgIEhMKC3dlYmhvb2tfdXJsGAMgASgJEg8KB3JlZnJlc2gYBCABKAgiTAocQ29uZmlndXJlSW50ZWdyYXRpb25SZXNwb25zZRIsCgtpbnRlZ3JhdGlvbhgBIAEoCzIXLmxhdGVybmEudjEuSW50ZWdyYXRpb24qbQoPSW50ZWdyYXRpb25LaW5kEiAKHElOVEVHUkFUSU9OX0tJTkRfVU5TUEVDSUZJRUQQABIbChdJTlRFR1JBVElPTl9LSU5EX1NPTkFSUhABEhsKF0lOVEVHUkFUSU9OX0tJTkRfUkFEQVJSEAIytAMKEkludGVncmF0aW9uU2VydmljZRJmChBMaXN0SW50ZWdyYXRpb25zEiMubGF0ZXJuYS52MS5MaXN0SW50ZWdyYXRpb25zUmVxdWVzdBokLmxhdGVybmEudjEuTGlzdEludGVncmF0aW9uc1Jlc3BvbnNlIgeQAgGItRgEEl0KDlNldEludGVncmF0aW9uEiEubGF0ZXJuYS52MS5TZXRJbnRlZ3JhdGlvblJlcXVlc3QaIi5sYXRlcm5hLnYxLlNldEludGVncmF0aW9uUmVzcG9uc2UiBIi1GAQSZgoRRGVsZXRlSW50ZWdyYXRpb24SJC5sYXRlcm5hLnYxLkRlbGV0ZUludGVncmF0aW9uUmVxdWVzdBolLmxhdGVybmEudjEuRGVsZXRlSW50ZWdyYXRpb25SZXNwb25zZSIEiLUYBBJvChRDb25maWd1cmVJbnRlZ3JhdGlvbhInLmxhdGVybmEudjEuQ29uZmlndXJlSW50ZWdyYXRpb25SZXF1ZXN0GigubGF0ZXJuYS52MS5Db25maWd1cmVJbnRlZ3JhdGlvblJlc3BvbnNlIgSItRgEQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_laterna_v1_options, file_laterna_v1_text]);
+  fileDesc("ChxsYXRlcm5hL3YxL2ludGVncmF0aW9uLnByb3RvEgpsYXRlcm5hLnYxIs0CCgtJbnRlZ3JhdGlvbhIpCgRraW5kGAEgASgOMhsubGF0ZXJuYS52MS5JbnRlZ3JhdGlvbktpbmQSCwoDdXJsGAIgASgJEhEKCXJlYWNoYWJsZRgDIAEoCBINCgVlcnJvchgEIAEoCRIPCgd2ZXJzaW9uGAUgASgJEhUKDWtvZGlfbWV0YWRhdGEYBiABKAgSFwoPbWlzc2luZ19vcHRpb25zGAcgAygJEg8KB3dlYmhvb2sYCCABKAgSDwoHZm9sZGVycxgJIAEoBRIQCgh1bm1hcHBlZBgKIAEoBRITCgt3aXRob3V0X25mbxgLIAEoBRIaChJ3aXRob3V0X25mb190aXRsZXMYDCADKAkSJAoKZXJyb3JfdGV4dBgNIAEoCzIQLmxhdGVybmEudjEuVGV4dBIYChBtYW5hZ2VzX21ldGFkYXRhGA4gASgIIhkKF0xpc3RJbnRlZ3JhdGlvbnNSZXF1ZXN0IkkKGExpc3RJbnRlZ3JhdGlvbnNSZXNwb25zZRItCgxpbnRlZ3JhdGlvbnMYASADKAsyFy5sYXRlcm5hLnYxLkludGVncmF0aW9uImAKFVNldEludGVncmF0aW9uUmVxdWVzdBIpCgRraW5kGAEgASgOMhsubGF0ZXJuYS52MS5JbnRlZ3JhdGlvbktpbmQSCwoDdXJsGAIgASgJEg8KB2FwaV9rZXkYAyABKAkiRgoWU2V0SW50ZWdyYXRpb25SZXNwb25zZRIsCgtpbnRlZ3JhdGlvbhgBIAEoCzIXLmxhdGVybmEudjEuSW50ZWdyYXRpb24iRQoYRGVsZXRlSW50ZWdyYXRpb25SZXF1ZXN0EikKBGtpbmQYASABKA4yGy5sYXRlcm5hLnYxLkludGVncmF0aW9uS2luZCIbChlEZWxldGVJbnRlZ3JhdGlvblJlc3BvbnNlIoUBChtDb25maWd1cmVJbnRlZ3JhdGlvblJlcXVlc3QSKQoEa2luZBgBIAEoDjIbLmxhdGVybmEudjEuSW50ZWdyYXRpb25LaW5kEhUKDWtvZGlfbWV0YWRhdGEYAiABKAgSEwoLd2ViaG9va191cmwYAyABKAkSDwoHcmVmcmVzaBgEIAEoCCJMChxDb25maWd1cmVJbnRlZ3JhdGlvblJlc3BvbnNlEiwKC2ludGVncmF0aW9uGAEgASgLMhcubGF0ZXJuYS52MS5JbnRlZ3JhdGlvbiquAQoPSW50ZWdyYXRpb25LaW5kEiAKHElOVEVHUkFUSU9OX0tJTkRfVU5TUEVDSUZJRUQQABIbChdJTlRFR1JBVElPTl9LSU5EX1NPTkFSUhABEhsKF0lOVEVHUkFUSU9OX0tJTkRfUkFEQVJSEAISGwoXSU5URUdSQVRJT05fS0lORF9MSURBUlIQAxIiCh5JTlRFR1JBVElPTl9LSU5EX0xBWllMSUJSQVJJQU4QBDK0AwoSSW50ZWdyYXRpb25TZXJ2aWNlEmYKEExpc3RJbnRlZ3JhdGlvbnMSIy5sYXRlcm5hLnYxLkxpc3RJbnRlZ3JhdGlvbnNSZXF1ZXN0GiQubGF0ZXJuYS52MS5MaXN0SW50ZWdyYXRpb25zUmVzcG9uc2UiB5ACAYi1GAQSXQoOU2V0SW50ZWdyYXRpb24SIS5sYXRlcm5hLnYxLlNldEludGVncmF0aW9uUmVxdWVzdBoiLmxhdGVybmEudjEuU2V0SW50ZWdyYXRpb25SZXNwb25zZSIEiLUYBBJmChFEZWxldGVJbnRlZ3JhdGlvbhIkLmxhdGVybmEudjEuRGVsZXRlSW50ZWdyYXRpb25SZXF1ZXN0GiUubGF0ZXJuYS52MS5EZWxldGVJbnRlZ3JhdGlvblJlc3BvbnNlIgSItRgEEm8KFENvbmZpZ3VyZUludGVncmF0aW9uEicubGF0ZXJuYS52MS5Db25maWd1cmVJbnRlZ3JhdGlvblJlcXVlc3QaKC5sYXRlcm5hLnYxLkNvbmZpZ3VyZUludGVncmF0aW9uUmVzcG9uc2UiBIi1GARCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_laterna_v1_options, file_laterna_v1_text]);
 
 /**
  * @generated from message laterna.v1.Integration
@@ -70,7 +70,7 @@ export type Integration = Message<"laterna.v1.Integration"> & {
   webhook: boolean;
 
   /**
-   * Tracked series or movies that have files.
+   * Tracked series, movies or artists that have files.
    *
    * @generated from field: int32 folders = 9;
    */
@@ -102,6 +102,14 @@ export type Integration = Message<"laterna.v1.Integration"> & {
    * @generated from field: laterna.v1.Text error_text = 13;
    */
   errorText?: Text | undefined;
+
+  /**
+   * The instance writes Kodi metadata and takes a webhook and a refresh (Sonarr, Radarr, Lidarr):
+   * the fields above and ConfigureIntegration apply. False for LazyLibrarian.
+   *
+   * @generated from field: bool manages_metadata = 14;
+   */
+  managesMetadata: boolean;
 };
 
 /**
@@ -158,7 +166,7 @@ export type SetIntegrationRequest = Message<"laterna.v1.SetIntegrationRequest"> 
   url: string;
 
   /**
-   * API key (Settings > General).
+   * API key (Settings > General; Config > Interface for LazyLibrarian).
    *
    * @generated from field: string api_key = 3;
    */
@@ -230,7 +238,7 @@ export type ConfigureIntegrationRequest = Message<"laterna.v1.ConfigureIntegrati
 
   /**
    * Turns Kodi metadata on with every option we need (NFO and images for series, seasons and
-   * episodes, or for movies); other settings are left alone.
+   * episodes, for movies, or for artists and albums); other settings are left alone.
    *
    * @generated from field: bool kodi_metadata = 2;
    */
@@ -245,8 +253,8 @@ export type ConfigureIntegrationRequest = Message<"laterna.v1.ConfigureIntegrati
   webhookUrl: string;
 
   /**
-   * Asks for a refresh of every series or movie (missing NFO files and images get written), then
-   * scans the libraries. The response does not wait for it to finish.
+   * Asks for a refresh of every series, movie or artist (missing NFO files and images get written),
+   * then scans the libraries. The response does not wait for it to finish.
    *
    * @generated from field: bool refresh = 4;
    */
@@ -299,6 +307,20 @@ export enum IntegrationKind {
    * @generated from enum value: INTEGRATION_KIND_RADARR = 2;
    */
   RADARR = 2,
+
+  /**
+   * Lidarr: music.
+   *
+   * @generated from enum value: INTEGRATION_KIND_LIDARR = 3;
+   */
+  LIDARR = 3,
+
+  /**
+   * LazyLibrarian: books, for requests only.
+   *
+   * @generated from enum value: INTEGRATION_KIND_LAZYLIBRARIAN = 4;
+   */
+  LAZYLIBRARIAN = 4,
 }
 
 /**
@@ -308,20 +330,23 @@ export const IntegrationKindSchema: GenEnum<IntegrationKind> = /*@__PURE__*/
   enumDesc(file_laterna_v1_integration, 0);
 
 /**
- * IntegrationService connects Laterna to Sonarr and Radarr. Administrators only.
+ * IntegrationService connects Laterna to Sonarr, Radarr, Lidarr and LazyLibrarian. Administrators
+ * only.
  *
- * Laterna only reads local metadata: NFO files and images sitting next to the media. Sonarr and
- * Radarr write them ("Kodi (XBMC) / Emby" metadata) and tell Laterna about each import through a
- * webhook, which triggers a scan. Without an integration, NFO files are read again at the periodic
- * scan. The integration checks how the instances are set up, fixes it on request and reacts right
- * away.
+ * Laterna only reads local metadata: NFO files and images sitting next to the media. Sonarr, Radarr
+ * and Lidarr write them ("Kodi (XBMC) / Emby" metadata) and tell Laterna about each import through
+ * a webhook, which triggers a scan. Without an integration, NFO files are read again at the
+ * periodic scan. The integration checks how the instances are set up, fixes it on request and
+ * reacts right away. LazyLibrarian writes no such metadata and has no webhook: it is only linked
+ * for requests (RequestService), and the folder watch notices the books it adds.
  *
  * @generated from service laterna.v1.IntegrationService
  */
 export const IntegrationService: GenService<{
   /**
-   * ListIntegrations returns the state of Sonarr and Radarr: connection, Kodi metadata, webhook,
-   * series or movies without an NFO. It queries the instances (a few seconds at most).
+   * ListIntegrations returns the state of each integration: connection and, for Sonarr, Radarr and
+   * Lidarr, Kodi metadata, webhook, series, movies or artists without an NFO. It queries the
+   * instances (a few seconds at most).
    *
    * @generated from rpc laterna.v1.IntegrationService.ListIntegrations
    */
@@ -352,7 +377,7 @@ export const IntegrationService: GenService<{
   },
   /**
    * ConfigureIntegration sets an instance up for Laterna: each requested step changes its
-   * configuration.
+   * configuration. Not for LazyLibrarian (Integration.manages_metadata).
    *
    * @generated from rpc laterna.v1.IntegrationService.ConfigureIntegration
    */

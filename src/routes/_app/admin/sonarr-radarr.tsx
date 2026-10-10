@@ -16,8 +16,8 @@ export const Route = createFileRoute("/_app/admin/sonarr-radarr")({
 });
 
 /**
- * Sonarr and Radarr: they write the NFO files and images Laterna reads, and notify it of each
- * import with a webhook.
+ * Sonarr, Radarr and Lidarr: they write the NFO files and images Laterna reads, and notify it of
+ * each import with a webhook. LazyLibrarian is only linked for book requests.
  */
 function Integrations() {
   const { t } = useTranslation();
@@ -35,8 +35,8 @@ function Integrations() {
           <IntegrationCard key={i.kind} integration={i} laternaUrl={laternaUrl} />
         ))}
       </div>
-      {/* The webhook is only installed on an instance that answers. */}
-      {list.data?.integrations.some((i) => i.reachable) && (
+      {/* The webhook is only installed on an instance that answers and takes one. */}
+      {list.data?.integrations.some((i) => i.reachable && i.managesMetadata) && (
         <section className={styles.card} aria-label={t("adminArr.webhookAddressLabel")}>
           <Field
             label={t("adminArr.webhookAddress")}

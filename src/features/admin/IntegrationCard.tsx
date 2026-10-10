@@ -3,7 +3,7 @@ import { type FormEvent, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { errorMessage } from "../../api/errors";
 import { useInvalidate } from "../../api/invalidate";
-import { type Integration, IntegrationService } from "../../gen/laterna/v1/integration_pb";
+import { type Integration, IntegrationKind, IntegrationService } from "../../gen/laterna/v1/integration_pb";
 import { Alert } from "../../ui/Alert";
 import { Button } from "../../ui/Button";
 import { Field } from "../../ui/Field";
@@ -89,7 +89,13 @@ export function IntegrationCard({
             type="password"
             autoComplete="off"
             required
-            hint={i.url ? t("adminArr.apiKeyAgain") : t("adminArr.apiKeyWhere")}
+            hint={
+              i.url
+                ? t("adminArr.apiKeyAgain")
+                : i.kind === IntegrationKind.LAZYLIBRARIAN
+                  ? t("adminArr.apiKeyWhereLazy")
+                  : t("adminArr.apiKeyWhere")
+            }
             value={apiKey}
             onChange={(e) => setApiKey(e.target.value)}
           />
@@ -112,7 +118,7 @@ export function IntegrationCard({
           <Button type="submit" variant="primary" disabled={busy || !url.trim() || !apiKey.trim()}>
             {t("adminArr.trySave")}
           </Button>
-          {i.reachable && (
+          {i.reachable && i.managesMetadata && (
             <>
               <button
                 type="button"

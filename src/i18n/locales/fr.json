@@ -108,7 +108,7 @@
     "tasks": "Tâches",
     "logs": "Journaux",
     "observability": "Observabilité",
-    "arr": "Sonarr et Radarr",
+    "arr": "Intégrations",
     "jellyfin": "Import Jellyfin",
     "settings": "Réglages",
     "restrictedTitle": "Profil restreint",
@@ -393,7 +393,7 @@
     "subtitles_purge": "Purge des sous-titres",
     "store_optimize": "Optimisation de la base",
     "file_segments": "Recherche des génériques",
-    "request_submit": "Envoi d'une demande à Sonarr ou Radarr",
+    "request_submit": "Envoi d'une demande à sa source",
     "requests_refresh": "Suivi des demandes"
   },
   "logLevels": {
@@ -458,7 +458,10 @@
     "allMapped": "Tous les {{what}} sont dans une bibliothèque",
     "withoutNfo": "{{count}} sans NFO : {{titles}}",
     "allNfo": "Tous les {{what}} ont leur NFO",
-    "kodiMissing_many": "Métadonnées Kodi : {{count}} options manquantes ({{options}})"
+    "kodiMissing_many": "Métadonnées Kodi : {{count}} options manquantes ({{options}})",
+    "artists": "artistes",
+    "books": "livres",
+    "requestsOnly": "Lié pour les demandes de livres : LazyLibrarian n'écrit pas de métadonnées et ne prend pas de webhook."
   },
   "settings": {
     "title": "Réglages",
@@ -743,10 +746,10 @@
     "save": "Enregistrer"
   },
   "adminArr": {
-    "title": "Sonarr et Radarr",
-    "subtitle": "Ils écrivent les NFO et les images, et préviennent Laterna de chaque import.",
+    "title": "Intégrations",
+    "subtitle": "Sonarr, Radarr et Lidarr écrivent NFO et images, et préviennent Laterna à chaque import ; LazyLibrarian va chercher les livres demandés.",
     "webhookAddressLabel": "Adresse de Laterna pour le webhook",
-    "webhookAddress": "Adresse de Laterna vue depuis Sonarr et Radarr, pour le webhook",
+    "webhookAddress": "Adresse de Laterna vue depuis Sonarr, Radarr et Lidarr, pour le webhook",
     "webhookHint": "Depuis un conteneur, « localhost » désigne le conteneur : indiquez plutôt l'adresse de la machine (http://192.0.2.10:8096).",
     "linked": "{{name}} répond : adresse et clé enregistrées.",
     "refreshing": "{{name}} actualise ses {{what}} ; les bibliothèques seront rescannées.",
@@ -762,7 +765,8 @@
     "reinstallWebhook": "Réinstaller le webhook",
     "installWebhook": "Installer le webhook",
     "refreshAll": "Tout actualiser",
-    "forget": "Oublier"
+    "forget": "Oublier",
+    "apiKeyWhereLazy": "Dans Config, puis Interface."
   },
   "adminAuth": {
     "title": "Authentification",
@@ -1834,10 +1838,10 @@
   },
   "requests": {
     "title": "Demandes",
-    "subtitle": "Demandez un film ou une série que le serveur n'a pas encore.",
-    "subtitleQuota_one": "Demandez un film ou une série que le serveur n'a pas encore : {{count}} demande tous les 7 jours.",
-    "subtitleQuota_other": "Demandez un film ou une série que le serveur n'a pas encore : {{count}} demandes tous les 7 jours.",
-    "subtitleQuota_many": "Demandez un film ou une série que le serveur n'a pas encore : {{count}} demandes tous les 7 jours.",
+    "subtitle": "Demandez un film, une série, de la musique ou un livre que le serveur n'a pas encore.",
+    "subtitleQuota_one": "Demandez un film, une série, de la musique ou un livre que le serveur n'a pas encore : {{count}} demande tous les 7 jours.",
+    "subtitleQuota_other": "Demandez un film, une série, de la musique ou un livre que le serveur n'a pas encore : {{count}} demandes tous les 7 jours.",
+    "subtitleQuota_many": "Demandez un film, une série, de la musique ou un livre que le serveur n'a pas encore : {{count}} demandes tous les 7 jours.",
     "denied": "Votre compte ne peut pas faire de demandes. Adressez-vous à un administrateur.",
     "closed": "Les demandes ne sont pas encore ouvertes sur ce serveur.",
     "searchTitle": "Trouver un titre",
@@ -1886,7 +1890,11 @@
     },
     "kind": {
       "movie": "Film",
-      "series": "Série"
+      "series": "Série",
+      "music": "Musique",
+      "artist": "Artiste",
+      "album": "Album",
+      "book": "Livre"
     },
     "state": {
       "available": "Déjà là",
@@ -1897,11 +1905,23 @@
       "standard": "Standard (S01E01)",
       "anime": "Anime (numérotation absolue)",
       "daily": "Quotidienne (par date de diffusion)"
-    }
+    },
+    "albumsLabel": "Albums",
+    "albums": {
+      "all": "Toute la discographie",
+      "first": "Premier album",
+      "latest": "Dernier album"
+    },
+    "placeholderMusic": "Un artiste ou un album à demander…",
+    "placeholderBook": "Un livre ou un auteur à demander…",
+    "listen": "Écouter",
+    "read": "Lire",
+    "askHintBook": "Les livres sont demandés en ebook. Un administrateur accepte les demandes, sauf si les vôtres le sont d'office. Vous verrez ici quand on pourra le lire.",
+    "askHintMusic": "Un administrateur accepte les demandes, sauf si les vôtres le sont d'office. Vous verrez ici quand on pourra l'écouter."
   },
   "adminRequests": {
     "title": "Demandes",
-    "subtitle": "Films et séries demandés par les profils ; rien ne vous attend.",
+    "subtitle": "Films, séries, musique et livres demandés par les profils ; rien ne vous attend.",
     "pending_one": "{{count}} demande attend votre accord.",
     "pending_other": "{{count}} demandes attendent votre accord.",
     "pending_many": "{{count}} demandes attendent votre accord.",
@@ -1915,7 +1935,7 @@
     "approve": "Accepter",
     "approveLabel": "Accepter la demande de {{title}}",
     "approveTitle": "Accepter « {{title}} »",
-    "approveHint": "Laterna ajoute le titre à Sonarr ou Radarr, surveillé, et le fait chercher.",
+    "approveHint": "Laterna confie le titre à Sonarr, Radarr, Lidarr ou LazyLibrarian, qui le fait chercher.",
     "asAsked": "Comme demandé ({{seasons}})",
     "decline": "Refuser",
     "declineLabel": "Refuser la demande de {{title}}",
@@ -1925,7 +1945,7 @@
     "forget": "Oublier",
     "forgetLabel": "Oublier la demande de {{title}}",
     "destinations": "Destinations",
-    "destinationsHint": "Où arrivent les demandes : une bibliothèque et, sur Sonarr ou Radarr, un dossier racine et un profil de qualité. Un profil ne voit que les destinations des bibliothèques qu'il peut parcourir.",
+    "destinationsHint": "Où arrivent les demandes : une bibliothèque et, sur Sonarr, Radarr ou Lidarr, un dossier racine et un profil de qualité (LazyLibrarian décide pour les livres). Un profil ne voit que les destinations des bibliothèques qu'il peut parcourir.",
     "noDestination": "Aucune destination : personne ne peut encore faire ce genre de demande.",
     "newDestination": "Nouvelle destination",
     "editTitle": "Destination « {{name}} »",
@@ -1940,6 +1960,8 @@
     "seriesType": "Type de série",
     "rootFolder": "Dossier racine",
     "qualityProfile": "Profil de qualité",
-    "rootHint": "Choisissez le dossier racine qui mène à la bibliothèque : les titres ajoutés y apparaissent après le scan."
+    "rootHint": "Choisissez le dossier racine qui mène à la bibliothèque : les titres ajoutés y apparaissent après le scan.",
+    "metadataProfile": "Profil de métadonnées",
+    "bookHint": "LazyLibrarian décide où ranger les livres : seule compte ici la bibliothèque où ils apparaîtront."
   }
 }

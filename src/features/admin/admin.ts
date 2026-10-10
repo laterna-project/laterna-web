@@ -283,9 +283,16 @@ export function accountCount(devices: readonly Pick<DeviceSession, "accountId">[
 
 /** Sonarr or Radarr, and what it follows. */
 export function integrationName(kind: IntegrationKind): { name: string; what: string; port: string } {
-  return kind === IntegrationKind.SONARR
-    ? { name: "Sonarr", what: i18n.t("arr.series"), port: "8989" }
-    : { name: "Radarr", what: i18n.t("arr.movies"), port: "7878" };
+  switch (kind) {
+    case IntegrationKind.RADARR:
+      return { name: "Radarr", what: i18n.t("arr.movies"), port: "7878" };
+    case IntegrationKind.LIDARR:
+      return { name: "Lidarr", what: i18n.t("arr.artists"), port: "8686" };
+    case IntegrationKind.LAZYLIBRARIAN:
+      return { name: "LazyLibrarian", what: i18n.t("arr.books"), port: "5299" };
+    default:
+      return { name: "Sonarr", what: i18n.t("arr.series"), port: "8989" };
+  }
 }
 
 export interface IntegrationState {
@@ -302,6 +309,13 @@ export function integrationState(i: Integration): IntegrationState {
       pill: i18n.t("arr.unreachable"),
       tone: "warn",
       checks: [{ ok: false, label: serverText(i.errorText) || i.error || i18n.t("arr.noResponse") }],
+    };
+  // LazyLibrarian writes no metadata and takes no webhook: only its connection counts.
+  if (!i.managesMetadata)
+    return {
+      pill: i18n.t("arr.connected"),
+      tone: "ok",
+      checks: [{ ok: true, label: i18n.t("arr.requestsOnly") }],
     };
   const { what } = integrationName(i.kind);
   const missing = i.missingOptions.length;

@@ -14,6 +14,7 @@ import {
   ffmpegVersion,
   importTarget,
   importTargetValue,
+  integrationName,
   integrationState,
   jobName,
   libraryCounts,
@@ -118,6 +119,29 @@ describe("administration", () => {
     expect(playbackMethod(p({ method: "transcode", copyVideo: true })).label).toBe("transcoded · audio");
   });
 
+  it("describes LazyLibrarian by its connection only", () => {
+    const ll = create(IntegrationSchema, {
+      kind: IntegrationKind.LAZYLIBRARIAN,
+      url: "http://nas:5299",
+      reachable: true,
+    });
+    expect(integrationState(ll)).toEqual({
+      pill: "connected",
+      tone: "ok",
+      checks: [
+        {
+          ok: true,
+          label: "Linked for book requests: LazyLibrarian writes no metadata and takes no webhook.",
+        },
+      ],
+    });
+    expect(integrationName(IntegrationKind.LIDARR)).toEqual({
+      name: "Lidarr",
+      what: "artists",
+      port: "8686",
+    });
+  });
+
   it("describes the state of Sonarr and Radarr", () => {
     const i = (fields: object) => create(IntegrationSchema, { kind: IntegrationKind.RADARR, ...fields });
     expect(integrationState(i({}))).toEqual({
@@ -133,6 +157,7 @@ describe("administration", () => {
       i({
         url: "http://nas:7878",
         reachable: true,
+        managesMetadata: true,
         webhook: true,
         missingOptions: ["Collection images", "Fanart"],
         folders: 40,

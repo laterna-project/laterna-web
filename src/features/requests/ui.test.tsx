@@ -120,6 +120,88 @@ describe("request dialog", () => {
   });
 });
 
+describe("music request", () => {
+  it("asks for an album by its key, without seasons", async () => {
+    let received: CreateRequestRequest | undefined;
+    const transport = createRouterTransport(({ service }) => {
+      service(RequestService, {
+        createRequest(req) {
+          received = req;
+          return {
+            request: create(MediaRequestSchema, {
+              id: "r2",
+              title: "Discovery",
+              status: RequestStatus.PENDING,
+            }),
+          };
+        },
+      });
+    });
+    const done = vi.fn();
+    const title = create(RequestableTitleSchema, {
+      kind: RequestKind.ALBUM,
+      externalKey: "rg-discovery",
+      title: "Discovery",
+      network: "Daft Punk",
+    });
+    render(
+      <Providers transport={transport}>
+        <RequestDialog
+          title={title}
+          destinations={[destination({ id: "m", kind: RequestKind.MUSIC })]}
+          onClose={() => undefined}
+          onDone={done}
+        />
+      </Providers>,
+    );
+    expect(screen.queryByRole("button", { name: "Whole series" })).toBeNull();
+    expect(screen.queryByRole("button", { name: "Every album" })).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: "Request" }));
+    await waitFor(() => expect(done).toHaveBeenCalled());
+    expect(received?.kind).toBe(RequestKind.ALBUM);
+    expect(received?.externalKey).toBe("rg-discovery");
+    expect(received?.externalId).toBe(0n);
+  });
+
+  it("asks for the latest album of an artist", async () => {
+    let received: CreateRequestRequest | undefined;
+    const transport = createRouterTransport(({ service }) => {
+      service(RequestService, {
+        createRequest(req) {
+          received = req;
+          return {
+            request: create(MediaRequestSchema, {
+              id: "r3",
+              title: "Justice",
+              status: RequestStatus.APPROVED,
+            }),
+          };
+        },
+      });
+    });
+    const done = vi.fn();
+    render(
+      <Providers transport={transport}>
+        <RequestDialog
+          title={create(RequestableTitleSchema, {
+            kind: RequestKind.ARTIST,
+            externalKey: "mb-justice",
+            title: "Justice",
+          })}
+          destinations={[destination({ id: "m", kind: RequestKind.MUSIC })]}
+          onClose={() => undefined}
+          onDone={done}
+        />
+      </Providers>,
+    );
+    expect(screen.getByRole("button", { name: "Every album" }).getAttribute("aria-pressed")).toBe("true");
+    fireEvent.click(screen.getByRole("button", { name: "Latest album" }));
+    fireEvent.click(screen.getByRole("button", { name: "Request" }));
+    await waitFor(() => expect(done).toHaveBeenCalled());
+    expect(received?.seasons).toBe(RequestSeasons.LATEST);
+  });
+});
+
 describe("request row", () => {
   it("shows where a request stands and why it was declined", () => {
     const transport = createRouterTransport(() => undefined);

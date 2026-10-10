@@ -105,7 +105,7 @@
     "tasks": "Aufgaben",
     "logs": "Protokolle",
     "observability": "Beobachtbarkeit",
-    "arr": "Sonarr und Radarr",
+    "arr": "Integrationen",
     "jellyfin": "Jellyfin-Import",
     "settings": "Einstellungen",
     "restrictedTitle": "Eingeschränktes Profil",
@@ -376,7 +376,7 @@
     "subtitles_purge": "Untertitel-Bereinigung",
     "store_optimize": "Datenbankoptimierung",
     "file_segments": "Intro- und Abspannerkennung",
-    "request_submit": "Anfrage an Sonarr oder Radarr",
+    "request_submit": "Anfrage an ihre Quelle übergeben",
     "requests_refresh": "Verfolgung der Anfragen"
   },
   "logLevels": {
@@ -438,7 +438,10 @@
     "unmapped": "{{count}} {{what}} von {{total}} außerhalb der Mediatheken von Laterna",
     "allMapped": "Alle {{what}} sind in einer Mediathek",
     "withoutNfo": "{{count}} ohne NFO: {{titles}}",
-    "allNfo": "Alle {{what}} haben ihre NFO"
+    "allNfo": "Alle {{what}} haben ihre NFO",
+    "artists": "Künstler",
+    "books": "Bücher",
+    "requestsOnly": "Für Buchanfragen verbunden: LazyLibrarian schreibt keine Metadaten und nimmt keinen Webhook an."
   },
   "settings": {
     "title": "Einstellungen",
@@ -706,10 +709,10 @@
     "save": "Speichern"
   },
   "adminArr": {
-    "title": "Sonarr und Radarr",
-    "subtitle": "Sie schreiben NFOs und Bilder und melden Laterna jeden Import.",
+    "title": "Integrationen",
+    "subtitle": "Sonarr, Radarr und Lidarr schreiben NFOs und Bilder und melden Laterna jeden Import; LazyLibrarian holt die angefragten Bücher.",
     "webhookAddressLabel": "Adresse von Laterna für den Webhook",
-    "webhookAddress": "Adresse von Laterna, wie Sonarr und Radarr sie sehen, für den Webhook",
+    "webhookAddress": "Adresse von Laterna aus Sicht von Sonarr, Radarr und Lidarr, für den Webhook",
     "webhookHint": "Aus einem Container heraus bezeichnet „localhost“ den Container: Geben Sie stattdessen die Adresse des Rechners an (http://192.0.2.10:8096).",
     "linked": "{{name}} antwortet: Adresse und Schlüssel gespeichert.",
     "refreshing": "{{name}} aktualisiert seine {{what}}; die Mediatheken werden erneut gescannt.",
@@ -725,7 +728,8 @@
     "reinstallWebhook": "Webhook neu installieren",
     "installWebhook": "Webhook installieren",
     "refreshAll": "Alles aktualisieren",
-    "forget": "Vergessen"
+    "forget": "Vergessen",
+    "apiKeyWhereLazy": "Unter Config, dann Interface."
   },
   "adminAuth": {
     "title": "Anmeldung",
@@ -1758,9 +1762,9 @@
   },
   "requests": {
     "title": "Anfragen",
-    "subtitle": "Fragen Sie einen Film oder eine Serie an, die der Server noch nicht hat.",
-    "subtitleQuota_one": "Fragen Sie einen Film oder eine Serie an, die der Server noch nicht hat: {{count}} Anfrage alle 7 Tage.",
-    "subtitleQuota_other": "Fragen Sie einen Film oder eine Serie an, die der Server noch nicht hat: {{count}} Anfragen alle 7 Tage.",
+    "subtitle": "Fragen Sie einen Film, eine Serie, Musik oder ein Buch an, das der Server noch nicht hat.",
+    "subtitleQuota_one": "Fragen Sie einen Film, eine Serie, Musik oder ein Buch an, das der Server noch nicht hat: {{count}} Anfrage alle 7 Tage.",
+    "subtitleQuota_other": "Fragen Sie einen Film, eine Serie, Musik oder ein Buch an, das der Server noch nicht hat: {{count}} Anfragen alle 7 Tage.",
     "denied": "Ihr Konto kann keine Anfragen stellen. Wenden Sie sich an einen Administrator.",
     "closed": "Anfragen sind auf diesem Server noch nicht möglich.",
     "searchTitle": "Einen Titel finden",
@@ -1807,7 +1811,11 @@
     },
     "kind": {
       "movie": "Film",
-      "series": "Serie"
+      "series": "Serie",
+      "music": "Musik",
+      "artist": "Künstler",
+      "album": "Album",
+      "book": "Buch"
     },
     "state": {
       "available": "Schon da",
@@ -1818,11 +1826,23 @@
       "standard": "Standard (S01E01)",
       "anime": "Anime (absolute Nummerierung)",
       "daily": "Täglich (nach Sendedatum)"
-    }
+    },
+    "albumsLabel": "Alben",
+    "albums": {
+      "all": "Alle Alben",
+      "first": "Erstes Album",
+      "latest": "Neuestes Album"
+    },
+    "placeholderMusic": "Einen Künstler oder ein Album anfragen…",
+    "placeholderBook": "Ein Buch oder einen Autor anfragen…",
+    "listen": "Anhören",
+    "read": "Lesen",
+    "askHintBook": "Bücher werden als E-Book angefragt. Ein Administrator nimmt Anfragen an, außer Ihre werden sofort angenommen. Hier sehen Sie, wann es lesbar ist.",
+    "askHintMusic": "Ein Administrator nimmt Anfragen an, außer Ihre werden sofort angenommen. Hier sehen Sie, wann es anhörbar ist."
   },
   "adminRequests": {
     "title": "Anfragen",
-    "subtitle": "Von den Profilen angefragte Filme und Serien; nichts wartet auf Sie.",
+    "subtitle": "Von den Profilen angefragte Filme, Serien, Musik und Bücher; nichts wartet auf Sie.",
     "pending_one": "{{count}} Anfrage wartet auf Ihre Freigabe.",
     "pending_other": "{{count}} Anfragen warten auf Ihre Freigabe.",
     "filterLabel": "Angezeigte Anfragen",
@@ -1835,7 +1855,7 @@
     "approve": "Annehmen",
     "approveLabel": "Anfrage für {{title}} annehmen",
     "approveTitle": "„{{title}}“ annehmen",
-    "approveHint": "Laterna fügt den Titel überwacht zu Sonarr oder Radarr hinzu und lässt ihn suchen.",
+    "approveHint": "Laterna übergibt den Titel an Sonarr, Radarr, Lidarr oder LazyLibrarian, das ihn sucht.",
     "asAsked": "Wie angefragt ({{seasons}})",
     "decline": "Ablehnen",
     "declineLabel": "Anfrage für {{title}} ablehnen",
@@ -1845,7 +1865,7 @@
     "forget": "Vergessen",
     "forgetLabel": "Anfrage für {{title}} vergessen",
     "destinations": "Ziele",
-    "destinationsHint": "Wohin Anfragen gehen: eine Mediathek und auf Sonarr oder Radarr ein Stammordner und ein Qualitätsprofil. Ein Profil sieht nur die Ziele der Mediatheken, die es durchsuchen darf.",
+    "destinationsHint": "Wohin Anfragen gehen: eine Mediathek und auf Sonarr, Radarr oder Lidarr ein Stammordner und ein Qualitätsprofil (bei Büchern entscheidet LazyLibrarian). Ein Profil sieht nur die Ziele der Mediatheken, die es durchsuchen darf.",
     "noDestination": "Kein Ziel: Niemand kann diese Art von Anfrage bisher stellen.",
     "newDestination": "Neues Ziel",
     "editTitle": "Ziel „{{name}}“",
@@ -1860,6 +1880,8 @@
     "seriesType": "Serientyp",
     "rootFolder": "Stammordner",
     "qualityProfile": "Qualitätsprofil",
-    "rootHint": "Wählen Sie den Stammordner, der in die Mediathek führt: Dort hinzugefügte Titel erscheinen nach dem Scan."
+    "rootHint": "Wählen Sie den Stammordner, der in die Mediathek führt: Dort hinzugefügte Titel erscheinen nach dem Scan.",
+    "metadataProfile": "Metadatenprofil",
+    "bookHint": "LazyLibrarian entscheidet, wohin Bücher kommen: Hier zählt nur die Mediathek, in der sie erscheinen."
   }
 }

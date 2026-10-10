@@ -67,6 +67,7 @@ export function RequestDestinations() {
                     d.libraryName,
                     d.rootFolder,
                     d.qualityProfileName,
+                    d.metadataProfileName,
                     d.kind === RequestKind.SERIES && type ? t(type.label) : "",
                   ]
                     .filter(Boolean)
@@ -127,6 +128,14 @@ export function RequestDestinations() {
   );
 }
 
+/** Kind of library each family of requests lands in. */
+const libraryKinds: Partial<Record<RequestKind, LibraryKind>> = {
+  [RequestKind.SERIES]: LibraryKind.SHOWS,
+  [RequestKind.MOVIE]: LibraryKind.MOVIES,
+  [RequestKind.MUSIC]: LibraryKind.MUSIC,
+  [RequestKind.BOOK]: LibraryKind.BOOKS,
+};
+
 const freeSpace = (bytes: bigint) =>
   bytes > 0n ? ` · ${num(Number(bytes) / 2 ** 40, { maximumFractionDigits: 1 })} TiB` : "";
 
@@ -145,14 +154,18 @@ function DestinationDialog({
   const [libraryId, setLibraryId] = useState(d?.libraryId ?? "");
   const [rootFolder, setRootFolder] = useState(d?.rootFolder ?? "");
   const [profileId, setProfileId] = useState(d?.qualityProfileId ?? 0);
+  const [metadataId, setMetadataId] = useState(d?.metadataProfileId ?? 0);
   const [seriesType, setSeriesType] = useState(d?.seriesType || RequestSeriesType.STANDARD);
-  const libraryKind = kind === RequestKind.MOVIE ? LibraryKind.MOVIES : LibraryKind.SHOWS;
+  const libraryKind = libraryKinds[kind] ?? LibraryKind.SHOWS;
+  // LazyLibrarian decides where books go: a book destination only names the library.
+  const onInstance = kind !== RequestKind.BOOK;
   const libraries = (useQuery(LibraryService.method.listLibraries, {}).data?.libraries ?? []).flatMap((l) =>
     l.library && l.library.kind === libraryKind ? [l.library] : [],
   );
   const options = useQuery(RequestService.method.getRequestOptions, { kind });
   const roots = options.data?.rootFolders ?? [];
   const profiles = options.data?.qualityProfiles ?? [];
+  const metadataProfiles = options.data?.metadataProfiles ?? [];
   const done = async () => {
     await invalidate(RequestService, ActivityService);
     onClose();
@@ -165,14 +178,21 @@ function DestinationDialog({
   const library = libraries.some((l) => l.id === libraryId) ? libraryId : (libraries[0]?.id ?? "");
   const root = roots.some((r) => r.path === rootFolder) ? rootFolder : (roots[0]?.path ?? "");
   const profile = profiles.some((p) => p.id === profileId) ? profileId : (profiles[0]?.id ?? 0);
+  const metadata = metadataProfiles.some((p) => p.id === metadataId)
+    ? metadataId
+    : (metadataProfiles[0]?.id ?? 0);
+  const complete =
+    Boolean(name.trim() && library) &&
+    (!onInstance || Boolean(root && profile)) &&
+    (kind !== RequestKind.MUSIC || Boolean(metadata));
 
   const submit = (e: FormEvent) => {
     e.preventDefault();
     const fields = {
       name: name.trim(),
       libraryId: library,
-      rootFolder: root,
-      qualityProfileId: profile,
+      ...(onInstance ? { rootFolder: root, qualityProfileId: profile } : {}),
+      ...(kind === RequestKind.MUSIC ? { metadataProfileId: metadata } : {}),
       seriesType,
     };
     if (d) update.mutate({ destinationId: d.id, ...fields });
@@ -196,7 +216,7 @@ function DestinationDialog({
           <fieldset className={styles.fieldset}>
             <legend className={styles.label}>{t("adminRequests.kind")}</legend>
             <div className={styles.choices}>
-              {[RequestKind.SERIES, RequestKind.MOVIE].map((k) => (
+              {[RequestKind.SERIES, RequestKind.MOVIE, RequestKind.MUSIC, RequestKind.BOOK].map((k) => (
                 <button
                   key={k}
                   type="button"
@@ -250,7 +270,7 @@ function DestinationDialog({
               {t("adminNav.arr")}
             </Link>
           </Alert>
-        ) : (
+        ) : onInstance ? (
           <div className={styles.grid2Fields}>
             <label className={styles.selectField}>
               <span className={styles.label}>{t("adminRequests.rootFolder")}</span>
@@ -277,18 +297,32 @@ function DestinationDialog({
                 ))}
               </select>
             </label>
+            {kind === RequestKind.MUSIC && (
+              <label className={styles.selectField}>
+                <span className={styles.label}>{t("adminRequests.metadataProfile")}</span>
+                <select
+                  className={styles.input}
+                  value={metadata}
+                  onChange={(e) => setMetadataId(Number(e.target.value))}
+                >
+                  {metadataProfiles.map((p) => (
+                    <option key={p.id} value={p.id}>
+                      {p.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
           </div>
-        )}
-        <p className={styles.muted}>{t("adminRequests.rootHint")}</p>
+        ) : null}
+        <p className={styles.muted}>
+          {onInstance ? t("adminRequests.rootHint") : t("adminRequests.bookHint")}
+        </p>
         {error && <Alert>{errorMessage(error)}</Alert>}
         <div className={styles.actions}>
           <span className={styles.spacer} />
           <Button onClick={onClose}>{t("common.cancel")}</Button>
-          <Button
-            type="submit"
-            variant="primary"
-            disabled={busy || !name.trim() || !library || !root || !profile}
-          >
+          <Button type="submit" variant="primary" disabled={busy || !complete}>
             {d ? t("common.save") : t("common.create")}
           </Button>
         </div>
