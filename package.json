@@ -1,13 +1,13 @@
 {
   "name": "laterna-web",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@11.25.0",
   "engines": {
     "node": ">=22"
   },
-  "laternaServer": "v0.9.0",
+  "laternaServer": "v0.10.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

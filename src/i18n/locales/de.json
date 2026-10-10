@@ -88,7 +88,8 @@
     "admin": "Verwaltung",
     "switchProfile": "Profil wechseln",
     "signOut": "Abmelden",
-    "requests": "Anfragen"
+    "requests": "Anfragen",
+    "notifications": "Benachrichtigungen"
   },
   "adminNav": {
     "label": "Verwaltung",
@@ -441,7 +442,9 @@
     "allNfo": "Alle {{what}} haben ihre NFO",
     "artists": "Künstler",
     "books": "Bücher",
-    "requestsOnly": "Für Buchanfragen verbunden: LazyLibrarian schreibt keine Metadaten und nimmt keinen Webhook an."
+    "requestsOnly": "Für Buchanfragen verbunden: LazyLibrarian schreibt keine Metadaten und nimmt keinen Webhook an.",
+    "subtitles": "Untertitel",
+    "subtitlesOnly": "Für die Untertitelsuche verbunden: Ein fehlender Untertitel wird im Player angefragt."
   },
   "settings": {
     "title": "Einstellungen",
@@ -710,7 +713,7 @@
   },
   "adminArr": {
     "title": "Integrationen",
-    "subtitle": "Sonarr, Radarr und Lidarr schreiben NFOs und Bilder und melden Laterna jeden Import; LazyLibrarian holt die angefragten Bücher.",
+    "subtitle": "Sonarr, Radarr und Lidarr schreiben NFOs und Bilder und melden Laterna jeden Import; LazyLibrarian holt die angefragten Bücher, Bazarr die fehlenden Untertitel.",
     "webhookAddressLabel": "Adresse von Laterna für den Webhook",
     "webhookAddress": "Adresse von Laterna aus Sicht von Sonarr, Radarr und Lidarr, für den Webhook",
     "webhookHint": "Aus einem Container heraus bezeichnet „localhost“ den Container: Geben Sie stattdessen die Adresse des Rechners an (http://192.0.2.10:8096).",
@@ -1883,5 +1886,48 @@
     "rootHint": "Wählen Sie den Stammordner, der in die Mediathek führt: Dort hinzugefügte Titel erscheinen nach dem Scan.",
     "metadataProfile": "Metadatenprofil",
     "bookHint": "LazyLibrarian entscheidet, wohin Bücher kommen: Hier zählt nur die Mediathek, in der sie erscheinen."
+  },
+  "upcoming": {
+    "today": "Heute",
+    "tomorrow": "Morgen",
+    "dayAt": "{{day}}, {{time}}",
+    "onItsWay": "Unterwegs",
+    "movie": "Film"
+  },
+  "notifications": {
+    "title": "Benachrichtigungen",
+    "subtitle": "Profil {{name}} · seine Anfragen und die neuen Folgen der Serien, denen es folgt",
+    "unread_one": "{{count}} ungelesene Benachrichtigung",
+    "unread_other": "{{count}} ungelesene Benachrichtigungen",
+    "unreadMark": "Ungelesen",
+    "markAllRead": "Alle als gelesen markieren",
+    "deleteAll": "Alle löschen",
+    "deleteLabel": "Benachrichtigung löschen: {{text}}",
+    "empty": "Noch nichts. Hier erfahren Sie, wenn eine Ihrer Anfragen vorankommt und wenn eine Folge einer Serie eintrifft, der Sie folgen.",
+    "allRead": "Alle Benachrichtigungen sind als gelesen markiert.",
+    "deleted": "Benachrichtigung gelöscht.",
+    "allDeleted": "Alle Benachrichtigungen gelöscht."
+  },
+  "push": {
+    "title": "Auf diesem Gerät",
+    "label": "Dieses Gerät benachrichtigen",
+    "hint": "Auch wenn Laterna geschlossen ist. Jedes Gerät entscheidet für sich.",
+    "unsupported": "Dieser Browser kann hier nicht benachrichtigt werden. Nötig sind eine über https ausgelieferte Seite und, auf iPhone oder iPad, Laterna auf dem Home-Bildschirm.",
+    "denied": "Benachrichtigungen sind für diese Website blockiert: Erlauben Sie sie in den Einstellungen des Browsers.",
+    "failed": "Der Browser konnte sich bei seinem Push-Dienst nicht anmelden.",
+    "on": "Dieses Gerät wird benachrichtigt.",
+    "off": "Dieses Gerät wird nicht mehr benachrichtigt."
+  },
+  "subtitleSearch": {
+    "title": "Fehlt ein Untertitel?",
+    "language": "Sprache",
+    "hearingImpaired": "Für Gehörlose und Hörgeschädigte",
+    "forced": "Nur fremdsprachige Passagen",
+    "search": "Suchen",
+    "searching": "{{what}}: Suche läuft...",
+    "found": "{{what}}: gefunden, er steht in der Liste.",
+    "notFound": "{{what}}: nichts gefunden.",
+    "failed": "{{what}}: {{reason}}",
+    "failedUnknown": "Die Suche konnte nicht durchgeführt werden."
   }
 }

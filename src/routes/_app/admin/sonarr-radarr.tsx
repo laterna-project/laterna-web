@@ -18,7 +18,8 @@ export const Route = createFileRoute("/_app/admin/sonarr-radarr")({
 
 /**
  * Sonarr, Radarr and Lidarr: they write the NFO files and images Laterna reads, and notify it of
- * each import with a webhook. LazyLibrarian is only linked for book requests.
+ * each import with a webhook. LazyLibrarian is only linked for book requests, Bazarr for the
+ * subtitles asked for from the player.
  */
 function Integrations() {
   const { t } = useTranslation();

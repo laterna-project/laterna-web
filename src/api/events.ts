@@ -11,9 +11,11 @@ import { EventService, type LibraryScanned } from "../gen/laterna/v1/events_pb";
 import { HomeService } from "../gen/laterna/v1/home_pb";
 import { LibraryService } from "../gen/laterna/v1/library_pb";
 import { MusicService } from "../gen/laterna/v1/music_pb";
+import { NotificationService } from "../gen/laterna/v1/notification_pb";
 import { PhotoService } from "../gen/laterna/v1/photo_pb";
 import { PlaylistService } from "../gen/laterna/v1/playlist_pb";
 import { RequestService } from "../gen/laterna/v1/request_pb";
+import { SubtitleService } from "../gen/laterna/v1/subtitle_pb";
 import { ThemeService } from "../gen/laterna/v1/theme_pb";
 
 /** Services whose responses depend on the catalog and on watch data. */
@@ -116,6 +118,13 @@ export function useServerEvents(profileId: string): void {
                 break;
               case "requestsChanged":
                 invalidator.mark(RequestService);
+                break;
+              case "notificationsChanged":
+                invalidator.mark(NotificationService);
+                break;
+              // The player reads the searches of its file again, and its subtitles once one is found.
+              case "subtitleSearchChanged":
+                invalidator.mark(SubtitleService);
                 break;
               default:
                 break;

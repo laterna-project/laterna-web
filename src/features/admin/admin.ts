@@ -281,7 +281,7 @@ export function accountCount(devices: readonly Pick<DeviceSession, "accountId">[
   return new Set(devices.map((d) => d.accountId)).size;
 }
 
-/** Sonarr or Radarr, and what it follows. */
+/** Sonarr, Radarr or another program Laterna is linked to, and what it follows. */
 export function integrationName(kind: IntegrationKind): { name: string; what: string; port: string } {
   switch (kind) {
     case IntegrationKind.RADARR:
@@ -290,6 +290,8 @@ export function integrationName(kind: IntegrationKind): { name: string; what: st
       return { name: "Lidarr", what: i18n.t("arr.artists"), port: "8686" };
     case IntegrationKind.LAZYLIBRARIAN:
       return { name: "LazyLibrarian", what: i18n.t("arr.books"), port: "5299" };
+    case IntegrationKind.BAZARR:
+      return { name: "Bazarr", what: i18n.t("arr.subtitles"), port: "6767" };
     default:
       return { name: "Sonarr", what: i18n.t("arr.series"), port: "8989" };
   }
@@ -317,12 +319,17 @@ export function integrationState(i: Integration): IntegrationState {
       tone: "warn",
       checks: [{ ok: false, label: serverText(i.errorText) || i.error || i18n.t("arr.noResponse") }],
     };
-  // LazyLibrarian writes no metadata and takes no webhook: only its connection counts.
+  // LazyLibrarian and Bazarr write no metadata and take no webhook: only their connection counts.
   if (!managesMetadata(i))
     return {
       pill: i18n.t("arr.connected"),
       tone: "ok",
-      checks: [{ ok: true, label: i18n.t("arr.requestsOnly") }],
+      checks: [
+        {
+          ok: true,
+          label: i18n.t(i.kind === IntegrationKind.BAZARR ? "arr.subtitlesOnly" : "arr.requestsOnly"),
+        },
+      ],
     };
   const { what } = integrationName(i.kind);
   const missing = i.missingOptions.length;

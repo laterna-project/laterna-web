@@ -57,8 +57,30 @@ show its own "Server unreachable" page with a retry button, not the browser's er
 - It only exists in the build: in development, Vite serves the files itself.
 
 What the installed app does not do: play without the network (downloads are files saved on the
-device, for any player), receive notifications (the server sends none), or sync in the
-background.
+device, for any player), or sync in the background.
+
+## Notifications
+
+A profile's notifications (server: `docs/design/notifications.md`) are a list every device shows
+alike: the bell of the header counts the unread ones and opens the page. The server announces
+each change on the event stream, and the list is read again.
+
+A device can also be told while the app is closed, by **web push**. "Notify this device", on the
+notifications page, asks the browser for permission, subscribes it at its push service with the
+server's key and hands the subscription to the server (`src/features/notifications/push.ts`).
+Each device decides for itself, and the subscription goes away when the device signs out.
+
+- The service worker shows what arrives. The server writes the text in the language of the
+  profile, so the worker needs no catalog: it shows the server's name and the sentence.
+- A click opens the app on `/notifications?open=<notification>`. The list knows what the
+  notification names (an episode, a movie, a request), marks it read and opens it. An app that is
+  already open is told through a message and brought to the front, without a reload.
+- Browsers renew subscriptions on their own. When the app opens and the browser's subscription is
+  no longer the one the server holds, the new one is handed over, without asking anything.
+- It needs what installing needs: HTTPS, or the computer itself. On an iPhone or iPad, web push
+  only exists for an app added to the home screen (iOS 16.4 or later). Where it cannot work, the
+  switch says so and stays off.
+- A server without push (before 0.10) shows neither the bell nor the switch.
 
 ## Layouts
 

@@ -91,7 +91,8 @@
     "admin": "Administration",
     "switchProfile": "Changer de profil",
     "signOut": "Se déconnecter",
-    "requests": "Demandes"
+    "requests": "Demandes",
+    "notifications": "Notifications"
   },
   "adminNav": {
     "label": "Administration",
@@ -461,7 +462,9 @@
     "kodiMissing_many": "Métadonnées Kodi : {{count}} options manquantes ({{options}})",
     "artists": "artistes",
     "books": "livres",
-    "requestsOnly": "Lié pour les demandes de livres : LazyLibrarian n'écrit pas de métadonnées et ne prend pas de webhook."
+    "requestsOnly": "Lié pour les demandes de livres : LazyLibrarian n'écrit pas de métadonnées et ne prend pas de webhook.",
+    "subtitles": "sous-titres",
+    "subtitlesOnly": "Lié pour la recherche de sous-titres : un sous-titre manquant se demande depuis le lecteur."
   },
   "settings": {
     "title": "Réglages",
@@ -747,7 +750,7 @@
   },
   "adminArr": {
     "title": "Intégrations",
-    "subtitle": "Sonarr, Radarr et Lidarr écrivent NFO et images, et préviennent Laterna à chaque import ; LazyLibrarian va chercher les livres demandés.",
+    "subtitle": "Sonarr, Radarr et Lidarr écrivent NFO et images, et préviennent Laterna à chaque import ; LazyLibrarian va chercher les livres demandés, Bazarr les sous-titres manquants.",
     "webhookAddressLabel": "Adresse de Laterna pour le webhook",
     "webhookAddress": "Adresse de Laterna vue depuis Sonarr, Radarr et Lidarr, pour le webhook",
     "webhookHint": "Depuis un conteneur, « localhost » désigne le conteneur : indiquez plutôt l'adresse de la machine (http://192.0.2.10:8096).",
@@ -1963,5 +1966,49 @@
     "rootHint": "Choisissez le dossier racine qui mène à la bibliothèque : les titres ajoutés y apparaissent après le scan.",
     "metadataProfile": "Profil de métadonnées",
     "bookHint": "LazyLibrarian décide où ranger les livres : seule compte ici la bibliothèque où ils apparaîtront."
+  },
+  "upcoming": {
+    "today": "Aujourd'hui",
+    "tomorrow": "Demain",
+    "dayAt": "{{day}}, {{time}}",
+    "onItsWay": "En route",
+    "movie": "Film"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "subtitle": "Profil {{name}} · ses demandes, et les nouveaux épisodes des séries qu'il suit",
+    "unread_one": "{{count}} notification non lue",
+    "unread_other": "{{count}} notifications non lues",
+    "unread_many": "{{count}} notifications non lues",
+    "unreadMark": "Non lue",
+    "markAllRead": "Tout marquer comme lu",
+    "deleteAll": "Tout effacer",
+    "deleteLabel": "Effacer la notification : {{text}}",
+    "empty": "Rien pour l'instant. Vous êtes prévenu ici quand une de vos demandes avance, et quand un épisode arrive pour une série que vous suivez.",
+    "allRead": "Toutes les notifications sont marquées comme lues.",
+    "deleted": "Notification effacée.",
+    "allDeleted": "Toutes les notifications sont effacées."
+  },
+  "push": {
+    "title": "Sur cet appareil",
+    "label": "Prévenir cet appareil",
+    "hint": "Même quand Laterna est fermé. Chaque appareil décide pour lui.",
+    "unsupported": "Ce navigateur ne peut pas être prévenu ici. Il faut une page servie en https et, sur iPhone ou iPad, Laterna ajouté à l'écran d'accueil.",
+    "denied": "Les notifications sont bloquées pour ce site : autorisez-les dans les réglages du navigateur.",
+    "failed": "Le navigateur n'a pas pu s'abonner à son service de push.",
+    "on": "Cet appareil sera prévenu.",
+    "off": "Cet appareil ne sera plus prévenu."
+  },
+  "subtitleSearch": {
+    "title": "Il manque un sous-titre ?",
+    "language": "Langue",
+    "hearingImpaired": "Pour sourds et malentendants",
+    "forced": "Passages en langue étrangère seulement",
+    "search": "Le chercher",
+    "searching": "{{what}} : recherche en cours...",
+    "found": "{{what}} : trouvé, il est dans la liste.",
+    "notFound": "{{what}} : rien trouvé.",
+    "failed": "{{what}} : {{reason}}",
+    "failedUnknown": "La recherche n'a pas pu aboutir."
   }
 }

@@ -226,6 +226,12 @@ const paths = {
       <path d="M12 7.6v.1" />
     </>
   ),
+  bell: (
+    <>
+      <path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z" />
+      <path d="M10 21h4" />
+    </>
+  ),
   // Sections, in the tab bar of phones.
   home: <path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z" />,
   discover: (

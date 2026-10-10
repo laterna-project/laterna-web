@@ -12,8 +12,8 @@ import { integrationName, integrationState, managesMetadata } from "./admin";
 import styles from "./admin.module.css";
 
 /**
- * Sonarr or Radarr: address and API key tried then saved, checks, settings made for Laterna,
- * removal.
+ * Sonarr, Radarr or another program Laterna is linked to: address and API key tried then saved,
+ * checks, settings made for Laterna, removal.
  */
 export function IntegrationCard({
   integration: i,
