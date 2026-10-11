@@ -99,7 +99,13 @@ describe("album choice dialog", () => {
   const air = create(MediaRequestSchema, { id: "r1", kind: RequestKind.ARTIST, title: "Air" });
   const albums = [
     { key: "rg-moon", title: "Moon Safari", year: 1998, type: "Album", trackCount: 10 },
-    { key: "rg-virgin", title: "The Virgin Suicides", year: 2000, type: "Album", secondaryTypes: ["Soundtrack"] },
+    {
+      key: "rg-virgin",
+      title: "The Virgin Suicides",
+      year: 2000,
+      type: "Album",
+      secondaryTypes: ["Soundtrack"],
+    },
     { key: "rg-talkie", title: "Talkie Walkie", year: 2004, type: "Album", monitored: true },
   ];
 
