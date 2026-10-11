@@ -1802,7 +1802,8 @@
       "available": "Available",
       "episodes": "Available · {{have}} of {{want}} episodes",
       "declined": "Declined",
-      "failed": "Failed"
+      "failed": "Failed",
+      "choosing": "Albums to choose"
     },
     "seasons": {
       "all": "Whole series",
@@ -1834,14 +1835,56 @@
     "albums": {
       "all": "Every album",
       "first": "First album",
-      "latest": "Latest album"
+      "latest": "Latest album",
+      "pick": "Choose…",
+      "pickHint": "You pick the albums from the artist's list once the request is accepted."
     },
     "placeholderMusic": "An artist or an album to request…",
     "placeholderBook": "A book or an author to request…",
     "listen": "Listen",
     "read": "Read",
     "askHintBook": "Books are asked for as ebooks. An administrator approves requests, unless yours are approved at once. You will see here when it can be read.",
-    "askHintMusic": "An administrator approves requests, unless yours are approved at once. You will see here when it can be listened to."
+    "askHintMusic": "An administrator approves requests, unless yours are approved at once. You will see here when it can be listened to.",
+    "choose": {
+      "action": "Choose the albums",
+      "actionLabel": "Choose the albums of {{title}}",
+      "title": "Albums of {{title}}",
+      "hint": "Lidarr looks for the albums you tick, and only those.",
+      "empty": "Lidarr is still reading this artist's albums. Try again in a moment.",
+      "kinds": "Kinds of releases",
+      "everyKind": "Everything",
+      "all": "Tick all",
+      "none": "Untick all",
+      "future": "Also the albums to come",
+      "futureHint": "Lidarr will look for each new album as it comes out.",
+      "here": "already here",
+      "monitored": "already asked for",
+      "confirm_one": "Ask for {{count}} album",
+      "confirm_other": "Ask for {{count}} albums",
+      "done": "Albums of {{title}} chosen: Lidarr is looking for them."
+    },
+    "albumKinds": {
+      "album": "Album",
+      "ep": "EP",
+      "single": "Single",
+      "broadcast": "Broadcast",
+      "other": "Other",
+      "studio": "Studio",
+      "live": "Live",
+      "compilation": "Compilation",
+      "soundtrack": "Soundtrack",
+      "remix": "Remix",
+      "demo": "Demo"
+    },
+    "many": {
+      "toggle": "Select several",
+      "pickLabel": "Select {{title}}",
+      "ask_one": "Ask for {{count}} book",
+      "ask_other": "Ask for {{count}} books",
+      "done_one": "{{count}} request sent.",
+      "done_other": "{{count}} requests sent.",
+      "failed": "{{title}}: {{reason}}"
+    }
   },
   "adminRequests": {
     "title": "Requests",
@@ -1853,7 +1896,8 @@
       "pending": "Waiting",
       "active": "On their way",
       "done": "Done",
-      "all": "All"
+      "all": "All",
+      "choosing": "To choose"
     },
     "approve": "Approve",
     "approveLabel": "Approve the request for {{title}}",
@@ -1885,7 +1929,8 @@
     "qualityProfile": "Quality profile",
     "rootHint": "Pick the root folder that leads into the library: titles added there show up in it after the scan.",
     "metadataProfile": "Metadata profile",
-    "bookHint": "LazyLibrarian decides where books go: only the library they show up in counts here."
+    "bookHint": "LazyLibrarian decides where books go: only the library they show up in counts here.",
+    "keeps": "Keeps: {{kinds}}"
   },
   "upcoming": {
     "today": "Today",

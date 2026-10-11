@@ -9,7 +9,7 @@ import {
   RequestSeriesType,
   RequestStatus,
 } from "../../gen/laterna/v1/request_pb";
-import i18n, { num } from "../../i18n";
+import i18n, { locale, num } from "../../i18n";
 import type { Universe } from "../../theme/contract";
 
 /** Tone of a status pill: done, waiting, refused. */
@@ -27,6 +27,9 @@ export function requestStatus(
       return { label: i18n.t("requests.status.pending"), tone: undefined };
     case RequestStatus.APPROVED:
       return { label: i18n.t("requests.status.approved"), tone: undefined };
+    // The artist is on Lidarr: its albums wait to be chosen.
+    case RequestStatus.CHOOSING:
+      return { label: i18n.t("requests.status.choosing"), tone: "warn" };
     case RequestStatus.DOWNLOADING:
       return {
         label: i18n.t("requests.status.downloading", { percent: num(r.progress, { style: "percent" }) }),
@@ -50,13 +53,18 @@ export function requestStatus(
 }
 
 /** Seasons of a series or albums of an artist asked for, in words; empty for the other kinds. */
-export function seasonsLabel(r: Pick<MediaRequest, "kind" | "seasons" | "seasonNumbers">): string {
+export function seasonsLabel(
+  r: Pick<MediaRequest, "kind" | "seasons" | "seasonNumbers"> & { albumTitles?: readonly string[] },
+): string {
   if (r.kind === RequestKind.ARTIST)
     switch (r.seasons) {
       case RequestSeasons.FIRST:
         return i18n.t("requests.albums.first");
       case RequestSeasons.LATEST:
         return i18n.t("requests.albums.latest");
+      // Chosen albums are named once chosen; until then the status says they are to choose.
+      case RequestSeasons.CHOSEN:
+        return (r.albumTitles ?? []).join(", ");
       default:
         return i18n.t("requests.albums.all");
     }
@@ -74,6 +82,15 @@ export function seasonsLabel(r: Pick<MediaRequest, "kind" | "seasons" | "seasonN
     default:
       return i18n.t("requests.seasons.all");
   }
+}
+
+/**
+ * Results in the natural order of their titles ("Tome 2" before "Tome 10"): the volumes of a series
+ * line up, to tick several in a row.
+ */
+export function byTitle<T extends { title: string }>(results: readonly T[]): T[] {
+  const collator = new Intl.Collator(locale(), { numeric: true, sensitivity: "base" });
+  return [...results].sort((a, b) => collator.compare(a.title, b.title));
 }
 
 /** Kind of a request (or family of a destination) in words, and its universe. */

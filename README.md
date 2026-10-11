@@ -14,6 +14,7 @@ the web app does what the server does, no more.
 
 | Laterna Web | Laterna server |
 |---|---|
+| 0.8.x | 0.11.x; 0.10.x without the choice of an artist's albums; older ones as 0.7.x |
 | 0.7.x | 0.10.x; 0.9.x without notifications, "Coming soon" and subtitle search; older ones as 0.6.x |
 | 0.6.x | 0.9.x; 0.8.x without music and book requests, 0.5.x to 0.7.x without requests |
 | 0.5.x | 0.8.x; 0.5.x to 0.7.x without requests |
@@ -48,8 +49,9 @@ The contract and the server's text catalogs are taken from the server version pi
 - **Collections, playlists and watch parties**: hand-made collections, playlists played in a row,
   watching together with synchronized playback, chat and reactions.
 - **Requests**: search for a movie, a series, an artist, an album or a book the server doesn't
-  have, ask for it (the whole series or some seasons, every album or the first or latest one) and
-  follow it until it can be watched, listened to or read.
+  have, ask for it (the whole series or some seasons; every album of an artist, the first, the
+  latest, or albums picked from the artist's list once the request is accepted; several books at
+  once, for the volumes of a series) and follow it until it can be watched, listened to or read.
 - **Notifications**: a request approved, declined or available, new episodes of the series the
   profile follows; the same list on every device, and web push for the devices that ask for it,
   even while the app is closed.
