@@ -418,6 +418,7 @@
   "reason.subtitle_burned": "El dispositivo no puede mostrar estos subtítulos ({codec}): se incrustan en la imagen",
   "reason.video_unsupported": "El dispositivo no puede reproducir este vídeo ({codec}, {bit_depth} bits, {dynamic_range})",
   "subtitle_search.file_gone": "El archivo ya no está",
+  "subtitle_search.no_profile": "Este título no tiene perfil de idiomas en {name}, que no busca subtítulos sin perfil",
   "subtitle_search.not_followed": "{name} no sigue este título",
   "subtitle_search.not_read": "Se encontró el subtítulo, pero no se pudo leer: {reason}",
   "subtitle_search.not_visible": "{name} encontró un subtítulo, pero lo guardó donde Laterna no lo ve",

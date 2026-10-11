@@ -418,6 +418,7 @@
   "reason.subtitle_burned": "Das Gerät kann diese Untertitel nicht anzeigen ({codec}): Sie werden ins Bild eingebrannt",
   "reason.video_unsupported": "Das Gerät kann dieses Video nicht abspielen ({codec}, {bit_depth} Bit, {dynamic_range})",
   "subtitle_search.file_gone": "Die Datei ist nicht mehr vorhanden",
+  "subtitle_search.no_profile": "Dieser Titel hat kein Sprachprofil in {name}, das ohne Profil keine Untertitel sucht",
   "subtitle_search.not_followed": "{name} verfolgt diesen Titel nicht",
   "subtitle_search.not_read": "Der Untertitel wurde gefunden, konnte aber nicht gelesen werden: {reason}",
   "subtitle_search.not_visible": "{name} hat einen Untertitel gefunden, ihn aber dort gespeichert, wo Laterna ihn nicht sieht",
