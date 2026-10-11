@@ -1802,7 +1802,8 @@
       "available": "Verfügbar",
       "episodes": "Verfügbar · {{have}} von {{want}} Folgen",
       "declined": "Abgelehnt",
-      "failed": "Fehlgeschlagen"
+      "failed": "Fehlgeschlagen",
+      "choosing": "Alben auszuwählen"
     },
     "seasons": {
       "all": "Ganze Serie",
@@ -1834,14 +1835,56 @@
     "albums": {
       "all": "Alle Alben",
       "first": "Erstes Album",
-      "latest": "Neuestes Album"
+      "latest": "Neuestes Album",
+      "pick": "Auswählen…",
+      "pickHint": "Sie wählen die Alben aus der Liste des Künstlers, sobald die Anfrage angenommen ist."
     },
     "placeholderMusic": "Einen Künstler oder ein Album anfragen…",
     "placeholderBook": "Ein Buch oder einen Autor anfragen…",
     "listen": "Anhören",
     "read": "Lesen",
     "askHintBook": "Bücher werden als E-Book angefragt. Ein Administrator nimmt Anfragen an, außer Ihre werden sofort angenommen. Hier sehen Sie, wann es lesbar ist.",
-    "askHintMusic": "Ein Administrator nimmt Anfragen an, außer Ihre werden sofort angenommen. Hier sehen Sie, wann es anhörbar ist."
+    "askHintMusic": "Ein Administrator nimmt Anfragen an, außer Ihre werden sofort angenommen. Hier sehen Sie, wann es anhörbar ist.",
+    "choose": {
+      "action": "Alben auswählen",
+      "actionLabel": "Alben von {{title}} auswählen",
+      "title": "Alben von {{title}}",
+      "hint": "Lidarr sucht nur die angekreuzten Alben.",
+      "empty": "Lidarr liest die Alben dieses Künstlers noch ein. Versuchen Sie es gleich noch einmal.",
+      "kinds": "Arten von Veröffentlichungen",
+      "everyKind": "Alles",
+      "all": "Alle ankreuzen",
+      "none": "Alle abwählen",
+      "future": "Auch künftige Alben",
+      "futureHint": "Lidarr sucht jedes neue Album, sobald es erscheint.",
+      "here": "schon vorhanden",
+      "monitored": "schon angefragt",
+      "confirm_one": "{{count}} Album anfragen",
+      "confirm_other": "{{count}} Alben anfragen",
+      "done": "Alben von {{title}} gewählt: Lidarr sucht sie."
+    },
+    "albumKinds": {
+      "album": "Album",
+      "ep": "EP",
+      "single": "Single",
+      "broadcast": "Sendung",
+      "other": "Sonstiges",
+      "studio": "Studio",
+      "live": "Live",
+      "compilation": "Kompilation",
+      "soundtrack": "Soundtrack",
+      "remix": "Remix",
+      "demo": "Demo"
+    },
+    "many": {
+      "toggle": "Mehrere auswählen",
+      "pickLabel": "{{title}} auswählen",
+      "ask_one": "{{count}} Buch anfragen",
+      "ask_other": "{{count}} Bücher anfragen",
+      "done_one": "{{count}} Anfrage gesendet.",
+      "done_other": "{{count}} Anfragen gesendet.",
+      "failed": "{{title}}: {{reason}}"
+    }
   },
   "adminRequests": {
     "title": "Anfragen",
@@ -1853,7 +1896,8 @@
       "pending": "Wartend",
       "active": "Unterwegs",
       "done": "Erledigt",
-      "all": "Alle"
+      "all": "Alle",
+      "choosing": "Auszuwählen"
     },
     "approve": "Annehmen",
     "approveLabel": "Anfrage für {{title}} annehmen",
@@ -1885,7 +1929,8 @@
     "qualityProfile": "Qualitätsprofil",
     "rootHint": "Wählen Sie den Stammordner, der in die Mediathek führt: Dort hinzugefügte Titel erscheinen nach dem Scan.",
     "metadataProfile": "Metadatenprofil",
-    "bookHint": "LazyLibrarian entscheidet, wohin Bücher kommen: Hier zählt nur die Mediathek, in der sie erscheinen."
+    "bookHint": "LazyLibrarian entscheidet, wohin Bücher kommen: Hier zählt nur die Mediathek, in der sie erscheinen.",
+    "keeps": "Behält: {{kinds}}"
   },
   "upcoming": {
     "today": "Heute",

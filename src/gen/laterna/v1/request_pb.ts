@@ -15,7 +15,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/request.proto.
  */
 export const file_laterna_v1_request: GenFile = /*@__PURE__*/
-  fileDesc("ChhsYXRlcm5hL3YxL3JlcXVlc3QucHJvdG8SCmxhdGVybmEudjEioAIKEFJlcXVlc3RhYmxlVGl0bGUSJQoEa2luZBgBIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQSEwoLZXh0ZXJuYWxfaWQYAiABKAMSDQoFdGl0bGUYAyABKAkSDAoEeWVhchgEIAEoBRIQCghvdmVydmlldxgFIAEoCRISCgpwb3N0ZXJfdXJsGAYgASgJEisKBXN0YXRlGAcgASgOMhwubGF0ZXJuYS52MS5SZXF1ZXN0YWJsZVN0YXRlEg8KB2l0ZW1faWQYCCABKAkSEgoKcmVxdWVzdF9pZBgJIAEoCRIUCgxzZWFzb25fY291bnQYCiABKAUSDwoHbmV0d29yaxgLIAEoCRIUCgxleHRlcm5hbF9rZXkYDCABKAkiUAoYU2VhcmNoUmVxdWVzdGFibGVSZXF1ZXN0EiUKBGtpbmQYASABKA4yFy5sYXRlcm5hLnYxLlJlcXVlc3RLaW5kEg0KBXF1ZXJ5GAIgASgJIkoKGVNlYXJjaFJlcXVlc3RhYmxlUmVzcG9uc2USLQoHcmVzdWx0cxgBIAMoCzIcLmxhdGVybmEudjEuUmVxdWVzdGFibGVUaXRsZSK+AgoSUmVxdWVzdERlc3RpbmF0aW9uEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSJQoEa2luZBgDIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQSEgoKbGlicmFyeV9pZBgEIAEoCRIUCgxsaWJyYXJ5X25hbWUYBSABKAkSEwoLcm9vdF9mb2xkZXIYBiABKAkSGgoScXVhbGl0eV9wcm9maWxlX2lkGAcgASgFEhwKFHF1YWxpdHlfcHJvZmlsZV9uYW1lGAggASgJEjIKC3Nlcmllc190eXBlGAkgASgOMh0ubGF0ZXJuYS52MS5SZXF1ZXN0U2VyaWVzVHlwZRIbChNtZXRhZGF0YV9wcm9maWxlX2lkGAogASgFEh0KFW1ldGFkYXRhX3Byb2ZpbGVfbmFtZRgLIAEoCSJHCh5MaXN0UmVxdWVzdERlc3RpbmF0aW9uc1JlcXVlc3QSJQoEa2luZBgBIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQiVwofTGlzdFJlcXVlc3REZXN0aW5hdGlvbnNSZXNwb25zZRI0CgxkZXN0aW5hdGlvbnMYASADKAsyHi5sYXRlcm5hLnYxLlJlcXVlc3REZXN0aW5hdGlvbiLvBQoMTWVkaWFSZXF1ZXN0EgoKAmlkGAEgASgJEiUKBGtpbmQYAiABKA4yFy5sYXRlcm5hLnYxLlJlcXVlc3RLaW5kEhMKC2V4dGVybmFsX2lkGAMgASgDEg0KBXRpdGxlGAQgASgJEgwKBHllYXIYBSABKAUSEgoKcG9zdGVyX3VybBgGIAEoCRIpCgZzdGF0dXMYByABKA4yGS5sYXRlcm5hLnYxLlJlcXVlc3RTdGF0dXMSKwoHc2Vhc29ucxgIIAEoDjIaLmxhdGVybmEudjEuUmVxdWVzdFNlYXNvbnMSFgoOc2Vhc29uX251bWJlcnMYCSADKAUSMwoLZGVzdGluYXRpb24YCiABKAsyHi5sYXRlcm5hLnYxLlJlcXVlc3REZXN0aW5hdGlvbhISCgphY2NvdW50X2lkGAsgASgJEhAKCHVzZXJuYW1lGAwgASgJEhIKCnByb2ZpbGVfaWQYDSABKAkSFAoMcHJvZmlsZV9uYW1lGA4gASgJEi4KCmNyZWF0ZWRfYXQYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCmRlY2lkZWRfYXQYECABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmRlY2lkZWRfYnkYESABKAkSFgoOZGVjbGluZV9yZWFzb24YEiABKAkSDQoFZXJyb3IYEyABKAkSJAoKZXJyb3JfdGV4dBgUIAEoCzIQLmxhdGVybmEudjEuVGV4dBIQCghwcm9ncmVzcxgVIAEoARIPCgdpdGVtX2lkGBYgASgJEhoKEmVwaXNvZGVzX2F2YWlsYWJsZRgXIAEoBRIXCg9lcGlzb2Rlc193YW50ZWQYGCABKAUSMAoMYXZhaWxhYmxlX2F0GBkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIUCgxleHRlcm5hbF9rZXkYGiABKAkSEAoIc3VidGl0bGUYGyABKAkixQEKFENyZWF0ZVJlcXVlc3RSZXF1ZXN0EiUKBGtpbmQYASABKA4yFy5sYXRlcm5hLnYxLlJlcXVlc3RLaW5kEhMKC2V4dGVybmFsX2lkGAIgASgDEhYKDmRlc3RpbmF0aW9uX2lkGAMgASgJEisKB3NlYXNvbnMYBCABKA4yGi5sYXRlcm5hLnYxLlJlcXVlc3RTZWFzb25zEhYKDnNlYXNvbl9udW1iZXJzGAUgAygFEhQKDGV4dGVybmFsX2tleRgGIAEoCSJCChVDcmVhdGVSZXF1ZXN0UmVzcG9uc2USKQoHcmVxdWVzdBgBIAEoCzIYLmxhdGVybmEudjEuTWVkaWFSZXF1ZXN0Ij4KFUxpc3RNeVJlcXVlc3RzUmVxdWVzdBISCgpwYWdlX3Rva2VuGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBSJdChZMaXN0TXlSZXF1ZXN0c1Jlc3BvbnNlEioKCHJlcXVlc3RzGAEgAygLMhgubGF0ZXJuYS52MS5NZWRpYVJlcXVlc3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIicKEUdldFJlcXVlc3RSZXF1ZXN0EhIKCnJlcXVlc3RfaWQYASABKAkiPwoSR2V0UmVxdWVzdFJlc3BvbnNlEikKB3JlcXVlc3QYASABKAsyGC5sYXRlcm5hLnYxLk1lZGlhUmVxdWVzdCIqChRDYW5jZWxSZXF1ZXN0UmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJIhcKFUNhbmNlbFJlcXVlc3RSZXNwb25zZSJpChNMaXN0UmVxdWVzdHNSZXF1ZXN0EhIKCnBhZ2VfdG9rZW4YASABKAkSEQoJcGFnZV9zaXplGAIgASgFEisKCHN0YXR1c2VzGAMgAygOMhkubGF0ZXJuYS52MS5SZXF1ZXN0U3RhdHVzInIKFExpc3RSZXF1ZXN0c1Jlc3BvbnNlEioKCHJlcXVlc3RzGAEgAygLMhgubGF0ZXJuYS52MS5NZWRpYVJlcXVlc3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhUKDXBlbmRpbmdfY291bnQYAyABKAUioAEKFUFwcHJvdmVSZXF1ZXN0UmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJEhsKDmRlc3RpbmF0aW9uX2lkGAIgASgJSACIAQESKwoHc2Vhc29ucxgDIAEoDjIaLmxhdGVybmEudjEuUmVxdWVzdFNlYXNvbnMSFgoOc2Vhc29uX251bWJlcnMYBCADKAVCEQoPX2Rlc3RpbmF0aW9uX2lkIkMKFkFwcHJvdmVSZXF1ZXN0UmVzcG9uc2USKQoHcmVxdWVzdBgBIAEoCzIYLmxhdGVybmEudjEuTWVkaWFSZXF1ZXN0IjsKFURlY2xpbmVSZXF1ZXN0UmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJEg4KBnJlYXNvbhgCIAEoCSJDChZEZWNsaW5lUmVxdWVzdFJlc3BvbnNlEikKB3JlcXVlc3QYASABKAsyGC5sYXRlcm5hLnYxLk1lZGlhUmVxdWVzdCIqChREZWxldGVSZXF1ZXN0UmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJIhcKFURlbGV0ZVJlcXVlc3RSZXNwb25zZSI1ChFSZXF1ZXN0Um9vdEZvbGRlchIMCgRwYXRoGAEgASgJEhIKCmZyZWVfc3BhY2UYAiABKAMiMQoVUmVxdWVzdFF1YWxpdHlQcm9maWxlEgoKAmlkGAEgASgFEgwKBG5hbWUYAiABKAkiQQoYR2V0UmVxdWVzdE9wdGlvbnNSZXF1ZXN0EiUKBGtpbmQYASABKA4yFy5sYXRlcm5hLnYxLlJlcXVlc3RLaW5kIssBChlHZXRSZXF1ZXN0T3B0aW9uc1Jlc3BvbnNlEjMKDHJvb3RfZm9sZGVycxgBIAMoCzIdLmxhdGVybmEudjEuUmVxdWVzdFJvb3RGb2xkZXISOwoQcXVhbGl0eV9wcm9maWxlcxgCIAMoCzIhLmxhdGVybmEudjEuUmVxdWVzdFF1YWxpdHlQcm9maWxlEjwKEW1ldGFkYXRhX3Byb2ZpbGVzGAMgAygLMiEubGF0ZXJuYS52MS5SZXF1ZXN0UXVhbGl0eVByb2ZpbGUi7AEKH0NyZWF0ZVJlcXVlc3REZXN0aW5hdGlvblJlcXVlc3QSDAoEbmFtZRgBIAEoCRIlCgRraW5kGAIgASgOMhcubGF0ZXJuYS52MS5SZXF1ZXN0S2luZBISCgpsaWJyYXJ5X2lkGAMgASgJEhMKC3Jvb3RfZm9sZGVyGAQgASgJEhoKEnF1YWxpdHlfcHJvZmlsZV9pZBgFIAEoBRIyCgtzZXJpZXNfdHlwZRgGIAEoDjIdLmxhdGVybmEudjEuUmVxdWVzdFNlcmllc1R5cGUSGwoTbWV0YWRhdGFfcHJvZmlsZV9pZBgHIAEoBSJXCiBDcmVhdGVSZXF1ZXN0RGVzdGluYXRpb25SZXNwb25zZRIzCgtkZXN0aW5hdGlvbhgBIAEoCzIeLmxhdGVybmEudjEuUmVxdWVzdERlc3RpbmF0aW9uIs0CCh9VcGRhdGVSZXF1ZXN0RGVzdGluYXRpb25SZXF1ZXN0EhYKDmRlc3RpbmF0aW9uX2lkGAEgASgJEhEKBG5hbWUYAiABKAlIAIgBARIXCgpsaWJyYXJ5X2lkGAMgASgJSAGIAQESGAoLcm9vdF9mb2xkZXIYBCABKAlIAogBARIfChJxdWFsaXR5X3Byb2ZpbGVfaWQYBSABKAVIA4gBARIyCgtzZXJpZXNfdHlwZRgGIAEoDjIdLmxhdGVybmEudjEuUmVxdWVzdFNlcmllc1R5cGUSIAoTbWV0YWRhdGFfcHJvZmlsZV9pZBgHIAEoBUgEiAEBQgcKBV9uYW1lQg0KC19saWJyYXJ5X2lkQg4KDF9yb290X2ZvbGRlckIVChNfcXVhbGl0eV9wcm9maWxlX2lkQhYKFF9tZXRhZGF0YV9wcm9maWxlX2lkIlcKIFVwZGF0ZVJlcXVlc3REZXN0aW5hdGlvblJlc3BvbnNlEjMKC2Rlc3RpbmF0aW9uGAEgASgLMh4ubGF0ZXJuYS52MS5SZXF1ZXN0RGVzdGluYXRpb24iOQofRGVsZXRlUmVxdWVzdERlc3RpbmF0aW9uUmVxdWVzdBIWCg5kZXN0aW5hdGlvbl9pZBgBIAEoCSIiCiBEZWxldGVSZXF1ZXN0RGVzdGluYXRpb25SZXNwb25zZSq8AQoLUmVxdWVzdEtpbmQSHAoYUkVRVUVTVF9LSU5EX1VOU1BFQ0lGSUVEEAASFwoTUkVRVUVTVF9LSU5EX1NFUklFUxABEhYKElJFUVVFU1RfS0lORF9NT1ZJRRACEhYKElJFUVVFU1RfS0lORF9NVVNJQxADEhcKE1JFUVVFU1RfS0lORF9BUlRJU1QQBBIWChJSRVFVRVNUX0tJTkRfQUxCVU0QBRIVChFSRVFVRVNUX0tJTkRfQk9PSxAGKrkBChBSZXF1ZXN0YWJsZVN0YXRlEiEKHVJFUVVFU1RBQkxFX1NUQVRFX1VOU1BFQ0lGSUVEEAASIQodUkVRVUVTVEFCTEVfU1RBVEVfUkVRVUVTVEFCTEUQARIfChtSRVFVRVNUQUJMRV9TVEFURV9BVkFJTEFCTEUQAhIfChtSRVFVRVNUQUJMRV9TVEFURV9SRVFVRVNURUQQAxIdChlSRVFVRVNUQUJMRV9TVEFURV9UUkFDS0VEEAQq3gEKDVJlcXVlc3RTdGF0dXMSHgoaUkVRVUVTVF9TVEFUVVNfVU5TUEVDSUZJRUQQABIaChZSRVFVRVNUX1NUQVRVU19QRU5ESU5HEAESGwoXUkVRVUVTVF9TVEFUVVNfQVBQUk9WRUQQAhIeChpSRVFVRVNUX1NUQVRVU19ET1dOTE9BRElORxADEhwKGFJFUVVFU1RfU1RBVFVTX0FWQUlMQUJMRRAEEhsKF1JFUVVFU1RfU1RBVFVTX0RFQ0xJTkVEEAUSGQoVUkVRVUVTVF9TVEFUVVNfRkFJTEVEEAYqnQEKDlJlcXVlc3RTZWFzb25zEh8KG1JFUVVFU1RfU0VBU09OU19VTlNQRUNJRklFRBAAEhcKE1JFUVVFU1RfU0VBU09OU19BTEwQARIZChVSRVFVRVNUX1NFQVNPTlNfRklSU1QQAhIaChZSRVFVRVNUX1NFQVNPTlNfTEFURVNUEAMSGgoWUkVRVUVTVF9TRUFTT05TX0NIT1NFThAEKpgBChFSZXF1ZXN0U2VyaWVzVHlwZRIjCh9SRVFVRVNUX1NFUklFU19UWVBFX1VOU1BFQ0lGSUVEEAASIAocUkVRVUVTVF9TRVJJRVNfVFlQRV9TVEFOREFSRBABEh0KGVJFUVVFU1RfU0VSSUVTX1RZUEVfQU5JTUUQAhIdChlSRVFVRVNUX1NFUklFU19UWVBFX0RBSUxZEAMyqgsKDlJlcXVlc3RTZXJ2aWNlEmUKEVNlYXJjaFJlcXVlc3RhYmxlEiQubGF0ZXJuYS52MS5TZWFyY2hSZXF1ZXN0YWJsZVJlcXVlc3QaJS5sYXRlcm5hLnYxLlNlYXJjaFJlcXVlc3RhYmxlUmVzcG9uc2UiA5ACARJ3ChdMaXN0UmVxdWVzdERlc3RpbmF0aW9ucxIqLmxhdGVybmEudjEuTGlzdFJlcXVlc3REZXN0aW5hdGlvbnNSZXF1ZXN0GisubGF0ZXJuYS52MS5MaXN0UmVxdWVzdERlc3RpbmF0aW9uc1Jlc3BvbnNlIgOQAgESVAoNQ3JlYXRlUmVxdWVzdBIgLmxhdGVybmEudjEuQ3JlYXRlUmVxdWVzdFJlcXVlc3QaIS5sYXRlcm5hLnYxLkNyZWF0ZVJlcXVlc3RSZXNwb25zZRJcCg5MaXN0TXlSZXF1ZXN0cxIhLmxhdGVybmEudjEuTGlzdE15UmVxdWVzdHNSZXF1ZXN0GiIubGF0ZXJuYS52MS5MaXN0TXlSZXF1ZXN0c1Jlc3BvbnNlIgOQAgESUAoKR2V0UmVxdWVzdBIdLmxhdGVybmEudjEuR2V0UmVxdWVzdFJlcXVlc3QaHi5sYXRlcm5hLnYxLkdldFJlcXVlc3RSZXNwb25zZSIDkAIBElQKDUNhbmNlbFJlcXVlc3QSIC5sYXRlcm5hLnYxLkNhbmNlbFJlcXVlc3RSZXF1ZXN0GiEubGF0ZXJuYS52MS5DYW5jZWxSZXF1ZXN0UmVzcG9uc2USWgoMTGlzdFJlcXVlc3RzEh8ubGF0ZXJuYS52MS5MaXN0UmVxdWVzdHNSZXF1ZXN0GiAubGF0ZXJuYS52MS5MaXN0UmVxdWVzdHNSZXNwb25zZSIHkAIBiLUYBBJdCg5BcHByb3ZlUmVxdWVzdBIhLmxhdGVybmEudjEuQXBwcm92ZVJlcXVlc3RSZXF1ZXN0GiIubGF0ZXJuYS52MS5BcHByb3ZlUmVxdWVzdFJlc3BvbnNlIgSItRgEEl0KDkRlY2xpbmVSZXF1ZXN0EiEubGF0ZXJuYS52MS5EZWNsaW5lUmVxdWVzdFJlcXVlc3QaIi5sYXRlcm5hLnYxLkRlY2xpbmVSZXF1ZXN0UmVzcG9uc2UiBIi1GAQSXQoNRGVsZXRlUmVxdWVzdBIgLmxhdGVybmEudjEuRGVsZXRlUmVxdWVzdFJlcXVlc3QaIS5sYXRlcm5hLnYxLkRlbGV0ZVJlcXVlc3RSZXNwb25zZSIHkAICiLUYBBJpChFHZXRSZXF1ZXN0T3B0aW9ucxIkLmxhdGVybmEudjEuR2V0UmVxdWVzdE9wdGlvbnNSZXF1ZXN0GiUubGF0ZXJuYS52MS5HZXRSZXF1ZXN0T3B0aW9uc1Jlc3BvbnNlIgeQAgGItRgEEnsKGENyZWF0ZVJlcXVlc3REZXN0aW5hdGlvbhIrLmxhdGVybmEudjEuQ3JlYXRlUmVxdWVzdERlc3RpbmF0aW9uUmVxdWVzdBosLmxhdGVybmEudjEuQ3JlYXRlUmVxdWVzdERlc3RpbmF0aW9uUmVzcG9uc2UiBIi1GAQSewoYVXBkYXRlUmVxdWVzdERlc3RpbmF0aW9uEisubGF0ZXJuYS52MS5VcGRhdGVSZXF1ZXN0RGVzdGluYXRpb25SZXF1ZXN0GiwubGF0ZXJuYS52MS5VcGRhdGVSZXF1ZXN0RGVzdGluYXRpb25SZXNwb25zZSIEiLUYBBJ+ChhEZWxldGVSZXF1ZXN0RGVzdGluYXRpb24SKy5sYXRlcm5hLnYxLkRlbGV0ZVJlcXVlc3REZXN0aW5hdGlvblJlcXVlc3QaLC5sYXRlcm5hLnYxLkRlbGV0ZVJlcXVlc3REZXN0aW5hdGlvblJlc3BvbnNlIgeQAgKItRgEQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_laterna_v1_options, file_laterna_v1_text]);
+  fileDesc("ChhsYXRlcm5hL3YxL3JlcXVlc3QucHJvdG8SCmxhdGVybmEudjEioAIKEFJlcXVlc3RhYmxlVGl0bGUSJQoEa2luZBgBIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQSEwoLZXh0ZXJuYWxfaWQYAiABKAMSDQoFdGl0bGUYAyABKAkSDAoEeWVhchgEIAEoBRIQCghvdmVydmlldxgFIAEoCRISCgpwb3N0ZXJfdXJsGAYgASgJEisKBXN0YXRlGAcgASgOMhwubGF0ZXJuYS52MS5SZXF1ZXN0YWJsZVN0YXRlEg8KB2l0ZW1faWQYCCABKAkSEgoKcmVxdWVzdF9pZBgJIAEoCRIUCgxzZWFzb25fY291bnQYCiABKAUSDwoHbmV0d29yaxgLIAEoCRIUCgxleHRlcm5hbF9rZXkYDCABKAkiUAoYU2VhcmNoUmVxdWVzdGFibGVSZXF1ZXN0EiUKBGtpbmQYASABKA4yFy5sYXRlcm5hLnYxLlJlcXVlc3RLaW5kEg0KBXF1ZXJ5GAIgASgJIkoKGVNlYXJjaFJlcXVlc3RhYmxlUmVzcG9uc2USLQoHcmVzdWx0cxgBIAMoCzIcLmxhdGVybmEudjEuUmVxdWVzdGFibGVUaXRsZSK+AgoSUmVxdWVzdERlc3RpbmF0aW9uEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSJQoEa2luZBgDIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQSEgoKbGlicmFyeV9pZBgEIAEoCRIUCgxsaWJyYXJ5X25hbWUYBSABKAkSEwoLcm9vdF9mb2xkZXIYBiABKAkSGgoScXVhbGl0eV9wcm9maWxlX2lkGAcgASgFEhwKFHF1YWxpdHlfcHJvZmlsZV9uYW1lGAggASgJEjIKC3Nlcmllc190eXBlGAkgASgOMh0ubGF0ZXJuYS52MS5SZXF1ZXN0U2VyaWVzVHlwZRIbChNtZXRhZGF0YV9wcm9maWxlX2lkGAogASgFEh0KFW1ldGFkYXRhX3Byb2ZpbGVfbmFtZRgLIAEoCSJHCh5MaXN0UmVxdWVzdERlc3RpbmF0aW9uc1JlcXVlc3QSJQoEa2luZBgBIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQiVwofTGlzdFJlcXVlc3REZXN0aW5hdGlvbnNSZXNwb25zZRI0CgxkZXN0aW5hdGlvbnMYASADKAsyHi5sYXRlcm5hLnYxLlJlcXVlc3REZXN0aW5hdGlvbiKFBgoMTWVkaWFSZXF1ZXN0EgoKAmlkGAEgASgJEiUKBGtpbmQYAiABKA4yFy5sYXRlcm5hLnYxLlJlcXVlc3RLaW5kEhMKC2V4dGVybmFsX2lkGAMgASgDEg0KBXRpdGxlGAQgASgJEgwKBHllYXIYBSABKAUSEgoKcG9zdGVyX3VybBgGIAEoCRIpCgZzdGF0dXMYByABKA4yGS5sYXRlcm5hLnYxLlJlcXVlc3RTdGF0dXMSKwoHc2Vhc29ucxgIIAEoDjIaLmxhdGVybmEudjEuUmVxdWVzdFNlYXNvbnMSFgoOc2Vhc29uX251bWJlcnMYCSADKAUSMwoLZGVzdGluYXRpb24YCiABKAsyHi5sYXRlcm5hLnYxLlJlcXVlc3REZXN0aW5hdGlvbhISCgphY2NvdW50X2lkGAsgASgJEhAKCHVzZXJuYW1lGAwgASgJEhIKCnByb2ZpbGVfaWQYDSABKAkSFAoMcHJvZmlsZV9uYW1lGA4gASgJEi4KCmNyZWF0ZWRfYXQYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCmRlY2lkZWRfYXQYECABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmRlY2lkZWRfYnkYESABKAkSFgoOZGVjbGluZV9yZWFzb24YEiABKAkSDQoFZXJyb3IYEyABKAkSJAoKZXJyb3JfdGV4dBgUIAEoCzIQLmxhdGVybmEudjEuVGV4dBIQCghwcm9ncmVzcxgVIAEoARIPCgdpdGVtX2lkGBYgASgJEhoKEmVwaXNvZGVzX2F2YWlsYWJsZRgXIAEoBRIXCg9lcGlzb2Rlc193YW50ZWQYGCABKAUSMAoMYXZhaWxhYmxlX2F0GBkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIUCgxleHRlcm5hbF9rZXkYGiABKAkSEAoIc3VidGl0bGUYGyABKAkSFAoMYWxidW1fdGl0bGVzGBwgAygJIq4BCgxSZXF1ZXN0QWxidW0SCwoDa2V5GAEgASgJEg0KBXRpdGxlGAIgASgJEgwKBHllYXIYAyABKAUSDAoEdHlwZRgEIAEoCRIXCg9zZWNvbmRhcnlfdHlwZXMYBSADKAkSEwoLdHJhY2tfY291bnQYBiABKAUSEQoJbW9uaXRvcmVkGAcgASgIEhEKCWF2YWlsYWJsZRgIIAEoCBISCgpwb3N0ZXJfdXJsGAkgASgJIi4KGExpc3RSZXF1ZXN0QWxidW1zUmVxdWVzdBISCgpyZXF1ZXN0X2lkGAEgASgJIkUKGUxpc3RSZXF1ZXN0QWxidW1zUmVzcG9uc2USKAoGYWxidW1zGAEgAygLMhgubGF0ZXJuYS52MS5SZXF1ZXN0QWxidW0iWwoaQ2hvb3NlUmVxdWVzdEFsYnVtc1JlcXVlc3QSEgoKcmVxdWVzdF9pZBgBIAEoCRISCgphbGJ1bV9rZXlzGAIgAygJEhUKDWZ1dHVyZV9hbGJ1bXMYAyABKAgiSAobQ2hvb3NlUmVxdWVzdEFsYnVtc1Jlc3BvbnNlEikKB3JlcXVlc3QYASABKAsyGC5sYXRlcm5hLnYxLk1lZGlhUmVxdWVzdCLFAQoUQ3JlYXRlUmVxdWVzdFJlcXVlc3QSJQoEa2luZBgBIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQSEwoLZXh0ZXJuYWxfaWQYAiABKAMSFgoOZGVzdGluYXRpb25faWQYAyABKAkSKwoHc2Vhc29ucxgEIAEoDjIaLmxhdGVybmEudjEuUmVxdWVzdFNlYXNvbnMSFgoOc2Vhc29uX251bWJlcnMYBSADKAUSFAoMZXh0ZXJuYWxfa2V5GAYgASgJIkIKFUNyZWF0ZVJlcXVlc3RSZXNwb25zZRIpCgdyZXF1ZXN0GAEgASgLMhgubGF0ZXJuYS52MS5NZWRpYVJlcXVlc3QiPgoVTGlzdE15UmVxdWVzdHNSZXF1ZXN0EhIKCnBhZ2VfdG9rZW4YASABKAkSEQoJcGFnZV9zaXplGAIgASgFIl0KFkxpc3RNeVJlcXVlc3RzUmVzcG9uc2USKgoIcmVxdWVzdHMYASADKAsyGC5sYXRlcm5hLnYxLk1lZGlhUmVxdWVzdBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiJwoRR2V0UmVxdWVzdFJlcXVlc3QSEgoKcmVxdWVzdF9pZBgBIAEoCSI/ChJHZXRSZXF1ZXN0UmVzcG9uc2USKQoHcmVxdWVzdBgBIAEoCzIYLmxhdGVybmEudjEuTWVkaWFSZXF1ZXN0IioKFENhbmNlbFJlcXVlc3RSZXF1ZXN0EhIKCnJlcXVlc3RfaWQYASABKAkiFwoVQ2FuY2VsUmVxdWVzdFJlc3BvbnNlImkKE0xpc3RSZXF1ZXN0c1JlcXVlc3QSEgoKcGFnZV90b2tlbhgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSKwoIc3RhdHVzZXMYAyADKA4yGS5sYXRlcm5hLnYxLlJlcXVlc3RTdGF0dXMicgoUTGlzdFJlcXVlc3RzUmVzcG9uc2USKgoIcmVxdWVzdHMYASADKAsyGC5sYXRlcm5hLnYxLk1lZGlhUmVxdWVzdBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSFQoNcGVuZGluZ19jb3VudBgDIAEoBSKgAQoVQXBwcm92ZVJlcXVlc3RSZXF1ZXN0EhIKCnJlcXVlc3RfaWQYASABKAkSGwoOZGVzdGluYXRpb25faWQYAiABKAlIAIgBARIrCgdzZWFzb25zGAMgASgOMhoubGF0ZXJuYS52MS5SZXF1ZXN0U2Vhc29ucxIWCg5zZWFzb25fbnVtYmVycxgEIAMoBUIRCg9fZGVzdGluYXRpb25faWQiQwoWQXBwcm92ZVJlcXVlc3RSZXNwb25zZRIpCgdyZXF1ZXN0GAEgASgLMhgubGF0ZXJuYS52MS5NZWRpYVJlcXVlc3QiOwoVRGVjbGluZVJlcXVlc3RSZXF1ZXN0EhIKCnJlcXVlc3RfaWQYASABKAkSDgoGcmVhc29uGAIgASgJIkMKFkRlY2xpbmVSZXF1ZXN0UmVzcG9uc2USKQoHcmVxdWVzdBgBIAEoCzIYLmxhdGVybmEudjEuTWVkaWFSZXF1ZXN0IioKFERlbGV0ZVJlcXVlc3RSZXF1ZXN0EhIKCnJlcXVlc3RfaWQYASABKAkiFwoVRGVsZXRlUmVxdWVzdFJlc3BvbnNlIjUKEVJlcXVlc3RSb290Rm9sZGVyEgwKBHBhdGgYASABKAkSEgoKZnJlZV9zcGFjZRgCIAEoAyJhChVSZXF1ZXN0UXVhbGl0eVByb2ZpbGUSCgoCaWQYASABKAUSDAoEbmFtZRgCIAEoCRIVCg1wcmltYXJ5X3R5cGVzGAMgAygJEhcKD3NlY29uZGFyeV90eXBlcxgEIAMoCSJBChhHZXRSZXF1ZXN0T3B0aW9uc1JlcXVlc3QSJQoEa2luZBgBIAEoDjIXLmxhdGVybmEudjEuUmVxdWVzdEtpbmQiywEKGUdldFJlcXVlc3RPcHRpb25zUmVzcG9uc2USMwoMcm9vdF9mb2xkZXJzGAEgAygLMh0ubGF0ZXJuYS52MS5SZXF1ZXN0Um9vdEZvbGRlchI7ChBxdWFsaXR5X3Byb2ZpbGVzGAIgAygLMiEubGF0ZXJuYS52MS5SZXF1ZXN0UXVhbGl0eVByb2ZpbGUSPAoRbWV0YWRhdGFfcHJvZmlsZXMYAyADKAsyIS5sYXRlcm5hLnYxLlJlcXVlc3RRdWFsaXR5UHJvZmlsZSLsAQofQ3JlYXRlUmVxdWVzdERlc3RpbmF0aW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJEiUKBGtpbmQYAiABKA4yFy5sYXRlcm5hLnYxLlJlcXVlc3RLaW5kEhIKCmxpYnJhcnlfaWQYAyABKAkSEwoLcm9vdF9mb2xkZXIYBCABKAkSGgoScXVhbGl0eV9wcm9maWxlX2lkGAUgASgFEjIKC3Nlcmllc190eXBlGAYgASgOMh0ubGF0ZXJuYS52MS5SZXF1ZXN0U2VyaWVzVHlwZRIbChNtZXRhZGF0YV9wcm9maWxlX2lkGAcgASgFIlcKIENyZWF0ZVJlcXVlc3REZXN0aW5hdGlvblJlc3BvbnNlEjMKC2Rlc3RpbmF0aW9uGAEgASgLMh4ubGF0ZXJuYS52MS5SZXF1ZXN0RGVzdGluYXRpb24izQIKH1VwZGF0ZVJlcXVlc3REZXN0aW5hdGlvblJlcXVlc3QSFgoOZGVzdGluYXRpb25faWQYASABKAkSEQoEbmFtZRgCIAEoCUgAiAEBEhcKCmxpYnJhcnlfaWQYAyABKAlIAYgBARIYCgtyb290X2ZvbGRlchgEIAEoCUgCiAEBEh8KEnF1YWxpdHlfcHJvZmlsZV9pZBgFIAEoBUgDiAEBEjIKC3Nlcmllc190eXBlGAYgASgOMh0ubGF0ZXJuYS52MS5SZXF1ZXN0U2VyaWVzVHlwZRIgChNtZXRhZGF0YV9wcm9maWxlX2lkGAcgASgFSASIAQFCBwoFX25hbWVCDQoLX2xpYnJhcnlfaWRCDgoMX3Jvb3RfZm9sZGVyQhUKE19xdWFsaXR5X3Byb2ZpbGVfaWRCFgoUX21ldGFkYXRhX3Byb2ZpbGVfaWQiVwogVXBkYXRlUmVxdWVzdERlc3RpbmF0aW9uUmVzcG9uc2USMwoLZGVzdGluYXRpb24YASABKAsyHi5sYXRlcm5hLnYxLlJlcXVlc3REZXN0aW5hdGlvbiI5Ch9EZWxldGVSZXF1ZXN0RGVzdGluYXRpb25SZXF1ZXN0EhYKDmRlc3RpbmF0aW9uX2lkGAEgASgJIiIKIERlbGV0ZVJlcXVlc3REZXN0aW5hdGlvblJlc3BvbnNlKrwBCgtSZXF1ZXN0S2luZBIcChhSRVFVRVNUX0tJTkRfVU5TUEVDSUZJRUQQABIXChNSRVFVRVNUX0tJTkRfU0VSSUVTEAESFgoSUkVRVUVTVF9LSU5EX01PVklFEAISFgoSUkVRVUVTVF9LSU5EX01VU0lDEAMSFwoTUkVRVUVTVF9LSU5EX0FSVElTVBAEEhYKElJFUVVFU1RfS0lORF9BTEJVTRAFEhUKEVJFUVVFU1RfS0lORF9CT09LEAYquQEKEFJlcXVlc3RhYmxlU3RhdGUSIQodUkVRVUVTVEFCTEVfU1RBVEVfVU5TUEVDSUZJRUQQABIhCh1SRVFVRVNUQUJMRV9TVEFURV9SRVFVRVNUQUJMRRABEh8KG1JFUVVFU1RBQkxFX1NUQVRFX0FWQUlMQUJMRRACEh8KG1JFUVVFU1RBQkxFX1NUQVRFX1JFUVVFU1RFRBADEh0KGVJFUVVFU1RBQkxFX1NUQVRFX1RSQUNLRUQQBCr7AQoNUmVxdWVzdFN0YXR1cxIeChpSRVFVRVNUX1NUQVRVU19VTlNQRUNJRklFRBAAEhoKFlJFUVVFU1RfU1RBVFVTX1BFTkRJTkcQARIbChdSRVFVRVNUX1NUQVRVU19BUFBST1ZFRBACEh4KGlJFUVVFU1RfU1RBVFVTX0RPV05MT0FESU5HEAMSHAoYUkVRVUVTVF9TVEFUVVNfQVZBSUxBQkxFEAQSGwoXUkVRVUVTVF9TVEFUVVNfREVDTElORUQQBRIZChVSRVFVRVNUX1NUQVRVU19GQUlMRUQQBhIbChdSRVFVRVNUX1NUQVRVU19DSE9PU0lORxAHKp0BCg5SZXF1ZXN0U2Vhc29ucxIfChtSRVFVRVNUX1NFQVNPTlNfVU5TUEVDSUZJRUQQABIXChNSRVFVRVNUX1NFQVNPTlNfQUxMEAESGQoVUkVRVUVTVF9TRUFTT05TX0ZJUlNUEAISGgoWUkVRVUVTVF9TRUFTT05TX0xBVEVTVBADEhoKFlJFUVVFU1RfU0VBU09OU19DSE9TRU4QBCqYAQoRUmVxdWVzdFNlcmllc1R5cGUSIwofUkVRVUVTVF9TRVJJRVNfVFlQRV9VTlNQRUNJRklFRBAAEiAKHFJFUVVFU1RfU0VSSUVTX1RZUEVfU1RBTkRBUkQQARIdChlSRVFVRVNUX1NFUklFU19UWVBFX0FOSU1FEAISHQoZUkVRVUVTVF9TRVJJRVNfVFlQRV9EQUlMWRADMvkMCg5SZXF1ZXN0U2VydmljZRJlChFTZWFyY2hSZXF1ZXN0YWJsZRIkLmxhdGVybmEudjEuU2VhcmNoUmVxdWVzdGFibGVSZXF1ZXN0GiUubGF0ZXJuYS52MS5TZWFyY2hSZXF1ZXN0YWJsZVJlc3BvbnNlIgOQAgESdwoXTGlzdFJlcXVlc3REZXN0aW5hdGlvbnMSKi5sYXRlcm5hLnYxLkxpc3RSZXF1ZXN0RGVzdGluYXRpb25zUmVxdWVzdBorLmxhdGVybmEudjEuTGlzdFJlcXVlc3REZXN0aW5hdGlvbnNSZXNwb25zZSIDkAIBElQKDUNyZWF0ZVJlcXVlc3QSIC5sYXRlcm5hLnYxLkNyZWF0ZVJlcXVlc3RSZXF1ZXN0GiEubGF0ZXJuYS52MS5DcmVhdGVSZXF1ZXN0UmVzcG9uc2USXAoOTGlzdE15UmVxdWVzdHMSIS5sYXRlcm5hLnYxLkxpc3RNeVJlcXVlc3RzUmVxdWVzdBoiLmxhdGVybmEudjEuTGlzdE15UmVxdWVzdHNSZXNwb25zZSIDkAIBElAKCkdldFJlcXVlc3QSHS5sYXRlcm5hLnYxLkdldFJlcXVlc3RSZXF1ZXN0Gh4ubGF0ZXJuYS52MS5HZXRSZXF1ZXN0UmVzcG9uc2UiA5ACARJUCg1DYW5jZWxSZXF1ZXN0EiAubGF0ZXJuYS52MS5DYW5jZWxSZXF1ZXN0UmVxdWVzdBohLmxhdGVybmEudjEuQ2FuY2VsUmVxdWVzdFJlc3BvbnNlEmUKEUxpc3RSZXF1ZXN0QWxidW1zEiQubGF0ZXJuYS52MS5MaXN0UmVxdWVzdEFsYnVtc1JlcXVlc3QaJS5sYXRlcm5hLnYxLkxpc3RSZXF1ZXN0QWxidW1zUmVzcG9uc2UiA5ACARJmChNDaG9vc2VSZXF1ZXN0QWxidW1zEiYubGF0ZXJuYS52MS5DaG9vc2VSZXF1ZXN0QWxidW1zUmVxdWVzdBonLmxhdGVybmEudjEuQ2hvb3NlUmVxdWVzdEFsYnVtc1Jlc3BvbnNlEloKDExpc3RSZXF1ZXN0cxIfLmxhdGVybmEudjEuTGlzdFJlcXVlc3RzUmVxdWVzdBogLmxhdGVybmEudjEuTGlzdFJlcXVlc3RzUmVzcG9uc2UiB5ACAYi1GAQSXQoOQXBwcm92ZVJlcXVlc3QSIS5sYXRlcm5hLnYxLkFwcHJvdmVSZXF1ZXN0UmVxdWVzdBoiLmxhdGVybmEudjEuQXBwcm92ZVJlcXVlc3RSZXNwb25zZSIEiLUYBBJdCg5EZWNsaW5lUmVxdWVzdBIhLmxhdGVybmEudjEuRGVjbGluZVJlcXVlc3RSZXF1ZXN0GiIubGF0ZXJuYS52MS5EZWNsaW5lUmVxdWVzdFJlc3BvbnNlIgSItRgEEl0KDURlbGV0ZVJlcXVlc3QSIC5sYXRlcm5hLnYxLkRlbGV0ZVJlcXVlc3RSZXF1ZXN0GiEubGF0ZXJuYS52MS5EZWxldGVSZXF1ZXN0UmVzcG9uc2UiB5ACAoi1GAQSaQoRR2V0UmVxdWVzdE9wdGlvbnMSJC5sYXRlcm5hLnYxLkdldFJlcXVlc3RPcHRpb25zUmVxdWVzdBolLmxhdGVybmEudjEuR2V0UmVxdWVzdE9wdGlvbnNSZXNwb25zZSIHkAIBiLUYBBJ7ChhDcmVhdGVSZXF1ZXN0RGVzdGluYXRpb24SKy5sYXRlcm5hLnYxLkNyZWF0ZVJlcXVlc3REZXN0aW5hdGlvblJlcXVlc3QaLC5sYXRlcm5hLnYxLkNyZWF0ZVJlcXVlc3REZXN0aW5hdGlvblJlc3BvbnNlIgSItRgEEnsKGFVwZGF0ZVJlcXVlc3REZXN0aW5hdGlvbhIrLmxhdGVybmEudjEuVXBkYXRlUmVxdWVzdERlc3RpbmF0aW9uUmVxdWVzdBosLmxhdGVybmEudjEuVXBkYXRlUmVxdWVzdERlc3RpbmF0aW9uUmVzcG9uc2UiBIi1GAQSfgoYRGVsZXRlUmVxdWVzdERlc3RpbmF0aW9uEisubGF0ZXJuYS52MS5EZWxldGVSZXF1ZXN0RGVzdGluYXRpb25SZXF1ZXN0GiwubGF0ZXJuYS52MS5EZWxldGVSZXF1ZXN0RGVzdGluYXRpb25SZXNwb25zZSIHkAICiLUYBEJKWkhnaXRodWIuY29tL2xhdGVybmEtcHJvamVjdC9sYXRlcm5hL2ludGVybmFsL2FwaS9nZW4vbGF0ZXJuYS92MTtsYXRlcm5hdjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_laterna_v1_options, file_laterna_v1_text]);
 
 /**
  * RequestableTitle is a search result.
@@ -430,6 +430,13 @@ export type MediaRequest = Message<"laterna.v1.MediaRequest"> & {
    * @generated from field: string subtitle = 27;
    */
   subtitle: string;
+
+  /**
+   * Artist with chosen albums: their titles, once chosen.
+   *
+   * @generated from field: repeated string album_titles = 28;
+   */
+  albumTitles: string[];
 };
 
 /**
@@ -438,6 +445,163 @@ export type MediaRequest = Message<"laterna.v1.MediaRequest"> & {
  */
 export const MediaRequestSchema: GenMessage<MediaRequest> = /*@__PURE__*/
   messageDesc(file_laterna_v1_request, 6);
+
+/**
+ * RequestAlbum is an album of a requested artist, as Lidarr has it.
+ *
+ * @generated from message laterna.v1.RequestAlbum
+ */
+export type RequestAlbum = Message<"laterna.v1.RequestAlbum"> & {
+  /**
+   * MusicBrainz ID of its release group: what ChooseRequestAlbums takes.
+   *
+   * @generated from field: string key = 1;
+   */
+  key: string;
+
+  /**
+   * @generated from field: string title = 2;
+   */
+  title: string;
+
+  /**
+   * Year it came out; 0 if unknown.
+   *
+   * @generated from field: int32 year = 3;
+   */
+  year: number;
+
+  /**
+   * Lidarr's primary type, as it names it: "Album", "EP", "Single", "Broadcast", "Other".
+   *
+   * @generated from field: string type = 4;
+   */
+  type: string;
+
+  /**
+   * Its secondary types ("Live", "Compilation", "Soundtrack"...); none for a studio release.
+   *
+   * @generated from field: repeated string secondary_types = 5;
+   */
+  secondaryTypes: string[];
+
+  /**
+   * @generated from field: int32 track_count = 6;
+   */
+  trackCount: number;
+
+  /**
+   * Lidarr already monitors it.
+   *
+   * @generated from field: bool monitored = 7;
+   */
+  monitored: boolean;
+
+  /**
+   * Every track has a file on Lidarr.
+   *
+   * @generated from field: bool available = 8;
+   */
+  available: boolean;
+
+  /**
+   * Path to append to the server's address; empty without a cover.
+   *
+   * @generated from field: string poster_url = 9;
+   */
+  posterUrl: string;
+};
+
+/**
+ * Describes the message laterna.v1.RequestAlbum.
+ * Use `create(RequestAlbumSchema)` to create a new message.
+ */
+export const RequestAlbumSchema: GenMessage<RequestAlbum> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_request, 7);
+
+/**
+ * @generated from message laterna.v1.ListRequestAlbumsRequest
+ */
+export type ListRequestAlbumsRequest = Message<"laterna.v1.ListRequestAlbumsRequest"> & {
+  /**
+   * @generated from field: string request_id = 1;
+   */
+  requestId: string;
+};
+
+/**
+ * Describes the message laterna.v1.ListRequestAlbumsRequest.
+ * Use `create(ListRequestAlbumsRequestSchema)` to create a new message.
+ */
+export const ListRequestAlbumsRequestSchema: GenMessage<ListRequestAlbumsRequest> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_request, 8);
+
+/**
+ * @generated from message laterna.v1.ListRequestAlbumsResponse
+ */
+export type ListRequestAlbumsResponse = Message<"laterna.v1.ListRequestAlbumsResponse"> & {
+  /**
+   * Oldest first.
+   *
+   * @generated from field: repeated laterna.v1.RequestAlbum albums = 1;
+   */
+  albums: RequestAlbum[];
+};
+
+/**
+ * Describes the message laterna.v1.ListRequestAlbumsResponse.
+ * Use `create(ListRequestAlbumsResponseSchema)` to create a new message.
+ */
+export const ListRequestAlbumsResponseSchema: GenMessage<ListRequestAlbumsResponse> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_request, 9);
+
+/**
+ * @generated from message laterna.v1.ChooseRequestAlbumsRequest
+ */
+export type ChooseRequestAlbumsRequest = Message<"laterna.v1.ChooseRequestAlbumsRequest"> & {
+  /**
+   * @generated from field: string request_id = 1;
+   */
+  requestId: string;
+
+  /**
+   * RequestAlbum.key of each album asked for; at least one.
+   *
+   * @generated from field: repeated string album_keys = 2;
+   */
+  albumKeys: string[];
+
+  /**
+   * Also the albums that come out later.
+   *
+   * @generated from field: bool future_albums = 3;
+   */
+  futureAlbums: boolean;
+};
+
+/**
+ * Describes the message laterna.v1.ChooseRequestAlbumsRequest.
+ * Use `create(ChooseRequestAlbumsRequestSchema)` to create a new message.
+ */
+export const ChooseRequestAlbumsRequestSchema: GenMessage<ChooseRequestAlbumsRequest> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_request, 10);
+
+/**
+ * @generated from message laterna.v1.ChooseRequestAlbumsResponse
+ */
+export type ChooseRequestAlbumsResponse = Message<"laterna.v1.ChooseRequestAlbumsResponse"> & {
+  /**
+   * @generated from field: laterna.v1.MediaRequest request = 1;
+   */
+  request?: MediaRequest | undefined;
+};
+
+/**
+ * Describes the message laterna.v1.ChooseRequestAlbumsResponse.
+ * Use `create(ChooseRequestAlbumsResponseSchema)` to create a new message.
+ */
+export const ChooseRequestAlbumsResponseSchema: GenMessage<ChooseRequestAlbumsResponse> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_request, 11);
 
 /**
  * @generated from message laterna.v1.CreateRequestRequest
@@ -465,7 +629,8 @@ export type CreateRequestRequest = Message<"laterna.v1.CreateRequestRequest"> & 
   destinationId: string;
 
   /**
-   * Series: which seasons; artist: which albums (ALL, FIRST or LATEST). Ignored for the others.
+   * Series: which seasons; artist: which albums (ALL, FIRST, LATEST, or CHOSEN to pick them once
+   * the request is approved). Ignored for the others.
    *
    * @generated from field: laterna.v1.RequestSeasons seasons = 4;
    */
@@ -489,7 +654,7 @@ export type CreateRequestRequest = Message<"laterna.v1.CreateRequestRequest"> & 
  * Use `create(CreateRequestRequestSchema)` to create a new message.
  */
 export const CreateRequestRequestSchema: GenMessage<CreateRequestRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 7);
+  messageDesc(file_laterna_v1_request, 12);
 
 /**
  * @generated from message laterna.v1.CreateRequestResponse
@@ -506,7 +671,7 @@ export type CreateRequestResponse = Message<"laterna.v1.CreateRequestResponse"> 
  * Use `create(CreateRequestResponseSchema)` to create a new message.
  */
 export const CreateRequestResponseSchema: GenMessage<CreateRequestResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 8);
+  messageDesc(file_laterna_v1_request, 13);
 
 /**
  * @generated from message laterna.v1.ListMyRequestsRequest
@@ -532,7 +697,7 @@ export type ListMyRequestsRequest = Message<"laterna.v1.ListMyRequestsRequest"> 
  * Use `create(ListMyRequestsRequestSchema)` to create a new message.
  */
 export const ListMyRequestsRequestSchema: GenMessage<ListMyRequestsRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 9);
+  messageDesc(file_laterna_v1_request, 14);
 
 /**
  * @generated from message laterna.v1.ListMyRequestsResponse
@@ -556,7 +721,7 @@ export type ListMyRequestsResponse = Message<"laterna.v1.ListMyRequestsResponse"
  * Use `create(ListMyRequestsResponseSchema)` to create a new message.
  */
 export const ListMyRequestsResponseSchema: GenMessage<ListMyRequestsResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 10);
+  messageDesc(file_laterna_v1_request, 15);
 
 /**
  * @generated from message laterna.v1.GetRequestRequest
@@ -573,7 +738,7 @@ export type GetRequestRequest = Message<"laterna.v1.GetRequestRequest"> & {
  * Use `create(GetRequestRequestSchema)` to create a new message.
  */
 export const GetRequestRequestSchema: GenMessage<GetRequestRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 11);
+  messageDesc(file_laterna_v1_request, 16);
 
 /**
  * @generated from message laterna.v1.GetRequestResponse
@@ -590,7 +755,7 @@ export type GetRequestResponse = Message<"laterna.v1.GetRequestResponse"> & {
  * Use `create(GetRequestResponseSchema)` to create a new message.
  */
 export const GetRequestResponseSchema: GenMessage<GetRequestResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 12);
+  messageDesc(file_laterna_v1_request, 17);
 
 /**
  * @generated from message laterna.v1.CancelRequestRequest
@@ -607,7 +772,7 @@ export type CancelRequestRequest = Message<"laterna.v1.CancelRequestRequest"> & 
  * Use `create(CancelRequestRequestSchema)` to create a new message.
  */
 export const CancelRequestRequestSchema: GenMessage<CancelRequestRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 13);
+  messageDesc(file_laterna_v1_request, 18);
 
 /**
  * @generated from message laterna.v1.CancelRequestResponse
@@ -620,7 +785,7 @@ export type CancelRequestResponse = Message<"laterna.v1.CancelRequestResponse"> 
  * Use `create(CancelRequestResponseSchema)` to create a new message.
  */
 export const CancelRequestResponseSchema: GenMessage<CancelRequestResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 14);
+  messageDesc(file_laterna_v1_request, 19);
 
 /**
  * @generated from message laterna.v1.ListRequestsRequest
@@ -653,7 +818,7 @@ export type ListRequestsRequest = Message<"laterna.v1.ListRequestsRequest"> & {
  * Use `create(ListRequestsRequestSchema)` to create a new message.
  */
 export const ListRequestsRequestSchema: GenMessage<ListRequestsRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 15);
+  messageDesc(file_laterna_v1_request, 20);
 
 /**
  * @generated from message laterna.v1.ListRequestsResponse
@@ -684,7 +849,7 @@ export type ListRequestsResponse = Message<"laterna.v1.ListRequestsResponse"> & 
  * Use `create(ListRequestsResponseSchema)` to create a new message.
  */
 export const ListRequestsResponseSchema: GenMessage<ListRequestsResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 16);
+  messageDesc(file_laterna_v1_request, 21);
 
 /**
  * @generated from message laterna.v1.ApproveRequestRequest
@@ -720,7 +885,7 @@ export type ApproveRequestRequest = Message<"laterna.v1.ApproveRequestRequest"> 
  * Use `create(ApproveRequestRequestSchema)` to create a new message.
  */
 export const ApproveRequestRequestSchema: GenMessage<ApproveRequestRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 17);
+  messageDesc(file_laterna_v1_request, 22);
 
 /**
  * @generated from message laterna.v1.ApproveRequestResponse
@@ -737,7 +902,7 @@ export type ApproveRequestResponse = Message<"laterna.v1.ApproveRequestResponse"
  * Use `create(ApproveRequestResponseSchema)` to create a new message.
  */
 export const ApproveRequestResponseSchema: GenMessage<ApproveRequestResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 18);
+  messageDesc(file_laterna_v1_request, 23);
 
 /**
  * @generated from message laterna.v1.DeclineRequestRequest
@@ -761,7 +926,7 @@ export type DeclineRequestRequest = Message<"laterna.v1.DeclineRequestRequest"> 
  * Use `create(DeclineRequestRequestSchema)` to create a new message.
  */
 export const DeclineRequestRequestSchema: GenMessage<DeclineRequestRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 19);
+  messageDesc(file_laterna_v1_request, 24);
 
 /**
  * @generated from message laterna.v1.DeclineRequestResponse
@@ -778,7 +943,7 @@ export type DeclineRequestResponse = Message<"laterna.v1.DeclineRequestResponse"
  * Use `create(DeclineRequestResponseSchema)` to create a new message.
  */
 export const DeclineRequestResponseSchema: GenMessage<DeclineRequestResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 20);
+  messageDesc(file_laterna_v1_request, 25);
 
 /**
  * @generated from message laterna.v1.DeleteRequestRequest
@@ -795,7 +960,7 @@ export type DeleteRequestRequest = Message<"laterna.v1.DeleteRequestRequest"> & 
  * Use `create(DeleteRequestRequestSchema)` to create a new message.
  */
 export const DeleteRequestRequestSchema: GenMessage<DeleteRequestRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 21);
+  messageDesc(file_laterna_v1_request, 26);
 
 /**
  * @generated from message laterna.v1.DeleteRequestResponse
@@ -808,7 +973,7 @@ export type DeleteRequestResponse = Message<"laterna.v1.DeleteRequestResponse"> 
  * Use `create(DeleteRequestResponseSchema)` to create a new message.
  */
 export const DeleteRequestResponseSchema: GenMessage<DeleteRequestResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 22);
+  messageDesc(file_laterna_v1_request, 27);
 
 /**
  * @generated from message laterna.v1.RequestRootFolder
@@ -832,7 +997,7 @@ export type RequestRootFolder = Message<"laterna.v1.RequestRootFolder"> & {
  * Use `create(RequestRootFolderSchema)` to create a new message.
  */
 export const RequestRootFolderSchema: GenMessage<RequestRootFolder> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 23);
+  messageDesc(file_laterna_v1_request, 28);
 
 /**
  * @generated from message laterna.v1.RequestQualityProfile
@@ -847,6 +1012,20 @@ export type RequestQualityProfile = Message<"laterna.v1.RequestQualityProfile"> 
    * @generated from field: string name = 2;
    */
   name: string;
+
+  /**
+   * A metadata profile of Lidarr: the kinds of releases it keeps, as Lidarr names them. An album is
+   * kept when its primary type ("Album", "EP", "Single"...) and each of its secondary types
+   * ("Studio" for none, "Live", "Compilation"...) are in these lists.
+   *
+   * @generated from field: repeated string primary_types = 3;
+   */
+  primaryTypes: string[];
+
+  /**
+   * @generated from field: repeated string secondary_types = 4;
+   */
+  secondaryTypes: string[];
 };
 
 /**
@@ -854,7 +1033,7 @@ export type RequestQualityProfile = Message<"laterna.v1.RequestQualityProfile"> 
  * Use `create(RequestQualityProfileSchema)` to create a new message.
  */
 export const RequestQualityProfileSchema: GenMessage<RequestQualityProfile> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 24);
+  messageDesc(file_laterna_v1_request, 29);
 
 /**
  * @generated from message laterna.v1.GetRequestOptionsRequest
@@ -873,7 +1052,7 @@ export type GetRequestOptionsRequest = Message<"laterna.v1.GetRequestOptionsRequ
  * Use `create(GetRequestOptionsRequestSchema)` to create a new message.
  */
 export const GetRequestOptionsRequestSchema: GenMessage<GetRequestOptionsRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 25);
+  messageDesc(file_laterna_v1_request, 30);
 
 /**
  * @generated from message laterna.v1.GetRequestOptionsResponse
@@ -902,7 +1081,7 @@ export type GetRequestOptionsResponse = Message<"laterna.v1.GetRequestOptionsRes
  * Use `create(GetRequestOptionsResponseSchema)` to create a new message.
  */
 export const GetRequestOptionsResponseSchema: GenMessage<GetRequestOptionsResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 26);
+  messageDesc(file_laterna_v1_request, 31);
 
 /**
  * @generated from message laterna.v1.CreateRequestDestinationRequest
@@ -951,7 +1130,7 @@ export type CreateRequestDestinationRequest = Message<"laterna.v1.CreateRequestD
  * Use `create(CreateRequestDestinationRequestSchema)` to create a new message.
  */
 export const CreateRequestDestinationRequestSchema: GenMessage<CreateRequestDestinationRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 27);
+  messageDesc(file_laterna_v1_request, 32);
 
 /**
  * @generated from message laterna.v1.CreateRequestDestinationResponse
@@ -968,7 +1147,7 @@ export type CreateRequestDestinationResponse = Message<"laterna.v1.CreateRequest
  * Use `create(CreateRequestDestinationResponseSchema)` to create a new message.
  */
 export const CreateRequestDestinationResponseSchema: GenMessage<CreateRequestDestinationResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 28);
+  messageDesc(file_laterna_v1_request, 33);
 
 /**
  * @generated from message laterna.v1.UpdateRequestDestinationRequest
@@ -1017,7 +1196,7 @@ export type UpdateRequestDestinationRequest = Message<"laterna.v1.UpdateRequestD
  * Use `create(UpdateRequestDestinationRequestSchema)` to create a new message.
  */
 export const UpdateRequestDestinationRequestSchema: GenMessage<UpdateRequestDestinationRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 29);
+  messageDesc(file_laterna_v1_request, 34);
 
 /**
  * @generated from message laterna.v1.UpdateRequestDestinationResponse
@@ -1034,7 +1213,7 @@ export type UpdateRequestDestinationResponse = Message<"laterna.v1.UpdateRequest
  * Use `create(UpdateRequestDestinationResponseSchema)` to create a new message.
  */
 export const UpdateRequestDestinationResponseSchema: GenMessage<UpdateRequestDestinationResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 30);
+  messageDesc(file_laterna_v1_request, 35);
 
 /**
  * @generated from message laterna.v1.DeleteRequestDestinationRequest
@@ -1051,7 +1230,7 @@ export type DeleteRequestDestinationRequest = Message<"laterna.v1.DeleteRequestD
  * Use `create(DeleteRequestDestinationRequestSchema)` to create a new message.
  */
 export const DeleteRequestDestinationRequestSchema: GenMessage<DeleteRequestDestinationRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 31);
+  messageDesc(file_laterna_v1_request, 36);
 
 /**
  * @generated from message laterna.v1.DeleteRequestDestinationResponse
@@ -1064,7 +1243,7 @@ export type DeleteRequestDestinationResponse = Message<"laterna.v1.DeleteRequest
  * Use `create(DeleteRequestDestinationResponseSchema)` to create a new message.
  */
 export const DeleteRequestDestinationResponseSchema: GenMessage<DeleteRequestDestinationResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_request, 32);
+  messageDesc(file_laterna_v1_request, 37);
 
 /**
  * RequestKind is what a request is for. Searches and destinations use SERIES, MOVIE, MUSIC and
@@ -1224,6 +1403,14 @@ export enum RequestStatus {
    * @generated from enum value: REQUEST_STATUS_FAILED = 6;
    */
   FAILED = 6,
+
+  /**
+   * An artist whose albums are to be chosen (RequestSeasons CHOSEN): approved, the artist is on
+   * Lidarr with nothing monitored, and the request waits for ChooseRequestAlbums.
+   *
+   * @generated from enum value: REQUEST_STATUS_CHOOSING = 7;
+   */
+  CHOOSING = 7,
 }
 
 /**
@@ -1268,7 +1455,8 @@ export enum RequestSeasons {
   LATEST = 3,
 
   /**
-   * The seasons in season_numbers (series only).
+   * The seasons in season_numbers; for an artist, albums chosen later, from the list Lidarr has
+   * once the request is approved (REQUEST_STATUS_CHOOSING).
    *
    * @generated from enum value: REQUEST_SEASONS_CHOSEN = 4;
    */
@@ -1396,7 +1584,8 @@ export const RequestService: GenService<{
     output: typeof GetRequestResponseSchema;
   },
   /**
-   * CancelRequest withdraws a pending request of the profile.
+   * CancelRequest withdraws a request of the profile that is pending, or whose albums wait to be
+   * chosen.
    *
    * @generated from rpc laterna.v1.RequestService.CancelRequest
    */
@@ -1404,6 +1593,31 @@ export const RequestService: GenService<{
     methodKind: "unary";
     input: typeof CancelRequestRequestSchema;
     output: typeof CancelRequestResponseSchema;
+  },
+  /**
+   * ListRequestAlbums lists the albums of the artist of a request, as Lidarr has them: those its
+   * metadata profile keeps. For the profile of the request or an administrator, once the artist is
+   * on Lidarr. The list may be empty for a moment after the approval, while Lidarr reads the
+   * discography.
+   *
+   * @generated from rpc laterna.v1.RequestService.ListRequestAlbums
+   */
+  listRequestAlbums: {
+    methodKind: "unary";
+    input: typeof ListRequestAlbumsRequestSchema;
+    output: typeof ListRequestAlbumsResponseSchema;
+  },
+  /**
+   * ChooseRequestAlbums says which albums a request asks for (status CHOOSING): they are monitored
+   * and searched, and the request goes on as APPROVED. By the profile of the request or an
+   * administrator.
+   *
+   * @generated from rpc laterna.v1.RequestService.ChooseRequestAlbums
+   */
+  chooseRequestAlbums: {
+    methodKind: "unary";
+    input: typeof ChooseRequestAlbumsRequestSchema;
+    output: typeof ChooseRequestAlbumsResponseSchema;
   },
   /**
    * ListRequests lists the requests of every account, newest first.

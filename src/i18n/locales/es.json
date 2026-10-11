@@ -1880,7 +1880,8 @@
       "available": "Disponible",
       "episodes": "Disponible · {{have}} de {{want}} episodios",
       "declined": "Rechazada",
-      "failed": "Fallida"
+      "failed": "Fallida",
+      "choosing": "Álbumes por elegir"
     },
     "seasons": {
       "all": "Toda la serie",
@@ -1913,14 +1914,59 @@
     "albums": {
       "all": "Toda la discografía",
       "first": "Primer álbum",
-      "latest": "Último álbum"
+      "latest": "Último álbum",
+      "pick": "Elegir…",
+      "pickHint": "Elegirás los álbumes en la lista del artista cuando se acepte la solicitud."
     },
     "placeholderMusic": "Un artista o un álbum que pedir…",
     "placeholderBook": "Un libro o un autor que pedir…",
     "listen": "Escuchar",
     "read": "Leer",
     "askHintBook": "Los libros se piden en ebook. Un administrador acepta las solicitudes, salvo si las tuyas se aceptan al momento. Aquí verás cuándo se puede leer.",
-    "askHintMusic": "Un administrador acepta las solicitudes, salvo si las tuyas se aceptan al momento. Aquí verás cuándo se puede escuchar."
+    "askHintMusic": "Un administrador acepta las solicitudes, salvo si las tuyas se aceptan al momento. Aquí verás cuándo se puede escuchar.",
+    "choose": {
+      "action": "Elegir los álbumes",
+      "actionLabel": "Elegir los álbumes de {{title}}",
+      "title": "Álbumes de {{title}}",
+      "hint": "Lidarr busca solo los álbumes marcados.",
+      "empty": "Lidarr aún está leyendo los álbumes de este artista. Vuelve a intentarlo en un momento.",
+      "kinds": "Tipos de lanzamientos",
+      "everyKind": "Todo",
+      "all": "Marcar todo",
+      "none": "Desmarcar todo",
+      "future": "También los próximos álbumes",
+      "futureHint": "Lidarr buscará cada álbum nuevo cuando salga.",
+      "here": "ya está",
+      "monitored": "ya pedido",
+      "confirm_one": "Pedir {{count}} álbum",
+      "confirm_other": "Pedir {{count}} álbumes",
+      "confirm_many": "Pedir {{count}} álbumes",
+      "done": "Álbumes de {{title}} elegidos: Lidarr los está buscando."
+    },
+    "albumKinds": {
+      "album": "Álbum",
+      "ep": "EP",
+      "single": "Sencillo",
+      "broadcast": "Emisión",
+      "other": "Otro",
+      "studio": "Estudio",
+      "live": "En directo",
+      "compilation": "Recopilatorio",
+      "soundtrack": "Banda sonora",
+      "remix": "Remix",
+      "demo": "Demo"
+    },
+    "many": {
+      "toggle": "Elegir varios",
+      "pickLabel": "Seleccionar {{title}}",
+      "ask_one": "Pedir {{count}} libro",
+      "ask_other": "Pedir {{count}} libros",
+      "ask_many": "Pedir {{count}} libros",
+      "done_one": "{{count}} solicitud enviada.",
+      "done_other": "{{count}} solicitudes enviadas.",
+      "done_many": "{{count}} solicitudes enviadas.",
+      "failed": "{{title}}: {{reason}}"
+    }
   },
   "adminRequests": {
     "title": "Solicitudes",
@@ -1933,7 +1979,8 @@
       "pending": "Pendientes",
       "active": "En curso",
       "done": "Terminadas",
-      "all": "Todas"
+      "all": "Todas",
+      "choosing": "Por elegir"
     },
     "approve": "Aceptar",
     "approveLabel": "Aceptar la solicitud de {{title}}",
@@ -1965,7 +2012,8 @@
     "qualityProfile": "Perfil de calidad",
     "rootHint": "Elige la carpeta raíz que lleva a la biblioteca: los títulos añadidos aparecen en ella tras el escaneo.",
     "metadataProfile": "Perfil de metadatos",
-    "bookHint": "LazyLibrarian decide dónde van los libros: aquí solo cuenta la biblioteca en la que aparecerán."
+    "bookHint": "LazyLibrarian decide dónde van los libros: aquí solo cuenta la biblioteca en la que aparecerán.",
+    "keeps": "Conserva: {{kinds}}"
   },
   "upcoming": {
     "today": "Hoy",

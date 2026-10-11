@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { errorMessage } from "../../api/errors";
 import { useInvalidate } from "../../api/invalidate";
-import { requestFamily, requestKind, stateLabel } from "../../features/requests/requests";
+import { AskMany } from "../../features/requests/AskMany";
+import { ChooseAlbumsDialog } from "../../features/requests/ChooseAlbums";
+import { byTitle, requestFamily, requestKind, stateLabel } from "../../features/requests/requests";
 import styles from "../../features/requests/requests.module.css";
 import { Poster, RequestDialog, RequestRow, WatchLink } from "../../features/requests/ui";
 import {
@@ -56,7 +58,12 @@ function RequestsPage() {
   const q = search.q ?? "";
   const [text, setText] = useState(q);
   const [asking, setAsking] = useState<RequestableTitle>();
+  const [choosing, setChoosing] = useState<MediaRequest>();
   const [done, setDone] = useState("");
+  // Books come in volumes: several results can be ticked and asked for at once.
+  const [many, setMany] = useState(false);
+  const [picked, setPicked] = useState<ReadonlySet<string>>(new Set());
+  const [failures, setFailures] = useState<string[]>([]);
 
   // The address follows what is typed, once typing pauses: each search asks Sonarr or Radarr.
   useEffect(() => {
@@ -87,6 +94,16 @@ function RequestsPage() {
     onSuccess: () => invalidate(RequestService),
   });
   const quota = account && !account.isAdmin ? account.requestQuota : 0;
+  const books = kind?.value === RequestKind.BOOK;
+  const found = results.data?.results ?? [];
+  const shown = books && many ? byTitle(found) : found;
+  const ticked = shown.filter((r) => r.state === RequestableState.REQUESTABLE && picked.has(r.externalKey));
+  const toggle = (key: string) =>
+    setPicked((before) => {
+      const next = new Set(before);
+      if (!next.delete(key)) next.add(key);
+      return next;
+    });
 
   const asked = (r: MediaRequest) => {
     setAsking(undefined);
@@ -155,24 +172,57 @@ function RequestsPage() {
             </form>
           </search>
           <Status className={styles.ok} message={done} />
+          {failures.length > 0 && (
+            <ul className={styles.failures} role="alert">
+              {failures.map((f) => (
+                <li key={f}>{f}</li>
+              ))}
+            </ul>
+          )}
           {results.isError && <Alert>{errorMessage(results.error)}</Alert>}
           {results.isFetching && !results.data && <p className={styles.muted}>{t("requests.searching")}</p>}
           {q.length >= 2 && results.data?.results.length === 0 && (
             <p className={styles.empty}>{t("requests.noResult", { q })}</p>
           )}
-          {(results.data?.results.length ?? 0) > 0 && (
+          {books && found.length > 1 && (
+            <div className={styles.choices}>
+              <button
+                type="button"
+                className={styles.choice}
+                aria-pressed={many}
+                onClick={() => setMany((on) => !on)}
+              >
+                {t("requests.many.toggle")}
+              </button>
+            </div>
+          )}
+          {shown.length > 0 && (
             <ul className={styles.results}>
-              {results.data?.results.map((r) => (
+              {shown.map((r) => (
                 <Result
-                  key={`${r.kind}-${r.externalId}`}
+                  key={`${r.kind}-${r.externalId}-${r.externalKey}`}
                   title={r}
+                  picked={books && many ? picked.has(r.externalKey) : undefined}
+                  onPick={() => toggle(r.externalKey)}
                   onAsk={() => {
                     setDone("");
+                    setFailures([]);
                     setAsking(r);
                   }}
                 />
               ))}
             </ul>
+          )}
+          {books && many && ticked.length > 0 && (
+            <AskMany
+              titles={ticked}
+              destinations={destinations.data?.destinations.filter((d) => d.kind === RequestKind.BOOK) ?? []}
+              onDone={(sent, failed) => {
+                setPicked(new Set());
+                setFailures(failed);
+                setDone(sent > 0 ? t("requests.many.done", { count: sent }) : "");
+              }}
+            />
           )}
         </section>
       )}
@@ -186,7 +236,16 @@ function RequestsPage() {
           <ul className={styles.rows}>
             {requests.map((r) => (
               <RequestRow key={r.id} request={r}>
-                {r.status === RequestStatus.PENDING && (
+                {r.status === RequestStatus.CHOOSING && (
+                  <Button
+                    variant="primary"
+                    aria-label={t("requests.choose.actionLabel", { title: r.title })}
+                    onClick={() => setChoosing(r)}
+                  >
+                    {t("requests.choose.action")}
+                  </Button>
+                )}
+                {(r.status === RequestStatus.PENDING || r.status === RequestStatus.CHOOSING) && (
                   <Button
                     disabled={cancel.isPending}
                     aria-label={t("requests.withdrawLabel", { title: r.title })}
@@ -219,12 +278,35 @@ function RequestsPage() {
           onDone={asked}
         />
       )}
+      {choosing && (
+        <ChooseAlbumsDialog
+          request={choosing}
+          onClose={() => setChoosing(undefined)}
+          onDone={(r) => {
+            setChoosing(undefined);
+            setDone(t("requests.choose.done", { title: r.title }));
+          }}
+        />
+      )}
     </div>
   );
 }
 
-/** A search result: poster, title, a few words, and what can be done with it. */
-function Result({ title: r, onAsk }: { title: RequestableTitle; onAsk: () => void }) {
+/**
+ * A search result: poster, title, a few words, and what can be done with it. picked is set while
+ * several results are being ticked: a box then takes the place of the button.
+ */
+function Result({
+  title: r,
+  picked,
+  onPick,
+  onAsk,
+}: {
+  title: RequestableTitle;
+  picked?: boolean;
+  onPick: () => void;
+  onAsk: () => void;
+}) {
   const { t } = useTranslation();
   const meta = [
     // An artist and an album look alike in a music search: their kind tells them apart.
@@ -243,7 +325,17 @@ function Result({ title: r, onAsk }: { title: RequestableTitle; onAsk: () => voi
         {meta.length > 0 && <span className={styles.muted}>{meta.join(" · ")}</span>}
         {r.overview && <span className={styles.overview}>{r.overview}</span>}
         <span className={styles.resultAction}>
-          {r.state === RequestableState.REQUESTABLE ? (
+          {r.state === RequestableState.REQUESTABLE && picked !== undefined ? (
+            <label className={styles.pick}>
+              <input
+                type="checkbox"
+                checked={picked}
+                aria-label={t("requests.many.pickLabel", { title: r.title })}
+                onChange={onPick}
+              />
+              {t("requests.ask")}
+            </label>
+          ) : r.state === RequestableState.REQUESTABLE ? (
             <Button variant="primary" onClick={onAsk} aria-label={t("requests.askLabel", { title: r.title })}>
               {t("requests.ask")}
             </Button>

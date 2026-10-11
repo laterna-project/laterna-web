@@ -217,9 +217,13 @@ const albumChoices = [
   { value: RequestSeasons.ALL, label: "requests.albums.all" },
   { value: RequestSeasons.FIRST, label: "requests.albums.first" },
   { value: RequestSeasons.LATEST, label: "requests.albums.latest" },
+  { value: RequestSeasons.CHOSEN, label: "requests.albums.pick" },
 ] as const;
 
-/** Which albums of an artist: every one, the first or the latest. */
+/**
+ * Which albums of an artist: every one, the first, the latest, or some of them. Those are picked
+ * later: Lidarr only lists the albums of an artist once it has it.
+ */
 export function AlbumPicker({
   albums,
   onChange,
@@ -244,6 +248,7 @@ export function AlbumPicker({
           </button>
         ))}
       </div>
+      {albums === RequestSeasons.CHOSEN && <p className={styles.muted}>{t("requests.albums.pickHint")}</p>}
     </fieldset>
   );
 }
@@ -299,7 +304,8 @@ export function RequestDialog({
     },
   });
   const series = title.kind === RequestKind.SERIES;
-  const ready = !(seasons === RequestSeasons.CHOSEN && numbers.length === 0);
+  // Chosen seasons are named here; chosen albums are picked once the request is approved.
+  const ready = !(series && seasons === RequestSeasons.CHOSEN && numbers.length === 0);
   const submit = (e: FormEvent) => {
     e.preventDefault();
     create.mutate({
@@ -307,7 +313,7 @@ export function RequestDialog({
       ...(byNumber(title.kind) ? { externalId: title.externalId } : { externalKey: title.externalKey }),
       destinationId: destinations.length > 1 ? destination : "",
       seasons,
-      seasonNumbers: seasons === RequestSeasons.CHOSEN ? numbers : [],
+      seasonNumbers: series && seasons === RequestSeasons.CHOSEN ? numbers : [],
     });
   };
   return (
