@@ -350,3 +350,78 @@
     width: 100%;
   }
 }
+
+/* The albums of an artist, to tick. */
+.albums {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  max-height: 40vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.album {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-muted);
+}
+
+.album[data-taken] {
+  color: var(--color-ink-muted);
+}
+
+.album input,
+.pick input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-accent);
+}
+
+.albumText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.albumTitle {
+  font-weight: var(--weight-strong);
+}
+
+/* Several results asked for at once: a box on each, and the bar that asks for them. */
+.pick {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--weight-strong);
+}
+
+.many {
+  position: sticky;
+  bottom: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-overlay);
+}
+
+.failures {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-danger-text);
+  font-size: var(--text-sm);
+}

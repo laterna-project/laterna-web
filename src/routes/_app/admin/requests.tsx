@@ -7,6 +7,7 @@ import { useInvalidate } from "../../../api/invalidate";
 import styles from "../../../features/admin/admin.module.css";
 import { RequestDestinations } from "../../../features/admin/RequestDestinations";
 import { AdminHead } from "../../../features/admin/ui";
+import { ChooseAlbumsDialog } from "../../../features/requests/ChooseAlbums";
 import { decidable, requestFamily, seasonsLabel } from "../../../features/requests/requests";
 import requestStyles from "../../../features/requests/requests.module.css";
 import { DestinationPicker, RequestRow } from "../../../features/requests/ui";
@@ -23,10 +24,12 @@ import { Alert } from "../../../ui/Alert";
 import { Button } from "../../../ui/Button";
 import { Dialog } from "../../../ui/Dialog";
 
-type Filter = "pending" | "active" | "done" | "all";
+type Filter = "pending" | "choosing" | "active" | "done" | "all";
 
 const filters = [
   { id: "pending", label: "adminRequests.filters.pending", statuses: [RequestStatus.PENDING] },
+  // Artists whose albums wait to be chosen, by their profile or by an administrator.
+  { id: "choosing", label: "adminRequests.filters.choosing", statuses: [RequestStatus.CHOOSING] },
   {
     id: "active",
     label: "adminRequests.filters.active",
@@ -66,6 +69,7 @@ function AdminRequests() {
   const invalidate = useInvalidate();
   const refresh = () => invalidate(RequestService, ActivityService);
   const [approving, setApproving] = useState<MediaRequest>();
+  const [choosing, setChoosing] = useState<MediaRequest>();
   const [declining, setDeclining] = useState<MediaRequest>();
   const remove = useMutation(RequestService.method.deleteRequest, { onSuccess: refresh });
 
@@ -118,6 +122,16 @@ function AdminRequests() {
                   </button>
                 </>
               )}
+              {r.status === RequestStatus.CHOOSING && (
+                <button
+                  type="button"
+                  className={styles.dark}
+                  aria-label={t("requests.choose.actionLabel", { title: r.title })}
+                  onClick={() => setChoosing(r)}
+                >
+                  {t("requests.choose.action")}
+                </button>
+              )}
               {!decidable(r.status) && (
                 <button
                   type="button"
@@ -141,6 +155,13 @@ function AdminRequests() {
         )}
       </section>
       <RequestDestinations />
+      {choosing && (
+        <ChooseAlbumsDialog
+          request={choosing}
+          onClose={() => setChoosing(undefined)}
+          onDone={() => setChoosing(undefined)}
+        />
+      )}
       {approving && (
         <ApproveDialog
           request={approving}

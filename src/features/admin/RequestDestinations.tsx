@@ -17,6 +17,7 @@ import { Alert } from "../../ui/Alert";
 import { Button } from "../../ui/Button";
 import { Dialog } from "../../ui/Dialog";
 import { Field } from "../../ui/Field";
+import { profileKinds } from "../requests/albums";
 import { requestKind, seriesTypes } from "../requests/requests";
 import styles from "./admin.module.css";
 
@@ -178,6 +179,8 @@ function DestinationDialog({
   const library = libraries.some((l) => l.id === libraryId) ? libraryId : (libraries[0]?.id ?? "");
   const root = roots.some((r) => r.path === rootFolder) ? rootFolder : (roots[0]?.path ?? "");
   const profile = profiles.some((p) => p.id === profileId) ? profileId : (profiles[0]?.id ?? 0);
+  const chosenProfile = metadataProfiles.find((p) => p.id === metadataId) ?? metadataProfiles[0];
+  const keeps = chosenProfile ? profileKinds(chosenProfile) : "";
   const metadata = metadataProfiles.some((p) => p.id === metadataId)
     ? metadataId
     : (metadataProfiles[0]?.id ?? 0);
@@ -311,6 +314,8 @@ function DestinationDialog({
                     </option>
                   ))}
                 </select>
+                {/* What the profile keeps is what a request can list. */}
+                {keeps && <span className={styles.muted}>{t("adminRequests.keeps", { kinds: keeps })}</span>}
               </label>
             )}
           </div>
