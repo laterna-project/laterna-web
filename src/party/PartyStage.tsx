@@ -8,7 +8,7 @@ import type { PartyItem } from "../gen/laterna/v1/party_pb";
 import { PartyStatus } from "../gen/laterna/v1/party_pb";
 import { PlaybackService, type StartPlaybackResponse } from "../gen/laterna/v1/playback_pb";
 import i18n from "../i18n";
-import { detectDeviceProfile } from "../player/deviceProfile";
+import { playerProfile } from "../player/deviceProfile";
 import { attachStream, SubtitleLayer } from "../player/media";
 import { stopOnUnload } from "../player/stop";
 import { Artwork } from "../ui/Artwork";
@@ -50,7 +50,7 @@ export function PartyStage({ session }: { session: PartySession }) {
   const { state, party, me, canControl, control, report, serverNow, reactions } = session;
   const transport = useTransport();
   const playback = useMemo(() => createClient(PlaybackService, transport), [transport]);
-  const device = useMemo(detectDeviceProfile, []);
+  const device = useMemo(playerProfile, []);
   const video = useRef<HTMLVideoElement>(null);
   const layer = useRef<SubtitleLayer | null>(null);
   const [stream, setStream] = useState<StartPlaybackResponse | null>(null);
