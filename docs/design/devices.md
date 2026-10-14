@@ -117,8 +117,14 @@ MediaSource), which hls.js needs. On iPhone, the player hands HLS streams to Saf
 other browsers.
 
 A page cannot go full screen on iPhone: the full screen button opens Safari's own player, with its
-controls. WebVTT subtitles show there; styled ASS subtitles (JASSUB) only outside full screen. On
-phones and tablets that can, full screen turns a wide video sideways.
+controls. That player shows only the subtitles of the stream: a `<track>` added by the page, or
+JASSUB drawing over the video, does not reach it. So on iPhone the video players
+(`playerProfile`) always ask the server for an HLS stream, even for a file Safari could play
+directly, and play its master playlist (`master_url`, server 0.12 or later), which carries every
+text subtitle as a WebVTT rendition. The subtitle chosen is the text track of the stream labelled
+with its rendition, shown inside the page and in full screen alike. Styled ASS subtitles come in
+their WebVTT version (dialogue only), and image subtitles (PGS) are burned in. On phones and
+tablets that can, full screen turns a wide video sideways.
 
 iOS shows no install prompt: the app is added from the Share menu. Safari erases the data of a
 site not visited for seven days, the session included; an app added to the Home Screen keeps it.
