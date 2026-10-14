@@ -71,6 +71,18 @@ export function detectDeviceProfile(): DeviceProfile {
   });
 }
 
+/**
+ * Profile of the video players. Where the browser plays HLS itself (iPhone), it shows only the
+ * subtitles of the stream, in its own fullscreen too: they come as the WebVTT renditions of the
+ * master playlist (StartPlaybackResponse.masterUrl), so ASS is shown in its WebVTT version, and the
+ * video always goes through HLS, even a file the browser could play directly.
+ */
+export function playerProfile(): DeviceProfile {
+  const profile = detectDeviceProfile();
+  if (!nativeHls()) return profile;
+  return withoutDirectVideo(create(DeviceProfileSchema, { ...profile, subtitleFormats: ["vtt"] }));
+}
+
 /** Does the browser itself pick the audio track of a file played directly (Safari)? */
 export function canSwitchAudioTracks(): boolean {
   return typeof HTMLMediaElement !== "undefined" && "audioTracks" in HTMLMediaElement.prototype;

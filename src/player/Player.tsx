@@ -28,7 +28,7 @@ import { Artwork } from "../ui/Artwork";
 import { Icon } from "../ui/Icon";
 import { Status } from "../ui/Status";
 import { usePanelFocus } from "../ui/usePanelFocus";
-import { canSwitchAudioTracks, detectDeviceProfile, withoutDirectVideo } from "./deviceProfile";
+import { canSwitchAudioTracks, playerProfile, withoutDirectVideo } from "./deviceProfile";
 import { canFullscreen, enterFullscreen, exitFullscreen } from "./fullscreen";
 import {
   autoSkippable,
@@ -101,7 +101,7 @@ export function Player(p: PlayerProps) {
   const transport = useTransport();
   const playback = useMemo(() => createClient(PlaybackService, transport), [transport]);
   const { t } = useTranslation();
-  const profile = useMemo(detectDeviceProfile, []);
+  const profile = useMemo(playerProfile, []);
   const navigate = useNavigate();
 
   const stage = useRef<HTMLDivElement>(null);
@@ -224,8 +224,10 @@ export function Player(p: PlayerProps) {
         detach.current = attachStream(v, s, {
           start: from,
           autoplay: true,
+          // In a stream (HLS), the server only put the track asked for.
           onLoaded: () => {
-            if (switchAudio) selectAudioTrack(v, target, s.audioStreamIndex);
+            if (switchAudio && s.method === PlaybackMethod.DIRECT)
+              selectAudioTrack(v, target, s.audioStreamIndex);
           },
           onFatal: setError,
         });
