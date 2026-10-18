@@ -16,7 +16,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/playback.proto.
  */
 export const file_laterna_v1_playback: GenFile = /*@__PURE__*/
-  fileDesc("ChlsYXRlcm5hL3YxL3BsYXliYWNrLnByb3RvEgpsYXRlcm5hLnYxIokBCg1EZXZpY2VQcm9maWxlEhIKCmNvbnRhaW5lcnMYASADKAkSJwoFdmlkZW8YAiADKAsyGC5sYXRlcm5hLnYxLlZpZGVvU3VwcG9ydBIUCgxhdWRpb19jb2RlY3MYAyADKAkSCwoDaGxzGAQgASgIEhgKEHN1YnRpdGxlX2Zvcm1hdHMYBSADKAkiQQoMVmlkZW9TdXBwb3J0Eg0KBWNvZGVjGAEgASgJEhUKDW1heF9iaXRfZGVwdGgYAiABKAUSCwoDaGRyGAMgASgIIuUBChRTdGFydFBsYXliYWNrUmVxdWVzdBIPCgdpdGVtX2lkGAEgASgJEg8KB2ZpbGVfaWQYAiABKAkSHwoSYXVkaW9fc3RyZWFtX2luZGV4GAMgASgFSACIAQESKQoGZGV2aWNlGAQgASgLMhkubGF0ZXJuYS52MS5EZXZpY2VQcm9maWxlEhsKDnN1YnRpdGxlX2luZGV4GAUgASgFSAGIAQESGAoQcHJvZmlsZV9zdWJ0aXRsZRgGIAEoCEIVChNfYXVkaW9fc3RyZWFtX2luZGV4QhEKD19zdWJ0aXRsZV9pbmRleCLcBQoVU3RhcnRQbGF5YmFja1Jlc3BvbnNlEhIKCnNlc3Npb25faWQYASABKAkSKgoGbWV0aG9kGAIgASgOMhoubGF0ZXJuYS52MS5QbGF5YmFja01ldGhvZBILCgN1cmwYAyABKAkSDwoHZmlsZV9pZBgEIAEoCRIfChJhdWRpb19zdHJlYW1faW5kZXgYBSABKAVIAIgBARIrCghkdXJhdGlvbhgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIyCg9yZXN1bWVfcG9zaXRpb24YByABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SDwoHcmVhc29ucxgIIAMoCRIYChB2aWRlb190cmFuc2NvZGVkGAkgASgIEhgKEGF1ZGlvX3RyYW5zY29kZWQYCiABKAgSFQoNdmlkZW9fZW5jb2RlchgLIAEoCRIsCglzdWJ0aXRsZXMYDCADKAsyGS5sYXRlcm5hLnYxLlN1YnRpdGxlVHJhY2sSHwoFZm9udHMYDSADKAsyEC5sYXRlcm5hLnYxLkZvbnQSFwoPc3VidGl0bGVzX3JlYWR5GA4gASgIEiIKFWJ1cm5lZF9zdWJ0aXRsZV9pbmRleBgPIAEoBUgBiAEBEhsKDnN1YnRpdGxlX2luZGV4GBQgASgFSAKIAQESJgoMcmVhc29uX3RleHRzGBMgAygLMhAubGF0ZXJuYS52MS5UZXh0EhQKDHRvbmVfbWFwcGluZxgQIAEoCRILCgNncHUYESABKAgSDwoHZGVjb2RlchgVIAEoCRIqCghzZWdtZW50cxgSIAMoCzIYLmxhdGVybmEudjEuTWVkaWFTZWdtZW50EhIKCm1hc3Rlcl91cmwYFiABKAlCFQoTX2F1ZGlvX3N0cmVhbV9pbmRleEIYChZfYnVybmVkX3N1YnRpdGxlX2luZGV4QhEKD19zdWJ0aXRsZV9pbmRleCLmAQoNU3VidGl0bGVUcmFjaxINCgVpbmRleBgBIAEoBRIQCghsYW5ndWFnZRgCIAEoCRINCgV0aXRsZRgDIAEoCRINCgVjb2RlYxgEIAEoCRIPCgdkZWZhdWx0GAUgASgIEg4KBmZvcmNlZBgGIAEoCBIYChBoZWFyaW5nX2ltcGFpcmVkGAcgASgIEhAKCGV4dGVybmFsGAggASgIEg0KBWltYWdlGAkgASgIEicKBWZpbGVzGAogAygLMhgubGF0ZXJuYS52MS5TdWJ0aXRsZUZpbGUSEQoJcmVuZGl0aW9uGAsgASgJIisKDFN1YnRpdGxlRmlsZRIOCgZmb3JtYXQYASABKAkSCwoDdXJsGAIgASgJIjAKBEZvbnQSDQoFbmFtZXMYASADKAkSCwoDdXJsGAIgASgJEgwKBHNpemUYAyABKAMiWAoVUmVwb3J0UHJvZ3Jlc3NSZXF1ZXN0EhIKCnNlc3Npb25faWQYASABKAkSKwoIcG9zaXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iGAoWUmVwb3J0UHJvZ3Jlc3NSZXNwb25zZSJWChNTdG9wUGxheWJhY2tSZXF1ZXN0EhIKCnNlc3Npb25faWQYASABKAkSKwoIcG9zaXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iFgoUU3RvcFBsYXliYWNrUmVzcG9uc2UiNwoTR2V0U3VidGl0bGVzUmVxdWVzdBISCgpzZXNzaW9uX2lkGAEgASgJEgwKBHdhaXQYAiABKAgifgoUR2V0U3VidGl0bGVzUmVzcG9uc2USLAoJc3VidGl0bGVzGAEgAygLMhkubGF0ZXJuYS52MS5TdWJ0aXRsZVRyYWNrEh8KBWZvbnRzGAIgAygLMhAubGF0ZXJuYS52MS5Gb250EhcKD3N1YnRpdGxlc19yZWFkeRgDIAEoCCquAQoOUGxheWJhY2tNZXRob2QSHwobUExBWUJBQ0tfTUVUSE9EX1VOU1BFQ0lGSUVEEAASGgoWUExBWUJBQ0tfTUVUSE9EX0RJUkVDVBABEh0KGVBMQVlCQUNLX01FVEhPRF9ITFNfUkVNVVgQAhIhCh1QTEFZQkFDS19NRVRIT0RfSExTX1RSQU5TQ09ERRADEh0KGVBMQVlCQUNLX01FVEhPRF9DT05WRVJURUQQBDL1AgoPUGxheWJhY2tTZXJ2aWNlElQKDVN0YXJ0UGxheWJhY2sSIC5sYXRlcm5hLnYxLlN0YXJ0UGxheWJhY2tSZXF1ZXN0GiEubGF0ZXJuYS52MS5TdGFydFBsYXliYWNrUmVzcG9uc2USXAoOUmVwb3J0UHJvZ3Jlc3MSIS5sYXRlcm5hLnYxLlJlcG9ydFByb2dyZXNzUmVxdWVzdBoiLmxhdGVybmEudjEuUmVwb3J0UHJvZ3Jlc3NSZXNwb25zZSIDkAICElYKDFN0b3BQbGF5YmFjaxIfLmxhdGVybmEudjEuU3RvcFBsYXliYWNrUmVxdWVzdBogLmxhdGVybmEudjEuU3RvcFBsYXliYWNrUmVzcG9uc2UiA5ACAhJWCgxHZXRTdWJ0aXRsZXMSHy5sYXRlcm5hLnYxLkdldFN1YnRpdGxlc1JlcXVlc3QaIC5sYXRlcm5hLnYxLkdldFN1YnRpdGxlc1Jlc3BvbnNlIgOQAgFCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_google_protobuf_duration, file_laterna_v1_catalog, file_laterna_v1_text]);
+  fileDesc("ChlsYXRlcm5hL3YxL3BsYXliYWNrLnByb3RvEgpsYXRlcm5hLnYxIokBCg1EZXZpY2VQcm9maWxlEhIKCmNvbnRhaW5lcnMYASADKAkSJwoFdmlkZW8YAiADKAsyGC5sYXRlcm5hLnYxLlZpZGVvU3VwcG9ydBIUCgxhdWRpb19jb2RlY3MYAyADKAkSCwoDaGxzGAQgASgIEhgKEHN1YnRpdGxlX2Zvcm1hdHMYBSADKAkiQQoMVmlkZW9TdXBwb3J0Eg0KBWNvZGVjGAEgASgJEhUKDW1heF9iaXRfZGVwdGgYAiABKAUSCwoDaGRyGAMgASgIIv8BChRTdGFydFBsYXliYWNrUmVxdWVzdBIPCgdpdGVtX2lkGAEgASgJEg8KB2ZpbGVfaWQYAiABKAkSHwoSYXVkaW9fc3RyZWFtX2luZGV4GAMgASgFSACIAQESKQoGZGV2aWNlGAQgASgLMhkubGF0ZXJuYS52MS5EZXZpY2VQcm9maWxlEhsKDnN1YnRpdGxlX2luZGV4GAUgASgFSAGIAQESGAoQcHJvZmlsZV9zdWJ0aXRsZRgGIAEoCBIYChBtYXhfYml0cmF0ZV9rYnBzGAcgASgFQhUKE19hdWRpb19zdHJlYW1faW5kZXhCEQoPX3N1YnRpdGxlX2luZGV4ItIGChVTdGFydFBsYXliYWNrUmVzcG9uc2USEgoKc2Vzc2lvbl9pZBgBIAEoCRIqCgZtZXRob2QYAiABKA4yGi5sYXRlcm5hLnYxLlBsYXliYWNrTWV0aG9kEgsKA3VybBgDIAEoCRIPCgdmaWxlX2lkGAQgASgJEh8KEmF1ZGlvX3N0cmVhbV9pbmRleBgFIAEoBUgAiAEBEisKCGR1cmF0aW9uGAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjIKD3Jlc3VtZV9wb3NpdGlvbhgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIPCgdyZWFzb25zGAggAygJEhgKEHZpZGVvX3RyYW5zY29kZWQYCSABKAgSGAoQYXVkaW9fdHJhbnNjb2RlZBgKIAEoCBIVCg12aWRlb19lbmNvZGVyGAsgASgJEiwKCXN1YnRpdGxlcxgMIAMoCzIZLmxhdGVybmEudjEuU3VidGl0bGVUcmFjaxIfCgVmb250cxgNIAMoCzIQLmxhdGVybmEudjEuRm9udBIXCg9zdWJ0aXRsZXNfcmVhZHkYDiABKAgSIgoVYnVybmVkX3N1YnRpdGxlX2luZGV4GA8gASgFSAGIAQESGwoOc3VidGl0bGVfaW5kZXgYFCABKAVIAogBARImCgxyZWFzb25fdGV4dHMYEyADKAsyEC5sYXRlcm5hLnYxLlRleHQSFAoMdG9uZV9tYXBwaW5nGBAgASgJEgsKA2dwdRgRIAEoCBIPCgdkZWNvZGVyGBUgASgJEioKCHNlZ21lbnRzGBIgAygLMhgubGF0ZXJuYS52MS5NZWRpYVNlZ21lbnQSEgoKbWFzdGVyX3VybBgWIAEoCRIaChJiaXRyYXRlX2xpbWl0X2ticHMYFyABKAUSPAoUYml0cmF0ZV9saW1pdF9zb3VyY2UYGCABKA4yHi5sYXRlcm5hLnYxLkJpdHJhdGVMaW1pdFNvdXJjZRIaChJ2aWRlb19iaXRyYXRlX2ticHMYGSABKAVCFQoTX2F1ZGlvX3N0cmVhbV9pbmRleEIYChZfYnVybmVkX3N1YnRpdGxlX2luZGV4QhEKD19zdWJ0aXRsZV9pbmRleCLmAQoNU3VidGl0bGVUcmFjaxINCgVpbmRleBgBIAEoBRIQCghsYW5ndWFnZRgCIAEoCRINCgV0aXRsZRgDIAEoCRINCgVjb2RlYxgEIAEoCRIPCgdkZWZhdWx0GAUgASgIEg4KBmZvcmNlZBgGIAEoCBIYChBoZWFyaW5nX2ltcGFpcmVkGAcgASgIEhAKCGV4dGVybmFsGAggASgIEg0KBWltYWdlGAkgASgIEicKBWZpbGVzGAogAygLMhgubGF0ZXJuYS52MS5TdWJ0aXRsZUZpbGUSEQoJcmVuZGl0aW9uGAsgASgJIisKDFN1YnRpdGxlRmlsZRIOCgZmb3JtYXQYASABKAkSCwoDdXJsGAIgASgJIjYKBEZvbnQSDQoFbmFtZXMYASADKAkSCwoDdXJsGAIgASgJEhIKCnNpemVfYnl0ZXMYAyABKAMiiAEKFVJlcG9ydFByb2dyZXNzUmVxdWVzdBISCgpzZXNzaW9uX2lkGAEgASgJEisKCHBvc2l0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhsKDnN1YnRpdGxlX2luZGV4GAMgASgFSACIAQFCEQoPX3N1YnRpdGxlX2luZGV4IhgKFlJlcG9ydFByb2dyZXNzUmVzcG9uc2UihgEKE1N0b3BQbGF5YmFja1JlcXVlc3QSEgoKc2Vzc2lvbl9pZBgBIAEoCRIrCghwb3NpdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIbCg5zdWJ0aXRsZV9pbmRleBgDIAEoBUgAiAEBQhEKD19zdWJ0aXRsZV9pbmRleCIWChRTdG9wUGxheWJhY2tSZXNwb25zZSI3ChNHZXRTdWJ0aXRsZXNSZXF1ZXN0EhIKCnNlc3Npb25faWQYASABKAkSDAoEd2FpdBgCIAEoCCJ+ChRHZXRTdWJ0aXRsZXNSZXNwb25zZRIsCglzdWJ0aXRsZXMYASADKAsyGS5sYXRlcm5hLnYxLlN1YnRpdGxlVHJhY2sSHwoFZm9udHMYAiADKAsyEC5sYXRlcm5hLnYxLkZvbnQSFwoPc3VidGl0bGVzX3JlYWR5GAMgASgIKq4BCg5QbGF5YmFja01ldGhvZBIfChtQTEFZQkFDS19NRVRIT0RfVU5TUEVDSUZJRUQQABIaChZQTEFZQkFDS19NRVRIT0RfRElSRUNUEAESHQoZUExBWUJBQ0tfTUVUSE9EX0hMU19SRU1VWBACEiEKHVBMQVlCQUNLX01FVEhPRF9ITFNfVFJBTlNDT0RFEAMSHQoZUExBWUJBQ0tfTUVUSE9EX0NPTlZFUlRFRBAEKnwKEkJpdHJhdGVMaW1pdFNvdXJjZRIkCiBCSVRSQVRFX0xJTUlUX1NPVVJDRV9VTlNQRUNJRklFRBAAEh8KG0JJVFJBVEVfTElNSVRfU09VUkNFX0NMSUVOVBABEh8KG0JJVFJBVEVfTElNSVRfU09VUkNFX1JFTU9URRACMvUCCg9QbGF5YmFja1NlcnZpY2USVAoNU3RhcnRQbGF5YmFjaxIgLmxhdGVybmEudjEuU3RhcnRQbGF5YmFja1JlcXVlc3QaIS5sYXRlcm5hLnYxLlN0YXJ0UGxheWJhY2tSZXNwb25zZRJcCg5SZXBvcnRQcm9ncmVzcxIhLmxhdGVybmEudjEuUmVwb3J0UHJvZ3Jlc3NSZXF1ZXN0GiIubGF0ZXJuYS52MS5SZXBvcnRQcm9ncmVzc1Jlc3BvbnNlIgOQAgISVgoMU3RvcFBsYXliYWNrEh8ubGF0ZXJuYS52MS5TdG9wUGxheWJhY2tSZXF1ZXN0GiAubGF0ZXJuYS52MS5TdG9wUGxheWJhY2tSZXNwb25zZSIDkAICElYKDEdldFN1YnRpdGxlcxIfLmxhdGVybmEudjEuR2V0U3VidGl0bGVzUmVxdWVzdBogLmxhdGVybmEudjEuR2V0U3VidGl0bGVzUmVzcG9uc2UiA5ACAUJKWkhnaXRodWIuY29tL2xhdGVybmEtcHJvamVjdC9sYXRlcm5hL2ludGVybmFsL2FwaS9nZW4vbGF0ZXJuYS92MTtsYXRlcm5hdjFiBnByb3RvMw", [file_google_protobuf_duration, file_laterna_v1_catalog, file_laterna_v1_text]);
 
 /**
  * DeviceProfile is what the device can play. Each client builds it from its own capabilities (a
@@ -120,7 +120,10 @@ export type StartPlaybackRequest = Message<"laterna.v1.StartPlaybackRequest"> & 
   fileId: string;
 
   /**
-   * Audio stream (MediaStream.index); unset means the default one.
+   * Audio stream (MediaStream.index). Unset means the one the profile's preferences pick: in an
+   * episode, one in the language last chosen in its series; then one in Profile.audio_language;
+   * then the file's default. A stream named here is the viewer's choice: in an episode, it becomes
+   * the language of its series.
    *
    * @generated from field: optional int32 audio_stream_index = 3;
    */
@@ -141,14 +144,26 @@ export type StartPlaybackRequest = Message<"laterna.v1.StartPlaybackRequest"> & 
   subtitleIndex?: number | undefined;
 
   /**
-   * When subtitle_index is unset, start with the subtitle the profile's preferences pick
-   * (Profile.subtitle_mode, Profile.subtitle_language): StartPlaybackResponse.subtitle_index says
-   * which. Like a requested one, it is burned in if the device cannot render it. A client sets it
-   * when a playback starts, and leaves it out when it reopens one after a choice of the viewer.
+   * When subtitle_index is unset, start with the subtitle the profile's preferences pick: in an
+   * episode, the subtitle last shown in its series (or none, if subtitles were turned off there,
+   * ReportProgressRequest.subtitle_index); otherwise Profile.subtitle_mode and
+   * Profile.subtitle_language. StartPlaybackResponse.subtitle_index says which. Like a requested
+   * one, it is burned in if the device cannot render it. A client sets it when a playback starts,
+   * and leaves it out when it reopens one after a choice of the viewer.
    *
    * @generated from field: bool profile_subtitle = 6;
    */
   profileSubtitle: boolean;
+
+  /**
+   * Highest bitrate of the stream: the quality the viewer picked, or what the connection carries;
+   * 0 means no limit. Outside the local network the server may lower it
+   * (Settings.remote_max_bitrate_kbps, Account.remote_max_bitrate_kbps). A file above the limit
+   * has its video re-encoded at a lower bitrate, and its picture scaled down to fit it.
+   *
+   * @generated from field: int32 max_bitrate_kbps = 7;
+   */
+  maxBitrateKbps: number;
 };
 
 /**
@@ -315,6 +330,27 @@ export type StartPlaybackResponse = Message<"laterna.v1.StartPlaybackResponse"> 
    * @generated from field: string master_url = 22;
    */
   masterUrl: string;
+
+  /**
+   * Bitrate limit applied, in kbit/s: the lowest of the client's and, outside the local network,
+   * the server's; 0 means none. The file plays as it is when it stays below it.
+   *
+   * @generated from field: int32 bitrate_limit_kbps = 23;
+   */
+  bitrateLimitKbps: number;
+
+  /**
+   * @generated from field: laterna.v1.BitrateLimitSource bitrate_limit_source = 24;
+   */
+  bitrateLimitSource: BitrateLimitSource;
+
+  /**
+   * Bitrate the re-encoded video aims at under that limit, in kbit/s; 0 if the video is copied or
+   * re-encoded without a limit.
+   *
+   * @generated from field: int32 video_bitrate_kbps = 25;
+   */
+  videoBitrateKbps: number;
 };
 
 /**
@@ -458,9 +494,9 @@ export type Font = Message<"laterna.v1.Font"> & {
   url: string;
 
   /**
-   * @generated from field: int64 size = 3;
+   * @generated from field: int64 size_bytes = 3;
    */
-  size: bigint;
+  sizeBytes: bigint;
 };
 
 /**
@@ -483,6 +519,15 @@ export type ReportProgressRequest = Message<"laterna.v1.ReportProgressRequest"> 
    * @generated from field: google.protobuf.Duration position = 2;
    */
   position?: Duration | undefined;
+
+  /**
+   * Subtitle shown now (SubtitleTrack.index), -1 for none; unset if the client does not say. In an
+   * episode, the last one reported is remembered for its series: the next episodes start with a
+   * subtitle in the same language, or with none (StartPlaybackRequest.profile_subtitle).
+   *
+   * @generated from field: optional int32 subtitle_index = 3;
+   */
+  subtitleIndex?: number | undefined;
 };
 
 /**
@@ -520,6 +565,13 @@ export type StopPlaybackRequest = Message<"laterna.v1.StopPlaybackRequest"> & {
    * @generated from field: google.protobuf.Duration position = 2;
    */
   position?: Duration | undefined;
+
+  /**
+   * Subtitle shown when stopping, as in ReportProgressRequest.subtitle_index.
+   *
+   * @generated from field: optional int32 subtitle_index = 3;
+   */
+  subtitleIndex?: number | undefined;
 };
 
 /**
@@ -638,6 +690,41 @@ export enum PlaybackMethod {
  */
 export const PlaybackMethodSchema: GenEnum<PlaybackMethod> = /*@__PURE__*/
   enumDesc(file_laterna_v1_playback, 0);
+
+/**
+ * BitrateLimitSource says where the bitrate limit of a playback comes from.
+ *
+ * @generated from enum laterna.v1.BitrateLimitSource
+ */
+export enum BitrateLimitSource {
+  /**
+   * No limit.
+   *
+   * @generated from enum value: BITRATE_LIMIT_SOURCE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * The client's (StartPlaybackRequest.max_bitrate_kbps).
+   *
+   * @generated from enum value: BITRATE_LIMIT_SOURCE_CLIENT = 1;
+   */
+  CLIENT = 1,
+
+  /**
+   * The server's for a connection from outside the local network:
+   * Settings.remote_max_bitrate_kbps or Account.remote_max_bitrate_kbps, the lower one.
+   *
+   * @generated from enum value: BITRATE_LIMIT_SOURCE_REMOTE = 2;
+   */
+  REMOTE = 2,
+}
+
+/**
+ * Describes the enum laterna.v1.BitrateLimitSource.
+ */
+export const BitrateLimitSourceSchema: GenEnum<BitrateLimitSource> = /*@__PURE__*/
+  enumDesc(file_laterna_v1_playback, 1);
 
 /**
  * PlaybackService opens and follows the playbacks of the picked profile. The client says what the

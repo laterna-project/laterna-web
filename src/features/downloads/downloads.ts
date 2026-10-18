@@ -124,7 +124,7 @@ export function stateLabel(d: Download): string {
 /** "High · 1.2 GB · transcoded · 1 h 32 min"; expected size (≈) until the file is ready. */
 export function downloadLine(d: Download): string {
   const ready = d.state === DownloadState.READY;
-  const bytes = ready && d.size > 0n ? d.size : d.estimatedSize;
+  const bytes = ready && d.sizeBytes > 0n ? d.sizeBytes : d.estimatedSizeBytes;
   const size = bytes > 0n ? `${ready ? "" : "≈ "}${fileSize(bytes)}` : "";
   const length = seconds(d.duration);
   const minutes = Math.round(length / 60);
@@ -171,7 +171,7 @@ export function versionLabel(f: MediaFile): string {
       ? [resolutionLabel(video.width, video.height), codecName(video.codec)].filter(Boolean).join(" ")
       : "",
     f.container.toUpperCase(),
-    f.size > 0n ? fileSize(f.size) : "",
+    f.sizeBytes > 0n ? fileSize(f.sizeBytes) : "",
   ]
     .filter(Boolean)
     .join(" · ");

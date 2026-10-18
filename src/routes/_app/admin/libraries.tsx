@@ -9,7 +9,7 @@ import { libraryCounts, libraryKind } from "../../../features/admin/admin";
 import styles from "../../../features/admin/admin.module.css";
 import { LibraryEditor } from "../../../features/admin/LibraryEditor";
 import { AdminHead } from "../../../features/admin/ui";
-import { languageName, relativeTime } from "../../../features/catalog/format";
+import { relativeTime } from "../../../features/catalog/format";
 import { CatalogService } from "../../../gen/laterna/v1/catalog_pb";
 import type { LibraryScanned } from "../../../gen/laterna/v1/events_pb";
 import { HomeService } from "../../../gen/laterna/v1/home_pb";
@@ -151,12 +151,7 @@ function Libraries() {
                 <span className={styles.libCardName}>{l.name}</span>
                 <span className={styles.libCardCounts}>{libraryCounts(l.kind, counts)}</span>
                 <span className={styles.libCardPaths}>
-                  {[
-                    l.paths.join(", "),
-                    l.kind === LibraryKind.PHOTOS
-                      ? t("adminLibraries.exif")
-                      : languageName(l.language.slice(0, 2)),
-                  ]
+                  {[l.paths.join(", "), l.kind === LibraryKind.PHOTOS ? t("adminLibraries.exif") : ""]
                     .filter(Boolean)
                     .join(" · ")}
                 </span>

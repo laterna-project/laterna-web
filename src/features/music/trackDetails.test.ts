@@ -21,7 +21,7 @@ describe("track information", () => {
     });
     const file = create(MediaFileSchema, {
       container: "flac",
-      size: 33_500_000n,
+      sizeBytes: 33_500_000n,
       duration: create(DurationSchema, { seconds: 193n }),
       streams: [audio],
     });

@@ -11,7 +11,7 @@ import { file_google_protobuf_descriptor } from "@bufbuild/protobuf/wkt";
  * Describes the file laterna/v1/options.proto.
  */
 export const file_laterna_v1_options: GenFile = /*@__PURE__*/
-  fileDesc("ChhsYXRlcm5hL3YxL29wdGlvbnMucHJvdG8SCmxhdGVybmEudjEqbQoGQWNjZXNzEhYKEkFDQ0VTU19VTlNQRUNJRklFRBAAEhEKDUFDQ0VTU19QVUJMSUMQARISCg5BQ0NFU1NfQUNDT1VOVBACEhIKDkFDQ0VTU19QUk9GSUxFEAMSEAoMQUNDRVNTX0FETUlOEAQ6TAoGYWNjZXNzEh4uZ29vZ2xlLnByb3RvYnVmLk1ldGhvZE9wdGlvbnMY0YYDIAEoDjISLmxhdGVybmEudjEuQWNjZXNzUgZhY2Nlc3NCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_google_protobuf_descriptor]);
+  fileDesc("ChhsYXRlcm5hL3YxL29wdGlvbnMucHJvdG8SCmxhdGVybmEudjEqbQoGQWNjZXNzEhYKEkFDQ0VTU19VTlNQRUNJRklFRBAAEhEKDUFDQ0VTU19QVUJMSUMQARISCg5BQ0NFU1NfQUNDT1VOVBACEhIKDkFDQ0VTU19QUk9GSUxFEAMSEAoMQUNDRVNTX0FETUlOEAQqUQoJQXBpVG9rZW5zEhoKFkFQSV9UT0tFTlNfVU5TUEVDSUZJRUQQABITCg9BUElfVE9LRU5TX1JFQUQQARITCg9BUElfVE9LRU5TX05PTkUQAjpMCgZhY2Nlc3MSHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxjRhgMgASgOMhIubGF0ZXJuYS52MS5BY2Nlc3NSBmFjY2VzczpWCgphcGlfdG9rZW5zEh4uZ29vZ2xlLnByb3RvYnVmLk1ldGhvZE9wdGlvbnMY0oYDIAEoDjIVLmxhdGVybmEudjEuQXBpVG9rZW5zUglhcGlUb2tlbnNCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_google_protobuf_descriptor]);
 
 /**
  * Access says who may call a method. The server enforces it before running the call. A method
@@ -64,10 +64,57 @@ export const AccessSchema: GenEnum<Access> = /*@__PURE__*/
   enumDesc(file_laterna_v1_options, 0);
 
 /**
+ * ApiTokens says which API tokens may call a method (AuthService.CreateApiToken). A token acts as
+ * the profile that created it, within the method's access level.
+ *
+ * @generated from enum laterna.v1.ApiTokens
+ */
+export enum ApiTokens {
+  /**
+   * Default value: any token for a method without side effects (idempotency_level
+   * NO_SIDE_EFFECTS), only a full one otherwise.
+   *
+   * @generated from enum value: API_TOKENS_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * Any token, read-only ones too: a method that only reads although its idempotency level cannot
+   * say so (a stream).
+   *
+   * @generated from enum value: API_TOKENS_READ = 1;
+   */
+  READ = 1,
+
+  /**
+   * No token: the method manages the credentials of the account (password, passkeys, sessions,
+   * tokens, device logins, accounts, single sign-on) or the profile of the session. A leaked token
+   * can neither lock its owner out nor hand out more access.
+   *
+   * @generated from enum value: API_TOKENS_NONE = 2;
+   */
+  NONE = 2,
+}
+
+/**
+ * Describes the enum laterna.v1.ApiTokens.
+ */
+export const ApiTokensSchema: GenEnum<ApiTokens> = /*@__PURE__*/
+  enumDesc(file_laterna_v1_options, 1);
+
+/**
  * Access level the method requires.
  *
  * @generated from extension: laterna.v1.Access access = 50001;
  */
 export const access: GenExtension<MethodOptions, Access> = /*@__PURE__*/
   extDesc(file_laterna_v1_options, 0);
+
+/**
+ * API tokens the method accepts.
+ *
+ * @generated from extension: laterna.v1.ApiTokens api_tokens = 50002;
+ */
+export const api_tokens: GenExtension<MethodOptions, ApiTokens> = /*@__PURE__*/
+  extDesc(file_laterna_v1_options, 1);
 

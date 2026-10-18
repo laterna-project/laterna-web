@@ -10,7 +10,7 @@ import { currentDevice, deviceName, saveDeviceName } from "../api/device";
 import { errorMessage } from "../api/errors";
 import { sessionToken } from "../api/session";
 import { LanguagePicker } from "../features/account/LanguagePicker";
-import { libraryKinds, metadataLanguages, metadataTag } from "../features/admin/admin";
+import { libraryKinds } from "../features/admin/admin";
 import { BrowseButton } from "../features/admin/FolderPicker";
 import { AuthService } from "../gen/laterna/v1/auth_pb";
 import { IntegrationKind, IntegrationService } from "../gen/laterna/v1/integration_pb";
@@ -168,8 +168,6 @@ function LibrariesStep() {
   // Folders typed in, each with a stable key for the list.
   const [paths, setPaths] = useState([{ key: 0, value: "" }]);
   const [nextKey, setNextKey] = useState(1);
-  // Metadata in the interface language by default.
-  const [language, setLanguage] = useState(metadataTag);
   const add = useMutation(LibraryService.method.createLibrary, {
     onSuccess: async () => {
       setName("");
@@ -184,7 +182,6 @@ function LibrariesStep() {
         name,
         kind,
         paths: paths.map((p) => p.value.trim()).filter(Boolean),
-        language,
       }),
     );
   };
@@ -264,16 +261,6 @@ function LibrariesStep() {
               {t("libraryEditor.addFolder")}
             </button>
           </div>
-          <label className={styles.select}>
-            <span className={styles.legend}>{t("libraryEditor.language")}</span>
-            <select value={language} onChange={(e) => setLanguage(e.target.value)}>
-              {metadataLanguages().map((l) => (
-                <option key={l.value} value={l.value}>
-                  {l.label}
-                </option>
-              ))}
-            </select>
-          </label>
           {add.isError && <Alert>{errorMessage(add.error)}</Alert>}
           <Button type="submit" variant="primary" disabled={add.isPending}>
             {t("setup.addLibrary")}

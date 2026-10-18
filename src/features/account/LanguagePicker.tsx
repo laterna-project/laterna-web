@@ -11,7 +11,7 @@ import styles from "./language.module.css";
  * Interface language on this device (docs/design/i18n.md): each language is named in its own
  * language, and the label also says "language", for whoever cannot read the language shown.
  * `inline`: label and list on one line, for the entry screens. `profile`: the language is also
- * saved on the chosen profile (ProfileService.SetLanguage), which takes it to its other devices as
+ * saved on the chosen profile (ProfileService.UpdatePreferences), which takes it to its other devices as
  * long as they have not chosen one.
  */
 export function LanguagePicker({
@@ -26,7 +26,7 @@ export function LanguagePicker({
   const { t } = useTranslation();
   const id = useId();
   const invalidate = useInvalidate();
-  const save = useMutation(ProfileService.method.setLanguage, {
+  const save = useMutation(ProfileService.method.updatePreferences, {
     onSuccess: () => invalidate(AuthService, ProfileService),
   });
   const choose = async (lang: Language) => {

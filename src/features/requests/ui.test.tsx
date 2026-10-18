@@ -142,7 +142,7 @@ describe("music request", () => {
       kind: RequestKind.ALBUM,
       externalKey: "rg-discovery",
       title: "Discovery",
-      network: "Daft Punk",
+      subtitle: "Daft Punk",
     });
     render(
       <Providers transport={transport}>

@@ -589,7 +589,6 @@
     "browse": "Browse the server's folders for folder {{n}}",
     "removeFolder": "Remove folder {{n}}",
     "addFolder": "+ Add a folder",
-    "language": "Metadata language",
     "note": "Laterna never modifies a file. A folder that becomes unreachable doesn't empty the library; a missing file is forgotten after the configured delay.",
     "savedScan": "Library saved; a scan has started.",
     "saved": "Library saved.",

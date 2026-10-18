@@ -622,7 +622,6 @@
     "browse": "Explorar las carpetas del servidor para la carpeta {{n}}",
     "removeFolder": "Quitar la carpeta {{n}}",
     "addFolder": "+ Añadir una carpeta",
-    "language": "Idioma de los metadatos",
     "note": "Laterna nunca modifica un archivo. Una carpeta que deja de estar accesible no vacía la biblioteca; un archivo que falta se olvida tras el plazo configurado.",
     "savedScan": "Biblioteca guardada; se ha iniciado un análisis.",
     "saved": "Biblioteca guardada.",

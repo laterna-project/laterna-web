@@ -87,7 +87,7 @@ export function useParty(partyId: string) {
                 setTimeout(() => setReactions((list) => list.filter((r) => r.key !== key)), 4000);
               }
             } else if (u.case === "ended") {
-              setEnded(serverText(res.endedText) || u.value || i18n.t("party.ended"));
+              setEnded(serverText(u.value.reasonText) || u.value.reason || i18n.t("party.ended"));
               return;
             }
           }

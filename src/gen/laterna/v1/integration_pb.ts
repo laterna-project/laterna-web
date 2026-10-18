@@ -105,7 +105,7 @@ export type Integration = Message<"laterna.v1.Integration"> & {
 
   /**
    * The instance writes Kodi metadata and takes a webhook and a refresh (Sonarr, Radarr, Lidarr):
-   * the fields above and ConfigureIntegration apply. False for LazyLibrarian.
+   * the fields above and ConfigureIntegration apply. False for LazyLibrarian and Bazarr.
    *
    * @generated from field: bool manages_metadata = 14;
    */
