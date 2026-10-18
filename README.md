@@ -7,8 +7,8 @@ The client talks to the server through its API only: a Protobuf contract served 
 [ConnectRPC](https://connectrpc.com/). The TypeScript client is generated from that contract, so
 the web app does what the server does, no more.
 
-> The project is young. Until version 1.0, a minor version may change what the client needs from
-> the server; the release notes say which server versions work.
+> The server's API is stable since Laterna 1.0. This client is still 0.x: a minor version may need
+> a newer server for what that server adds; the table below and the release notes say which work.
 
 ## Server versions
 
@@ -75,7 +75,7 @@ The contract and the server's text catalogs are taken from the server version pi
 
 ## Installing
 
-**With the server's Docker image**, version 0.2.0 or later, there is nothing to install: the image
+**With the server's Docker image**, there is nothing to install: the image
 includes the client. Open the server's address (http://localhost:8096 on the server itself).
 
 **On other installations of the server**, download the archive of a release
