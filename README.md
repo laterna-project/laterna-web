@@ -14,6 +14,7 @@ the web app does what the server does, no more.
 
 | Laterna Web | Laterna server |
 |---|---|
+| 0.10.x | 1.0.x and the next 1.x; not the 0.x servers, whose contract had other names |
 | 0.9.x | 0.12.x; 0.11.x without subtitles in the iPhone's own player; older ones as 0.8.x |
 | 0.8.x | 0.11.x; 0.10.x without the choice of an artist's albums; older ones as 0.7.x |
 | 0.7.x | 0.10.x; 0.9.x without notifications, "Coming soon" and subtitle search; older ones as 0.6.x |
