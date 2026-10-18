@@ -7,7 +7,7 @@
   "engines": {
     "node": ">=22"
   },
-  "laternaServer": "v1.0.0-rc.1",
+  "laternaServer": "v1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
