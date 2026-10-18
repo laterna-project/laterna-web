@@ -144,7 +144,7 @@ function Logs() {
               {(files.data?.files ?? []).map((f) => (
                 <li key={f.name} className={styles.fileRow}>
                   <span className={styles.libName}>{f.name}</span>
-                  <span className={styles.muted}>{fileSize(f.size)}</span>
+                  <span className={styles.muted}>{fileSize(f.sizeBytes)}</span>
                   <button
                     type="button"
                     className={styles.iconButton}

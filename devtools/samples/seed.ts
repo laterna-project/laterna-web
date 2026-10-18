@@ -124,7 +124,7 @@ async function librariesAndScan(): Promise<void> {
       ids.push(found.id);
       continue;
     }
-    const res = await svc.createLibrary({ name: l.name, kind: l.kind, paths: [path], language: "en-US" });
+    const res = await svc.createLibrary({ name: l.name, kind: l.kind, paths: [path] });
     if (res.library) ids.push(res.library.id);
     log(`Library "${l.name}" created: ${path}`);
   }

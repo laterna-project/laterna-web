@@ -115,7 +115,7 @@ export function BookPanel({ bookId }: { bookId: string }) {
               />
               <span className={styles.formatName}>{f.book ? formatName(f.book.format) : f.version}</span>
               <span className={styles.formatHow}>{f.book ? layoutLabel(f.book.layout) : ""}</span>
-              <span className={styles.formatSize}>{fileSize(f.size)}</span>
+              <span className={styles.formatSize}>{fileSize(f.sizeBytes)}</span>
             </label>
           ))}
         </fieldset>

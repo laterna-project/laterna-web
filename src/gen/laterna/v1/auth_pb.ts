@@ -17,7 +17,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/auth.proto.
  */
 export const file_laterna_v1_auth: GenFile = /*@__PURE__*/
-  fileDesc("ChVsYXRlcm5hL3YxL2F1dGgucHJvdG8SCmxhdGVybmEudjEiUAoGRGV2aWNlEgwKBG5hbWUYASABKAkSDgoGY2xpZW50GAIgASgJEhYKDmNsaWVudF92ZXJzaW9uGAMgASgJEhAKCHBsYXRmb3JtGAQgASgJIr0CCgdBY2NvdW50EgoKAmlkGAEgASgJEhAKCHVzZXJuYW1lGAIgASgJEhAKCGlzX2FkbWluGAMgASgIEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhAKCGRpc2FibGVkGAUgASgIEiwKCWxpYnJhcmllcxgGIAEoCzIZLmxhdGVybmEudjEuTGlicmFyeUFjY2VzcxItCghwYXJlbnRhbBgHIAEoCzIbLmxhdGVybmEudjEuUGFyZW50YWxDb250cm9sEhYKDmRlbnlfZG93bmxvYWRzGAggASgIEhUKDWRlbnlfcmVxdWVzdHMYCSABKAgSHQoVYXV0b19hcHByb3ZlX3JlcXVlc3RzGAogASgIEhUKDXJlcXVlc3RfcXVvdGEYCyABKAUiMQoNTGlicmFyeUFjY2VzcxILCgNhbGwYASABKAgSEwoLbGlicmFyeV9pZHMYAiADKAkiuQIKB1Nlc3Npb24SCgoCaWQYASABKAkSJAoHYWNjb3VudBgCIAEoCzITLmxhdGVybmEudjEuQWNjb3VudBIpCgdwcm9maWxlGAMgASgLMhMubGF0ZXJuYS52MS5Qcm9maWxlSACIAQESIgoGZGV2aWNlGAQgASgLMhIubGF0ZXJuYS52MS5EZXZpY2USLgoKY3JlYXRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoMbGFzdF91c2VkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpleHBpcmVzX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIPCgdjdXJyZW50GAggASgIQgoKCF9wcm9maWxlIlYKDFNldHVwUmVxdWVzdBIQCgh1c2VybmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCRIiCgZkZXZpY2UYAyABKAsyEi5sYXRlcm5hLnYxLkRldmljZSJECg1TZXR1cFJlc3BvbnNlEiQKB3Nlc3Npb24YASABKAsyEy5sYXRlcm5hLnYxLlNlc3Npb24SDQoFdG9rZW4YAiABKAkiVgoMTG9naW5SZXF1ZXN0EhAKCHVzZXJuYW1lGAEgASgJEhAKCHBhc3N3b3JkGAIgASgJEiIKBmRldmljZRgDIAEoCzISLmxhdGVybmEudjEuRGV2aWNlIkQKDUxvZ2luUmVzcG9uc2USJAoHc2Vzc2lvbhgBIAEoCzITLmxhdGVybmEudjEuU2Vzc2lvbhINCgV0b2tlbhgCIAEoCSIPCg1Mb2dvdXRSZXF1ZXN0IhAKDkxvZ291dFJlc3BvbnNlIhMKEUdldFNlc3Npb25SZXF1ZXN0IjoKEkdldFNlc3Npb25SZXNwb25zZRIkCgdzZXNzaW9uGAEgASgLMhMubGF0ZXJuYS52MS5TZXNzaW9uIhUKE0xpc3RTZXNzaW9uc1JlcXVlc3QiPQoUTGlzdFNlc3Npb25zUmVzcG9uc2USJQoIc2Vzc2lvbnMYASADKAsyEy5sYXRlcm5hLnYxLlNlc3Npb24iKgoUUmV2b2tlU2Vzc2lvblJlcXVlc3QSEgoKc2Vzc2lvbl9pZBgBIAEoCSIXChVSZXZva2VTZXNzaW9uUmVzcG9uc2UiRwoVQ2hhbmdlUGFzc3dvcmRSZXF1ZXN0EhgKEGN1cnJlbnRfcGFzc3dvcmQYASABKAkSFAoMbmV3X3Bhc3N3b3JkGAIgASgJIhgKFkNoYW5nZVBhc3N3b3JkUmVzcG9uc2UiPQoXU3RhcnREZXZpY2VMb2dpblJlcXVlc3QSIgoGZGV2aWNlGAEgASgLMhIubGF0ZXJuYS52MS5EZXZpY2Ui3AEKGFN0YXJ0RGV2aWNlTG9naW5SZXNwb25zZRITCgtkZXZpY2VfY29kZRgBIAEoCRIRCgl1c2VyX2NvZGUYAiABKAkSLgoKZXhwaXJlc19hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoIaW50ZXJ2YWwYBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SGAoQdmVyaWZpY2F0aW9uX3VybBgFIAEoCRIhChl2ZXJpZmljYXRpb25fdXJsX2NvbXBsZXRlGAYgASgJIi0KFlBvbGxEZXZpY2VMb2dpblJlcXVlc3QSEwoLZGV2aWNlX2NvZGUYASABKAkiqAEKF1BvbGxEZXZpY2VMb2dpblJlc3BvbnNlEisKBXN0YXRlGAEgASgOMhwubGF0ZXJuYS52MS5EZXZpY2VMb2dpblN0YXRlEiQKB3Nlc3Npb24YAiABKAsyEy5sYXRlcm5hLnYxLlNlc3Npb24SDQoFdG9rZW4YAyABKAkSKwoIaW50ZXJ2YWwYBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iKgoVR2V0RGV2aWNlTG9naW5SZXF1ZXN0EhEKCXVzZXJfY29kZRgBIAEoCSKoAQoWR2V0RGV2aWNlTG9naW5SZXNwb25zZRIiCgZkZXZpY2UYASABKAsyEi5sYXRlcm5hLnYxLkRldmljZRIKCgJpcBgCIAEoCRIuCgpjcmVhdGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpleHBpcmVzX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJGChlBcHByb3ZlRGV2aWNlTG9naW5SZXF1ZXN0EhEKCXVzZXJfY29kZRgBIAEoCRIWCg5zZWxlY3RfcHJvZmlsZRgCIAEoCCIcChpBcHByb3ZlRGV2aWNlTG9naW5SZXNwb25zZSIrChZEZW55RGV2aWNlTG9naW5SZXF1ZXN0EhEKCXVzZXJfY29kZRgBIAEoCSIZChdEZW55RGV2aWNlTG9naW5SZXNwb25zZSKFAQoHUGFzc2tleRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEi4KCmNyZWF0ZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjAKDGxhc3RfdXNlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiIQofQmVnaW5QYXNza2V5UmVnaXN0cmF0aW9uUmVxdWVzdCJRCiBCZWdpblBhc3NrZXlSZWdpc3RyYXRpb25SZXNwb25zZRIXCg9yZWdpc3RyYXRpb25faWQYASABKAkSFAoMb3B0aW9uc19qc29uGAIgASgJImIKIEZpbmlzaFBhc3NrZXlSZWdpc3RyYXRpb25SZXF1ZXN0EhcKD3JlZ2lzdHJhdGlvbl9pZBgBIAEoCRIXCg9jcmVkZW50aWFsX2pzb24YAiABKAkSDAoEbmFtZRgDIAEoCSJJCiFGaW5pc2hQYXNza2V5UmVnaXN0cmF0aW9uUmVzcG9uc2USJAoHcGFzc2tleRgBIAEoCzITLmxhdGVybmEudjEuUGFzc2tleSIVChNMaXN0UGFzc2tleXNSZXF1ZXN0Ij0KFExpc3RQYXNza2V5c1Jlc3BvbnNlEiUKCHBhc3NrZXlzGAEgAygLMhMubGF0ZXJuYS52MS5QYXNza2V5IioKFERlbGV0ZVBhc3NrZXlSZXF1ZXN0EhIKCnBhc3NrZXlfaWQYASABKAkiFwoVRGVsZXRlUGFzc2tleVJlc3BvbnNlIhoKGEJlZ2luUGFzc2tleUxvZ2luUmVxdWVzdCJDChlCZWdpblBhc3NrZXlMb2dpblJlc3BvbnNlEhAKCGxvZ2luX2lkGAEgASgJEhQKDG9wdGlvbnNfanNvbhgCIAEoCSJqChlGaW5pc2hQYXNza2V5TG9naW5SZXF1ZXN0EhAKCGxvZ2luX2lkGAEgASgJEhcKD2NyZWRlbnRpYWxfanNvbhgCIAEoCRIiCgZkZXZpY2UYAyABKAsyEi5sYXRlcm5hLnYxLkRldmljZSJRChpGaW5pc2hQYXNza2V5TG9naW5SZXNwb25zZRIkCgdzZXNzaW9uGAEgASgLMhMubGF0ZXJuYS52MS5TZXNzaW9uEg0KBXRva2VuGAIgASgJIjsKFVN0YXJ0T2lkY0xvZ2luUmVxdWVzdBIiCgZkZXZpY2UYASABKAsyEi5sYXRlcm5hLnYxLkRldmljZSKhAQoWU3RhcnRPaWRjTG9naW5SZXNwb25zZRIQCghsb2dpbl9pZBgBIAEoCRIZChFhdXRob3JpemF0aW9uX3VybBgCIAEoCRIrCghpbnRlcnZhbBgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhItCgpleHBpcmVzX2luGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIigKFFBvbGxPaWRjTG9naW5SZXF1ZXN0EhAKCGxvZ2luX2lkGAEgASgJIrABChVQb2xsT2lkY0xvZ2luUmVzcG9uc2USKQoFc3RhdGUYASABKA4yGi5sYXRlcm5hLnYxLk9pZGNMb2dpblN0YXRlEiQKB3Nlc3Npb24YAiABKAsyEy5sYXRlcm5hLnYxLlNlc3Npb24SDQoFdG9rZW4YAyABKAkSDwoHbWVzc2FnZRgEIAEoCRImCgxtZXNzYWdlX3RleHQYBSABKAsyEC5sYXRlcm5hLnYxLlRleHQqtgEKEERldmljZUxvZ2luU3RhdGUSIgoeREVWSUNFX0xPR0lOX1NUQVRFX1VOU1BFQ0lGSUVEEAASHgoaREVWSUNFX0xPR0lOX1NUQVRFX1BFTkRJTkcQARIfChtERVZJQ0VfTE9HSU5fU1RBVEVfQVBQUk9WRUQQAhIdChlERVZJQ0VfTE9HSU5fU1RBVEVfREVOSUVEEAMSHgoaREVWSUNFX0xPR0lOX1NUQVRFX0VYUElSRUQQBCqqAQoOT2lkY0xvZ2luU3RhdGUSIAocT0lEQ19MT0dJTl9TVEFURV9VTlNQRUNJRklFRBAAEhwKGE9JRENfTE9HSU5fU1RBVEVfUEVORElORxABEh0KGU9JRENfTE9HSU5fU1RBVEVfQVBQUk9WRUQQAhIbChdPSURDX0xPR0lOX1NUQVRFX0RFTklFRBADEhwKGE9JRENfTE9HSU5fU1RBVEVfRVhQSVJFRBAEMv8OCgtBdXRoU2VydmljZRJCCgVTZXR1cBIYLmxhdGVybmEudjEuU2V0dXBSZXF1ZXN0GhkubGF0ZXJuYS52MS5TZXR1cFJlc3BvbnNlIgSItRgBEkIKBUxvZ2luEhgubGF0ZXJuYS52MS5Mb2dpblJlcXVlc3QaGS5sYXRlcm5hLnYxLkxvZ2luUmVzcG9uc2UiBIi1GAESRQoGTG9nb3V0EhkubGF0ZXJuYS52MS5Mb2dvdXRSZXF1ZXN0GhoubGF0ZXJuYS52MS5Mb2dvdXRSZXNwb25zZSIEiLUYAhJUCgpHZXRTZXNzaW9uEh0ubGF0ZXJuYS52MS5HZXRTZXNzaW9uUmVxdWVzdBoeLmxhdGVybmEudjEuR2V0U2Vzc2lvblJlc3BvbnNlIgeQAgGItRgCEloKDExpc3RTZXNzaW9ucxIfLmxhdGVybmEudjEuTGlzdFNlc3Npb25zUmVxdWVzdBogLmxhdGVybmEudjEuTGlzdFNlc3Npb25zUmVzcG9uc2UiB5ACAYi1GAISWgoNUmV2b2tlU2Vzc2lvbhIgLmxhdGVybmEudjEuUmV2b2tlU2Vzc2lvblJlcXVlc3QaIS5sYXRlcm5hLnYxLlJldm9rZVNlc3Npb25SZXNwb25zZSIEiLUYAhJdCg5DaGFuZ2VQYXNzd29yZBIhLmxhdGVybmEudjEuQ2hhbmdlUGFzc3dvcmRSZXF1ZXN0GiIubGF0ZXJuYS52MS5DaGFuZ2VQYXNzd29yZFJlc3BvbnNlIgSItRgCEmMKEFN0YXJ0RGV2aWNlTG9naW4SIy5sYXRlcm5hLnYxLlN0YXJ0RGV2aWNlTG9naW5SZXF1ZXN0GiQubGF0ZXJuYS52MS5TdGFydERldmljZUxvZ2luUmVzcG9uc2UiBIi1GAESYAoPUG9sbERldmljZUxvZ2luEiIubGF0ZXJuYS52MS5Qb2xsRGV2aWNlTG9naW5SZXF1ZXN0GiMubGF0ZXJuYS52MS5Qb2xsRGV2aWNlTG9naW5SZXNwb25zZSIEiLUYARJdCg5HZXREZXZpY2VMb2dpbhIhLmxhdGVybmEudjEuR2V0RGV2aWNlTG9naW5SZXF1ZXN0GiIubGF0ZXJuYS52MS5HZXREZXZpY2VMb2dpblJlc3BvbnNlIgSItRgCEmkKEkFwcHJvdmVEZXZpY2VMb2dpbhIlLmxhdGVybmEudjEuQXBwcm92ZURldmljZUxvZ2luUmVxdWVzdBomLmxhdGVybmEudjEuQXBwcm92ZURldmljZUxvZ2luUmVzcG9uc2UiBIi1GAISYAoPRGVueURldmljZUxvZ2luEiIubGF0ZXJuYS52MS5EZW55RGV2aWNlTG9naW5SZXF1ZXN0GiMubGF0ZXJuYS52MS5EZW55RGV2aWNlTG9naW5SZXNwb25zZSIEiLUYAhJ7ChhCZWdpblBhc3NrZXlSZWdpc3RyYXRpb24SKy5sYXRlcm5hLnYxLkJlZ2luUGFzc2tleVJlZ2lzdHJhdGlvblJlcXVlc3QaLC5sYXRlcm5hLnYxLkJlZ2luUGFzc2tleVJlZ2lzdHJhdGlvblJlc3BvbnNlIgSItRgCEn4KGUZpbmlzaFBhc3NrZXlSZWdpc3RyYXRpb24SLC5sYXRlcm5hLnYxLkZpbmlzaFBhc3NrZXlSZWdpc3RyYXRpb25SZXF1ZXN0Gi0ubGF0ZXJuYS52MS5GaW5pc2hQYXNza2V5UmVnaXN0cmF0aW9uUmVzcG9uc2UiBIi1GAISWgoMTGlzdFBhc3NrZXlzEh8ubGF0ZXJuYS52MS5MaXN0UGFzc2tleXNSZXF1ZXN0GiAubGF0ZXJuYS52MS5MaXN0UGFzc2tleXNSZXNwb25zZSIHkAIBiLUYAhJaCg1EZWxldGVQYXNza2V5EiAubGF0ZXJuYS52MS5EZWxldGVQYXNza2V5UmVxdWVzdBohLmxhdGVybmEudjEuRGVsZXRlUGFzc2tleVJlc3BvbnNlIgSItRgCEmYKEUJlZ2luUGFzc2tleUxvZ2luEiQubGF0ZXJuYS52MS5CZWdpblBhc3NrZXlMb2dpblJlcXVlc3QaJS5sYXRlcm5hLnYxLkJlZ2luUGFzc2tleUxvZ2luUmVzcG9uc2UiBIi1GAESaQoSRmluaXNoUGFzc2tleUxvZ2luEiUubGF0ZXJuYS52MS5GaW5pc2hQYXNza2V5TG9naW5SZXF1ZXN0GiYubGF0ZXJuYS52MS5GaW5pc2hQYXNza2V5TG9naW5SZXNwb25zZSIEiLUYARJdCg5TdGFydE9pZGNMb2dpbhIhLmxhdGVybmEudjEuU3RhcnRPaWRjTG9naW5SZXF1ZXN0GiIubGF0ZXJuYS52MS5TdGFydE9pZGNMb2dpblJlc3BvbnNlIgSItRgBEloKDVBvbGxPaWRjTG9naW4SIC5sYXRlcm5hLnYxLlBvbGxPaWRjTG9naW5SZXF1ZXN0GiEubGF0ZXJuYS52MS5Qb2xsT2lkY0xvZ2luUmVzcG9uc2UiBIi1GAFCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_laterna_v1_options, file_laterna_v1_profile, file_laterna_v1_text]);
+  fileDesc("ChVsYXRlcm5hL3YxL2F1dGgucHJvdG8SCmxhdGVybmEudjEiUAoGRGV2aWNlEgwKBG5hbWUYASABKAkSDgoGY2xpZW50GAIgASgJEhYKDmNsaWVudF92ZXJzaW9uGAMgASgJEhAKCHBsYXRmb3JtGAQgASgJIt4CCgdBY2NvdW50EgoKAmlkGAEgASgJEhAKCHVzZXJuYW1lGAIgASgJEhAKCGlzX2FkbWluGAMgASgIEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhAKCGRpc2FibGVkGAUgASgIEiwKCWxpYnJhcmllcxgGIAEoCzIZLmxhdGVybmEudjEuTGlicmFyeUFjY2VzcxItCghwYXJlbnRhbBgHIAEoCzIbLmxhdGVybmEudjEuUGFyZW50YWxDb250cm9sEhYKDmRlbnlfZG93bmxvYWRzGAggASgIEhUKDWRlbnlfcmVxdWVzdHMYCSABKAgSHQoVYXV0b19hcHByb3ZlX3JlcXVlc3RzGAogASgIEhUKDXJlcXVlc3RfcXVvdGEYCyABKAUSHwoXcmVtb3RlX21heF9iaXRyYXRlX2ticHMYDCABKAUiMQoNTGlicmFyeUFjY2VzcxILCgNhbGwYASABKAgSEwoLbGlicmFyeV9pZHMYAiADKAkiuQIKB1Nlc3Npb24SCgoCaWQYASABKAkSJAoHYWNjb3VudBgCIAEoCzITLmxhdGVybmEudjEuQWNjb3VudBIpCgdwcm9maWxlGAMgASgLMhMubGF0ZXJuYS52MS5Qcm9maWxlSACIAQESIgoGZGV2aWNlGAQgASgLMhIubGF0ZXJuYS52MS5EZXZpY2USLgoKY3JlYXRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoMbGFzdF91c2VkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpleHBpcmVzX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIPCgdjdXJyZW50GAggASgIQgoKCF9wcm9maWxlIlYKDFNldHVwUmVxdWVzdBIQCgh1c2VybmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCRIiCgZkZXZpY2UYAyABKAsyEi5sYXRlcm5hLnYxLkRldmljZSJECg1TZXR1cFJlc3BvbnNlEiQKB3Nlc3Npb24YASABKAsyEy5sYXRlcm5hLnYxLlNlc3Npb24SDQoFdG9rZW4YAiABKAkiVgoMTG9naW5SZXF1ZXN0EhAKCHVzZXJuYW1lGAEgASgJEhAKCHBhc3N3b3JkGAIgASgJEiIKBmRldmljZRgDIAEoCzISLmxhdGVybmEudjEuRGV2aWNlIkQKDUxvZ2luUmVzcG9uc2USJAoHc2Vzc2lvbhgBIAEoCzITLmxhdGVybmEudjEuU2Vzc2lvbhINCgV0b2tlbhgCIAEoCSIPCg1Mb2dvdXRSZXF1ZXN0IhAKDkxvZ291dFJlc3BvbnNlIhMKEUdldFNlc3Npb25SZXF1ZXN0IjoKEkdldFNlc3Npb25SZXNwb25zZRIkCgdzZXNzaW9uGAEgASgLMhMubGF0ZXJuYS52MS5TZXNzaW9uIhUKE0xpc3RTZXNzaW9uc1JlcXVlc3QiPQoUTGlzdFNlc3Npb25zUmVzcG9uc2USJQoIc2Vzc2lvbnMYASADKAsyEy5sYXRlcm5hLnYxLlNlc3Npb24iKgoUUmV2b2tlU2Vzc2lvblJlcXVlc3QSEgoKc2Vzc2lvbl9pZBgBIAEoCSIXChVSZXZva2VTZXNzaW9uUmVzcG9uc2UiRwoVQ2hhbmdlUGFzc3dvcmRSZXF1ZXN0EhgKEGN1cnJlbnRfcGFzc3dvcmQYASABKAkSFAoMbmV3X3Bhc3N3b3JkGAIgASgJIhgKFkNoYW5nZVBhc3N3b3JkUmVzcG9uc2Ui4QEKCEFwaVRva2VuEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEQoJcmVhZF9vbmx5GAMgASgIEikKB3Byb2ZpbGUYBCABKAsyEy5sYXRlcm5hLnYxLlByb2ZpbGVIAIgBARIuCgpjcmVhdGVkX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxsYXN0X3VzZWRfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg8KB2xhc3RfaXAYByABKAlCCgoIX3Byb2ZpbGUiOAoVQ3JlYXRlQXBpVG9rZW5SZXF1ZXN0EgwKBG5hbWUYASABKAkSEQoJcmVhZF9vbmx5GAIgASgIIlAKFkNyZWF0ZUFwaVRva2VuUmVzcG9uc2USDQoFdG9rZW4YASABKAkSJwoJYXBpX3Rva2VuGAIgASgLMhQubGF0ZXJuYS52MS5BcGlUb2tlbiIWChRMaXN0QXBpVG9rZW5zUmVxdWVzdCJBChVMaXN0QXBpVG9rZW5zUmVzcG9uc2USKAoKYXBpX3Rva2VucxgBIAMoCzIULmxhdGVybmEudjEuQXBpVG9rZW4iLQoVUmV2b2tlQXBpVG9rZW5SZXF1ZXN0EhQKDGFwaV90b2tlbl9pZBgBIAEoCSIYChZSZXZva2VBcGlUb2tlblJlc3BvbnNlIj0KF1N0YXJ0RGV2aWNlTG9naW5SZXF1ZXN0EiIKBmRldmljZRgBIAEoCzISLmxhdGVybmEudjEuRGV2aWNlItwBChhTdGFydERldmljZUxvZ2luUmVzcG9uc2USEwoLZGV2aWNlX2NvZGUYASABKAkSEQoJdXNlcl9jb2RlGAIgASgJEi4KCmV4cGlyZXNfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEisKCGludGVydmFsGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhgKEHZlcmlmaWNhdGlvbl91cmwYBSABKAkSIQoZdmVyaWZpY2F0aW9uX3VybF9jb21wbGV0ZRgGIAEoCSItChZQb2xsRGV2aWNlTG9naW5SZXF1ZXN0EhMKC2RldmljZV9jb2RlGAEgASgJIqgBChdQb2xsRGV2aWNlTG9naW5SZXNwb25zZRIrCgVzdGF0ZRgBIAEoDjIcLmxhdGVybmEudjEuRGV2aWNlTG9naW5TdGF0ZRIkCgdzZXNzaW9uGAIgASgLMhMubGF0ZXJuYS52MS5TZXNzaW9uEg0KBXRva2VuGAMgASgJEisKCGludGVydmFsGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIioKFUdldERldmljZUxvZ2luUmVxdWVzdBIRCgl1c2VyX2NvZGUYASABKAkiqAEKFkdldERldmljZUxvZ2luUmVzcG9uc2USIgoGZGV2aWNlGAEgASgLMhIubGF0ZXJuYS52MS5EZXZpY2USCgoCaXAYAiABKAkSLgoKY3JlYXRlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKZXhwaXJlc19hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiRgoZQXBwcm92ZURldmljZUxvZ2luUmVxdWVzdBIRCgl1c2VyX2NvZGUYASABKAkSFgoOc2VsZWN0X3Byb2ZpbGUYAiABKAgiHAoaQXBwcm92ZURldmljZUxvZ2luUmVzcG9uc2UiKwoWRGVueURldmljZUxvZ2luUmVxdWVzdBIRCgl1c2VyX2NvZGUYASABKAkiGQoXRGVueURldmljZUxvZ2luUmVzcG9uc2UihQEKB1Bhc3NrZXkSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIuCgpjcmVhdGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxsYXN0X3VzZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIiEKH0JlZ2luUGFzc2tleVJlZ2lzdHJhdGlvblJlcXVlc3QiUQogQmVnaW5QYXNza2V5UmVnaXN0cmF0aW9uUmVzcG9uc2USFwoPcmVnaXN0cmF0aW9uX2lkGAEgASgJEhQKDG9wdGlvbnNfanNvbhgCIAEoCSJiCiBGaW5pc2hQYXNza2V5UmVnaXN0cmF0aW9uUmVxdWVzdBIXCg9yZWdpc3RyYXRpb25faWQYASABKAkSFwoPY3JlZGVudGlhbF9qc29uGAIgASgJEgwKBG5hbWUYAyABKAkiSQohRmluaXNoUGFzc2tleVJlZ2lzdHJhdGlvblJlc3BvbnNlEiQKB3Bhc3NrZXkYASABKAsyEy5sYXRlcm5hLnYxLlBhc3NrZXkiFQoTTGlzdFBhc3NrZXlzUmVxdWVzdCI9ChRMaXN0UGFzc2tleXNSZXNwb25zZRIlCghwYXNza2V5cxgBIAMoCzITLmxhdGVybmEudjEuUGFzc2tleSIqChREZWxldGVQYXNza2V5UmVxdWVzdBISCgpwYXNza2V5X2lkGAEgASgJIhcKFURlbGV0ZVBhc3NrZXlSZXNwb25zZSIaChhCZWdpblBhc3NrZXlMb2dpblJlcXVlc3QiQwoZQmVnaW5QYXNza2V5TG9naW5SZXNwb25zZRIQCghsb2dpbl9pZBgBIAEoCRIUCgxvcHRpb25zX2pzb24YAiABKAkiagoZRmluaXNoUGFzc2tleUxvZ2luUmVxdWVzdBIQCghsb2dpbl9pZBgBIAEoCRIXCg9jcmVkZW50aWFsX2pzb24YAiABKAkSIgoGZGV2aWNlGAMgASgLMhIubGF0ZXJuYS52MS5EZXZpY2UiUQoaRmluaXNoUGFzc2tleUxvZ2luUmVzcG9uc2USJAoHc2Vzc2lvbhgBIAEoCzITLmxhdGVybmEudjEuU2Vzc2lvbhINCgV0b2tlbhgCIAEoCSI7ChVTdGFydE9pZGNMb2dpblJlcXVlc3QSIgoGZGV2aWNlGAEgASgLMhIubGF0ZXJuYS52MS5EZXZpY2UitAEKFlN0YXJ0T2lkY0xvZ2luUmVzcG9uc2USEAoIbG9naW5faWQYASABKAkSGQoRYXV0aG9yaXphdGlvbl91cmwYAiABKAkSKwoIaW50ZXJ2YWwYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLgoKZXhwaXJlc19hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBKBAgEEAVSCmV4cGlyZXNfaW4iKAoUUG9sbE9pZGNMb2dpblJlcXVlc3QSEAoIbG9naW5faWQYASABKAkisAEKFVBvbGxPaWRjTG9naW5SZXNwb25zZRIpCgVzdGF0ZRgBIAEoDjIaLmxhdGVybmEudjEuT2lkY0xvZ2luU3RhdGUSJAoHc2Vzc2lvbhgCIAEoCzITLmxhdGVybmEudjEuU2Vzc2lvbhINCgV0b2tlbhgDIAEoCRIPCgdtZXNzYWdlGAQgASgJEiYKDG1lc3NhZ2VfdGV4dBgFIAEoCzIQLmxhdGVybmEudjEuVGV4dCq2AQoQRGV2aWNlTG9naW5TdGF0ZRIiCh5ERVZJQ0VfTE9HSU5fU1RBVEVfVU5TUEVDSUZJRUQQABIeChpERVZJQ0VfTE9HSU5fU1RBVEVfUEVORElORxABEh8KG0RFVklDRV9MT0dJTl9TVEFURV9BUFBST1ZFRBACEh0KGURFVklDRV9MT0dJTl9TVEFURV9ERU5JRUQQAxIeChpERVZJQ0VfTE9HSU5fU1RBVEVfRVhQSVJFRBAEKqoBCg5PaWRjTG9naW5TdGF0ZRIgChxPSURDX0xPR0lOX1NUQVRFX1VOU1BFQ0lGSUVEEAASHAoYT0lEQ19MT0dJTl9TVEFURV9QRU5ESU5HEAESHQoZT0lEQ19MT0dJTl9TVEFURV9BUFBST1ZFRBACEhsKF09JRENfTE9HSU5fU1RBVEVfREVOSUVEEAMSHAoYT0lEQ19MT0dJTl9TVEFURV9FWFBJUkVEEAQyxREKC0F1dGhTZXJ2aWNlEkIKBVNldHVwEhgubGF0ZXJuYS52MS5TZXR1cFJlcXVlc3QaGS5sYXRlcm5hLnYxLlNldHVwUmVzcG9uc2UiBIi1GAESQgoFTG9naW4SGC5sYXRlcm5hLnYxLkxvZ2luUmVxdWVzdBoZLmxhdGVybmEudjEuTG9naW5SZXNwb25zZSIEiLUYARJFCgZMb2dvdXQSGS5sYXRlcm5hLnYxLkxvZ291dFJlcXVlc3QaGi5sYXRlcm5hLnYxLkxvZ291dFJlc3BvbnNlIgSItRgCElQKCkdldFNlc3Npb24SHS5sYXRlcm5hLnYxLkdldFNlc3Npb25SZXF1ZXN0Gh4ubGF0ZXJuYS52MS5HZXRTZXNzaW9uUmVzcG9uc2UiB5ACAYi1GAISWgoMTGlzdFNlc3Npb25zEh8ubGF0ZXJuYS52MS5MaXN0U2Vzc2lvbnNSZXF1ZXN0GiAubGF0ZXJuYS52MS5MaXN0U2Vzc2lvbnNSZXNwb25zZSIHkAIBiLUYAhJeCg1SZXZva2VTZXNzaW9uEiAubGF0ZXJuYS52MS5SZXZva2VTZXNzaW9uUmVxdWVzdBohLmxhdGVybmEudjEuUmV2b2tlU2Vzc2lvblJlc3BvbnNlIgiItRgCkLUYAhJhCg5DaGFuZ2VQYXNzd29yZBIhLmxhdGVybmEudjEuQ2hhbmdlUGFzc3dvcmRSZXF1ZXN0GiIubGF0ZXJuYS52MS5DaGFuZ2VQYXNzd29yZFJlc3BvbnNlIgiItRgCkLUYAhJdCg5DcmVhdGVBcGlUb2tlbhIhLmxhdGVybmEudjEuQ3JlYXRlQXBpVG9rZW5SZXF1ZXN0GiIubGF0ZXJuYS52MS5DcmVhdGVBcGlUb2tlblJlc3BvbnNlIgSQtRgCEmEKDUxpc3RBcGlUb2tlbnMSIC5sYXRlcm5hLnYxLkxpc3RBcGlUb2tlbnNSZXF1ZXN0GiEubGF0ZXJuYS52MS5MaXN0QXBpVG9rZW5zUmVzcG9uc2UiC5ACAYi1GAKQtRgCEmEKDlJldm9rZUFwaVRva2VuEiEubGF0ZXJuYS52MS5SZXZva2VBcGlUb2tlblJlcXVlc3QaIi5sYXRlcm5hLnYxLlJldm9rZUFwaVRva2VuUmVzcG9uc2UiCIi1GAKQtRgCEmMKEFN0YXJ0RGV2aWNlTG9naW4SIy5sYXRlcm5hLnYxLlN0YXJ0RGV2aWNlTG9naW5SZXF1ZXN0GiQubGF0ZXJuYS52MS5TdGFydERldmljZUxvZ2luUmVzcG9uc2UiBIi1GAESYAoPUG9sbERldmljZUxvZ2luEiIubGF0ZXJuYS52MS5Qb2xsRGV2aWNlTG9naW5SZXF1ZXN0GiMubGF0ZXJuYS52MS5Qb2xsRGV2aWNlTG9naW5SZXNwb25zZSIEiLUYARJhCg5HZXREZXZpY2VMb2dpbhIhLmxhdGVybmEudjEuR2V0RGV2aWNlTG9naW5SZXF1ZXN0GiIubGF0ZXJuYS52MS5HZXREZXZpY2VMb2dpblJlc3BvbnNlIgiItRgCkLUYAhJtChJBcHByb3ZlRGV2aWNlTG9naW4SJS5sYXRlcm5hLnYxLkFwcHJvdmVEZXZpY2VMb2dpblJlcXVlc3QaJi5sYXRlcm5hLnYxLkFwcHJvdmVEZXZpY2VMb2dpblJlc3BvbnNlIgiItRgCkLUYAhJkCg9EZW55RGV2aWNlTG9naW4SIi5sYXRlcm5hLnYxLkRlbnlEZXZpY2VMb2dpblJlcXVlc3QaIy5sYXRlcm5hLnYxLkRlbnlEZXZpY2VMb2dpblJlc3BvbnNlIgiItRgCkLUYAhJ/ChhCZWdpblBhc3NrZXlSZWdpc3RyYXRpb24SKy5sYXRlcm5hLnYxLkJlZ2luUGFzc2tleVJlZ2lzdHJhdGlvblJlcXVlc3QaLC5sYXRlcm5hLnYxLkJlZ2luUGFzc2tleVJlZ2lzdHJhdGlvblJlc3BvbnNlIgiItRgCkLUYAhKCAQoZRmluaXNoUGFzc2tleVJlZ2lzdHJhdGlvbhIsLmxhdGVybmEudjEuRmluaXNoUGFzc2tleVJlZ2lzdHJhdGlvblJlcXVlc3QaLS5sYXRlcm5hLnYxLkZpbmlzaFBhc3NrZXlSZWdpc3RyYXRpb25SZXNwb25zZSIIiLUYApC1GAISWgoMTGlzdFBhc3NrZXlzEh8ubGF0ZXJuYS52MS5MaXN0UGFzc2tleXNSZXF1ZXN0GiAubGF0ZXJuYS52MS5MaXN0UGFzc2tleXNSZXNwb25zZSIHkAIBiLUYAhJeCg1EZWxldGVQYXNza2V5EiAubGF0ZXJuYS52MS5EZWxldGVQYXNza2V5UmVxdWVzdBohLmxhdGVybmEudjEuRGVsZXRlUGFzc2tleVJlc3BvbnNlIgiItRgCkLUYAhJmChFCZWdpblBhc3NrZXlMb2dpbhIkLmxhdGVybmEudjEuQmVnaW5QYXNza2V5TG9naW5SZXF1ZXN0GiUubGF0ZXJuYS52MS5CZWdpblBhc3NrZXlMb2dpblJlc3BvbnNlIgSItRgBEmkKEkZpbmlzaFBhc3NrZXlMb2dpbhIlLmxhdGVybmEudjEuRmluaXNoUGFzc2tleUxvZ2luUmVxdWVzdBomLmxhdGVybmEudjEuRmluaXNoUGFzc2tleUxvZ2luUmVzcG9uc2UiBIi1GAESXQoOU3RhcnRPaWRjTG9naW4SIS5sYXRlcm5hLnYxLlN0YXJ0T2lkY0xvZ2luUmVxdWVzdBoiLmxhdGVybmEudjEuU3RhcnRPaWRjTG9naW5SZXNwb25zZSIEiLUYARJaCg1Qb2xsT2lkY0xvZ2luEiAubGF0ZXJuYS52MS5Qb2xsT2lkY0xvZ2luUmVxdWVzdBohLmxhdGVybmEudjEuUG9sbE9pZGNMb2dpblJlc3BvbnNlIgSItRgBQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_laterna_v1_options, file_laterna_v1_profile, file_laterna_v1_text]);
 
 /**
  * Device describes the device signing in, as shown in the list of sessions.
@@ -136,6 +136,14 @@ export type Account = Message<"laterna.v1.Account"> & {
    * @generated from field: int32 request_quota = 11;
    */
   requestQuota: number;
+
+  /**
+   * Highest bitrate of its playbacks from outside the local network, in kbit/s; 0 means only the
+   * server's limit (Settings.remote_max_bitrate_kbps). The lower of the two applies.
+   *
+   * @generated from field: int32 remote_max_bitrate_kbps = 12;
+   */
+  remoteMaxBitrateKbps: number;
 };
 
 /**
@@ -488,6 +496,170 @@ export const ChangePasswordResponseSchema: GenMessage<ChangePasswordResponse> = 
   messageDesc(file_laterna_v1_auth, 17);
 
 /**
+ * ApiToken is an API token, without its secret.
+ *
+ * @generated from message laterna.v1.ApiToken
+ */
+export type ApiToken = Message<"laterna.v1.ApiToken"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * What it is for ("Home Assistant").
+   *
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * It only calls the methods that change nothing.
+   *
+   * @generated from field: bool read_only = 3;
+   */
+  readOnly: boolean;
+
+  /**
+   * The profile it acts as; unset if that profile was deleted (the token then only reaches what
+   * needs no profile).
+   *
+   * @generated from field: optional laterna.v1.Profile profile = 4;
+   */
+  profile?: Profile | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp created_at = 5;
+   */
+  createdAt?: Timestamp | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp last_used_at = 6;
+   */
+  lastUsedAt?: Timestamp | undefined;
+
+  /**
+   * @generated from field: string last_ip = 7;
+   */
+  lastIp: string;
+};
+
+/**
+ * Describes the message laterna.v1.ApiToken.
+ * Use `create(ApiTokenSchema)` to create a new message.
+ */
+export const ApiTokenSchema: GenMessage<ApiToken> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_auth, 18);
+
+/**
+ * @generated from message laterna.v1.CreateApiTokenRequest
+ */
+export type CreateApiTokenRequest = Message<"laterna.v1.CreateApiTokenRequest"> & {
+  /**
+   * 1 to 64 characters.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  /**
+   * @generated from field: bool read_only = 2;
+   */
+  readOnly: boolean;
+};
+
+/**
+ * Describes the message laterna.v1.CreateApiTokenRequest.
+ * Use `create(CreateApiTokenRequestSchema)` to create a new message.
+ */
+export const CreateApiTokenRequestSchema: GenMessage<CreateApiTokenRequest> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_auth, 19);
+
+/**
+ * @generated from message laterna.v1.CreateApiTokenResponse
+ */
+export type CreateApiTokenResponse = Message<"laterna.v1.CreateApiTokenResponse"> & {
+  /**
+   * The secret, shown this once.
+   *
+   * @generated from field: string token = 1;
+   */
+  token: string;
+
+  /**
+   * @generated from field: laterna.v1.ApiToken api_token = 2;
+   */
+  apiToken?: ApiToken | undefined;
+};
+
+/**
+ * Describes the message laterna.v1.CreateApiTokenResponse.
+ * Use `create(CreateApiTokenResponseSchema)` to create a new message.
+ */
+export const CreateApiTokenResponseSchema: GenMessage<CreateApiTokenResponse> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_auth, 20);
+
+/**
+ * @generated from message laterna.v1.ListApiTokensRequest
+ */
+export type ListApiTokensRequest = Message<"laterna.v1.ListApiTokensRequest"> & {
+};
+
+/**
+ * Describes the message laterna.v1.ListApiTokensRequest.
+ * Use `create(ListApiTokensRequestSchema)` to create a new message.
+ */
+export const ListApiTokensRequestSchema: GenMessage<ListApiTokensRequest> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_auth, 21);
+
+/**
+ * @generated from message laterna.v1.ListApiTokensResponse
+ */
+export type ListApiTokensResponse = Message<"laterna.v1.ListApiTokensResponse"> & {
+  /**
+   * @generated from field: repeated laterna.v1.ApiToken api_tokens = 1;
+   */
+  apiTokens: ApiToken[];
+};
+
+/**
+ * Describes the message laterna.v1.ListApiTokensResponse.
+ * Use `create(ListApiTokensResponseSchema)` to create a new message.
+ */
+export const ListApiTokensResponseSchema: GenMessage<ListApiTokensResponse> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_auth, 22);
+
+/**
+ * @generated from message laterna.v1.RevokeApiTokenRequest
+ */
+export type RevokeApiTokenRequest = Message<"laterna.v1.RevokeApiTokenRequest"> & {
+  /**
+   * @generated from field: string api_token_id = 1;
+   */
+  apiTokenId: string;
+};
+
+/**
+ * Describes the message laterna.v1.RevokeApiTokenRequest.
+ * Use `create(RevokeApiTokenRequestSchema)` to create a new message.
+ */
+export const RevokeApiTokenRequestSchema: GenMessage<RevokeApiTokenRequest> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_auth, 23);
+
+/**
+ * @generated from message laterna.v1.RevokeApiTokenResponse
+ */
+export type RevokeApiTokenResponse = Message<"laterna.v1.RevokeApiTokenResponse"> & {
+};
+
+/**
+ * Describes the message laterna.v1.RevokeApiTokenResponse.
+ * Use `create(RevokeApiTokenResponseSchema)` to create a new message.
+ */
+export const RevokeApiTokenResponseSchema: GenMessage<RevokeApiTokenResponse> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_auth, 24);
+
+/**
  * @generated from message laterna.v1.StartDeviceLoginRequest
  */
 export type StartDeviceLoginRequest = Message<"laterna.v1.StartDeviceLoginRequest"> & {
@@ -504,7 +676,7 @@ export type StartDeviceLoginRequest = Message<"laterna.v1.StartDeviceLoginReques
  * Use `create(StartDeviceLoginRequestSchema)` to create a new message.
  */
 export const StartDeviceLoginRequestSchema: GenMessage<StartDeviceLoginRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 18);
+  messageDesc(file_laterna_v1_auth, 25);
 
 /**
  * @generated from message laterna.v1.StartDeviceLoginResponse
@@ -560,7 +732,7 @@ export type StartDeviceLoginResponse = Message<"laterna.v1.StartDeviceLoginRespo
  * Use `create(StartDeviceLoginResponseSchema)` to create a new message.
  */
 export const StartDeviceLoginResponseSchema: GenMessage<StartDeviceLoginResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 19);
+  messageDesc(file_laterna_v1_auth, 26);
 
 /**
  * @generated from message laterna.v1.PollDeviceLoginRequest
@@ -577,7 +749,7 @@ export type PollDeviceLoginRequest = Message<"laterna.v1.PollDeviceLoginRequest"
  * Use `create(PollDeviceLoginRequestSchema)` to create a new message.
  */
 export const PollDeviceLoginRequestSchema: GenMessage<PollDeviceLoginRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 20);
+  messageDesc(file_laterna_v1_auth, 27);
 
 /**
  * @generated from message laterna.v1.PollDeviceLoginResponse
@@ -613,7 +785,7 @@ export type PollDeviceLoginResponse = Message<"laterna.v1.PollDeviceLoginRespons
  * Use `create(PollDeviceLoginResponseSchema)` to create a new message.
  */
 export const PollDeviceLoginResponseSchema: GenMessage<PollDeviceLoginResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 21);
+  messageDesc(file_laterna_v1_auth, 28);
 
 /**
  * @generated from message laterna.v1.GetDeviceLoginRequest
@@ -630,7 +802,7 @@ export type GetDeviceLoginRequest = Message<"laterna.v1.GetDeviceLoginRequest"> 
  * Use `create(GetDeviceLoginRequestSchema)` to create a new message.
  */
 export const GetDeviceLoginRequestSchema: GenMessage<GetDeviceLoginRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 22);
+  messageDesc(file_laterna_v1_auth, 29);
 
 /**
  * @generated from message laterna.v1.GetDeviceLoginResponse
@@ -664,7 +836,7 @@ export type GetDeviceLoginResponse = Message<"laterna.v1.GetDeviceLoginResponse"
  * Use `create(GetDeviceLoginResponseSchema)` to create a new message.
  */
 export const GetDeviceLoginResponseSchema: GenMessage<GetDeviceLoginResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 23);
+  messageDesc(file_laterna_v1_auth, 30);
 
 /**
  * @generated from message laterna.v1.ApproveDeviceLoginRequest
@@ -689,7 +861,7 @@ export type ApproveDeviceLoginRequest = Message<"laterna.v1.ApproveDeviceLoginRe
  * Use `create(ApproveDeviceLoginRequestSchema)` to create a new message.
  */
 export const ApproveDeviceLoginRequestSchema: GenMessage<ApproveDeviceLoginRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 24);
+  messageDesc(file_laterna_v1_auth, 31);
 
 /**
  * @generated from message laterna.v1.ApproveDeviceLoginResponse
@@ -702,7 +874,7 @@ export type ApproveDeviceLoginResponse = Message<"laterna.v1.ApproveDeviceLoginR
  * Use `create(ApproveDeviceLoginResponseSchema)` to create a new message.
  */
 export const ApproveDeviceLoginResponseSchema: GenMessage<ApproveDeviceLoginResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 25);
+  messageDesc(file_laterna_v1_auth, 32);
 
 /**
  * @generated from message laterna.v1.DenyDeviceLoginRequest
@@ -719,7 +891,7 @@ export type DenyDeviceLoginRequest = Message<"laterna.v1.DenyDeviceLoginRequest"
  * Use `create(DenyDeviceLoginRequestSchema)` to create a new message.
  */
 export const DenyDeviceLoginRequestSchema: GenMessage<DenyDeviceLoginRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 26);
+  messageDesc(file_laterna_v1_auth, 33);
 
 /**
  * @generated from message laterna.v1.DenyDeviceLoginResponse
@@ -732,7 +904,7 @@ export type DenyDeviceLoginResponse = Message<"laterna.v1.DenyDeviceLoginRespons
  * Use `create(DenyDeviceLoginResponseSchema)` to create a new message.
  */
 export const DenyDeviceLoginResponseSchema: GenMessage<DenyDeviceLoginResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 27);
+  messageDesc(file_laterna_v1_auth, 34);
 
 /**
  * Passkey is a WebAuthn key of the account.
@@ -770,7 +942,7 @@ export type Passkey = Message<"laterna.v1.Passkey"> & {
  * Use `create(PasskeySchema)` to create a new message.
  */
 export const PasskeySchema: GenMessage<Passkey> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 28);
+  messageDesc(file_laterna_v1_auth, 35);
 
 /**
  * @generated from message laterna.v1.BeginPasskeyRegistrationRequest
@@ -783,7 +955,7 @@ export type BeginPasskeyRegistrationRequest = Message<"laterna.v1.BeginPasskeyRe
  * Use `create(BeginPasskeyRegistrationRequestSchema)` to create a new message.
  */
 export const BeginPasskeyRegistrationRequestSchema: GenMessage<BeginPasskeyRegistrationRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 29);
+  messageDesc(file_laterna_v1_auth, 36);
 
 /**
  * @generated from message laterna.v1.BeginPasskeyRegistrationResponse
@@ -807,7 +979,7 @@ export type BeginPasskeyRegistrationResponse = Message<"laterna.v1.BeginPasskeyR
  * Use `create(BeginPasskeyRegistrationResponseSchema)` to create a new message.
  */
 export const BeginPasskeyRegistrationResponseSchema: GenMessage<BeginPasskeyRegistrationResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 30);
+  messageDesc(file_laterna_v1_auth, 37);
 
 /**
  * @generated from message laterna.v1.FinishPasskeyRegistrationRequest
@@ -838,7 +1010,7 @@ export type FinishPasskeyRegistrationRequest = Message<"laterna.v1.FinishPasskey
  * Use `create(FinishPasskeyRegistrationRequestSchema)` to create a new message.
  */
 export const FinishPasskeyRegistrationRequestSchema: GenMessage<FinishPasskeyRegistrationRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 31);
+  messageDesc(file_laterna_v1_auth, 38);
 
 /**
  * @generated from message laterna.v1.FinishPasskeyRegistrationResponse
@@ -855,7 +1027,7 @@ export type FinishPasskeyRegistrationResponse = Message<"laterna.v1.FinishPasske
  * Use `create(FinishPasskeyRegistrationResponseSchema)` to create a new message.
  */
 export const FinishPasskeyRegistrationResponseSchema: GenMessage<FinishPasskeyRegistrationResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 32);
+  messageDesc(file_laterna_v1_auth, 39);
 
 /**
  * @generated from message laterna.v1.ListPasskeysRequest
@@ -868,7 +1040,7 @@ export type ListPasskeysRequest = Message<"laterna.v1.ListPasskeysRequest"> & {
  * Use `create(ListPasskeysRequestSchema)` to create a new message.
  */
 export const ListPasskeysRequestSchema: GenMessage<ListPasskeysRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 33);
+  messageDesc(file_laterna_v1_auth, 40);
 
 /**
  * @generated from message laterna.v1.ListPasskeysResponse
@@ -885,7 +1057,7 @@ export type ListPasskeysResponse = Message<"laterna.v1.ListPasskeysResponse"> & 
  * Use `create(ListPasskeysResponseSchema)` to create a new message.
  */
 export const ListPasskeysResponseSchema: GenMessage<ListPasskeysResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 34);
+  messageDesc(file_laterna_v1_auth, 41);
 
 /**
  * @generated from message laterna.v1.DeletePasskeyRequest
@@ -902,7 +1074,7 @@ export type DeletePasskeyRequest = Message<"laterna.v1.DeletePasskeyRequest"> & 
  * Use `create(DeletePasskeyRequestSchema)` to create a new message.
  */
 export const DeletePasskeyRequestSchema: GenMessage<DeletePasskeyRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 35);
+  messageDesc(file_laterna_v1_auth, 42);
 
 /**
  * @generated from message laterna.v1.DeletePasskeyResponse
@@ -915,7 +1087,7 @@ export type DeletePasskeyResponse = Message<"laterna.v1.DeletePasskeyResponse"> 
  * Use `create(DeletePasskeyResponseSchema)` to create a new message.
  */
 export const DeletePasskeyResponseSchema: GenMessage<DeletePasskeyResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 36);
+  messageDesc(file_laterna_v1_auth, 43);
 
 /**
  * @generated from message laterna.v1.BeginPasskeyLoginRequest
@@ -928,7 +1100,7 @@ export type BeginPasskeyLoginRequest = Message<"laterna.v1.BeginPasskeyLoginRequ
  * Use `create(BeginPasskeyLoginRequestSchema)` to create a new message.
  */
 export const BeginPasskeyLoginRequestSchema: GenMessage<BeginPasskeyLoginRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 37);
+  messageDesc(file_laterna_v1_auth, 44);
 
 /**
  * @generated from message laterna.v1.BeginPasskeyLoginResponse
@@ -952,7 +1124,7 @@ export type BeginPasskeyLoginResponse = Message<"laterna.v1.BeginPasskeyLoginRes
  * Use `create(BeginPasskeyLoginResponseSchema)` to create a new message.
  */
 export const BeginPasskeyLoginResponseSchema: GenMessage<BeginPasskeyLoginResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 38);
+  messageDesc(file_laterna_v1_auth, 45);
 
 /**
  * @generated from message laterna.v1.FinishPasskeyLoginRequest
@@ -981,7 +1153,7 @@ export type FinishPasskeyLoginRequest = Message<"laterna.v1.FinishPasskeyLoginRe
  * Use `create(FinishPasskeyLoginRequestSchema)` to create a new message.
  */
 export const FinishPasskeyLoginRequestSchema: GenMessage<FinishPasskeyLoginRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 39);
+  messageDesc(file_laterna_v1_auth, 46);
 
 /**
  * @generated from message laterna.v1.FinishPasskeyLoginResponse
@@ -1005,7 +1177,7 @@ export type FinishPasskeyLoginResponse = Message<"laterna.v1.FinishPasskeyLoginR
  * Use `create(FinishPasskeyLoginResponseSchema)` to create a new message.
  */
 export const FinishPasskeyLoginResponseSchema: GenMessage<FinishPasskeyLoginResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 40);
+  messageDesc(file_laterna_v1_auth, 47);
 
 /**
  * @generated from message laterna.v1.StartOidcLoginRequest
@@ -1022,7 +1194,7 @@ export type StartOidcLoginRequest = Message<"laterna.v1.StartOidcLoginRequest"> 
  * Use `create(StartOidcLoginRequestSchema)` to create a new message.
  */
 export const StartOidcLoginRequestSchema: GenMessage<StartOidcLoginRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 41);
+  messageDesc(file_laterna_v1_auth, 48);
 
 /**
  * @generated from message laterna.v1.StartOidcLoginResponse
@@ -1043,14 +1215,18 @@ export type StartOidcLoginResponse = Message<"laterna.v1.StartOidcLoginResponse"
   authorizationUrl: string;
 
   /**
+   * Minimum time between two polls.
+   *
    * @generated from field: google.protobuf.Duration interval = 3;
    */
   interval?: Duration | undefined;
 
   /**
-   * @generated from field: google.protobuf.Duration expires_in = 4;
+   * Past it, the login is over: start again.
+   *
+   * @generated from field: google.protobuf.Timestamp expires_at = 5;
    */
-  expiresIn?: Duration | undefined;
+  expiresAt?: Timestamp | undefined;
 };
 
 /**
@@ -1058,7 +1234,7 @@ export type StartOidcLoginResponse = Message<"laterna.v1.StartOidcLoginResponse"
  * Use `create(StartOidcLoginResponseSchema)` to create a new message.
  */
 export const StartOidcLoginResponseSchema: GenMessage<StartOidcLoginResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 42);
+  messageDesc(file_laterna_v1_auth, 49);
 
 /**
  * @generated from message laterna.v1.PollOidcLoginRequest
@@ -1075,7 +1251,7 @@ export type PollOidcLoginRequest = Message<"laterna.v1.PollOidcLoginRequest"> & 
  * Use `create(PollOidcLoginRequestSchema)` to create a new message.
  */
 export const PollOidcLoginRequestSchema: GenMessage<PollOidcLoginRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 43);
+  messageDesc(file_laterna_v1_auth, 50);
 
 /**
  * @generated from message laterna.v1.PollOidcLoginResponse
@@ -1116,7 +1292,7 @@ export type PollOidcLoginResponse = Message<"laterna.v1.PollOidcLoginResponse"> 
  * Use `create(PollOidcLoginResponseSchema)` to create a new message.
  */
 export const PollOidcLoginResponseSchema: GenMessage<PollOidcLoginResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_auth, 44);
+  messageDesc(file_laterna_v1_auth, 51);
 
 /**
  * @generated from enum laterna.v1.DeviceLoginState
@@ -1253,7 +1429,8 @@ export const AuthService: GenService<{
     output: typeof GetSessionResponseSchema;
   },
   /**
-   * ListSessions lists the devices signed in to the account.
+   * ListSessions lists the devices signed in to the account; API tokens are listed apart
+   * (ListApiTokens).
    *
    * @generated from rpc laterna.v1.AuthService.ListSessions
    */
@@ -1273,7 +1450,8 @@ export const AuthService: GenService<{
     output: typeof RevokeSessionResponseSchema;
   },
   /**
-   * ChangePassword changes the account's password and signs out the other devices.
+   * ChangePassword changes the account's password and signs out the other devices, API tokens
+   * included.
    *
    * @generated from rpc laterna.v1.AuthService.ChangePassword
    */
@@ -1281,6 +1459,37 @@ export const AuthService: GenService<{
     methodKind: "unary";
     input: typeof ChangePasswordRequestSchema;
     output: typeof ChangePasswordResponseSchema;
+  },
+  /**
+   * CreateApiToken creates a token for the picked profile and returns it, once: only its hash is
+   * kept. Refused to a restricted profile; 50 tokens per account at most.
+   *
+   * @generated from rpc laterna.v1.AuthService.CreateApiToken
+   */
+  createApiToken: {
+    methodKind: "unary";
+    input: typeof CreateApiTokenRequestSchema;
+    output: typeof CreateApiTokenResponseSchema;
+  },
+  /**
+   * ListApiTokens lists the tokens of the account, the most recently used first.
+   *
+   * @generated from rpc laterna.v1.AuthService.ListApiTokens
+   */
+  listApiTokens: {
+    methodKind: "unary";
+    input: typeof ListApiTokensRequestSchema;
+    output: typeof ListApiTokensResponseSchema;
+  },
+  /**
+   * RevokeApiToken revokes a token of the account. Refused to a restricted profile.
+   *
+   * @generated from rpc laterna.v1.AuthService.RevokeApiToken
+   */
+  revokeApiToken: {
+    methodKind: "unary";
+    input: typeof RevokeApiTokenRequestSchema;
+    output: typeof RevokeApiTokenResponseSchema;
   },
   /**
    * StartDeviceLogin opens a device login request (valid for 10 minutes).

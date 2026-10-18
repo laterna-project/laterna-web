@@ -33,7 +33,7 @@ export function trackFileRows(f: MediaFile): { label: string; value: string }[] 
     },
     { label: t("music.rows.channels"), value: audio ? channelsLabel(audio.channels) : "" },
     { label: t("music.rows.bitrate"), value: bitrate > 0 ? `${kilo(bitrate / 1000)} kbit/s` : "" },
-    { label: t("music.rows.size"), value: f.size > 0n ? fileSize(f.size) : "" },
+    { label: t("music.rows.size"), value: f.sizeBytes > 0n ? fileSize(f.sizeBytes) : "" },
     { label: t("music.rows.duration"), value: f.duration ? formatClock(seconds(f.duration)) : "" },
   ];
   return rows.filter((r) => r.value);

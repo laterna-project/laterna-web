@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/profile.proto.
  */
 export const file_laterna_v1_profile: GenFile = /*@__PURE__*/
-  fileDesc("ChhsYXRlcm5hL3YxL3Byb2ZpbGUucHJvdG8SCmxhdGVybmEudjEi/gEKB1Byb2ZpbGUSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdoYXNfcGluGAMgASgIEgsKA2tpZBgEIAEoCBIuCgpjcmVhdGVkX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCghwYXJlbnRhbBgGIAEoCzIbLmxhdGVybmEudjEuUGFyZW50YWxDb250cm9sEhAKCGxhbmd1YWdlGAcgASgJEi8KDXN1YnRpdGxlX21vZGUYCCABKA4yGC5sYXRlcm5hLnYxLlN1YnRpdGxlTW9kZRIZChFzdWJ0aXRsZV9sYW5ndWFnZRgJIAEoCSJKCg9QYXJlbnRhbENvbnRyb2wSFAoHbWF4X2FnZRgBIAEoBUgAiAEBEhUKDWJsb2NrX3VucmF0ZWQYAiABKAhCCgoIX21heF9hZ2UiFQoTTGlzdFByb2ZpbGVzUmVxdWVzdCI9ChRMaXN0UHJvZmlsZXNSZXNwb25zZRIlCghwcm9maWxlcxgBIAMoCzITLmxhdGVybmEudjEuUHJvZmlsZSJ/ChRDcmVhdGVQcm9maWxlUmVxdWVzdBIMCgRuYW1lGAEgASgJEgsKA3BpbhgCIAEoCRILCgNraWQYAyABKAgSLQoIcGFyZW50YWwYBCABKAsyGy5sYXRlcm5hLnYxLlBhcmVudGFsQ29udHJvbBIQCghsYW5ndWFnZRgFIAEoCSI9ChVDcmVhdGVQcm9maWxlUmVzcG9uc2USJAoHcHJvZmlsZRgBIAEoCzITLmxhdGVybmEudjEuUHJvZmlsZSLiAQoUVXBkYXRlUHJvZmlsZVJlcXVlc3QSEgoKcHJvZmlsZV9pZBgBIAEoCRITCgtjdXJyZW50X3BpbhgCIAEoCRIRCgRuYW1lGAMgASgJSACIAQESEAoDcGluGAQgASgJSAGIAQESEAoDa2lkGAUgASgISAKIAQESLQoIcGFyZW50YWwYBiABKAsyGy5sYXRlcm5hLnYxLlBhcmVudGFsQ29udHJvbBIVCghsYW5ndWFnZRgHIAEoCUgDiAEBQgcKBV9uYW1lQgYKBF9waW5CBgoEX2tpZEILCglfbGFuZ3VhZ2UiPQoVVXBkYXRlUHJvZmlsZVJlc3BvbnNlEiQKB3Byb2ZpbGUYASABKAsyEy5sYXRlcm5hLnYxLlByb2ZpbGUiPwoURGVsZXRlUHJvZmlsZVJlcXVlc3QSEgoKcHJvZmlsZV9pZBgBIAEoCRITCgtjdXJyZW50X3BpbhgCIAEoCSIXChVEZWxldGVQcm9maWxlUmVzcG9uc2UiNwoUU2VsZWN0UHJvZmlsZVJlcXVlc3QSEgoKcHJvZmlsZV9pZBgBIAEoCRILCgNwaW4YAiABKAkiPQoVU2VsZWN0UHJvZmlsZVJlc3BvbnNlEiQKB3Byb2ZpbGUYASABKAsyEy5sYXRlcm5hLnYxLlByb2ZpbGUiJgoSU2V0TGFuZ3VhZ2VSZXF1ZXN0EhAKCGxhbmd1YWdlGAEgASgJIjsKE1NldExhbmd1YWdlUmVzcG9uc2USJAoHcHJvZmlsZRgBIAEoCzITLmxhdGVybmEudjEuUHJvZmlsZSJZCh1TZXRTdWJ0aXRsZVByZWZlcmVuY2VzUmVxdWVzdBImCgRtb2RlGAEgASgOMhgubGF0ZXJuYS52MS5TdWJ0aXRsZU1vZGUSEAoIbGFuZ3VhZ2UYAiABKAkiRgoeU2V0U3VidGl0bGVQcmVmZXJlbmNlc1Jlc3BvbnNlEiQKB3Byb2ZpbGUYASABKAsyEy5sYXRlcm5hLnYxLlByb2ZpbGUqeAoMU3VidGl0bGVNb2RlEh0KGVNVQlRJVExFX01PREVfVU5TUEVDSUZJRUQQABIYChRTVUJUSVRMRV9NT0RFX0FMV0FZUxABEhgKFFNVQlRJVExFX01PREVfRk9SQ0VEEAISFQoRU1VCVElUTEVfTU9ERV9PRkYQAzKdBQoOUHJvZmlsZVNlcnZpY2USWgoMTGlzdFByb2ZpbGVzEh8ubGF0ZXJuYS52MS5MaXN0UHJvZmlsZXNSZXF1ZXN0GiAubGF0ZXJuYS52MS5MaXN0UHJvZmlsZXNSZXNwb25zZSIHkAIBiLUYAhJaCg1DcmVhdGVQcm9maWxlEiAubGF0ZXJuYS52MS5DcmVhdGVQcm9maWxlUmVxdWVzdBohLmxhdGVybmEudjEuQ3JlYXRlUHJvZmlsZVJlc3BvbnNlIgSItRgCEloKDVVwZGF0ZVByb2ZpbGUSIC5sYXRlcm5hLnYxLlVwZGF0ZVByb2ZpbGVSZXF1ZXN0GiEubGF0ZXJuYS52MS5VcGRhdGVQcm9maWxlUmVzcG9uc2UiBIi1GAISWgoNRGVsZXRlUHJvZmlsZRIgLmxhdGVybmEudjEuRGVsZXRlUHJvZmlsZVJlcXVlc3QaIS5sYXRlcm5hLnYxLkRlbGV0ZVByb2ZpbGVSZXNwb25zZSIEiLUYAhJaCg1TZWxlY3RQcm9maWxlEiAubGF0ZXJuYS52MS5TZWxlY3RQcm9maWxlUmVxdWVzdBohLmxhdGVybmEudjEuU2VsZWN0UHJvZmlsZVJlc3BvbnNlIgSItRgCEk4KC1NldExhbmd1YWdlEh4ubGF0ZXJuYS52MS5TZXRMYW5ndWFnZVJlcXVlc3QaHy5sYXRlcm5hLnYxLlNldExhbmd1YWdlUmVzcG9uc2USbwoWU2V0U3VidGl0bGVQcmVmZXJlbmNlcxIpLmxhdGVybmEudjEuU2V0U3VidGl0bGVQcmVmZXJlbmNlc1JlcXVlc3QaKi5sYXRlcm5hLnYxLlNldFN1YnRpdGxlUHJlZmVyZW5jZXNSZXNwb25zZUJKWkhnaXRodWIuY29tL2xhdGVybmEtcHJvamVjdC9sYXRlcm5hL2ludGVybmFsL2FwaS9nZW4vbGF0ZXJuYS92MTtsYXRlcm5hdjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_laterna_v1_options]);
+  fileDesc("ChhsYXRlcm5hL3YxL3Byb2ZpbGUucHJvdG8SCmxhdGVybmEudjEilgIKB1Byb2ZpbGUSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdoYXNfcGluGAMgASgIEgsKA2tpZBgEIAEoCBIuCgpjcmVhdGVkX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCghwYXJlbnRhbBgGIAEoCzIbLmxhdGVybmEudjEuUGFyZW50YWxDb250cm9sEhAKCGxhbmd1YWdlGAcgASgJEi8KDXN1YnRpdGxlX21vZGUYCCABKA4yGC5sYXRlcm5hLnYxLlN1YnRpdGxlTW9kZRIZChFzdWJ0aXRsZV9sYW5ndWFnZRgJIAEoCRIWCg5hdWRpb19sYW5ndWFnZRgKIAEoCSJKCg9QYXJlbnRhbENvbnRyb2wSFAoHbWF4X2FnZRgBIAEoBUgAiAEBEhUKDWJsb2NrX3VucmF0ZWQYAiABKAhCCgoIX21heF9hZ2UiFQoTTGlzdFByb2ZpbGVzUmVxdWVzdCI9ChRMaXN0UHJvZmlsZXNSZXNwb25zZRIlCghwcm9maWxlcxgBIAMoCzITLmxhdGVybmEudjEuUHJvZmlsZSJ/ChRDcmVhdGVQcm9maWxlUmVxdWVzdBIMCgRuYW1lGAEgASgJEgsKA3BpbhgCIAEoCRILCgNraWQYAyABKAgSLQoIcGFyZW50YWwYBCABKAsyGy5sYXRlcm5hLnYxLlBhcmVudGFsQ29udHJvbBIQCghsYW5ndWFnZRgFIAEoCSI9ChVDcmVhdGVQcm9maWxlUmVzcG9uc2USJAoHcHJvZmlsZRgBIAEoCzITLmxhdGVybmEudjEuUHJvZmlsZSLiAQoUVXBkYXRlUHJvZmlsZVJlcXVlc3QSEgoKcHJvZmlsZV9pZBgBIAEoCRITCgtjdXJyZW50X3BpbhgCIAEoCRIRCgRuYW1lGAMgASgJSACIAQESEAoDcGluGAQgASgJSAGIAQESEAoDa2lkGAUgASgISAKIAQESLQoIcGFyZW50YWwYBiABKAsyGy5sYXRlcm5hLnYxLlBhcmVudGFsQ29udHJvbBIVCghsYW5ndWFnZRgHIAEoCUgDiAEBQgcKBV9uYW1lQgYKBF9waW5CBgoEX2tpZEILCglfbGFuZ3VhZ2UiPQoVVXBkYXRlUHJvZmlsZVJlc3BvbnNlEiQKB3Byb2ZpbGUYASABKAsyEy5sYXRlcm5hLnYxLlByb2ZpbGUiPwoURGVsZXRlUHJvZmlsZVJlcXVlc3QSEgoKcHJvZmlsZV9pZBgBIAEoCRITCgtjdXJyZW50X3BpbhgCIAEoCSIXChVEZWxldGVQcm9maWxlUmVzcG9uc2UiNwoUU2VsZWN0UHJvZmlsZVJlcXVlc3QSEgoKcHJvZmlsZV9pZBgBIAEoCRILCgNwaW4YAiABKAkiPQoVU2VsZWN0UHJvZmlsZVJlc3BvbnNlEiQKB3Byb2ZpbGUYASABKAsyEy5sYXRlcm5hLnYxLlByb2ZpbGUi7AEKGFVwZGF0ZVByZWZlcmVuY2VzUmVxdWVzdBIVCghsYW5ndWFnZRgBIAEoCUgAiAEBEjQKDXN1YnRpdGxlX21vZGUYAiABKA4yGC5sYXRlcm5hLnYxLlN1YnRpdGxlTW9kZUgBiAEBEh4KEXN1YnRpdGxlX2xhbmd1YWdlGAMgASgJSAKIAQESGwoOYXVkaW9fbGFuZ3VhZ2UYBCABKAlIA4gBAUILCglfbGFuZ3VhZ2VCEAoOX3N1YnRpdGxlX21vZGVCFAoSX3N1YnRpdGxlX2xhbmd1YWdlQhEKD19hdWRpb19sYW5ndWFnZSJBChlVcGRhdGVQcmVmZXJlbmNlc1Jlc3BvbnNlEiQKB3Byb2ZpbGUYASABKAsyEy5sYXRlcm5hLnYxLlByb2ZpbGUqeAoMU3VidGl0bGVNb2RlEh0KGVNVQlRJVExFX01PREVfVU5TUEVDSUZJRUQQABIYChRTVUJUSVRMRV9NT0RFX0FMV0FZUxABEhgKFFNVQlRJVExFX01PREVfRk9SQ0VEEAISFQoRU1VCVElUTEVfTU9ERV9PRkYQAzLOBAoOUHJvZmlsZVNlcnZpY2USWgoMTGlzdFByb2ZpbGVzEh8ubGF0ZXJuYS52MS5MaXN0UHJvZmlsZXNSZXF1ZXN0GiAubGF0ZXJuYS52MS5MaXN0UHJvZmlsZXNSZXNwb25zZSIHkAIBiLUYAhJeCg1DcmVhdGVQcm9maWxlEiAubGF0ZXJuYS52MS5DcmVhdGVQcm9maWxlUmVxdWVzdBohLmxhdGVybmEudjEuQ3JlYXRlUHJvZmlsZVJlc3BvbnNlIgiItRgCkLUYAhJeCg1VcGRhdGVQcm9maWxlEiAubGF0ZXJuYS52MS5VcGRhdGVQcm9maWxlUmVxdWVzdBohLmxhdGVybmEudjEuVXBkYXRlUHJvZmlsZVJlc3BvbnNlIgiItRgCkLUYAhJeCg1EZWxldGVQcm9maWxlEiAubGF0ZXJuYS52MS5EZWxldGVQcm9maWxlUmVxdWVzdBohLmxhdGVybmEudjEuRGVsZXRlUHJvZmlsZVJlc3BvbnNlIgiItRgCkLUYAhJeCg1TZWxlY3RQcm9maWxlEiAubGF0ZXJuYS52MS5TZWxlY3RQcm9maWxlUmVxdWVzdBohLmxhdGVybmEudjEuU2VsZWN0UHJvZmlsZVJlc3BvbnNlIgiItRgCkLUYAhJgChFVcGRhdGVQcmVmZXJlbmNlcxIkLmxhdGVybmEudjEuVXBkYXRlUHJlZmVyZW5jZXNSZXF1ZXN0GiUubGF0ZXJuYS52MS5VcGRhdGVQcmVmZXJlbmNlc1Jlc3BvbnNlQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_laterna_v1_options]);
 
 /**
  * @generated from message laterna.v1.Profile
@@ -79,6 +79,15 @@ export type Profile = Message<"laterna.v1.Profile"> & {
    * @generated from field: string subtitle_language = 9;
    */
   subtitleLanguage: string;
+
+  /**
+   * Language of the audio playback starts with (BCP 47 tag: "ja" for anime in the original), when
+   * the file has it and the request names no audio stream; empty means the file's default stream.
+   * In a series, the language last chosen there comes first (StartPlaybackRequest).
+   *
+   * @generated from field: string audio_language = 10;
+   */
+  audioLanguage: string;
 };
 
 /**
@@ -360,28 +369,50 @@ export const SelectProfileResponseSchema: GenMessage<SelectProfileResponse> = /*
   messageDesc(file_laterna_v1_profile, 11);
 
 /**
- * @generated from message laterna.v1.SetLanguageRequest
+ * UpdatePreferencesRequest changes what it sets; unset leaves it unchanged. Languages are BCP 47
+ * tags, as in Profile.
+ *
+ * @generated from message laterna.v1.UpdatePreferencesRequest
  */
-export type SetLanguageRequest = Message<"laterna.v1.SetLanguageRequest"> & {
+export type UpdatePreferencesRequest = Message<"laterna.v1.UpdatePreferencesRequest"> & {
   /**
-   * BCP 47 tag; empty means none.
+   * Empty means none.
    *
-   * @generated from field: string language = 1;
+   * @generated from field: optional string language = 1;
    */
-  language: string;
+  language?: string | undefined;
+
+  /**
+   * @generated from field: optional laterna.v1.SubtitleMode subtitle_mode = 2;
+   */
+  subtitleMode?: SubtitleMode | undefined;
+
+  /**
+   * Empty means the profile's language.
+   *
+   * @generated from field: optional string subtitle_language = 3;
+   */
+  subtitleLanguage?: string | undefined;
+
+  /**
+   * Empty means the file's default stream.
+   *
+   * @generated from field: optional string audio_language = 4;
+   */
+  audioLanguage?: string | undefined;
 };
 
 /**
- * Describes the message laterna.v1.SetLanguageRequest.
- * Use `create(SetLanguageRequestSchema)` to create a new message.
+ * Describes the message laterna.v1.UpdatePreferencesRequest.
+ * Use `create(UpdatePreferencesRequestSchema)` to create a new message.
  */
-export const SetLanguageRequestSchema: GenMessage<SetLanguageRequest> = /*@__PURE__*/
+export const UpdatePreferencesRequestSchema: GenMessage<UpdatePreferencesRequest> = /*@__PURE__*/
   messageDesc(file_laterna_v1_profile, 12);
 
 /**
- * @generated from message laterna.v1.SetLanguageResponse
+ * @generated from message laterna.v1.UpdatePreferencesResponse
  */
-export type SetLanguageResponse = Message<"laterna.v1.SetLanguageResponse"> & {
+export type UpdatePreferencesResponse = Message<"laterna.v1.UpdatePreferencesResponse"> & {
   /**
    * @generated from field: laterna.v1.Profile profile = 1;
    */
@@ -389,52 +420,11 @@ export type SetLanguageResponse = Message<"laterna.v1.SetLanguageResponse"> & {
 };
 
 /**
- * Describes the message laterna.v1.SetLanguageResponse.
- * Use `create(SetLanguageResponseSchema)` to create a new message.
+ * Describes the message laterna.v1.UpdatePreferencesResponse.
+ * Use `create(UpdatePreferencesResponseSchema)` to create a new message.
  */
-export const SetLanguageResponseSchema: GenMessage<SetLanguageResponse> = /*@__PURE__*/
+export const UpdatePreferencesResponseSchema: GenMessage<UpdatePreferencesResponse> = /*@__PURE__*/
   messageDesc(file_laterna_v1_profile, 13);
-
-/**
- * @generated from message laterna.v1.SetSubtitlePreferencesRequest
- */
-export type SetSubtitlePreferencesRequest = Message<"laterna.v1.SetSubtitlePreferencesRequest"> & {
-  /**
-   * @generated from field: laterna.v1.SubtitleMode mode = 1;
-   */
-  mode: SubtitleMode;
-
-  /**
-   * BCP 47 tag; empty means the profile's language.
-   *
-   * @generated from field: string language = 2;
-   */
-  language: string;
-};
-
-/**
- * Describes the message laterna.v1.SetSubtitlePreferencesRequest.
- * Use `create(SetSubtitlePreferencesRequestSchema)` to create a new message.
- */
-export const SetSubtitlePreferencesRequestSchema: GenMessage<SetSubtitlePreferencesRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_profile, 14);
-
-/**
- * @generated from message laterna.v1.SetSubtitlePreferencesResponse
- */
-export type SetSubtitlePreferencesResponse = Message<"laterna.v1.SetSubtitlePreferencesResponse"> & {
-  /**
-   * @generated from field: laterna.v1.Profile profile = 1;
-   */
-  profile?: Profile | undefined;
-};
-
-/**
- * Describes the message laterna.v1.SetSubtitlePreferencesResponse.
- * Use `create(SetSubtitlePreferencesResponseSchema)` to create a new message.
- */
-export const SetSubtitlePreferencesResponseSchema: GenMessage<SetSubtitlePreferencesResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_profile, 15);
 
 /**
  * SubtitleMode says when a playback starts with a subtitle in the language of the profile.
@@ -540,26 +530,17 @@ export const ProfileService: GenService<{
     output: typeof SelectProfileResponseSchema;
   },
   /**
-   * SetLanguage changes the language of the picked profile. Everyone sets their own, even from a
-   * restricted profile.
+   * UpdatePreferences changes the preferences of the picked profile: its language, when playback
+   * starts with a subtitle and in which language, the audio language playback starts with.
+   * Everyone sets their own, even from a restricted profile. The theme is set apart
+   * (ThemeService.SetMyTheme).
    *
-   * @generated from rpc laterna.v1.ProfileService.SetLanguage
+   * @generated from rpc laterna.v1.ProfileService.UpdatePreferences
    */
-  setLanguage: {
+  updatePreferences: {
     methodKind: "unary";
-    input: typeof SetLanguageRequestSchema;
-    output: typeof SetLanguageResponseSchema;
-  },
-  /**
-   * SetSubtitlePreferences changes when playback starts with a subtitle, for the picked profile.
-   * Everyone sets their own, even from a restricted profile.
-   *
-   * @generated from rpc laterna.v1.ProfileService.SetSubtitlePreferences
-   */
-  setSubtitlePreferences: {
-    methodKind: "unary";
-    input: typeof SetSubtitlePreferencesRequestSchema;
-    output: typeof SetSubtitlePreferencesResponseSchema;
+    input: typeof UpdatePreferencesRequestSchema;
+    output: typeof UpdatePreferencesResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_laterna_v1_profile, 0);

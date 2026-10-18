@@ -795,7 +795,7 @@ export function Player(p: PlayerProps) {
                     key={f.id}
                     on={f.id === session.fileId}
                     label={f.version || (v ? resolutionLabel(v.width, v.height) : f.container.toUpperCase())}
-                    sub={[f.container.toUpperCase(), fileSize(f.size)].join(" · ")}
+                    sub={[f.container.toUpperCase(), fileSize(f.sizeBytes)].join(" · ")}
                     onClick={() => void open({ ...choice, fileId: f.id }, video.current?.currentTime)}
                   />
                 );

@@ -281,7 +281,7 @@ function DestinationDialog({
                 {roots.map((r) => (
                   <option key={r.path} value={r.path}>
                     {r.path}
-                    {freeSpace(r.freeSpace)}
+                    {freeSpace(r.freeSpaceBytes)}
                   </option>
                 ))}
               </select>

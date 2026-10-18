@@ -2,8 +2,10 @@
 // @generated from file laterna/v1/music.proto (package laterna.v1, syntax proto3)
 /* eslint-disable */
 
-import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
-import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
+import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
+import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
+import type { Duration } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_duration } from "@bufbuild/protobuf/wkt";
 import type { Album, AlbumSummary, Artist, ArtistSummary, ItemSort, MediaFile, Track } from "./catalog_pb";
 import { file_laterna_v1_catalog } from "./catalog_pb";
 import type { Message } from "@bufbuild/protobuf";
@@ -12,7 +14,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/music.proto.
  */
 export const file_laterna_v1_music: GenFile = /*@__PURE__*/
-  fileDesc("ChZsYXRlcm5hL3YxL211c2ljLnByb3RvEgpsYXRlcm5hLnYxIpwBChJMaXN0QXJ0aXN0c1JlcXVlc3QSEgoKbGlicmFyeV9pZBgBIAEoCRIiCgRzb3J0GAIgASgOMhQubGF0ZXJuYS52MS5JdGVtU29ydBIPCgdyZXZlcnNlGAMgASgIEhYKDmZhdm9yaXRlc19vbmx5GAQgASgIEhEKCXBhZ2Vfc2l6ZRgFIAEoBRISCgpwYWdlX3Rva2VuGAYgASgJIm4KE0xpc3RBcnRpc3RzUmVzcG9uc2USKgoHYXJ0aXN0cxgBIAMoCzIZLmxhdGVybmEudjEuQXJ0aXN0U3VtbWFyeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6ZRgDIAEoBSIlChBHZXRBcnRpc3RSZXF1ZXN0EhEKCWFydGlzdF9pZBgBIAEoCSJhChFHZXRBcnRpc3RSZXNwb25zZRIiCgZhcnRpc3QYASABKAsyEi5sYXRlcm5hLnYxLkFydGlzdBIoCgZhbGJ1bXMYAiADKAsyGC5sYXRlcm5hLnYxLkFsYnVtU3VtbWFyeSK9AQoRTGlzdEFsYnVtc1JlcXVlc3QSEgoKbGlicmFyeV9pZBgBIAEoCRIRCglhcnRpc3RfaWQYAiABKAkSIgoEc29ydBgDIAEoDjIULmxhdGVybmEudjEuSXRlbVNvcnQSDwoHcmV2ZXJzZRgEIAEoCBINCgVnZW5yZRgFIAEoCRIWCg5mYXZvcml0ZXNfb25seRgGIAEoCBIRCglwYWdlX3NpemUYByABKAUSEgoKcGFnZV90b2tlbhgIIAEoCSJrChJMaXN0QWxidW1zUmVzcG9uc2USKAoGYWxidW1zGAEgAygLMhgubGF0ZXJuYS52MS5BbGJ1bVN1bW1hcnkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUiIwoPR2V0QWxidW1SZXF1ZXN0EhAKCGFsYnVtX2lkGAEgASgJIlcKEEdldEFsYnVtUmVzcG9uc2USIAoFYWxidW0YASABKAsyES5sYXRlcm5hLnYxLkFsYnVtEiEKBnRyYWNrcxgCIAMoCzIRLmxhdGVybmEudjEuVHJhY2simwEKEUxpc3RUcmFja3NSZXF1ZXN0EhIKCmxpYnJhcnlfaWQYASABKAkSIgoEc29ydBgCIAEoDjIULmxhdGVybmEudjEuSXRlbVNvcnQSDwoHcmV2ZXJzZRgDIAEoCBIWCg5mYXZvcml0ZXNfb25seRgEIAEoCBIRCglwYWdlX3NpemUYBSABKAUSEgoKcGFnZV90b2tlbhgGIAEoCSJkChJMaXN0VHJhY2tzUmVzcG9uc2USIQoGdHJhY2tzGAEgAygLMhEubGF0ZXJuYS52MS5UcmFjaxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6ZRgDIAEoBSIjCg9HZXRUcmFja1JlcXVlc3QSEAoIdHJhY2tfaWQYASABKAkiWgoQR2V0VHJhY2tSZXNwb25zZRIgCgV0cmFjaxgBIAEoCzIRLmxhdGVybmEudjEuVHJhY2sSJAoFZmlsZXMYAiADKAsyFS5sYXRlcm5hLnYxLk1lZGlhRmlsZSIsChdMaXN0QXJ0aXN0VHJhY2tzUmVxdWVzdBIRCglhcnRpc3RfaWQYASABKAkiPQoYTGlzdEFydGlzdFRyYWNrc1Jlc3BvbnNlEiEKBnRyYWNrcxgBIAMoCzIRLmxhdGVybmEudjEuVHJhY2sy0gQKDE11c2ljU2VydmljZRJTCgtMaXN0QXJ0aXN0cxIeLmxhdGVybmEudjEuTGlzdEFydGlzdHNSZXF1ZXN0Gh8ubGF0ZXJuYS52MS5MaXN0QXJ0aXN0c1Jlc3BvbnNlIgOQAgESTQoJR2V0QXJ0aXN0EhwubGF0ZXJuYS52MS5HZXRBcnRpc3RSZXF1ZXN0Gh0ubGF0ZXJuYS52MS5HZXRBcnRpc3RSZXNwb25zZSIDkAIBElAKCkxpc3RBbGJ1bXMSHS5sYXRlcm5hLnYxLkxpc3RBbGJ1bXNSZXF1ZXN0Gh4ubGF0ZXJuYS52MS5MaXN0QWxidW1zUmVzcG9uc2UiA5ACARJKCghHZXRBbGJ1bRIbLmxhdGVybmEudjEuR2V0QWxidW1SZXF1ZXN0GhwubGF0ZXJuYS52MS5HZXRBbGJ1bVJlc3BvbnNlIgOQAgESUAoKTGlzdFRyYWNrcxIdLmxhdGVybmEudjEuTGlzdFRyYWNrc1JlcXVlc3QaHi5sYXRlcm5hLnYxLkxpc3RUcmFja3NSZXNwb25zZSIDkAIBEkoKCEdldFRyYWNrEhsubGF0ZXJuYS52MS5HZXRUcmFja1JlcXVlc3QaHC5sYXRlcm5hLnYxLkdldFRyYWNrUmVzcG9uc2UiA5ACARJiChBMaXN0QXJ0aXN0VHJhY2tzEiMubGF0ZXJuYS52MS5MaXN0QXJ0aXN0VHJhY2tzUmVxdWVzdBokLmxhdGVybmEudjEuTGlzdEFydGlzdFRyYWNrc1Jlc3BvbnNlIgOQAgFCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_laterna_v1_catalog]);
+  fileDesc("ChZsYXRlcm5hL3YxL211c2ljLnByb3RvEgpsYXRlcm5hLnYxIpwBChJMaXN0QXJ0aXN0c1JlcXVlc3QSEgoKbGlicmFyeV9pZBgBIAEoCRIiCgRzb3J0GAIgASgOMhQubGF0ZXJuYS52MS5JdGVtU29ydBIPCgdyZXZlcnNlGAMgASgIEhYKDmZhdm9yaXRlc19vbmx5GAQgASgIEhEKCXBhZ2Vfc2l6ZRgFIAEoBRISCgpwYWdlX3Rva2VuGAYgASgJIm4KE0xpc3RBcnRpc3RzUmVzcG9uc2USKgoHYXJ0aXN0cxgBIAMoCzIZLmxhdGVybmEudjEuQXJ0aXN0U3VtbWFyeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6ZRgDIAEoBSIlChBHZXRBcnRpc3RSZXF1ZXN0EhEKCWFydGlzdF9pZBgBIAEoCSJhChFHZXRBcnRpc3RSZXNwb25zZRIiCgZhcnRpc3QYASABKAsyEi5sYXRlcm5hLnYxLkFydGlzdBIoCgZhbGJ1bXMYAiADKAsyGC5sYXRlcm5hLnYxLkFsYnVtU3VtbWFyeSK9AQoRTGlzdEFsYnVtc1JlcXVlc3QSEgoKbGlicmFyeV9pZBgBIAEoCRIRCglhcnRpc3RfaWQYAiABKAkSIgoEc29ydBgDIAEoDjIULmxhdGVybmEudjEuSXRlbVNvcnQSDwoHcmV2ZXJzZRgEIAEoCBINCgVnZW5yZRgFIAEoCRIWCg5mYXZvcml0ZXNfb25seRgGIAEoCBIRCglwYWdlX3NpemUYByABKAUSEgoKcGFnZV90b2tlbhgIIAEoCSJrChJMaXN0QWxidW1zUmVzcG9uc2USKAoGYWxidW1zGAEgAygLMhgubGF0ZXJuYS52MS5BbGJ1bVN1bW1hcnkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUiIwoPR2V0QWxidW1SZXF1ZXN0EhAKCGFsYnVtX2lkGAEgASgJIlcKEEdldEFsYnVtUmVzcG9uc2USIAoFYWxidW0YASABKAsyES5sYXRlcm5hLnYxLkFsYnVtEiEKBnRyYWNrcxgCIAMoCzIRLmxhdGVybmEudjEuVHJhY2sirgEKEUxpc3RUcmFja3NSZXF1ZXN0EhIKCmxpYnJhcnlfaWQYASABKAkSIgoEc29ydBgCIAEoDjIULmxhdGVybmEudjEuSXRlbVNvcnQSDwoHcmV2ZXJzZRgDIAEoCBIWCg5mYXZvcml0ZXNfb25seRgEIAEoCBIRCglwYWdlX3NpemUYBSABKAUSEgoKcGFnZV90b2tlbhgGIAEoCRIRCglhcnRpc3RfaWQYByABKAkiZAoSTGlzdFRyYWNrc1Jlc3BvbnNlEiEKBnRyYWNrcxgBIAMoCzIRLmxhdGVybmEudjEuVHJhY2sSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUiIwoPR2V0VHJhY2tSZXF1ZXN0EhAKCHRyYWNrX2lkGAEgASgJIloKEEdldFRyYWNrUmVzcG9uc2USIAoFdHJhY2sYASABKAsyES5sYXRlcm5hLnYxLlRyYWNrEiQKBWZpbGVzGAIgAygLMhUubGF0ZXJuYS52MS5NZWRpYUZpbGUiJAoQR2V0THlyaWNzUmVxdWVzdBIQCgh0cmFja19pZBgBIAEoCSJzChFHZXRMeXJpY3NSZXNwb25zZRIOCgZzeW5jZWQYASABKAgSJAoFbGluZXMYAiADKAsyFS5sYXRlcm5hLnYxLkx5cmljTGluZRIoCgZzb3VyY2UYAyABKA4yGC5sYXRlcm5hLnYxLkx5cmljc1NvdXJjZSJDCglMeXJpY0xpbmUSKAoFc3RhcnQYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SDAoEdGV4dBgCIAEoCSpdCgxMeXJpY3NTb3VyY2USHQoZTFlSSUNTX1NPVVJDRV9VTlNQRUNJRklFRBAAEhYKEkxZUklDU19TT1VSQ0VfRklMRRABEhYKEkxZUklDU19TT1VSQ0VfVEFHUxACMr0ECgxNdXNpY1NlcnZpY2USUwoLTGlzdEFydGlzdHMSHi5sYXRlcm5hLnYxLkxpc3RBcnRpc3RzUmVxdWVzdBofLmxhdGVybmEudjEuTGlzdEFydGlzdHNSZXNwb25zZSIDkAIBEk0KCUdldEFydGlzdBIcLmxhdGVybmEudjEuR2V0QXJ0aXN0UmVxdWVzdBodLmxhdGVybmEudjEuR2V0QXJ0aXN0UmVzcG9uc2UiA5ACARJQCgpMaXN0QWxidW1zEh0ubGF0ZXJuYS52MS5MaXN0QWxidW1zUmVxdWVzdBoeLmxhdGVybmEudjEuTGlzdEFsYnVtc1Jlc3BvbnNlIgOQAgESSgoIR2V0QWxidW0SGy5sYXRlcm5hLnYxLkdldEFsYnVtUmVxdWVzdBocLmxhdGVybmEudjEuR2V0QWxidW1SZXNwb25zZSIDkAIBElAKCkxpc3RUcmFja3MSHS5sYXRlcm5hLnYxLkxpc3RUcmFja3NSZXF1ZXN0Gh4ubGF0ZXJuYS52MS5MaXN0VHJhY2tzUmVzcG9uc2UiA5ACARJKCghHZXRUcmFjaxIbLmxhdGVybmEudjEuR2V0VHJhY2tSZXF1ZXN0GhwubGF0ZXJuYS52MS5HZXRUcmFja1Jlc3BvbnNlIgOQAgESTQoJR2V0THlyaWNzEhwubGF0ZXJuYS52MS5HZXRMeXJpY3NSZXF1ZXN0Gh0ubGF0ZXJuYS52MS5HZXRMeXJpY3NSZXNwb25zZSIDkAIBQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_google_protobuf_duration, file_laterna_v1_catalog]);
 
 /**
  * @generated from message laterna.v1.ListArtistsRequest
@@ -291,6 +293,13 @@ export type ListTracksRequest = Message<"laterna.v1.ListTracksRequest"> & {
    * @generated from field: string page_token = 6;
    */
   pageToken: string;
+
+  /**
+   * Empty means all artists; otherwise the tracks of the albums of this artist.
+   *
+   * @generated from field: string artist_id = 7;
+   */
+  artistId: string;
 };
 
 /**
@@ -369,38 +378,109 @@ export const GetTrackResponseSchema: GenMessage<GetTrackResponse> = /*@__PURE__*
   messageDesc(file_laterna_v1_music, 11);
 
 /**
- * @generated from message laterna.v1.ListArtistTracksRequest
+ * @generated from message laterna.v1.GetLyricsRequest
  */
-export type ListArtistTracksRequest = Message<"laterna.v1.ListArtistTracksRequest"> & {
+export type GetLyricsRequest = Message<"laterna.v1.GetLyricsRequest"> & {
   /**
-   * @generated from field: string artist_id = 1;
+   * @generated from field: string track_id = 1;
    */
-  artistId: string;
+  trackId: string;
 };
 
 /**
- * Describes the message laterna.v1.ListArtistTracksRequest.
- * Use `create(ListArtistTracksRequestSchema)` to create a new message.
+ * Describes the message laterna.v1.GetLyricsRequest.
+ * Use `create(GetLyricsRequestSchema)` to create a new message.
  */
-export const ListArtistTracksRequestSchema: GenMessage<ListArtistTracksRequest> = /*@__PURE__*/
+export const GetLyricsRequestSchema: GenMessage<GetLyricsRequest> = /*@__PURE__*/
   messageDesc(file_laterna_v1_music, 12);
 
 /**
- * @generated from message laterna.v1.ListArtistTracksResponse
+ * @generated from message laterna.v1.GetLyricsResponse
  */
-export type ListArtistTracksResponse = Message<"laterna.v1.ListArtistTracksResponse"> & {
+export type GetLyricsResponse = Message<"laterna.v1.GetLyricsResponse"> & {
   /**
-   * @generated from field: repeated laterna.v1.Track tracks = 1;
+   * Timed lines (LRC), to follow the playback; otherwise plain lines, an empty one between
+   * stanzas.
+   *
+   * @generated from field: bool synced = 1;
    */
-  tracks: Track[];
+  synced: boolean;
+
+  /**
+   * @generated from field: repeated laterna.v1.LyricLine lines = 2;
+   */
+  lines: LyricLine[];
+
+  /**
+   * @generated from field: laterna.v1.LyricsSource source = 3;
+   */
+  source: LyricsSource;
 };
 
 /**
- * Describes the message laterna.v1.ListArtistTracksResponse.
- * Use `create(ListArtistTracksResponseSchema)` to create a new message.
+ * Describes the message laterna.v1.GetLyricsResponse.
+ * Use `create(GetLyricsResponseSchema)` to create a new message.
  */
-export const ListArtistTracksResponseSchema: GenMessage<ListArtistTracksResponse> = /*@__PURE__*/
+export const GetLyricsResponseSchema: GenMessage<GetLyricsResponse> = /*@__PURE__*/
   messageDesc(file_laterna_v1_music, 13);
+
+/**
+ * LyricLine is a line of lyrics.
+ *
+ * @generated from message laterna.v1.LyricLine
+ */
+export type LyricLine = Message<"laterna.v1.LyricLine"> & {
+  /**
+   * When it is sung; unset for plain lyrics.
+   *
+   * @generated from field: google.protobuf.Duration start = 1;
+   */
+  start?: Duration | undefined;
+
+  /**
+   * @generated from field: string text = 2;
+   */
+  text: string;
+};
+
+/**
+ * Describes the message laterna.v1.LyricLine.
+ * Use `create(LyricLineSchema)` to create a new message.
+ */
+export const LyricLineSchema: GenMessage<LyricLine> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_music, 14);
+
+/**
+ * LyricsSource says where lyrics come from.
+ *
+ * @generated from enum laterna.v1.LyricsSource
+ */
+export enum LyricsSource {
+  /**
+   * @generated from enum value: LYRICS_SOURCE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * A .lrc file next to the track, with the same name.
+   *
+   * @generated from enum value: LYRICS_SOURCE_FILE = 1;
+   */
+  FILE = 1,
+
+  /**
+   * The tags of the file (LYRICS, UNSYNCEDLYRICS, ID3 USLT, MP4 lyrics).
+   *
+   * @generated from enum value: LYRICS_SOURCE_TAGS = 2;
+   */
+  TAGS = 2,
+}
+
+/**
+ * Describes the enum laterna.v1.LyricsSource.
+ */
+export const LyricsSourceSchema: GenEnum<LyricsSource> = /*@__PURE__*/
+  enumDesc(file_laterna_v1_music, 0);
 
 /**
  * MusicService browses the music libraries for the picked profile: artists (those with at least one
@@ -455,7 +535,8 @@ export const MusicService: GenService<{
     output: typeof GetAlbumResponseSchema;
   },
   /**
-   * ListTracks returns a page of tracks (all of them, or the favorites).
+   * ListTracks returns a page of tracks: all of them, the favorites, or those of an artist. Those
+   * of an artist in ITEM_SORT_ALBUM order are what plays the artist, album by album.
    *
    * @generated from rpc laterna.v1.MusicService.ListTracks
    */
@@ -475,15 +556,15 @@ export const MusicService: GenService<{
     output: typeof GetTrackResponseSchema;
   },
   /**
-   * ListArtistTracks returns all the present tracks of an artist, album by album (oldest first):
-   * enough to play everything, or shuffle everything.
+   * GetLyrics returns the lyrics of a track (Track.has_lyrics): from a .lrc file next to it, timed
+   * line by line, otherwise from its tags. NOT_FOUND (music.no_lyrics) if it has none.
    *
-   * @generated from rpc laterna.v1.MusicService.ListArtistTracks
+   * @generated from rpc laterna.v1.MusicService.GetLyrics
    */
-  listArtistTracks: {
+  getLyrics: {
     methodKind: "unary";
-    input: typeof ListArtistTracksRequestSchema;
-    output: typeof ListArtistTracksResponseSchema;
+    input: typeof GetLyricsRequestSchema;
+    output: typeof GetLyricsResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_laterna_v1_music, 0);
