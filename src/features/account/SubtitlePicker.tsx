@@ -63,7 +63,7 @@ export function languageOptions(locale: string): { code: string; name: string }[
 }
 
 /**
- * Subtitles a playback starts with, for the chosen profile (ProfileService.SetSubtitlePreferences):
+ * Subtitles a playback starts with, for the chosen profile (ProfileService.UpdatePreferences):
  * when, and in which language. The server applies them on every device that asks.
  */
 export function SubtitlePicker() {
@@ -71,16 +71,16 @@ export function SubtitlePicker() {
   const id = useId();
   const invalidate = useInvalidate();
   const profile = useQuery(AuthService.method.getSession, {}).data?.session?.profile;
-  const save = useMutation(ProfileService.method.setSubtitlePreferences, {
+  const save = useMutation(ProfileService.method.updatePreferences, {
     onSuccess: () => invalidate(AuthService, ProfileService),
   });
   if (!profile) return null;
   // The choice being saved shows at once; a refused one goes back to the profile's.
   const pending = save.isError ? undefined : save.variables;
-  const mode = pending?.mode ?? profile.subtitleMode;
-  const language = pending?.language ?? profile.subtitleLanguage;
+  const mode = pending?.subtitleMode ?? profile.subtitleMode;
+  const language = pending?.subtitleLanguage ?? profile.subtitleLanguage;
   const choose = (next: { mode?: SubtitleMode; language?: string }) =>
-    save.mutate({ mode: next.mode ?? mode, language: next.language ?? language });
+    save.mutate({ subtitleMode: next.mode ?? mode, subtitleLanguage: next.language ?? language });
   const own = profile.language || uiLanguage();
   const ownName = new Intl.DisplayNames([uiLanguage()], { type: "language" }).of(own) ?? own;
   return (

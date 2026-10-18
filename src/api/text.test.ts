@@ -27,6 +27,15 @@ describe("server texts", () => {
     expect(renderKey("error.auth.too_many_attempts", { retry_after_seconds: "61" })).toContain("2 min");
   });
 
+  it("formats bitrates", () => {
+    expect(renderKey("reason.bitrate_above_limit", { bitrate_kbps: "60400", limit_kbps: "4000" })).toBe(
+      "The bitrate of the file (60 Mbit/s) is above the limit of this playback (4 Mbit/s)",
+    );
+    expect(renderKey("activity.setting.remote_max_bitrate", { value_kbps: "1500" })).toBe(
+      "bitrate outside the local network: 1500 kbit/s at most",
+    );
+  });
+
   it("joins the list with the language's separator", () => {
     const t = create(TextSchema, {
       key: "activity.scan",

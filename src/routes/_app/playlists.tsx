@@ -134,7 +134,7 @@ function NameDialog({
   const create = useMutation(PlaylistService.method.createPlaylist, {
     onSuccess: (r) => done(r.playlist?.id),
   });
-  const rename = useMutation(PlaylistService.method.renamePlaylist, {
+  const rename = useMutation(PlaylistService.method.updatePlaylist, {
     onSuccess: (r) => done(r.playlist?.id),
   });
   const error = create.error ?? rename.error;

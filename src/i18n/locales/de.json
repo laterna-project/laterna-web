@@ -589,7 +589,6 @@
     "browse": "Server-Ordner für Ordner {{n}} durchsuchen",
     "removeFolder": "Ordner {{n}} entfernen",
     "addFolder": "+ Ordner hinzufügen",
-    "language": "Sprache der Metadaten",
     "note": "Laterna verändert nie eine Datei. Ein unerreichbarer Ordner leert die Mediathek nicht; eine fehlende Datei wird nach der eingestellten Frist vergessen.",
     "savedScan": "Mediathek gespeichert; ein Scan wurde gestartet.",
     "saved": "Mediathek gespeichert.",

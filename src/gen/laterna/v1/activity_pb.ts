@@ -9,6 +9,8 @@ import { file_google_protobuf_duration, file_google_protobuf_timestamp } from "@
 import type { Device } from "./auth_pb";
 import { file_laterna_v1_auth } from "./auth_pb";
 import { file_laterna_v1_options } from "./options_pb";
+import type { PlaybackMethod } from "./playback_pb";
+import { file_laterna_v1_playback } from "./playback_pb";
 import type { Text } from "./text_pb";
 import { file_laterna_v1_text } from "./text_pb";
 import type { Message } from "@bufbuild/protobuf";
@@ -17,7 +19,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/activity.proto.
  */
 export const file_laterna_v1_activity: GenFile = /*@__PURE__*/
-  fileDesc("ChlsYXRlcm5hL3YxL2FjdGl2aXR5LnByb3RvEgpsYXRlcm5hLnYxIuYBCg1BY3Rpdml0eUVudHJ5EgoKAmlkGAEgASgDEiYKAmF0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBImCgRraW5kGAMgASgOMhgubGF0ZXJuYS52MS5BY3Rpdml0eUtpbmQSDwoHd2FybmluZxgEIAEoCBISCgphY2NvdW50X2lkGAUgASgJEhIKCnByb2ZpbGVfaWQYBiABKAkSDwoHaXRlbV9pZBgHIAEoCRIPCgdzdW1tYXJ5GAggASgJEh4KBHRleHQYCSABKAsyEC5sYXRlcm5hLnYxLlRleHQiZwoTTGlzdEFjdGl2aXR5UmVxdWVzdBISCgpwYWdlX3Rva2VuGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRIVCg13YXJuaW5nc19vbmx5GAMgASgIEhIKCmFjY291bnRfaWQYBCABKAkiWwoUTGlzdEFjdGl2aXR5UmVzcG9uc2USKgoHZW50cmllcxgBIAMoCzIZLmxhdGVybmEudjEuQWN0aXZpdHlFbnRyeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkihwIKDURldmljZVNlc3Npb24SEgoKc2Vzc2lvbl9pZBgBIAEoCRISCgphY2NvdW50X2lkGAIgASgJEhAKCHVzZXJuYW1lGAMgASgJEhQKDHByb2ZpbGVfbmFtZRgEIAEoCRIiCgZkZXZpY2UYBSABKAsyEi5sYXRlcm5hLnYxLkRldmljZRIuCgpjcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxsYXN0X3VzZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg8KB2xhc3RfaXAYCCABKAkSDwoHY3VycmVudBgJIAEoCCIUChJMaXN0RGV2aWNlc1JlcXVlc3QiQQoTTGlzdERldmljZXNSZXNwb25zZRIqCgdkZXZpY2VzGAEgAygLMhkubGF0ZXJuYS52MS5EZXZpY2VTZXNzaW9uIikKE1Jldm9rZURldmljZVJlcXVlc3QSEgoKc2Vzc2lvbl9pZBgBIAEoCSIWChRSZXZva2VEZXZpY2VSZXNwb25zZSK0AwoOQWN0aXZlUGxheWJhY2sSCgoCaWQYASABKAkSEgoKYWNjb3VudF9pZBgCIAEoCRIQCgh1c2VybmFtZRgDIAEoCRISCgpwcm9maWxlX2lkGAQgASgJEhQKDHByb2ZpbGVfbmFtZRgFIAEoCRIOCgZkZXZpY2UYBiABKAkSDwoHaXRlbV9pZBgHIAEoCRINCgV0aXRsZRgIIAEoCRIOCgZtZXRob2QYCSABKAkSEgoKY29weV92aWRlbxgKIAEoCBISCgpjb3B5X2F1ZGlvGAsgASgIEg8KB2VuY29kZXIYDCABKAkSEAoIdG9uZV9tYXAYDSABKAkSCwoDZ3B1GA4gASgIEi4KCnN0YXJ0ZWRfYXQYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEisKCHBvc2l0aW9uGBAgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEisKCGR1cmF0aW9uGBEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhMKC3RyYW5zY29kaW5nGBIgASgIEg8KB2RlY29kZXIYEyABKAkiFgoUTGlzdFBsYXliYWNrc1JlcXVlc3QiRgoVTGlzdFBsYXliYWNrc1Jlc3BvbnNlEi0KCXBsYXliYWNrcxgBIAMoCzIaLmxhdGVybmEudjEuQWN0aXZlUGxheWJhY2siKQoSRW5kUGxheWJhY2tSZXF1ZXN0EhMKC3BsYXliYWNrX2lkGAEgASgJIhUKE0VuZFBsYXliYWNrUmVzcG9uc2UqmAUKDEFjdGl2aXR5S2luZBIdChlBQ1RJVklUWV9LSU5EX1VOU1BFQ0lGSUVEEAASFwoTQUNUSVZJVFlfS0lORF9MT0dJThABEh4KGkFDVElWSVRZX0tJTkRfTE9HSU5fRkFJTEVEEAISIQodQUNUSVZJVFlfS0lORF9BQ0NPVU5UX0NSRUFURUQQAxIhCh1BQ1RJVklUWV9LSU5EX0FDQ09VTlRfVVBEQVRFRBAEEiEKHUFDVElWSVRZX0tJTkRfQUNDT1VOVF9ERUxFVEVEEAUSIQodQUNUSVZJVFlfS0lORF9TRVNTSU9OX1JFVk9LRUQQBhIhCh1BQ1RJVklUWV9LSU5EX0xJQlJBUllfQ1JFQVRFRBAHEiEKHUFDVElWSVRZX0tJTkRfTElCUkFSWV9VUERBVEVEEAgSIQodQUNUSVZJVFlfS0lORF9MSUJSQVJZX0RFTEVURUQQCRIhCh1BQ1RJVklUWV9LSU5EX0xJQlJBUllfU0NBTk5FRBAKEiIKHkFDVElWSVRZX0tJTkRfUExBWUJBQ0tfU1RBUlRFRBALEiIKHkFDVElWSVRZX0tJTkRfUExBWUJBQ0tfU1RPUFBFRBAMEiIKHkFDVElWSVRZX0tJTkRfU0VUVElOR1NfVVBEQVRFRBANEh0KGUFDVElWSVRZX0tJTkRfSU5URUdSQVRJT04QDhIZChVBQ1RJVklUWV9LSU5EX1dFQkhPT0sQDxIcChhBQ1RJVklUWV9LSU5EX0pPQl9GQUlMRUQQEBIfChtBQ1RJVklUWV9LSU5EX1BBUlRZX1NUQVJURUQQERIYChRBQ1RJVklUWV9LSU5EX0lNUE9SVBASEhkKFUFDVElWSVRZX0tJTkRfUkVRVUVTVBATMtQDCg9BY3Rpdml0eVNlcnZpY2USWgoMTGlzdEFjdGl2aXR5Eh8ubGF0ZXJuYS52MS5MaXN0QWN0aXZpdHlSZXF1ZXN0GiAubGF0ZXJuYS52MS5MaXN0QWN0aXZpdHlSZXNwb25zZSIHkAIBiLUYBBJXCgtMaXN0RGV2aWNlcxIeLmxhdGVybmEudjEuTGlzdERldmljZXNSZXF1ZXN0Gh8ubGF0ZXJuYS52MS5MaXN0RGV2aWNlc1Jlc3BvbnNlIgeQAgGItRgEElcKDFJldm9rZURldmljZRIfLmxhdGVybmEudjEuUmV2b2tlRGV2aWNlUmVxdWVzdBogLmxhdGVybmEudjEuUmV2b2tlRGV2aWNlUmVzcG9uc2UiBIi1GAQSXQoNTGlzdFBsYXliYWNrcxIgLmxhdGVybmEudjEuTGlzdFBsYXliYWNrc1JlcXVlc3QaIS5sYXRlcm5hLnYxLkxpc3RQbGF5YmFja3NSZXNwb25zZSIHkAIBiLUYBBJUCgtFbmRQbGF5YmFjaxIeLmxhdGVybmEudjEuRW5kUGxheWJhY2tSZXF1ZXN0Gh8ubGF0ZXJuYS52MS5FbmRQbGF5YmFja1Jlc3BvbnNlIgSItRgEQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_laterna_v1_auth, file_laterna_v1_options, file_laterna_v1_text]);
+  fileDesc("ChlsYXRlcm5hL3YxL2FjdGl2aXR5LnByb3RvEgpsYXRlcm5hLnYxIuYBCg1BY3Rpdml0eUVudHJ5EgoKAmlkGAEgASgDEiYKAmF0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBImCgRraW5kGAMgASgOMhgubGF0ZXJuYS52MS5BY3Rpdml0eUtpbmQSDwoHd2FybmluZxgEIAEoCBISCgphY2NvdW50X2lkGAUgASgJEhIKCnByb2ZpbGVfaWQYBiABKAkSDwoHaXRlbV9pZBgHIAEoCRIPCgdzdW1tYXJ5GAggASgJEh4KBHRleHQYCSABKAsyEC5sYXRlcm5hLnYxLlRleHQiZwoTTGlzdEFjdGl2aXR5UmVxdWVzdBISCgpwYWdlX3Rva2VuGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRIVCg13YXJuaW5nc19vbmx5GAMgASgIEhIKCmFjY291bnRfaWQYBCABKAkiWwoUTGlzdEFjdGl2aXR5UmVzcG9uc2USKgoHZW50cmllcxgBIAMoCzIZLmxhdGVybmEudjEuQWN0aXZpdHlFbnRyeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkirQIKDURldmljZVNlc3Npb24SEgoKc2Vzc2lvbl9pZBgBIAEoCRISCgphY2NvdW50X2lkGAIgASgJEhAKCHVzZXJuYW1lGAMgASgJEhQKDHByb2ZpbGVfbmFtZRgEIAEoCRIiCgZkZXZpY2UYBSABKAsyEi5sYXRlcm5hLnYxLkRldmljZRIuCgpjcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxsYXN0X3VzZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg8KB2xhc3RfaXAYCCABKAkSDwoHY3VycmVudBgJIAEoCBIRCglhcGlfdG9rZW4YCiABKAgSEQoJcmVhZF9vbmx5GAsgASgIIhQKEkxpc3REZXZpY2VzUmVxdWVzdCJBChNMaXN0RGV2aWNlc1Jlc3BvbnNlEioKB2RldmljZXMYASADKAsyGS5sYXRlcm5hLnYxLkRldmljZVNlc3Npb24iKQoTUmV2b2tlRGV2aWNlUmVxdWVzdBISCgpzZXNzaW9uX2lkGAEgASgJIhYKFFJldm9rZURldmljZVJlc3BvbnNlIsgECg5BY3RpdmVQbGF5YmFjaxIKCgJpZBgBIAEoCRISCgphY2NvdW50X2lkGAIgASgJEhAKCHVzZXJuYW1lGAMgASgJEhIKCnByb2ZpbGVfaWQYBCABKAkSFAoMcHJvZmlsZV9uYW1lGAUgASgJEg4KBmRldmljZRgGIAEoCRIPCgdpdGVtX2lkGAcgASgJEg0KBXRpdGxlGAggASgJEioKBm1ldGhvZBgXIAEoDjIaLmxhdGVybmEudjEuUGxheWJhY2tNZXRob2QSGAoQdmlkZW9fdHJhbnNjb2RlZBgYIAEoCBIYChBhdWRpb190cmFuc2NvZGVkGBkgASgIEhUKDXZpZGVvX2VuY29kZXIYDCABKAkSFAoMdG9uZV9tYXBwaW5nGA0gASgJEgsKA2dwdRgOIAEoCBIuCgpzdGFydGVkX2F0GA8gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCghwb3NpdGlvbhgQIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIrCghkdXJhdGlvbhgRIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhITCgt0cmFuc2NvZGluZxgSIAEoCBIPCgdkZWNvZGVyGBMgASgJEg4KBnJlbW90ZRgUIAEoCBIaChJiaXRyYXRlX2xpbWl0X2ticHMYFSABKAUSCgoCaXAYFiABKAlKBAgJEApKBAgKEAtKBAgLEAxSCmNvcHlfdmlkZW9SCmNvcHlfYXVkaW8iFgoUTGlzdFBsYXliYWNrc1JlcXVlc3QiRgoVTGlzdFBsYXliYWNrc1Jlc3BvbnNlEi0KCXBsYXliYWNrcxgBIAMoCzIaLmxhdGVybmEudjEuQWN0aXZlUGxheWJhY2siKQoSRW5kUGxheWJhY2tSZXF1ZXN0EhMKC3BsYXliYWNrX2lkGAEgASgJIhUKE0VuZFBsYXliYWNrUmVzcG9uc2UqhgYKDEFjdGl2aXR5S2luZBIdChlBQ1RJVklUWV9LSU5EX1VOU1BFQ0lGSUVEEAASFwoTQUNUSVZJVFlfS0lORF9MT0dJThABEh4KGkFDVElWSVRZX0tJTkRfTE9HSU5fRkFJTEVEEAISIQodQUNUSVZJVFlfS0lORF9BQ0NPVU5UX0NSRUFURUQQAxIhCh1BQ1RJVklUWV9LSU5EX0FDQ09VTlRfVVBEQVRFRBAEEiEKHUFDVElWSVRZX0tJTkRfQUNDT1VOVF9ERUxFVEVEEAUSIQodQUNUSVZJVFlfS0lORF9TRVNTSU9OX1JFVk9LRUQQBhIhCh1BQ1RJVklUWV9LSU5EX0xJQlJBUllfQ1JFQVRFRBAHEiEKHUFDVElWSVRZX0tJTkRfTElCUkFSWV9VUERBVEVEEAgSIQodQUNUSVZJVFlfS0lORF9MSUJSQVJZX0RFTEVURUQQCRIhCh1BQ1RJVklUWV9LSU5EX0xJQlJBUllfU0NBTk5FRBAKEiIKHkFDVElWSVRZX0tJTkRfUExBWUJBQ0tfU1RBUlRFRBALEiIKHkFDVElWSVRZX0tJTkRfUExBWUJBQ0tfU1RPUFBFRBAMEiIKHkFDVElWSVRZX0tJTkRfU0VUVElOR1NfVVBEQVRFRBANEh0KGUFDVElWSVRZX0tJTkRfSU5URUdSQVRJT04QDhIZChVBQ1RJVklUWV9LSU5EX1dFQkhPT0sQDxIcChhBQ1RJVklUWV9LSU5EX0pPQl9GQUlMRUQQEBIfChtBQ1RJVklUWV9LSU5EX1BBUlRZX1NUQVJURUQQERIYChRBQ1RJVklUWV9LSU5EX0lNUE9SVBASEhkKFUFDVElWSVRZX0tJTkRfUkVRVUVTVBATEiMKH0FDVElWSVRZX0tJTkRfQVBJX1RPS0VOX0NSRUFURUQQFBIjCh9BQ1RJVklUWV9LSU5EX0FQSV9UT0tFTl9SRVZPS0VEEBUSIgoeQUNUSVZJVFlfS0lORF9FUElTT0RFU19BUlJJVkVEEBYy1AMKD0FjdGl2aXR5U2VydmljZRJaCgxMaXN0QWN0aXZpdHkSHy5sYXRlcm5hLnYxLkxpc3RBY3Rpdml0eVJlcXVlc3QaIC5sYXRlcm5hLnYxLkxpc3RBY3Rpdml0eVJlc3BvbnNlIgeQAgGItRgEElcKC0xpc3REZXZpY2VzEh4ubGF0ZXJuYS52MS5MaXN0RGV2aWNlc1JlcXVlc3QaHy5sYXRlcm5hLnYxLkxpc3REZXZpY2VzUmVzcG9uc2UiB5ACAYi1GAQSVwoMUmV2b2tlRGV2aWNlEh8ubGF0ZXJuYS52MS5SZXZva2VEZXZpY2VSZXF1ZXN0GiAubGF0ZXJuYS52MS5SZXZva2VEZXZpY2VSZXNwb25zZSIEiLUYBBJdCg1MaXN0UGxheWJhY2tzEiAubGF0ZXJuYS52MS5MaXN0UGxheWJhY2tzUmVxdWVzdBohLmxhdGVybmEudjEuTGlzdFBsYXliYWNrc1Jlc3BvbnNlIgeQAgGItRgEElQKC0VuZFBsYXliYWNrEh4ubGF0ZXJuYS52MS5FbmRQbGF5YmFja1JlcXVlc3QaHy5sYXRlcm5hLnYxLkVuZFBsYXliYWNrUmVzcG9uc2UiBIi1GARCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_laterna_v1_auth, file_laterna_v1_options, file_laterna_v1_playback, file_laterna_v1_text]);
 
 /**
  * @generated from message laterna.v1.ActivityEntry
@@ -201,6 +203,19 @@ export type DeviceSession = Message<"laterna.v1.DeviceSession"> & {
    * @generated from field: bool current = 9;
    */
   current: boolean;
+
+  /**
+   * An API token (AuthService.CreateApiToken) rather than a device: device is its name, and
+   * read_only says whether it only reads.
+   *
+   * @generated from field: bool api_token = 10;
+   */
+  apiToken: boolean;
+
+  /**
+   * @generated from field: bool read_only = 11;
+   */
+  readOnly: boolean;
 };
 
 /**
@@ -271,7 +286,8 @@ export const RevokeDeviceResponseSchema: GenMessage<RevokeDeviceResponse> = /*@_
   messageDesc(file_laterna_v1_activity, 7);
 
 /**
- * ActivePlayback is a playback in progress.
+ * ActivePlayback is a playback in progress. Method, streams re-encoded, encoder, conversion and
+ * decoder are those of StartPlaybackResponse.
  *
  * @generated from message laterna.v1.ActivePlayback
  */
@@ -321,33 +337,31 @@ export type ActivePlayback = Message<"laterna.v1.ActivePlayback"> & {
   title: string;
 
   /**
-   * Playback method: "direct", "remux", "transcode".
-   *
-   * @generated from field: string method = 9;
+   * @generated from field: laterna.v1.PlaybackMethod method = 23;
    */
-  method: string;
+  method: PlaybackMethod;
 
   /**
-   * @generated from field: bool copy_video = 10;
+   * @generated from field: bool video_transcoded = 24;
    */
-  copyVideo: boolean;
+  videoTranscoded: boolean;
 
   /**
-   * @generated from field: bool copy_audio = 11;
+   * @generated from field: bool audio_transcoded = 25;
    */
-  copyAudio: boolean;
+  audioTranscoded: boolean;
 
   /**
    * Video encoder and HDR to SDR conversion, if the video is re-encoded.
    *
-   * @generated from field: string encoder = 12;
+   * @generated from field: string video_encoder = 12;
    */
-  encoder: string;
+  videoEncoder: string;
 
   /**
-   * @generated from field: string tone_map = 13;
+   * @generated from field: string tone_mapping = 13;
    */
-  toneMap: string;
+  toneMapping: string;
 
   /**
    * @generated from field: bool gpu = 14;
@@ -385,6 +399,27 @@ export type ActivePlayback = Message<"laterna.v1.ActivePlayback"> & {
    * @generated from field: string decoder = 19;
    */
   decoder: string;
+
+  /**
+   * The client is outside the local network (Settings.local_networks).
+   *
+   * @generated from field: bool remote = 20;
+   */
+  remote: boolean;
+
+  /**
+   * Bitrate limit applied (kbit/s, StartPlaybackResponse.bitrate_limit_kbps); 0 means none.
+   *
+   * @generated from field: int32 bitrate_limit_kbps = 21;
+   */
+  bitrateLimitKbps: number;
+
+  /**
+   * Client address, as seen by the server or given by a trusted proxy.
+   *
+   * @generated from field: string ip = 22;
+   */
+  ip: string;
 };
 
 /**
@@ -565,6 +600,25 @@ export enum ActivityKind {
    * @generated from enum value: ACTIVITY_KIND_REQUEST = 19;
    */
   REQUEST = 19,
+
+  /**
+   * An API token created or revoked (AuthService.CreateApiToken).
+   *
+   * @generated from enum value: ACTIVITY_KIND_API_TOKEN_CREATED = 20;
+   */
+  API_TOKEN_CREATED = 20,
+
+  /**
+   * @generated from enum value: ACTIVITY_KIND_API_TOKEN_REVOKED = 21;
+   */
+  API_TOKEN_REVOKED = 21,
+
+  /**
+   * Episodes of a series that arrived, told once the series has been quiet for a while.
+   *
+   * @generated from enum value: ACTIVITY_KIND_EPISODES_ARRIVED = 22;
+   */
+  EPISODES_ARRIVED = 22,
 }
 
 /**

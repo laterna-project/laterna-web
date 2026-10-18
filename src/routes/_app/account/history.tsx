@@ -206,7 +206,7 @@ function Entry({
           ) : (
             <span className={styles.name}>{e.title}</span>
           )}
-          {e.completed && <span className={styles.tag}>{t("history.completed")}</span>}
+          {e.finished && <span className={styles.tag}>{t("history.completed")}</span>}
           {e.offline && <span className={styles.tag}>{t("history.offline")}</span>}
         </span>
         <span className={styles.meta}>{meta}</span>

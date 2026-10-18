@@ -42,7 +42,7 @@ describe("downloads", () => {
     state: DownloadState.PREPARING,
     method: DownloadMethod.TRANSCODE,
     progress: 0.426,
-    estimatedSize: 420_000_000n,
+    estimatedSizeBytes: 420_000_000n,
     duration: create(DurationSchema, { seconds: 5_520n }),
   });
 
@@ -75,7 +75,7 @@ describe("downloads", () => {
       state: DownloadState.READY,
       method: DownloadMethod.ORIGINAL,
       quality: DownloadQuality.ORIGINAL,
-      size: 1_234_000_000n,
+      sizeBytes: 1_234_000_000n,
       duration: create(DurationSchema, { seconds: 300n }),
     });
     expect(stateLabel(ready)).toBe("Ready");
@@ -106,7 +106,7 @@ describe("downloads", () => {
     const file = create(MediaFileSchema, {
       version: "Director's Cut",
       container: "mkv",
-      size: 12_000_000_000n,
+      sizeBytes: 12_000_000_000n,
       streams: [video],
     });
     expect(versionLabel(file)).toBe("Director's Cut · 4K HEVC · MKV · 12 GB");

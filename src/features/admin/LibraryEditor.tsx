@@ -11,13 +11,13 @@ import { Dialog } from "../../ui/Dialog";
 import { Field } from "../../ui/Field";
 import { scrollBehavior } from "../../ui/motion";
 import { Status } from "../../ui/Status";
-import { libraryKind, libraryKinds, metadataLanguages, metadataTag } from "./admin";
+import { libraryKind, libraryKinds } from "./admin";
 import styles from "./admin.module.css";
 import { BrowseButton } from "./FolderPicker";
 
 /**
- * Create or edit a library: name, kind (at creation only), folders as the server sees them,
- * metadata language; delete.
+ * Create or edit a library: name, kind (at creation only), folders as the server sees them;
+ * delete.
  */
 export function LibraryEditor({
   library,
@@ -41,7 +41,6 @@ export function LibraryEditor({
     (library?.paths.length ? library.paths : [""]).map((value, key) => ({ key, value })),
   );
   const [nextKey, setNextKey] = useState(paths.length);
-  const [language, setLanguage] = useState(library?.language || metadataTag());
   const [deleting, setDeleting] = useState(false);
   // Report of the last save: changing the folders starts a scan.
   const [saved, setSaved] = useState<"" | "ok" | "scan">("");
@@ -73,14 +72,13 @@ export function LibraryEditor({
     e.preventDefault();
     setSaved("");
     if (!library) {
-      createLibrary.mutate({ name: name.trim(), kind, paths: list, language });
+      createLibrary.mutate({ name: name.trim(), kind, paths: list });
       return;
     }
     updateLibrary.mutate({
       libraryId: library.id,
       name: name.trim() !== library.name ? name.trim() : undefined,
       paths: pathsChanged ? list : [],
-      language: language !== library.language ? language : undefined,
     });
   };
   const error = createLibrary.error ?? updateLibrary.error;
@@ -171,22 +169,6 @@ export function LibraryEditor({
             </button>
           </div>
         </fieldset>
-        {kind !== LibraryKind.PHOTOS && (
-          <label className={styles.selectField}>
-            <span className={styles.label}>{t("libraryEditor.language")}</span>
-            <select className={styles.input} value={language} onChange={(e) => setLanguage(e.target.value)}>
-              {metadataLanguages().map((l) => (
-                <option key={l.value} value={l.value}>
-                  {l.label}
-                </option>
-              ))}
-              {/* A language set elsewhere (another region, another language) is still offered as is. */}
-              {!metadataLanguages().some((l) => l.value === language) && (
-                <option value={language}>{language}</option>
-              )}
-            </select>
-          </label>
-        )}
         <p className={styles.note}>{t("libraryEditor.note")}</p>
         {error && <Alert>{errorMessage(error)}</Alert>}
         <Status

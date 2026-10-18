@@ -189,7 +189,7 @@ export function Files({ files }: { files: readonly MediaFile[] }) {
             ? [resolutionLabel(video.width, video.height), codecName(video.codec)].filter(Boolean).join(" ")
             : null,
           f.container.toUpperCase(),
-          f.size > 0n ? fileSize(f.size) : null,
+          f.sizeBytes > 0n ? fileSize(f.sizeBytes) : null,
           f.duration ? formatRuntime(seconds(f.duration)) : null,
         ].filter(Boolean);
         return (

@@ -311,7 +311,7 @@ function Result({
   const meta = [
     // An artist and an album look alike in a music search: their kind tells them apart.
     r.kind === RequestKind.ARTIST || r.kind === RequestKind.ALBUM ? requestKind(r.kind).label : "",
-    r.network,
+    r.subtitle,
     r.year > 0 ? String(r.year) : "",
     r.kind === RequestKind.SERIES && r.seasonCount > 0
       ? t("requests.seasonCount", { count: r.seasonCount })

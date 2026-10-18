@@ -8,6 +8,7 @@ import type { Timestamp } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import type { SearchResult } from "./catalog_pb";
 import { file_laterna_v1_catalog } from "./catalog_pb";
+import { file_laterna_v1_options } from "./options_pb";
 import type { Text } from "./text_pb";
 import { file_laterna_v1_text } from "./text_pb";
 import type { Message } from "@bufbuild/protobuf";
@@ -16,7 +17,197 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/notification.proto.
  */
 export const file_laterna_v1_notification: GenFile = /*@__PURE__*/
-  fileDesc("Ch1sYXRlcm5hL3YxL25vdGlmaWNhdGlvbi5wcm90bxIKbGF0ZXJuYS52MSKFAgoMTm90aWZpY2F0aW9uEgoKAmlkGAEgASgJEioKBGtpbmQYAiABKA4yHC5sYXRlcm5hLnYxLk5vdGlmaWNhdGlvbktpbmQSDwoHc3VtbWFyeRgDIAEoCRIeCgR0ZXh0GAQgASgLMhAubGF0ZXJuYS52MS5UZXh0Ei4KCmNyZWF0ZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEgwKBHJlYWQYBiABKAgSJgoEaXRlbRgHIAEoCzIYLmxhdGVybmEudjEuU2VhcmNoUmVzdWx0EhIKCnJlcXVlc3RfaWQYCCABKAkSEgoKcG9zdGVyX3VybBgJIAEoCSJBChhMaXN0Tm90aWZpY2F0aW9uc1JlcXVlc3QSEgoKcGFnZV90b2tlbhgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUiewoZTGlzdE5vdGlmaWNhdGlvbnNSZXNwb25zZRIvCg1ub3RpZmljYXRpb25zGAEgAygLMhgubGF0ZXJuYS52MS5Ob3RpZmljYXRpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhQKDHVucmVhZF9jb3VudBgDIAEoBSJFChxNYXJrTm90aWZpY2F0aW9uc1JlYWRSZXF1ZXN0EhgKEG5vdGlmaWNhdGlvbl9pZHMYASADKAkSCwoDYWxsGAIgASgIIh8KHU1hcmtOb3RpZmljYXRpb25zUmVhZFJlc3BvbnNlIkMKGkRlbGV0ZU5vdGlmaWNhdGlvbnNSZXF1ZXN0EhgKEG5vdGlmaWNhdGlvbl9pZHMYASADKAkSCwoDYWxsGAIgASgIIh0KG0RlbGV0ZU5vdGlmaWNhdGlvbnNSZXNwb25zZSIWChRHZXRQdXNoQ29uZmlnUmVxdWVzdCI9ChVHZXRQdXNoQ29uZmlnUmVzcG9uc2USEgoKcHVibGljX2tleRgBIAEoCRIQCghlbmRwb2ludBgCIAEoCSJGChRTdWJzY3JpYmVQdXNoUmVxdWVzdBIQCghlbmRwb2ludBgBIAEoCRIOCgZwMjU2ZGgYAiABKAkSDAoEYXV0aBgDIAEoCSIXChVTdWJzY3JpYmVQdXNoUmVzcG9uc2UiGAoWVW5zdWJzY3JpYmVQdXNoUmVxdWVzdCIZChdVbnN1YnNjcmliZVB1c2hSZXNwb25zZSrFAgoQTm90aWZpY2F0aW9uS2luZBIhCh1OT1RJRklDQVRJT05fS0lORF9VTlNQRUNJRklFRBAAEiUKIU5PVElGSUNBVElPTl9LSU5EX1JFUVVFU1RfUEVORElORxABEiYKIk5PVElGSUNBVElPTl9LSU5EX1JFUVVFU1RfQVBQUk9WRUQQAhImCiJOT1RJRklDQVRJT05fS0lORF9SRVFVRVNUX0RFQ0xJTkVEEAMSJwojTk9USUZJQ0FUSU9OX0tJTkRfUkVRVUVTVF9BVkFJTEFCTEUQBBIkCiBOT1RJRklDQVRJT05fS0lORF9SRVFVRVNUX0ZBSUxFRBAFEiIKHk5PVElGSUNBVElPTl9LSU5EX05FV19FUElTT0RFUxAGEiQKIE5PVElGSUNBVElPTl9LSU5EX1JFUVVFU1RfQ0hPT1NFEAcy8wQKE05vdGlmaWNhdGlvblNlcnZpY2USZQoRTGlzdE5vdGlmaWNhdGlvbnMSJC5sYXRlcm5hLnYxLkxpc3ROb3RpZmljYXRpb25zUmVxdWVzdBolLmxhdGVybmEudjEuTGlzdE5vdGlmaWNhdGlvbnNSZXNwb25zZSIDkAIBEnEKFU1hcmtOb3RpZmljYXRpb25zUmVhZBIoLmxhdGVybmEudjEuTWFya05vdGlmaWNhdGlvbnNSZWFkUmVxdWVzdBopLmxhdGVybmEudjEuTWFya05vdGlmaWNhdGlvbnNSZWFkUmVzcG9uc2UiA5ACAhJrChNEZWxldGVOb3RpZmljYXRpb25zEiYubGF0ZXJuYS52MS5EZWxldGVOb3RpZmljYXRpb25zUmVxdWVzdBonLmxhdGVybmEudjEuRGVsZXRlTm90aWZpY2F0aW9uc1Jlc3BvbnNlIgOQAgISWQoNR2V0UHVzaENvbmZpZxIgLmxhdGVybmEudjEuR2V0UHVzaENvbmZpZ1JlcXVlc3QaIS5sYXRlcm5hLnYxLkdldFB1c2hDb25maWdSZXNwb25zZSIDkAIBElkKDVN1YnNjcmliZVB1c2gSIC5sYXRlcm5hLnYxLlN1YnNjcmliZVB1c2hSZXF1ZXN0GiEubGF0ZXJuYS52MS5TdWJzY3JpYmVQdXNoUmVzcG9uc2UiA5ACAhJfCg9VbnN1YnNjcmliZVB1c2gSIi5sYXRlcm5hLnYxLlVuc3Vic2NyaWJlUHVzaFJlcXVlc3QaIy5sYXRlcm5hLnYxLlVuc3Vic2NyaWJlUHVzaFJlc3BvbnNlIgOQAgJCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_laterna_v1_catalog, file_laterna_v1_text]);
+  fileDesc("Ch1sYXRlcm5hL3YxL25vdGlmaWNhdGlvbi5wcm90bxIKbGF0ZXJuYS52MSKoAgoMQWxlcnRDaGFubmVsEioKBGtpbmQYASABKA4yHC5sYXRlcm5hLnYxLkFsZXJ0Q2hhbm5lbEtpbmQSDwoHZW5hYmxlZBgCIAEoCBIOCgZ0YXJnZXQYAyABKAkSLQoKY2F0ZWdvcmllcxgEIAMoDjIZLmxhdGVybmEudjEuQWxlcnRDYXRlZ29yeRIRCgloYXNfdG9rZW4YBSABKAgSMAoMbGFzdF9zZW50X2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIkCgpsYXN0X2Vycm9yGAcgASgLMhAubGF0ZXJuYS52MS5UZXh0EjEKDWxhc3RfZXJyb3JfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIhoKGExpc3RBbGVydENoYW5uZWxzUmVxdWVzdCJHChlMaXN0QWxlcnRDaGFubmVsc1Jlc3BvbnNlEioKCGNoYW5uZWxzGAEgAygLMhgubGF0ZXJuYS52MS5BbGVydENoYW5uZWwivAEKFlNldEFsZXJ0Q2hhbm5lbFJlcXVlc3QSKgoEa2luZBgBIAEoDjIcLmxhdGVybmEudjEuQWxlcnRDaGFubmVsS2luZBIPCgdlbmFibGVkGAIgASgIEhAKA3VybBgDIAEoCUgAiAEBEhIKBXRva2VuGAQgASgJSAGIAQESLQoKY2F0ZWdvcmllcxgFIAMoDjIZLmxhdGVybmEudjEuQWxlcnRDYXRlZ29yeUIGCgRfdXJsQggKBl90b2tlbiJEChdTZXRBbGVydENoYW5uZWxSZXNwb25zZRIpCgdjaGFubmVsGAEgASgLMhgubGF0ZXJuYS52MS5BbGVydENoYW5uZWwiRQoXVGVzdEFsZXJ0Q2hhbm5lbFJlcXVlc3QSKgoEa2luZBgBIAEoDjIcLmxhdGVybmEudjEuQWxlcnRDaGFubmVsS2luZCIaChhUZXN0QWxlcnRDaGFubmVsUmVzcG9uc2UihQIKDE5vdGlmaWNhdGlvbhIKCgJpZBgBIAEoCRIqCgRraW5kGAIgASgOMhwubGF0ZXJuYS52MS5Ob3RpZmljYXRpb25LaW5kEg8KB3N1bW1hcnkYAyABKAkSHgoEdGV4dBgEIAEoCzIQLmxhdGVybmEudjEuVGV4dBIuCgpjcmVhdGVkX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIMCgRyZWFkGAYgASgIEiYKBGl0ZW0YByABKAsyGC5sYXRlcm5hLnYxLlNlYXJjaFJlc3VsdBISCgpyZXF1ZXN0X2lkGAggASgJEhIKCnBvc3Rlcl91cmwYCSABKAkiQQoYTGlzdE5vdGlmaWNhdGlvbnNSZXF1ZXN0EhIKCnBhZ2VfdG9rZW4YASABKAkSEQoJcGFnZV9zaXplGAIgASgFInsKGUxpc3ROb3RpZmljYXRpb25zUmVzcG9uc2USLwoNbm90aWZpY2F0aW9ucxgBIAMoCzIYLmxhdGVybmEudjEuTm90aWZpY2F0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIUCgx1bnJlYWRfY291bnQYAyABKAUiRQocTWFya05vdGlmaWNhdGlvbnNSZWFkUmVxdWVzdBIYChBub3RpZmljYXRpb25faWRzGAEgAygJEgsKA2FsbBgCIAEoCCIfCh1NYXJrTm90aWZpY2F0aW9uc1JlYWRSZXNwb25zZSJDChpEZWxldGVOb3RpZmljYXRpb25zUmVxdWVzdBIYChBub3RpZmljYXRpb25faWRzGAEgAygJEgsKA2FsbBgCIAEoCCIdChtEZWxldGVOb3RpZmljYXRpb25zUmVzcG9uc2UiFgoUR2V0UHVzaENvbmZpZ1JlcXVlc3QiPQoVR2V0UHVzaENvbmZpZ1Jlc3BvbnNlEhIKCnB1YmxpY19rZXkYASABKAkSEAoIZW5kcG9pbnQYAiABKAkiRgoUU3Vic2NyaWJlUHVzaFJlcXVlc3QSEAoIZW5kcG9pbnQYASABKAkSDgoGcDI1NmRoGAIgASgJEgwKBGF1dGgYAyABKAkiFwoVU3Vic2NyaWJlUHVzaFJlc3BvbnNlIhgKFlVuc3Vic2NyaWJlUHVzaFJlcXVlc3QiGQoXVW5zdWJzY3JpYmVQdXNoUmVzcG9uc2UqkwEKEEFsZXJ0Q2hhbm5lbEtpbmQSIgoeQUxFUlRfQ0hBTk5FTF9LSU5EX1VOU1BFQ0lGSUVEEAASHgoaQUxFUlRfQ0hBTk5FTF9LSU5EX0RJU0NPUkQQARIbChdBTEVSVF9DSEFOTkVMX0tJTkRfTlRGWRACEh4KGkFMRVJUX0NIQU5ORUxfS0lORF9XRUJIT09LEAMqpwEKDUFsZXJ0Q2F0ZWdvcnkSHgoaQUxFUlRfQ0FURUdPUllfVU5TUEVDSUZJRUQQABIbChdBTEVSVF9DQVRFR09SWV9SRVFVRVNUUxABEh8KG0FMRVJUX0NBVEVHT1JZX05FV19FUElTT0RFUxACEhsKF0FMRVJUX0NBVEVHT1JZX1BMQVlCQUNLEAMSGwoXQUxFUlRfQ0FURUdPUllfUFJPQkxFTVMQBCrFAgoQTm90aWZpY2F0aW9uS2luZBIhCh1OT1RJRklDQVRJT05fS0lORF9VTlNQRUNJRklFRBAAEiUKIU5PVElGSUNBVElPTl9LSU5EX1JFUVVFU1RfUEVORElORxABEiYKIk5PVElGSUNBVElPTl9LSU5EX1JFUVVFU1RfQVBQUk9WRUQQAhImCiJOT1RJRklDQVRJT05fS0lORF9SRVFVRVNUX0RFQ0xJTkVEEAMSJwojTk9USUZJQ0FUSU9OX0tJTkRfUkVRVUVTVF9BVkFJTEFCTEUQBBIkCiBOT1RJRklDQVRJT05fS0lORF9SRVFVRVNUX0ZBSUxFRBAFEiIKHk5PVElGSUNBVElPTl9LSU5EX05FV19FUElTT0RFUxAGEiQKIE5PVElGSUNBVElPTl9LSU5EX1JFUVVFU1RfQ0hPT1NFEAcyqQcKE05vdGlmaWNhdGlvblNlcnZpY2USZQoRTGlzdE5vdGlmaWNhdGlvbnMSJC5sYXRlcm5hLnYxLkxpc3ROb3RpZmljYXRpb25zUmVxdWVzdBolLmxhdGVybmEudjEuTGlzdE5vdGlmaWNhdGlvbnNSZXNwb25zZSIDkAIBEnEKFU1hcmtOb3RpZmljYXRpb25zUmVhZBIoLmxhdGVybmEudjEuTWFya05vdGlmaWNhdGlvbnNSZWFkUmVxdWVzdBopLmxhdGVybmEudjEuTWFya05vdGlmaWNhdGlvbnNSZWFkUmVzcG9uc2UiA5ACAhJrChNEZWxldGVOb3RpZmljYXRpb25zEiYubGF0ZXJuYS52MS5EZWxldGVOb3RpZmljYXRpb25zUmVxdWVzdBonLmxhdGVybmEudjEuRGVsZXRlTm90aWZpY2F0aW9uc1Jlc3BvbnNlIgOQAgISWQoNR2V0UHVzaENvbmZpZxIgLmxhdGVybmEudjEuR2V0UHVzaENvbmZpZ1JlcXVlc3QaIS5sYXRlcm5hLnYxLkdldFB1c2hDb25maWdSZXNwb25zZSIDkAIBElkKDVN1YnNjcmliZVB1c2gSIC5sYXRlcm5hLnYxLlN1YnNjcmliZVB1c2hSZXF1ZXN0GiEubGF0ZXJuYS52MS5TdWJzY3JpYmVQdXNoUmVzcG9uc2UiA5ACAhJfCg9VbnN1YnNjcmliZVB1c2gSIi5sYXRlcm5hLnYxLlVuc3Vic2NyaWJlUHVzaFJlcXVlc3QaIy5sYXRlcm5hLnYxLlVuc3Vic2NyaWJlUHVzaFJlc3BvbnNlIgOQAgISaQoRTGlzdEFsZXJ0Q2hhbm5lbHMSJC5sYXRlcm5hLnYxLkxpc3RBbGVydENoYW5uZWxzUmVxdWVzdBolLmxhdGVybmEudjEuTGlzdEFsZXJ0Q2hhbm5lbHNSZXNwb25zZSIHkAIBiLUYBBJkCg9TZXRBbGVydENoYW5uZWwSIi5sYXRlcm5hLnYxLlNldEFsZXJ0Q2hhbm5lbFJlcXVlc3QaIy5sYXRlcm5hLnYxLlNldEFsZXJ0Q2hhbm5lbFJlc3BvbnNlIgiItRgEkLUYAhJjChBUZXN0QWxlcnRDaGFubmVsEiMubGF0ZXJuYS52MS5UZXN0QWxlcnRDaGFubmVsUmVxdWVzdBokLmxhdGVybmEudjEuVGVzdEFsZXJ0Q2hhbm5lbFJlc3BvbnNlIgSItRgEQkpaSGdpdGh1Yi5jb20vbGF0ZXJuYS1wcm9qZWN0L2xhdGVybmEvaW50ZXJuYWwvYXBpL2dlbi9sYXRlcm5hL3YxO2xhdGVybmF2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_laterna_v1_catalog, file_laterna_v1_options, file_laterna_v1_text]);
+
+/**
+ * AlertChannel is a channel, without its secrets.
+ *
+ * @generated from message laterna.v1.AlertChannel
+ */
+export type AlertChannel = Message<"laterna.v1.AlertChannel"> & {
+  /**
+   * @generated from field: laterna.v1.AlertChannelKind kind = 1;
+   */
+  kind: AlertChannelKind;
+
+  /**
+   * False until it is set up, or while it is paused.
+   *
+   * @generated from field: bool enabled = 2;
+   */
+  enabled: boolean;
+
+  /**
+   * Where it goes, shortened before its secret part: "discord.com/api/webhooks/1234…",
+   * "ntfy.sh/laterna", "homeassistant.local:8123/api/webhook/…"; empty if it is not set up.
+   *
+   * @generated from field: string target = 3;
+   */
+  target: string;
+
+  /**
+   * @generated from field: repeated laterna.v1.AlertCategory categories = 4;
+   */
+  categories: AlertCategory[];
+
+  /**
+   * ntfy: an access token is set. Webhook: a signing secret is set.
+   *
+   * @generated from field: bool has_token = 5;
+   */
+  hasToken: boolean;
+
+  /**
+   * Last message delivered; unset if none yet.
+   *
+   * @generated from field: google.protobuf.Timestamp last_sent_at = 6;
+   */
+  lastSentAt?: Timestamp | undefined;
+
+  /**
+   * Why the last message could not be delivered (alert.delivery_failed, alert.unreachable...);
+   * unset if it was, or before the first one.
+   *
+   * @generated from field: laterna.v1.Text last_error = 7;
+   */
+  lastError?: Text | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp last_error_at = 8;
+   */
+  lastErrorAt?: Timestamp | undefined;
+};
+
+/**
+ * Describes the message laterna.v1.AlertChannel.
+ * Use `create(AlertChannelSchema)` to create a new message.
+ */
+export const AlertChannelSchema: GenMessage<AlertChannel> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_notification, 0);
+
+/**
+ * @generated from message laterna.v1.ListAlertChannelsRequest
+ */
+export type ListAlertChannelsRequest = Message<"laterna.v1.ListAlertChannelsRequest"> & {
+};
+
+/**
+ * Describes the message laterna.v1.ListAlertChannelsRequest.
+ * Use `create(ListAlertChannelsRequestSchema)` to create a new message.
+ */
+export const ListAlertChannelsRequestSchema: GenMessage<ListAlertChannelsRequest> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_notification, 1);
+
+/**
+ * @generated from message laterna.v1.ListAlertChannelsResponse
+ */
+export type ListAlertChannelsResponse = Message<"laterna.v1.ListAlertChannelsResponse"> & {
+  /**
+   * Discord, ntfy and the webhook, in this order.
+   *
+   * @generated from field: repeated laterna.v1.AlertChannel channels = 1;
+   */
+  channels: AlertChannel[];
+};
+
+/**
+ * Describes the message laterna.v1.ListAlertChannelsResponse.
+ * Use `create(ListAlertChannelsResponseSchema)` to create a new message.
+ */
+export const ListAlertChannelsResponseSchema: GenMessage<ListAlertChannelsResponse> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_notification, 2);
+
+/**
+ * @generated from message laterna.v1.SetAlertChannelRequest
+ */
+export type SetAlertChannelRequest = Message<"laterna.v1.SetAlertChannelRequest"> & {
+  /**
+   * @generated from field: laterna.v1.AlertChannelKind kind = 1;
+   */
+  kind: AlertChannelKind;
+
+  /**
+   * @generated from field: bool enabled = 2;
+   */
+  enabled: boolean;
+
+  /**
+   * Discord: the webhook URL of the channel. ntfy: the URL of the topic ("https://ntfy.sh/laterna").
+   * Webhook: where the JSON is POSTed. Unset keeps the one set; empty removes the channel.
+   *
+   * @generated from field: optional string url = 3;
+   */
+  url?: string | undefined;
+
+  /**
+   * ntfy: an access token, sent as "Authorization: Bearer". Webhook: the secret that signs each
+   * body. Unset keeps the one set; empty removes it. Discord takes none.
+   *
+   * @generated from field: optional string token = 4;
+   */
+  token?: string | undefined;
+
+  /**
+   * At least one when the channel is enabled.
+   *
+   * @generated from field: repeated laterna.v1.AlertCategory categories = 5;
+   */
+  categories: AlertCategory[];
+};
+
+/**
+ * Describes the message laterna.v1.SetAlertChannelRequest.
+ * Use `create(SetAlertChannelRequestSchema)` to create a new message.
+ */
+export const SetAlertChannelRequestSchema: GenMessage<SetAlertChannelRequest> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_notification, 3);
+
+/**
+ * @generated from message laterna.v1.SetAlertChannelResponse
+ */
+export type SetAlertChannelResponse = Message<"laterna.v1.SetAlertChannelResponse"> & {
+  /**
+   * @generated from field: laterna.v1.AlertChannel channel = 1;
+   */
+  channel?: AlertChannel | undefined;
+};
+
+/**
+ * Describes the message laterna.v1.SetAlertChannelResponse.
+ * Use `create(SetAlertChannelResponseSchema)` to create a new message.
+ */
+export const SetAlertChannelResponseSchema: GenMessage<SetAlertChannelResponse> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_notification, 4);
+
+/**
+ * @generated from message laterna.v1.TestAlertChannelRequest
+ */
+export type TestAlertChannelRequest = Message<"laterna.v1.TestAlertChannelRequest"> & {
+  /**
+   * @generated from field: laterna.v1.AlertChannelKind kind = 1;
+   */
+  kind: AlertChannelKind;
+};
+
+/**
+ * Describes the message laterna.v1.TestAlertChannelRequest.
+ * Use `create(TestAlertChannelRequestSchema)` to create a new message.
+ */
+export const TestAlertChannelRequestSchema: GenMessage<TestAlertChannelRequest> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_notification, 5);
+
+/**
+ * @generated from message laterna.v1.TestAlertChannelResponse
+ */
+export type TestAlertChannelResponse = Message<"laterna.v1.TestAlertChannelResponse"> & {
+};
+
+/**
+ * Describes the message laterna.v1.TestAlertChannelResponse.
+ * Use `create(TestAlertChannelResponseSchema)` to create a new message.
+ */
+export const TestAlertChannelResponseSchema: GenMessage<TestAlertChannelResponse> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_notification, 6);
 
 /**
  * @generated from message laterna.v1.Notification
@@ -86,7 +277,7 @@ export type Notification = Message<"laterna.v1.Notification"> & {
  * Use `create(NotificationSchema)` to create a new message.
  */
 export const NotificationSchema: GenMessage<Notification> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 0);
+  messageDesc(file_laterna_v1_notification, 7);
 
 /**
  * @generated from message laterna.v1.ListNotificationsRequest
@@ -112,7 +303,7 @@ export type ListNotificationsRequest = Message<"laterna.v1.ListNotificationsRequ
  * Use `create(ListNotificationsRequestSchema)` to create a new message.
  */
 export const ListNotificationsRequestSchema: GenMessage<ListNotificationsRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 1);
+  messageDesc(file_laterna_v1_notification, 8);
 
 /**
  * @generated from message laterna.v1.ListNotificationsResponse
@@ -143,7 +334,7 @@ export type ListNotificationsResponse = Message<"laterna.v1.ListNotificationsRes
  * Use `create(ListNotificationsResponseSchema)` to create a new message.
  */
 export const ListNotificationsResponseSchema: GenMessage<ListNotificationsResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 2);
+  messageDesc(file_laterna_v1_notification, 9);
 
 /**
  * @generated from message laterna.v1.MarkNotificationsReadRequest
@@ -169,7 +360,7 @@ export type MarkNotificationsReadRequest = Message<"laterna.v1.MarkNotifications
  * Use `create(MarkNotificationsReadRequestSchema)` to create a new message.
  */
 export const MarkNotificationsReadRequestSchema: GenMessage<MarkNotificationsReadRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 3);
+  messageDesc(file_laterna_v1_notification, 10);
 
 /**
  * @generated from message laterna.v1.MarkNotificationsReadResponse
@@ -182,7 +373,7 @@ export type MarkNotificationsReadResponse = Message<"laterna.v1.MarkNotification
  * Use `create(MarkNotificationsReadResponseSchema)` to create a new message.
  */
 export const MarkNotificationsReadResponseSchema: GenMessage<MarkNotificationsReadResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 4);
+  messageDesc(file_laterna_v1_notification, 11);
 
 /**
  * @generated from message laterna.v1.DeleteNotificationsRequest
@@ -208,7 +399,7 @@ export type DeleteNotificationsRequest = Message<"laterna.v1.DeleteNotifications
  * Use `create(DeleteNotificationsRequestSchema)` to create a new message.
  */
 export const DeleteNotificationsRequestSchema: GenMessage<DeleteNotificationsRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 5);
+  messageDesc(file_laterna_v1_notification, 12);
 
 /**
  * @generated from message laterna.v1.DeleteNotificationsResponse
@@ -221,7 +412,7 @@ export type DeleteNotificationsResponse = Message<"laterna.v1.DeleteNotification
  * Use `create(DeleteNotificationsResponseSchema)` to create a new message.
  */
 export const DeleteNotificationsResponseSchema: GenMessage<DeleteNotificationsResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 6);
+  messageDesc(file_laterna_v1_notification, 13);
 
 /**
  * @generated from message laterna.v1.GetPushConfigRequest
@@ -234,7 +425,7 @@ export type GetPushConfigRequest = Message<"laterna.v1.GetPushConfigRequest"> & 
  * Use `create(GetPushConfigRequestSchema)` to create a new message.
  */
 export const GetPushConfigRequestSchema: GenMessage<GetPushConfigRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 7);
+  messageDesc(file_laterna_v1_notification, 14);
 
 /**
  * @generated from message laterna.v1.GetPushConfigResponse
@@ -262,7 +453,7 @@ export type GetPushConfigResponse = Message<"laterna.v1.GetPushConfigResponse"> 
  * Use `create(GetPushConfigResponseSchema)` to create a new message.
  */
 export const GetPushConfigResponseSchema: GenMessage<GetPushConfigResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 8);
+  messageDesc(file_laterna_v1_notification, 15);
 
 /**
  * SubscribePushRequest carries what PushSubscription.toJSON() gives.
@@ -295,7 +486,7 @@ export type SubscribePushRequest = Message<"laterna.v1.SubscribePushRequest"> & 
  * Use `create(SubscribePushRequestSchema)` to create a new message.
  */
 export const SubscribePushRequestSchema: GenMessage<SubscribePushRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 9);
+  messageDesc(file_laterna_v1_notification, 16);
 
 /**
  * @generated from message laterna.v1.SubscribePushResponse
@@ -308,7 +499,7 @@ export type SubscribePushResponse = Message<"laterna.v1.SubscribePushResponse"> 
  * Use `create(SubscribePushResponseSchema)` to create a new message.
  */
 export const SubscribePushResponseSchema: GenMessage<SubscribePushResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 10);
+  messageDesc(file_laterna_v1_notification, 17);
 
 /**
  * @generated from message laterna.v1.UnsubscribePushRequest
@@ -321,7 +512,7 @@ export type UnsubscribePushRequest = Message<"laterna.v1.UnsubscribePushRequest"
  * Use `create(UnsubscribePushRequestSchema)` to create a new message.
  */
 export const UnsubscribePushRequestSchema: GenMessage<UnsubscribePushRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 11);
+  messageDesc(file_laterna_v1_notification, 18);
 
 /**
  * @generated from message laterna.v1.UnsubscribePushResponse
@@ -334,7 +525,92 @@ export type UnsubscribePushResponse = Message<"laterna.v1.UnsubscribePushRespons
  * Use `create(UnsubscribePushResponseSchema)` to create a new message.
  */
 export const UnsubscribePushResponseSchema: GenMessage<UnsubscribePushResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_notification, 12);
+  messageDesc(file_laterna_v1_notification, 19);
+
+/**
+ * AlertChannelKind is where alerts go.
+ *
+ * @generated from enum laterna.v1.AlertChannelKind
+ */
+export enum AlertChannelKind {
+  /**
+   * @generated from enum value: ALERT_CHANNEL_KIND_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * A Discord webhook.
+   *
+   * @generated from enum value: ALERT_CHANNEL_KIND_DISCORD = 1;
+   */
+  DISCORD = 1,
+
+  /**
+   * An ntfy topic, on ntfy.sh or a server of one's own.
+   *
+   * @generated from enum value: ALERT_CHANNEL_KIND_NTFY = 2;
+   */
+  NTFY = 2,
+
+  /**
+   * Any web service, which receives a JSON object.
+   *
+   * @generated from enum value: ALERT_CHANNEL_KIND_WEBHOOK = 3;
+   */
+  WEBHOOK = 3,
+}
+
+/**
+ * Describes the enum laterna.v1.AlertChannelKind.
+ */
+export const AlertChannelKindSchema: GenEnum<AlertChannelKind> = /*@__PURE__*/
+  enumDesc(file_laterna_v1_notification, 0);
+
+/**
+ * AlertCategory says what an alert is about.
+ *
+ * @generated from enum laterna.v1.AlertCategory
+ */
+export enum AlertCategory {
+  /**
+   * @generated from enum value: ALERT_CATEGORY_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * A request created, approved, declined, available or failed.
+   *
+   * @generated from enum value: ALERT_CATEGORY_REQUESTS = 1;
+   */
+  REQUESTS = 1,
+
+  /**
+   * Episodes that arrived, one message per series once it has been quiet for a while.
+   *
+   * @generated from enum value: ALERT_CATEGORY_NEW_EPISODES = 2;
+   */
+  NEW_EPISODES = 2,
+
+  /**
+   * A playback that starts: who watches or listens to what, on which device.
+   *
+   * @generated from enum value: ALERT_CATEGORY_PLAYBACK = 3;
+   */
+  PLAYBACK = 3,
+
+  /**
+   * What is worth a look: a refused sign-in, a background job that failed.
+   *
+   * @generated from enum value: ALERT_CATEGORY_PROBLEMS = 4;
+   */
+  PROBLEMS = 4,
+}
+
+/**
+ * Describes the enum laterna.v1.AlertCategory.
+ */
+export const AlertCategorySchema: GenEnum<AlertCategory> = /*@__PURE__*/
+  enumDesc(file_laterna_v1_notification, 1);
 
 /**
  * @generated from enum laterna.v1.NotificationKind
@@ -400,7 +676,7 @@ export enum NotificationKind {
  * Describes the enum laterna.v1.NotificationKind.
  */
 export const NotificationKindSchema: GenEnum<NotificationKind> = /*@__PURE__*/
-  enumDesc(file_laterna_v1_notification, 0);
+  enumDesc(file_laterna_v1_notification, 2);
 
 /**
  * NotificationService gives a profile what it was told about while it was not looking: what became
@@ -488,6 +764,38 @@ export const NotificationService: GenService<{
     methodKind: "unary";
     input: typeof UnsubscribePushRequestSchema;
     output: typeof UnsubscribePushResponseSchema;
+  },
+  /**
+   * ListAlertChannels lists the three channels and how their last messages went.
+   *
+   * @generated from rpc laterna.v1.NotificationService.ListAlertChannels
+   */
+  listAlertChannels: {
+    methodKind: "unary";
+    input: typeof ListAlertChannelsRequestSchema;
+    output: typeof ListAlertChannelsResponseSchema;
+  },
+  /**
+   * SetAlertChannel sets up a channel. A Discord webhook must be one of discord.com; the other two
+   * take any http or https address.
+   *
+   * @generated from rpc laterna.v1.NotificationService.SetAlertChannel
+   */
+  setAlertChannel: {
+    methodKind: "unary";
+    input: typeof SetAlertChannelRequestSchema;
+    output: typeof SetAlertChannelResponseSchema;
+  },
+  /**
+   * TestAlertChannel sends a test message to a channel set up, and waits for it to arrive:
+   * FAILED_PRECONDITION (alert.delivery_failed) if it does not.
+   *
+   * @generated from rpc laterna.v1.NotificationService.TestAlertChannel
+   */
+  testAlertChannel: {
+    methodKind: "unary";
+    input: typeof TestAlertChannelRequestSchema;
+    output: typeof TestAlertChannelResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_laterna_v1_notification, 0);

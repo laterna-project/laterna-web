@@ -622,7 +622,6 @@
     "browse": "Parcourir les dossiers du serveur pour le dossier {{n}}",
     "removeFolder": "Retirer le dossier {{n}}",
     "addFolder": "+ Ajouter un dossier",
-    "language": "Langue des métadonnées",
     "note": "Laterna ne modifie jamais un fichier. Un dossier devenu inaccessible ne vide pas la bibliothèque ; un fichier disparu est oublié après le délai réglé.",
     "savedScan": "Bibliothèque enregistrée ; un scan est lancé.",
     "saved": "Bibliothèque enregistrée.",

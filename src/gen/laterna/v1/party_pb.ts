@@ -8,6 +8,8 @@ import type { Duration, Timestamp } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_duration, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import type { Episode, MovieSummary, Track } from "./catalog_pb";
 import { file_laterna_v1_catalog } from "./catalog_pb";
+import type { Heartbeat } from "./events_pb";
+import { file_laterna_v1_events } from "./events_pb";
 import type { Text } from "./text_pb";
 import { file_laterna_v1_text } from "./text_pb";
 import type { Message } from "@bufbuild/protobuf";
@@ -16,7 +18,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file laterna/v1/party.proto.
  */
 export const file_laterna_v1_party: GenFile = /*@__PURE__*/
-  fileDesc("ChZsYXRlcm5hL3YxL3BhcnR5LnByb3RvEgpsYXRlcm5hLnYxImcKC1BhcnR5TWVtYmVyEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDAoEaG9zdBgDIAEoCBINCgVyZWFkeRgEIAEoCBIRCglidWZmZXJpbmcYBSABKAgSDgoGc3luY2VkGAYgASgIIp8CCgpQYXJ0eVN0YXRlEg0KBXF1ZXVlGAEgAygJEg0KBWluZGV4GAIgASgFEicKBnN0YXR1cxgDIAEoDjIXLmxhdGVybmEudjEuUGFydHlTdGF0dXMSJwoGcmVzdW1lGAQgASgOMhcubGF0ZXJuYS52MS5QYXJ0eVN0YXR1cxIrCghwb3NpdGlvbhgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhImCgJhdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKAoHbWVtYmVycxgHIAMoCzIXLmxhdGVybmEudjEuUGFydHlNZW1iZXISEQoJaG9zdF9vbmx5GAggASgIEg8KB3ZlcnNpb24YCSABKAMiigEKCVBhcnR5SXRlbRIpCgVtb3ZpZRgBIAEoCzIYLmxhdGVybmEudjEuTW92aWVTdW1tYXJ5SAASJgoHZXBpc29kZRgCIAEoCzITLmxhdGVybmEudjEuRXBpc29kZUgAEiIKBXRyYWNrGAMgASgLMhEubGF0ZXJuYS52MS5UcmFja0gAQgYKBGl0ZW0igQEKBVBhcnR5EgoKAmlkGAEgASgJEgwKBGNvZGUYAiABKAkSEQoJbWVtYmVyX2lkGAMgASgJEiQKBWl0ZW1zGAQgAygLMhUubGF0ZXJuYS52MS5QYXJ0eUl0ZW0SJQoFc3RhdGUYBSABKAsyFi5sYXRlcm5hLnYxLlBhcnR5U3RhdGUidwoMUGFydHlNZXNzYWdlEhEKCW1lbWJlcl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEgwKBHRleHQYAyABKAkSEAoIcmVhY3Rpb24YBCABKAgSJgoCYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIjkKEkNyZWF0ZVBhcnR5UmVxdWVzdBIQCghpdGVtX2lkcxgBIAMoCRIRCglob3N0X29ubHkYAiABKAgiNwoTQ3JlYXRlUGFydHlSZXNwb25zZRIgCgVwYXJ0eRgBIAEoCzIRLmxhdGVybmEudjEuUGFydHkiIAoQSm9pblBhcnR5UmVxdWVzdBIMCgRjb2RlGAEgASgJIjUKEUpvaW5QYXJ0eVJlc3BvbnNlEiAKBXBhcnR5GAEgASgLMhEubGF0ZXJuYS52MS5QYXJ0eSIjCg9HZXRQYXJ0eVJlcXVlc3QSEAoIcGFydHlfaWQYASABKAkiNAoQR2V0UGFydHlSZXNwb25zZRIgCgVwYXJ0eRgBIAEoCzIRLmxhdGVybmEudjEuUGFydHkiJQoRV2F0Y2hQYXJ0eVJlcXVlc3QSEAoIcGFydHlfaWQYASABKAki8QEKEldhdGNoUGFydHlSZXNwb25zZRIvCgtzZXJ2ZXJfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASJwoFc3RhdGUYAiABKAsyFi5sYXRlcm5hLnYxLlBhcnR5U3RhdGVIABIrCgdtZXNzYWdlGAMgASgLMhgubGF0ZXJuYS52MS5QYXJ0eU1lc3NhZ2VIABIPCgVlbmRlZBgEIAEoCUgAEhMKCWhlYXJ0YmVhdBgFIAEoCEgAEiQKCmVuZGVkX3RleHQYBiABKAsyEC5sYXRlcm5hLnYxLlRleHRCCAoGdXBkYXRlIi0KClBhcnR5UXVldWUSEAoIaXRlbV9pZHMYASADKAkSDQoFaW5kZXgYAiABKAUizgEKE0NvbnRyb2xQYXJ0eVJlcXVlc3QSEAoIcGFydHlfaWQYASABKAkSDgoEcGxheRgCIAEoCEgAEg8KBXBhdXNlGAMgASgISAASKQoEc2VlaxgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEhAKBnNlbGVjdBgFIAEoBUgAEicKBXF1ZXVlGAYgASgLMhYubGF0ZXJuYS52MS5QYXJ0eVF1ZXVlSAASEwoJaG9zdF9vbmx5GAcgASgISABCCQoHY29tbWFuZCI9ChRDb250cm9sUGFydHlSZXNwb25zZRIlCgVzdGF0ZRgBIAEoCzIWLmxhdGVybmEudjEuUGFydHlTdGF0ZSJ4ChhSZXBvcnRQYXJ0eVN0YXR1c1JlcXVlc3QSEAoIcGFydHlfaWQYASABKAkSDQoFcmVhZHkYAiABKAgSEQoJYnVmZmVyaW5nGAMgASgIEhgKC2VuZGVkX2luZGV4GAQgASgFSACIAQFCDgoMX2VuZGVkX2luZGV4IhsKGVJlcG9ydFBhcnR5U3RhdHVzUmVzcG9uc2UiSwoXU2VuZFBhcnR5TWVzc2FnZVJlcXVlc3QSEAoIcGFydHlfaWQYASABKAkSDAoEdGV4dBgCIAEoCRIQCghyZWFjdGlvbhgDIAEoCCIaChhTZW5kUGFydHlNZXNzYWdlUmVzcG9uc2UiJQoRTGVhdmVQYXJ0eVJlcXVlc3QSEAoIcGFydHlfaWQYASABKAkiFAoSTGVhdmVQYXJ0eVJlc3BvbnNlIj0KFktpY2tQYXJ0eU1lbWJlclJlcXVlc3QSEAoIcGFydHlfaWQYASABKAkSEQoJbWVtYmVyX2lkGAIgASgJIhkKF0tpY2tQYXJ0eU1lbWJlclJlc3BvbnNlIiMKD0VuZFBhcnR5UmVxdWVzdBIQCghwYXJ0eV9pZBgBIAEoCSISChBFbmRQYXJ0eVJlc3BvbnNlIhYKFEdldFNlcnZlclRpbWVSZXF1ZXN0IkAKFUdldFNlcnZlclRpbWVSZXNwb25zZRInCgNub3cYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wKngKC1BhcnR5U3RhdHVzEhwKGFBBUlRZX1NUQVRVU19VTlNQRUNJRklFRBAAEhcKE1BBUlRZX1NUQVRVU19QQVVTRUQQARIYChRQQVJUWV9TVEFUVVNfUExBWUlORxACEhgKFFBBUlRZX1NUQVRVU19XQUlUSU5HEAMyogcKDFBhcnR5U2VydmljZRJOCgtDcmVhdGVQYXJ0eRIeLmxhdGVybmEudjEuQ3JlYXRlUGFydHlSZXF1ZXN0Gh8ubGF0ZXJuYS52MS5DcmVhdGVQYXJ0eVJlc3BvbnNlEkgKCUpvaW5QYXJ0eRIcLmxhdGVybmEudjEuSm9pblBhcnR5UmVxdWVzdBodLmxhdGVybmEudjEuSm9pblBhcnR5UmVzcG9uc2USSgoIR2V0UGFydHkSGy5sYXRlcm5hLnYxLkdldFBhcnR5UmVxdWVzdBocLmxhdGVybmEudjEuR2V0UGFydHlSZXNwb25zZSIDkAIBEk0KCldhdGNoUGFydHkSHS5sYXRlcm5hLnYxLldhdGNoUGFydHlSZXF1ZXN0Gh4ubGF0ZXJuYS52MS5XYXRjaFBhcnR5UmVzcG9uc2UwARJRCgxDb250cm9sUGFydHkSHy5sYXRlcm5hLnYxLkNvbnRyb2xQYXJ0eVJlcXVlc3QaIC5sYXRlcm5hLnYxLkNvbnRyb2xQYXJ0eVJlc3BvbnNlEmAKEVJlcG9ydFBhcnR5U3RhdHVzEiQubGF0ZXJuYS52MS5SZXBvcnRQYXJ0eVN0YXR1c1JlcXVlc3QaJS5sYXRlcm5hLnYxLlJlcG9ydFBhcnR5U3RhdHVzUmVzcG9uc2USXQoQU2VuZFBhcnR5TWVzc2FnZRIjLmxhdGVybmEudjEuU2VuZFBhcnR5TWVzc2FnZVJlcXVlc3QaJC5sYXRlcm5hLnYxLlNlbmRQYXJ0eU1lc3NhZ2VSZXNwb25zZRJLCgpMZWF2ZVBhcnR5Eh0ubGF0ZXJuYS52MS5MZWF2ZVBhcnR5UmVxdWVzdBoeLmxhdGVybmEudjEuTGVhdmVQYXJ0eVJlc3BvbnNlEloKD0tpY2tQYXJ0eU1lbWJlchIiLmxhdGVybmEudjEuS2lja1BhcnR5TWVtYmVyUmVxdWVzdBojLmxhdGVybmEudjEuS2lja1BhcnR5TWVtYmVyUmVzcG9uc2USRQoIRW5kUGFydHkSGy5sYXRlcm5hLnYxLkVuZFBhcnR5UmVxdWVzdBocLmxhdGVybmEudjEuRW5kUGFydHlSZXNwb25zZRJZCg1HZXRTZXJ2ZXJUaW1lEiAubGF0ZXJuYS52MS5HZXRTZXJ2ZXJUaW1lUmVxdWVzdBohLmxhdGVybmEudjEuR2V0U2VydmVyVGltZVJlc3BvbnNlIgOQAgFCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_laterna_v1_catalog, file_laterna_v1_text]);
+  fileDesc("ChZsYXRlcm5hL3YxL3BhcnR5LnByb3RvEgpsYXRlcm5hLnYxImcKC1BhcnR5TWVtYmVyEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDAoEaG9zdBgDIAEoCBINCgVyZWFkeRgEIAEoCBIRCglidWZmZXJpbmcYBSABKAgSDgoGc3luY2VkGAYgASgIIp8CCgpQYXJ0eVN0YXRlEg0KBXF1ZXVlGAEgAygJEg0KBWluZGV4GAIgASgFEicKBnN0YXR1cxgDIAEoDjIXLmxhdGVybmEudjEuUGFydHlTdGF0dXMSJwoGcmVzdW1lGAQgASgOMhcubGF0ZXJuYS52MS5QYXJ0eVN0YXR1cxIrCghwb3NpdGlvbhgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhImCgJhdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKAoHbWVtYmVycxgHIAMoCzIXLmxhdGVybmEudjEuUGFydHlNZW1iZXISEQoJaG9zdF9vbmx5GAggASgIEg8KB3ZlcnNpb24YCSABKAMiigEKCVBhcnR5SXRlbRIpCgVtb3ZpZRgBIAEoCzIYLmxhdGVybmEudjEuTW92aWVTdW1tYXJ5SAASJgoHZXBpc29kZRgCIAEoCzITLmxhdGVybmEudjEuRXBpc29kZUgAEiIKBXRyYWNrGAMgASgLMhEubGF0ZXJuYS52MS5UcmFja0gAQgYKBGl0ZW0igQEKBVBhcnR5EgoKAmlkGAEgASgJEgwKBGNvZGUYAiABKAkSEQoJbWVtYmVyX2lkGAMgASgJEiQKBWl0ZW1zGAQgAygLMhUubGF0ZXJuYS52MS5QYXJ0eUl0ZW0SJQoFc3RhdGUYBSABKAsyFi5sYXRlcm5hLnYxLlBhcnR5U3RhdGUidwoMUGFydHlNZXNzYWdlEhEKCW1lbWJlcl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEgwKBHRleHQYAyABKAkSEAoIcmVhY3Rpb24YBCABKAgSJgoCYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIjkKEkNyZWF0ZVBhcnR5UmVxdWVzdBIQCghpdGVtX2lkcxgBIAMoCRIRCglob3N0X29ubHkYAiABKAgiNwoTQ3JlYXRlUGFydHlSZXNwb25zZRIgCgVwYXJ0eRgBIAEoCzIRLmxhdGVybmEudjEuUGFydHkiIAoQSm9pblBhcnR5UmVxdWVzdBIMCgRjb2RlGAEgASgJIjUKEUpvaW5QYXJ0eVJlc3BvbnNlEiAKBXBhcnR5GAEgASgLMhEubGF0ZXJuYS52MS5QYXJ0eSIjCg9HZXRQYXJ0eVJlcXVlc3QSEAoIcGFydHlfaWQYASABKAkiNAoQR2V0UGFydHlSZXNwb25zZRIgCgVwYXJ0eRgBIAEoCzIRLmxhdGVybmEudjEuUGFydHkiJQoRV2F0Y2hQYXJ0eVJlcXVlc3QSEAoIcGFydHlfaWQYASABKAkimAIKEldhdGNoUGFydHlSZXNwb25zZRIvCgtzZXJ2ZXJfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASJwoFc3RhdGUYAiABKAsyFi5sYXRlcm5hLnYxLlBhcnR5U3RhdGVIABIrCgdtZXNzYWdlGAMgASgLMhgubGF0ZXJuYS52MS5QYXJ0eU1lc3NhZ2VIABInCgVlbmRlZBgHIAEoCzIWLmxhdGVybmEudjEuUGFydHlFbmRlZEgAEioKCWhlYXJ0YmVhdBgIIAEoCzIVLmxhdGVybmEudjEuSGVhcnRiZWF0SABCCAoGdXBkYXRlSgQIBBAFSgQIBRAGSgQIBhAHUgplbmRlZF90ZXh0IkMKClBhcnR5RW5kZWQSDgoGcmVhc29uGAEgASgJEiUKC3JlYXNvbl90ZXh0GAIgASgLMhAubGF0ZXJuYS52MS5UZXh0Ii0KClBhcnR5UXVldWUSEAoIaXRlbV9pZHMYASADKAkSDQoFaW5kZXgYAiABKAUizgEKE0NvbnRyb2xQYXJ0eVJlcXVlc3QSEAoIcGFydHlfaWQYASABKAkSDgoEcGxheRgCIAEoCEgAEg8KBXBhdXNlGAMgASgISAASKQoEc2VlaxgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEhAKBnNlbGVjdBgFIAEoBUgAEicKBXF1ZXVlGAYgASgLMhYubGF0ZXJuYS52MS5QYXJ0eVF1ZXVlSAASEwoJaG9zdF9vbmx5GAcgASgISABCCQoHY29tbWFuZCI9ChRDb250cm9sUGFydHlSZXNwb25zZRIlCgVzdGF0ZRgBIAEoCzIWLmxhdGVybmEudjEuUGFydHlTdGF0ZSJ4ChhSZXBvcnRQYXJ0eVN0YXR1c1JlcXVlc3QSEAoIcGFydHlfaWQYASABKAkSDQoFcmVhZHkYAiABKAgSEQoJYnVmZmVyaW5nGAMgASgIEhgKC2VuZGVkX2luZGV4GAQgASgFSACIAQFCDgoMX2VuZGVkX2luZGV4IhsKGVJlcG9ydFBhcnR5U3RhdHVzUmVzcG9uc2UiSwoXU2VuZFBhcnR5TWVzc2FnZVJlcXVlc3QSEAoIcGFydHlfaWQYASABKAkSDAoEdGV4dBgCIAEoCRIQCghyZWFjdGlvbhgDIAEoCCIaChhTZW5kUGFydHlNZXNzYWdlUmVzcG9uc2UiJQoRTGVhdmVQYXJ0eVJlcXVlc3QSEAoIcGFydHlfaWQYASABKAkiFAoSTGVhdmVQYXJ0eVJlc3BvbnNlIj0KFktpY2tQYXJ0eU1lbWJlclJlcXVlc3QSEAoIcGFydHlfaWQYASABKAkSEQoJbWVtYmVyX2lkGAIgASgJIhkKF0tpY2tQYXJ0eU1lbWJlclJlc3BvbnNlIiMKD0VuZFBhcnR5UmVxdWVzdBIQCghwYXJ0eV9pZBgBIAEoCSISChBFbmRQYXJ0eVJlc3BvbnNlIhYKFEdldFNlcnZlclRpbWVSZXF1ZXN0IkAKFUdldFNlcnZlclRpbWVSZXNwb25zZRInCgNub3cYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wKngKC1BhcnR5U3RhdHVzEhwKGFBBUlRZX1NUQVRVU19VTlNQRUNJRklFRBAAEhcKE1BBUlRZX1NUQVRVU19QQVVTRUQQARIYChRQQVJUWV9TVEFUVVNfUExBWUlORxACEhgKFFBBUlRZX1NUQVRVU19XQUlUSU5HEAMyogcKDFBhcnR5U2VydmljZRJOCgtDcmVhdGVQYXJ0eRIeLmxhdGVybmEudjEuQ3JlYXRlUGFydHlSZXF1ZXN0Gh8ubGF0ZXJuYS52MS5DcmVhdGVQYXJ0eVJlc3BvbnNlEkgKCUpvaW5QYXJ0eRIcLmxhdGVybmEudjEuSm9pblBhcnR5UmVxdWVzdBodLmxhdGVybmEudjEuSm9pblBhcnR5UmVzcG9uc2USSgoIR2V0UGFydHkSGy5sYXRlcm5hLnYxLkdldFBhcnR5UmVxdWVzdBocLmxhdGVybmEudjEuR2V0UGFydHlSZXNwb25zZSIDkAIBEk0KCldhdGNoUGFydHkSHS5sYXRlcm5hLnYxLldhdGNoUGFydHlSZXF1ZXN0Gh4ubGF0ZXJuYS52MS5XYXRjaFBhcnR5UmVzcG9uc2UwARJRCgxDb250cm9sUGFydHkSHy5sYXRlcm5hLnYxLkNvbnRyb2xQYXJ0eVJlcXVlc3QaIC5sYXRlcm5hLnYxLkNvbnRyb2xQYXJ0eVJlc3BvbnNlEmAKEVJlcG9ydFBhcnR5U3RhdHVzEiQubGF0ZXJuYS52MS5SZXBvcnRQYXJ0eVN0YXR1c1JlcXVlc3QaJS5sYXRlcm5hLnYxLlJlcG9ydFBhcnR5U3RhdHVzUmVzcG9uc2USXQoQU2VuZFBhcnR5TWVzc2FnZRIjLmxhdGVybmEudjEuU2VuZFBhcnR5TWVzc2FnZVJlcXVlc3QaJC5sYXRlcm5hLnYxLlNlbmRQYXJ0eU1lc3NhZ2VSZXNwb25zZRJLCgpMZWF2ZVBhcnR5Eh0ubGF0ZXJuYS52MS5MZWF2ZVBhcnR5UmVxdWVzdBoeLmxhdGVybmEudjEuTGVhdmVQYXJ0eVJlc3BvbnNlEloKD0tpY2tQYXJ0eU1lbWJlchIiLmxhdGVybmEudjEuS2lja1BhcnR5TWVtYmVyUmVxdWVzdBojLmxhdGVybmEudjEuS2lja1BhcnR5TWVtYmVyUmVzcG9uc2USRQoIRW5kUGFydHkSGy5sYXRlcm5hLnYxLkVuZFBhcnR5UmVxdWVzdBocLmxhdGVybmEudjEuRW5kUGFydHlSZXNwb25zZRJZCg1HZXRTZXJ2ZXJUaW1lEiAubGF0ZXJuYS52MS5HZXRTZXJ2ZXJUaW1lUmVxdWVzdBohLmxhdGVybmEudjEuR2V0U2VydmVyVGltZVJlc3BvbnNlIgOQAgFCSlpIZ2l0aHViLmNvbS9sYXRlcm5hLXByb2plY3QvbGF0ZXJuYS9pbnRlcm5hbC9hcGkvZ2VuL2xhdGVybmEvdjE7bGF0ZXJuYXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_laterna_v1_catalog, file_laterna_v1_events, file_laterna_v1_text]);
 
 /**
  * @generated from message laterna.v1.PartyMember
@@ -410,30 +412,21 @@ export type WatchPartyResponse = Message<"laterna.v1.WatchPartyResponse"> & {
     case: "message";
   } | {
     /**
-     * End of the group for the caller (group ended, removed by the host): the reason, in the
-     * language of the request.
+     * End of the group for the caller (group ended, removed by the host).
      *
-     * @generated from field: string ended = 4;
+     * @generated from field: laterna.v1.PartyEnded ended = 7;
      */
-    value: string;
+    value: PartyEnded;
     case: "ended";
   } | {
     /**
      * Keep-alive (every 30 s without anything else sent).
      *
-     * @generated from field: bool heartbeat = 5;
+     * @generated from field: laterna.v1.Heartbeat heartbeat = 8;
      */
-    value: boolean;
+    value: Heartbeat;
     case: "heartbeat";
   } | { case: undefined; value?: undefined };
-
-  /**
-   * With ended: the reason, for translation ("party.ended.left", "party.ended.removed",
-   * "party.ended.by_host").
-   *
-   * @generated from field: laterna.v1.Text ended_text = 6;
-   */
-  endedText?: Text | undefined;
 };
 
 /**
@@ -442,6 +435,34 @@ export type WatchPartyResponse = Message<"laterna.v1.WatchPartyResponse"> & {
  */
 export const WatchPartyResponseSchema: GenMessage<WatchPartyResponse> = /*@__PURE__*/
   messageDesc(file_laterna_v1_party, 12);
+
+/**
+ * PartyEnded says why the group ended for the caller.
+ *
+ * @generated from message laterna.v1.PartyEnded
+ */
+export type PartyEnded = Message<"laterna.v1.PartyEnded"> & {
+  /**
+   * In the language of the request.
+   *
+   * @generated from field: string reason = 1;
+   */
+  reason: string;
+
+  /**
+   * The same, for translation ("party.ended.left", "party.ended.removed", "party.ended.by_host").
+   *
+   * @generated from field: laterna.v1.Text reason_text = 2;
+   */
+  reasonText?: Text | undefined;
+};
+
+/**
+ * Describes the message laterna.v1.PartyEnded.
+ * Use `create(PartyEndedSchema)` to create a new message.
+ */
+export const PartyEndedSchema: GenMessage<PartyEnded> = /*@__PURE__*/
+  messageDesc(file_laterna_v1_party, 13);
 
 /**
  * PartyQueue replaces the queue.
@@ -467,7 +488,7 @@ export type PartyQueue = Message<"laterna.v1.PartyQueue"> & {
  * Use `create(PartyQueueSchema)` to create a new message.
  */
 export const PartyQueueSchema: GenMessage<PartyQueue> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 13);
+  messageDesc(file_laterna_v1_party, 14);
 
 /**
  * @generated from message laterna.v1.ControlPartyRequest
@@ -529,7 +550,7 @@ export type ControlPartyRequest = Message<"laterna.v1.ControlPartyRequest"> & {
  * Use `create(ControlPartyRequestSchema)` to create a new message.
  */
 export const ControlPartyRequestSchema: GenMessage<ControlPartyRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 14);
+  messageDesc(file_laterna_v1_party, 15);
 
 /**
  * @generated from message laterna.v1.ControlPartyResponse
@@ -546,7 +567,7 @@ export type ControlPartyResponse = Message<"laterna.v1.ControlPartyResponse"> & 
  * Use `create(ControlPartyResponseSchema)` to create a new message.
  */
 export const ControlPartyResponseSchema: GenMessage<ControlPartyResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 15);
+  messageDesc(file_laterna_v1_party, 16);
 
 /**
  * @generated from message laterna.v1.ReportPartyStatusRequest
@@ -580,7 +601,7 @@ export type ReportPartyStatusRequest = Message<"laterna.v1.ReportPartyStatusRequ
  * Use `create(ReportPartyStatusRequestSchema)` to create a new message.
  */
 export const ReportPartyStatusRequestSchema: GenMessage<ReportPartyStatusRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 16);
+  messageDesc(file_laterna_v1_party, 17);
 
 /**
  * @generated from message laterna.v1.ReportPartyStatusResponse
@@ -593,7 +614,7 @@ export type ReportPartyStatusResponse = Message<"laterna.v1.ReportPartyStatusRes
  * Use `create(ReportPartyStatusResponseSchema)` to create a new message.
  */
 export const ReportPartyStatusResponseSchema: GenMessage<ReportPartyStatusResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 17);
+  messageDesc(file_laterna_v1_party, 18);
 
 /**
  * @generated from message laterna.v1.SendPartyMessageRequest
@@ -622,7 +643,7 @@ export type SendPartyMessageRequest = Message<"laterna.v1.SendPartyMessageReques
  * Use `create(SendPartyMessageRequestSchema)` to create a new message.
  */
 export const SendPartyMessageRequestSchema: GenMessage<SendPartyMessageRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 18);
+  messageDesc(file_laterna_v1_party, 19);
 
 /**
  * @generated from message laterna.v1.SendPartyMessageResponse
@@ -635,7 +656,7 @@ export type SendPartyMessageResponse = Message<"laterna.v1.SendPartyMessageRespo
  * Use `create(SendPartyMessageResponseSchema)` to create a new message.
  */
 export const SendPartyMessageResponseSchema: GenMessage<SendPartyMessageResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 19);
+  messageDesc(file_laterna_v1_party, 20);
 
 /**
  * @generated from message laterna.v1.LeavePartyRequest
@@ -652,7 +673,7 @@ export type LeavePartyRequest = Message<"laterna.v1.LeavePartyRequest"> & {
  * Use `create(LeavePartyRequestSchema)` to create a new message.
  */
 export const LeavePartyRequestSchema: GenMessage<LeavePartyRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 20);
+  messageDesc(file_laterna_v1_party, 21);
 
 /**
  * @generated from message laterna.v1.LeavePartyResponse
@@ -665,7 +686,7 @@ export type LeavePartyResponse = Message<"laterna.v1.LeavePartyResponse"> & {
  * Use `create(LeavePartyResponseSchema)` to create a new message.
  */
 export const LeavePartyResponseSchema: GenMessage<LeavePartyResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 21);
+  messageDesc(file_laterna_v1_party, 22);
 
 /**
  * @generated from message laterna.v1.KickPartyMemberRequest
@@ -687,7 +708,7 @@ export type KickPartyMemberRequest = Message<"laterna.v1.KickPartyMemberRequest"
  * Use `create(KickPartyMemberRequestSchema)` to create a new message.
  */
 export const KickPartyMemberRequestSchema: GenMessage<KickPartyMemberRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 22);
+  messageDesc(file_laterna_v1_party, 23);
 
 /**
  * @generated from message laterna.v1.KickPartyMemberResponse
@@ -700,7 +721,7 @@ export type KickPartyMemberResponse = Message<"laterna.v1.KickPartyMemberRespons
  * Use `create(KickPartyMemberResponseSchema)` to create a new message.
  */
 export const KickPartyMemberResponseSchema: GenMessage<KickPartyMemberResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 23);
+  messageDesc(file_laterna_v1_party, 24);
 
 /**
  * @generated from message laterna.v1.EndPartyRequest
@@ -717,7 +738,7 @@ export type EndPartyRequest = Message<"laterna.v1.EndPartyRequest"> & {
  * Use `create(EndPartyRequestSchema)` to create a new message.
  */
 export const EndPartyRequestSchema: GenMessage<EndPartyRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 24);
+  messageDesc(file_laterna_v1_party, 25);
 
 /**
  * @generated from message laterna.v1.EndPartyResponse
@@ -730,7 +751,7 @@ export type EndPartyResponse = Message<"laterna.v1.EndPartyResponse"> & {
  * Use `create(EndPartyResponseSchema)` to create a new message.
  */
 export const EndPartyResponseSchema: GenMessage<EndPartyResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 25);
+  messageDesc(file_laterna_v1_party, 26);
 
 /**
  * @generated from message laterna.v1.GetServerTimeRequest
@@ -743,7 +764,7 @@ export type GetServerTimeRequest = Message<"laterna.v1.GetServerTimeRequest"> & 
  * Use `create(GetServerTimeRequestSchema)` to create a new message.
  */
 export const GetServerTimeRequestSchema: GenMessage<GetServerTimeRequest> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 26);
+  messageDesc(file_laterna_v1_party, 27);
 
 /**
  * @generated from message laterna.v1.GetServerTimeResponse
@@ -760,7 +781,7 @@ export type GetServerTimeResponse = Message<"laterna.v1.GetServerTimeResponse"> 
  * Use `create(GetServerTimeResponseSchema)` to create a new message.
  */
 export const GetServerTimeResponseSchema: GenMessage<GetServerTimeResponse> = /*@__PURE__*/
-  messageDesc(file_laterna_v1_party, 27);
+  messageDesc(file_laterna_v1_party, 28);
 
 /**
  * @generated from enum laterna.v1.PartyStatus

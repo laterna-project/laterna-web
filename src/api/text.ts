@@ -2,7 +2,7 @@
 // of other texts, and the text the server wrote itself in the language of the request. Here the key
 // is translated with the server's catalogs into the interface language (src/i18n/server); a key
 // unknown to that language keeps the server's text. Rendered like the server does: {name},
-// {seconds:duration}, {bytes:bytes}, {seconds:clock}, {flag:onoff}, {list}.
+// {seconds:duration}, {bytes:bytes}, {kbps:bitrate}, {seconds:clock}, {flag:onoff}, {list}.
 import type { Text } from "../gen/laterna/v1/text_pb";
 import { serverTemplate } from "../i18n";
 
@@ -50,6 +50,10 @@ function formatParam(value: string, format: string | undefined): string {
       if (n >= 2 ** 20) return unit(Math.round(n / 2 ** 20), "mib");
       if (n >= 2 ** 10) return unit(Math.round(n / 2 ** 10), "kib");
       return unit(n, "byte");
+    case "bitrate":
+      // In Mbit/s when it is round or large enough, so that no decimal separator is needed.
+      if (n >= 10000 || (n >= 1000 && n % 1000 === 0)) return unit(Math.round(n / 1000), "mbps");
+      return unit(n, "kbps");
     case "clock": {
       const two = (x: number) => String(x).padStart(2, "0");
       return n >= 3600

@@ -9,23 +9,11 @@ import {
 } from "../../gen/laterna/v1/import_pb";
 import { type Integration, IntegrationKind } from "../../gen/laterna/v1/integration_pb";
 import { type ItemCounts, LibraryKind } from "../../gen/laterna/v1/library_pb";
+import { PlaybackMethod } from "../../gen/laterna/v1/playback_pb";
 import { LogLevel } from "../../gen/laterna/v1/system_pb";
-import i18n, { euLanguages, type Language, language, locale } from "../../i18n";
+import i18n from "../../i18n";
 import type { Universe } from "../../theme/contract";
 import { ageLabel } from "../account/parental";
-import { languageName } from "../catalog/format";
-
-/** Metadata language of a library, in BCP 47: "fr-FR", and "en-US" for English. */
-export function metadataTag(lang: Language = language()): string {
-  return `${lang}-${euLanguages.find((l) => l.id === lang)?.region || "US"}`;
-}
-
-/** Languages offered for metadata: those of the European Union, named in the interface language. */
-export function metadataLanguages(): { value: string; label: string }[] {
-  return euLanguages
-    .map((l) => ({ value: metadataTag(l.id), label: `${languageName(l.id)} (${metadataTag(l.id)})` }))
-    .sort((a, b) => a.label.localeCompare(b.label, locale()));
-}
 
 /** Library kinds, in the app's order, with their universe. */
 // Labels read on each render (getters): they follow the interface language.
@@ -256,11 +244,11 @@ export function accountTags(s: AccountSummary, libraryNames: ReadonlyMap<string,
 
 /** How it plays, in plain words: "direct play", "remux", "transcoded · h264_nvenc". */
 export function playbackMethod(p: ActivePlayback): { label: string; transcoded: boolean } {
-  if (p.method === "transcode") {
-    const what = !p.copyVideo
+  if (p.method === PlaybackMethod.HLS_TRANSCODE || p.method === PlaybackMethod.CONVERTED) {
+    const what = p.videoTranscoded
       ? [
-          p.encoder,
-          p.toneMap ? "HDR → SDR" : "",
+          p.videoEncoder,
+          p.toneMapping ? "HDR → SDR" : "",
           p.gpu ? i18n.t("playbackMethod.gpu") : "",
           p.decoder ? i18n.t("playbackMethod.decoder", { decoder: p.decoder }) : "",
         ]
@@ -271,7 +259,10 @@ export function playbackMethod(p: ActivePlayback): { label: string; transcoded: 
     };
   }
   return {
-    label: p.method === "remux" ? i18n.t("playbackMethod.remux") : i18n.t("playbackMethod.direct"),
+    label:
+      p.method === PlaybackMethod.HLS_REMUX
+        ? i18n.t("playbackMethod.remux")
+        : i18n.t("playbackMethod.direct"),
     transcoded: false,
   };
 }

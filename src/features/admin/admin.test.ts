@@ -6,6 +6,7 @@ import { AccountSchema, LibraryAccessSchema } from "../../gen/laterna/v1/auth_pb
 import { JellyfinTargetKind } from "../../gen/laterna/v1/import_pb";
 import { IntegrationKind, IntegrationSchema } from "../../gen/laterna/v1/integration_pb";
 import { ItemCountsSchema, LibraryKind } from "../../gen/laterna/v1/library_pb";
+import { PlaybackMethod } from "../../gen/laterna/v1/playback_pb";
 import { ParentalControlSchema } from "../../gen/laterna/v1/profile_pb";
 import {
   accountTags,
@@ -105,18 +106,26 @@ describe("administration", () => {
 
   it("describes how it plays", () => {
     const p = (fields: object) => create(ActivePlaybackSchema, fields);
-    expect(playbackMethod(p({ method: "direct" }))).toEqual({
+    const transcode = PlaybackMethod.HLS_TRANSCODE;
+    expect(playbackMethod(p({ method: PlaybackMethod.DIRECT }))).toEqual({
       label: "direct play",
       transcoded: false,
     });
-    expect(playbackMethod(p({ method: "remux" })).label).toBe("no transcoding");
-    expect(playbackMethod(p({ method: "transcode", encoder: "h264_nvenc", gpu: true })).label).toBe(
-      "transcoded · h264_nvenc · GPU",
+    expect(playbackMethod(p({ method: PlaybackMethod.HLS_REMUX })).label).toBe("no transcoding");
+    expect(
+      playbackMethod(p({ method: transcode, videoTranscoded: true, videoEncoder: "h264_nvenc", gpu: true }))
+        .label,
+    ).toBe("transcoded · h264_nvenc · GPU");
+    expect(
+      playbackMethod(
+        p({ method: transcode, videoTranscoded: true, videoEncoder: "h264_nvenc", decoder: "cuda" }),
+      ).label,
+    ).toBe("transcoded · h264_nvenc · cuda decoding");
+    expect(playbackMethod(p({ method: transcode, audioTranscoded: true })).label).toBe("transcoded · audio");
+    // A track converted to AAC.
+    expect(playbackMethod(p({ method: PlaybackMethod.CONVERTED, audioTranscoded: true })).label).toBe(
+      "transcoded · audio",
     );
-    expect(playbackMethod(p({ method: "transcode", encoder: "h264_nvenc", decoder: "cuda" })).label).toBe(
-      "transcoded · h264_nvenc · cuda decoding",
-    );
-    expect(playbackMethod(p({ method: "transcode", copyVideo: true })).label).toBe("transcoded · audio");
   });
 
   it("describes LazyLibrarian by its connection only", () => {
